@@ -10,8 +10,10 @@ Including:
 """
 
 METHODS = ['U-Ignore', 'U-Zeros', 'U-Ones', 'U-SelfTrained', 'U-MultiClass']
-CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
-CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
+#CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
+CLASS_NUM = [11559, 2776, 13317, 19894, 5782, 6331, 1431, 5302, 4667, 2303, 2516, 1686, 3385, 227] # chest
+#CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
+CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
 
 class Loss_Zeros(object):
     """
@@ -49,7 +51,30 @@ class cross_entropy_loss(object):
         # target[target == -1] = 2
         output_softmax = F.softmax(output, dim=1)
         target = torch.argmax(target, dim=1)
+        # print("output_softmax:",output_softmax)
+        # print("target: ",target)
         return self.base_loss(output_softmax, target.long())
+
+class cross_entropy_loss_multiClass(object):
+    """
+    map all uncertainty values to a unique value "2"
+    """
+    
+    def __init__(self):
+        self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
+    
+    def __call__(self, output, target):
+        # target[target == -1] = 2
+        print("multi class:")
+        print("output shape:",output.shape)
+        print("target shape:",target.shape)
+        #output_softmax = F.softmax(output, dim=1)
+        target = torch.argmax(target, dim=1)
+        # print("output_softmax:",output_softmax)
+        # print("target: ",target)
+        print("output_softmax shape:",output.shape)
+        print("target shape:",target.shape)
+        return self.base_loss(output, target.long())
 
 
 # class weighted_cross_entropy_loss(object):

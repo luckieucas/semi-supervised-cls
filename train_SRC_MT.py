@@ -18,30 +18,31 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torchvision.utils import make_grid
 
-from networks.models import DenseNet121
+from networks.models import DenseNet121,DenseNet161
 from utils import losses, ramps
 from utils.metrics import compute_AUCs
 from utils.metric_logger import MetricLogger
 from dataloaders import  dataset
+from dataloaders import chest_xray_14
 from dataloaders.dataset import TwoStreamBatchSampler
 from utils.util import get_timestamp
 from validation import epochVal, epochVal_metrics
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--root_path', type=str, default='../dataset/skin/training_data/', help='dataset root dir')
-parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training.csv', help='training set csv file')
-parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/validation.csv', help='validation set csv file')
-parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing.csv', help='testing set csv file')
+parser.add_argument('--root_path', type=str, default='../dataset/chest/training_data/', help='dataset root dir')
+parser.add_argument('--csv_file_train', type=str, default='../dataset/chest/training.csv', help='training set csv file')
+parser.add_argument('--csv_file_val', type=str, default='../dataset/chest/validation.csv', help='validation set csv file')
+parser.add_argument('--csv_file_test', type=str, default='../dataset/chest/testing.csv', help='testing set csv file')
 parser.add_argument('--exp', type=str,  default='xxxx', help='model_name')
 parser.add_argument('--epochs', type=int,  default=100, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=16, help='batch_size per gpu')
 parser.add_argument('--labeled_bs', type=int, default=4, help='number of labeled data per batch')
 parser.add_argument('--drop_rate', type=int, default=0.2, help='dropout rate')
 parser.add_argument('--ema_consistency', type=int, default=1, help='whether train baseline model')
-parser.add_argument('--labeled_num', type=int, default=1400, help='number of labeled')
+parser.add_argument('--labeled_rate', type=int, default=0.2, help='number of labeled')
 parser.add_argument('--base_lr', type=float,  default=1e-4, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
-parser.add_argument('--seed', type=int,  default=1337, help='random seed')
+parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
@@ -55,6 +56,8 @@ parser.add_argument('--ema_decay', type=float,  default=0.99, help='ema_decay')
 parser.add_argument('--consistency_type', type=str,  default="mse", help='consistency_type')
 parser.add_argument('--consistency', type=float,  default=1, help='consistency')
 parser.add_argument('--consistency_rampup', type=float,  default=30, help='consistency_rampup')
+#add by liupeng
+parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
 
 train_data_path = args.root_path
@@ -86,6 +89,10 @@ def update_ema_variables(model, ema_model, alpha, global_step):
 
 
 if __name__ == "__main__":
+    resize = 224
+    if args.task == 'chest':
+        dataset = chest_xray_14
+        resize = 384
     ## make logging file
     if not os.path.exists(snapshot_path):
         os.makedirs(snapshot_path)
@@ -101,7 +108,7 @@ if __name__ == "__main__":
 
     def create_model(ema=False):
         # Network definition
-        net = DenseNet121(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        net = DenseNet161(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
         if len(args.gpu.split(',')) > 1:
             net = torch.nn.DataParallel(net)
         model = net.cuda()
@@ -134,7 +141,7 @@ if __name__ == "__main__":
     train_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                             csv_file=args.csv_file_train,
                                             transform=dataset.TransformTwice(transforms.Compose([
-                                                transforms.Resize((224, 224)),
+                                                transforms.Resize((resize, resize)),
                                                 transforms.RandomAffine(degrees=10, translate=(0.02, 0.02)),
                                                 transforms.RandomHorizontalFlip(),
                                                 # transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
@@ -147,22 +154,25 @@ if __name__ == "__main__":
     val_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                           csv_file=args.csv_file_val,
                                           transform=transforms.Compose([
-                                              transforms.Resize((224, 224)),
+                                              transforms.Resize((resize, resize)),
                                               transforms.ToTensor(),
                                               normalize,
                                           ]))
     test_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                           csv_file=args.csv_file_test,
                                           transform=transforms.Compose([
-                                              transforms.Resize((224, 224)),
+                                              transforms.Resize((resize, resize)),
                                               transforms.ToTensor(),
                                               normalize,
                                           ]))
-
-    labeled_idxs = list(range(args.labeled_num))
-    unlabeled_idxs = list(range(args.labeled_num, 7000))
+    print("train_dataset len:",len(train_dataset))
+    train_dataset_num = len(train_dataset)
+    labeled_num = int(train_dataset_num*args.labeled_rate)
+    labeled_idxs = list(range(labeled_num))
+    unlabeled_idxs = list(range(labeled_num, train_dataset_num))
     batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, batch_size, batch_size-labeled_bs)
 
+    
     def worker_init_fn(worker_id):
         random.seed(args.seed+worker_id)
     train_dataloader = DataLoader(dataset=train_dataset, batch_sampler=batch_sampler,
@@ -175,6 +185,8 @@ if __name__ == "__main__":
     model.train()
 
     loss_fn = losses.cross_entropy_loss()
+    if args.task == 'chest':
+        loss_fn = losses.Loss_Ones()
     if args.consistency_type == 'mse':
         consistency_criterion = losses.softmax_mse_loss
     elif args.consistency_type == 'kl':

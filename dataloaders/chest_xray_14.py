@@ -66,9 +66,10 @@ class CheXpertDataset(Dataset):
         image_name = os.path.join(self.root_dir, self.images[index])
         image = Image.open(image_name).convert('RGB')
         label = self.labels[index]
+        #print("label:",label)
         if self.transform is not None:
             image = self.transform(image)
-        return index, image, torch.FloatTensor(label)
+        return image_name, index, image, torch.FloatTensor(label)
 
     def __len__(self):
         return len(self.images)
