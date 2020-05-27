@@ -267,7 +267,6 @@ if __name__ == "__main__":
             iter_num = iter_num + 1
 
             # write tensorboard
-            break # use as test
             if i % 100 == 0:
                 writer.add_scalar('lr', lr_, iter_num)
                 writer.add_scalar('loss/loss', loss, iter_num)
