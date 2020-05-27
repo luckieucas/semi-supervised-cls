@@ -237,7 +237,7 @@ if __name__ == "__main__":
             ## MT loss (have no effect in the beginneing)
             if args.ema_consistency == 1:
                 consistency_weight = get_current_consistency_weight(epoch)
-                consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output)) / batch_size #/ dataset.N_CLASSES
+                consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output, args)) / batch_size #/ dataset.N_CLASSES
                 consistency_loss = consistency_weight * consistency_dist  
 
                 # consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
@@ -265,7 +265,6 @@ if __name__ == "__main__":
             meters_loss_consistency_relation.update(loss=consistency_relation_loss)
 
             iter_num = iter_num + 1
-
             # write tensorboard
             if i % 100 == 0:
                 writer.add_scalar('lr', lr_, iter_num)

@@ -55,41 +55,7 @@ class cross_entropy_loss(object):
         # print("target: ",target)
         return self.base_loss(output_softmax, target.long())
 
-class cross_entropy_loss_multiClass(object):
-    """
-    map all uncertainty values to a unique value "2"
-    """
-    
-    def __init__(self):
-        self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
-    
-    def __call__(self, output, target):
-        # target[target == -1] = 2
-        print("multi class:")
-        print("output shape:",output.shape)
-        print("target shape:",target.shape)
-        #output_softmax = F.softmax(output, dim=1)
-        target = torch.argmax(target, dim=1)
-        # print("output_softmax:",output_softmax)
-        # print("target: ",target)
-        print("output_softmax shape:",output.shape)
-        print("target shape:",target.shape)
-        return self.base_loss(output, target.long())
 
-
-# class weighted_cross_entropy_loss(object):
-#     """
-#     map all uncertainty values to a unique value "2"
-#     """
-    
-#     def __init__(self):
-#         self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
-    
-#     def __call__(self, output, target):
-#         # target[target == -1] = 2
-#         output_softmax = F.softmax(output, dim=1)
-#         target = torch.argmax(target, dim=1)
-#         return self.base_loss(output_softmax, target.long())
 
 def get_UncertaintyLoss(method):
     assert method in METHODS
@@ -154,7 +120,7 @@ def entropy_loss_map(p, C=2):
     ent = -1*torch.sum(p * torch.log(p + 1e-6), dim=1, keepdim=True)/torch.tensor(np.log(C)).cuda()
     return ent
 
-def softmax_mse_loss(input_logits, target_logits):
+def softmax_mse_loss(input_logits, target_logits, args):
     """Takes softmax on both sides and returns MSE loss
 
     Note:
@@ -165,7 +131,12 @@ def softmax_mse_loss(input_logits, target_logits):
     assert input_logits.size() == target_logits.size()
     input_softmax = F.softmax(input_logits, dim=1)
     target_softmax = F.softmax(target_logits, dim=1)
-
+    CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
+    CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
+    if args.task == 'chest':
+        CLASS_NUM = [11559, 2776, 13317, 19894, 5782, 6331, 1431, 5302, 4667, 2303,
+        2516, 1686, 3385, 227] # chest
+        CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
     mse_loss = (input_softmax-target_softmax)**2 * CLASS_WEIGHT
     return mse_loss
 
