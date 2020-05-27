@@ -28,11 +28,12 @@ from dataloaders.dataset import TwoStreamBatchSampler
 from utils.util import get_timestamp
 from validation import epochVal, epochVal_metrics
 
+
 parser = argparse.ArgumentParser()
-parser.add_argument('--root_path', type=str, default='../dataset/chest/training_data/', help='dataset root dir')
-parser.add_argument('--csv_file_train', type=str, default='../dataset/chest/training.csv', help='training set csv file')
-parser.add_argument('--csv_file_val', type=str, default='../dataset/chest/validation.csv', help='validation set csv file')
-parser.add_argument('--csv_file_test', type=str, default='../dataset/chest/testing.csv', help='testing set csv file')
+parser.add_argument('--root_path', type=str, default='../dataset/skin/training_data/', help='dataset root dir')
+parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training.csv', help='training set csv file')
+parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/validation.csv', help='validation set csv file')
+parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing.csv', help='testing set csv file')
 parser.add_argument('--exp', type=str,  default='xxxx', help='model_name')
 parser.add_argument('--epochs', type=int,  default=100, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=16, help='batch_size per gpu')
@@ -93,6 +94,10 @@ if __name__ == "__main__":
     if args.task == 'chest':
         dataset = chest_xray_14
         resize = 384
+        args.root_path = args.root_path.replace("/skin/","/chest/")
+        args.csv_file_train = args.csv_file_train.replace("/skin/","/chest/")
+        args.csv_file_val = args.csv_file_val.replace("/skin/","/chest/")
+        args.csv_file_test = args.csv_file_test.replace("/skin/","/chest/")
     ## make logging file
     if not os.path.exists(snapshot_path):
         os.makedirs(snapshot_path)
@@ -108,7 +113,9 @@ if __name__ == "__main__":
 
     def create_model(ema=False):
         # Network definition
-        net = DenseNet161(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        net = DenseNet121(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        if args.task == 'chest':
+            net = DenseNet161(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
         if len(args.gpu.split(',')) > 1:
             net = torch.nn.DataParallel(net)
         model = net.cuda()
@@ -260,6 +267,7 @@ if __name__ == "__main__":
             iter_num = iter_num + 1
 
             # write tensorboard
+            break # use as test
             if i % 100 == 0:
                 writer.add_scalar('lr', lr_, iter_num)
                 writer.add_scalar('loss/loss', loss, iter_num)
@@ -284,7 +292,7 @@ if __name__ == "__main__":
         # validate student
         # 
 
-        AUROCs, Accus, Senss, Specs = epochVal_metrics(model, val_dataloader)  
+        AUROCs, Accus, Senss, Specs = epochVal_metrics(model, val_dataloader, args)  
         AUROC_avg = np.array(AUROCs).mean()
         Accus_avg = np.array(Accus).mean()
         Senss_avg = np.array(Senss).mean()
@@ -297,7 +305,7 @@ if __name__ == "__main__":
         
         # test student
         # 
-        AUROCs, Accus, Senss, Specs = epochVal_metrics(model, test_dataloader)  
+        AUROCs, Accus, Senss, Specs = epochVal_metrics(model, test_dataloader, args)  
         AUROC_avg = np.array(AUROCs).mean()
         Accus_avg = np.array(Accus).mean()
         Senss_avg = np.array(Senss).mean()

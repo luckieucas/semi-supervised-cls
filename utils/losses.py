@@ -10,10 +10,10 @@ Including:
 """
 
 METHODS = ['U-Ignore', 'U-Zeros', 'U-Ones', 'U-SelfTrained', 'U-MultiClass']
-#CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
-CLASS_NUM = [11559, 2776, 13317, 19894, 5782, 6331, 1431, 5302, 4667, 2303, 2516, 1686, 3385, 227] # chest
-#CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
-CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
+CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
+#CLASS_NUM = [11559, 2776, 13317, 19894, 5782, 6331, 1431, 5302, 4667, 2303, 2516, 1686, 3385, 227] # chest
+CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
+#CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
 
 class Loss_Zeros(object):
     """

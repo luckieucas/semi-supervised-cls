@@ -55,14 +55,14 @@ def epochVal(model, dataLoader, loss_fn, args):
             gt = torch.cat((gt, gt_study[study].view(1, -1)), 0)
             pred = torch.cat((pred, pred_study[study].view(1, -1)), 0)
         
-        AUROCs = compute_AUCs(gt, pred, competition=True)
+        AUROCs = compute_AUCs(gt, pred, args, competition=True)
     
     model.train(training)
 
     return meters.loss.global_avg, AUROCs
 
 
-def epochVal_metrics(model, dataLoader):
+def epochVal_metrics(model, dataLoader, args):
     training = model.training
     model.eval()
 
@@ -98,13 +98,13 @@ def epochVal_metrics(model, dataLoader):
             gt = torch.cat((gt, gt_study[study].view(1, -1)), 0)
             pred = torch.cat((pred, pred_study[study].view(1, -1)), 0)
 
-        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred, competition=True)
+        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred,args, competition=True)
     
     model.train(training)
 
     return AUROCs, Accus, Senss, Specs
 
-def epochVal_metrics_test(model, dataLoader):
+def epochVal_metrics_test(model, dataLoader, args):
     training = model.training
     model.eval()
 
@@ -140,7 +140,7 @@ def epochVal_metrics_test(model, dataLoader):
             gt = torch.cat((gt, gt_study[study].view(1, -1)), 0)
             pred = torch.cat((pred, pred_study[study].view(1, -1)), 0)
 
-        AUROCs, Accus, Senss, Specs, pre, F1 = compute_metrics_test(gt, pred, competition=True)
+        AUROCs, Accus, Senss, Specs, pre, F1 = compute_metrics_test(gt, pred, args, competition=True)
     
     model.train(training)
 

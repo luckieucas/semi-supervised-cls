@@ -1,16 +1,23 @@
 # encoding: utf-8
+import sys
 import numpy as np
 from sklearn.metrics.ranking import roc_auc_score
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score#, sensitivity_score
 from imblearn.metrics import sensitivity_score, specificity_score
 import pdb
 from sklearn.metrics.ranking import roc_auc_score
+sys.path.append("..")
+#N_CLASSES = 7
+#CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis', 'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
 
 
-N_CLASSES = 7
-CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis', 'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
+# N_CLASSES = 14
+# CLASS_NAMES = [
+#         'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia', 'Pneumothorax',
+#         'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'
+#                   ]
 
-def compute_AUCs(gt, pred, competition=True):
+def compute_AUCs(gt, pred, args, competition=True):
     """
     Computes Area Under the Curve (AUC) from prediction scores.
     Args:
@@ -27,6 +34,12 @@ def compute_AUCs(gt, pred, competition=True):
     AUROCs = []
     gt_np = gt.cpu().detach().numpy()
     pred_np = pred.cpu().detach().numpy()
+    CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
+        'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
+    if args.task == 'chest':
+        CLASS_NAMES = [
+        'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
+         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
     indexes = range(len(CLASS_NAMES))
     
     for i in indexes:
@@ -37,7 +50,7 @@ def compute_AUCs(gt, pred, competition=True):
     return AUROCs
 
 
-def compute_metrics(gt, pred, competition=True):
+def compute_metrics(gt, pred, args, competition=True):
     """
     Computes accuracy, precision, recall and F1-score from prediction scores.
     Args:
@@ -64,6 +77,12 @@ def compute_metrics(gt, pred, competition=True):
     #indexes = range(n_classes)
     
 #     pdb.set_trace()
+    CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
+        'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
+    if args.task == 'chest':
+        CLASS_NAMES = [
+        'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
+         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):
@@ -94,7 +113,7 @@ def compute_metrics(gt, pred, competition=True):
     
     return AUROCs, Accus, Senss, Specs
 
-def compute_metrics_test(gt, pred, competition=True):
+def compute_metrics_test(gt, pred, args, competition=True):
     """
     Computes accuracy, precision, recall and F1-score from prediction scores.
     Args:
@@ -121,6 +140,12 @@ def compute_metrics_test(gt, pred, competition=True):
     #indexes = range(n_classes)
     
 #     pdb.set_trace()
+    CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
+        'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
+    if args.task == 'chest':
+        CLASS_NAMES = [
+        'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
+         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):
