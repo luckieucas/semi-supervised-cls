@@ -82,7 +82,9 @@ def compute_metrics(gt, pred, args, competition=True):
     if args.task == 'chest':
         CLASS_NAMES = [
         'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
-         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
+         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
+    if args.task == 'hip':
+        CLASS_NAMES = ['Normal', 'ONFH_I', 'ONFH_II']  
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):

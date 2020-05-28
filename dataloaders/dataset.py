@@ -15,8 +15,8 @@ import itertools
 from torch.utils.data.sampler import Sampler
 
 
-N_CLASSES = 7
-CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis', 'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
+#N_CLASSES = 7
+#CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis', 'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
 
 
 class CheXpertDataset(Dataset):
@@ -47,7 +47,7 @@ class CheXpertDataset(Dataset):
         """
         items = self.images[index]#.split('/')
         #study = items[2] + '/' + items[3]
-        image_name = os.path.join(self.root_dir, self.images[index]+'.jpg')
+        image_name = os.path.join(self.root_dir, self.images[index])
         image = Image.open(image_name).convert('RGB')
         label = self.labels[index]
         if self.transform is not None:

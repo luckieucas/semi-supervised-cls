@@ -40,7 +40,7 @@ parser.add_argument('--batch_size', type=int, default=16, help='batch_size per g
 parser.add_argument('--labeled_bs', type=int, default=4, help='number of labeled data per batch')
 parser.add_argument('--drop_rate', type=int, default=0.2, help='dropout rate')
 parser.add_argument('--ema_consistency', type=int, default=1, help='whether train baseline model')
-parser.add_argument('--labeled_rate', type=int, default=0.2, help='number of labeled')
+parser.add_argument('--labeled_rate', type=float, default=0.2, help='number of labeled')
 parser.add_argument('--base_lr', type=float,  default=1e-4, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
@@ -91,13 +91,24 @@ def update_ema_variables(model, ema_model, alpha, global_step):
 
 if __name__ == "__main__":
     resize = 224
+    CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
+     'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
     if args.task == 'chest':
+        CLASS_NAMES = ['Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 
+        'Pneumonia', 'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 
+        'Pleural_Thickening', 'Hernia']
         dataset = chest_xray_14
         resize = 384
         args.root_path = args.root_path.replace("/skin/","/chest/")
         args.csv_file_train = args.csv_file_train.replace("/skin/","/chest/")
         args.csv_file_val = args.csv_file_val.replace("/skin/","/chest/")
         args.csv_file_test = args.csv_file_test.replace("/skin/","/chest/")
+    if args.task == 'hip':
+        CLASS_NAMES = ['Normal','ONFH_I','ONFH_II']
+        args.root_path = args.root_path.replace("/skin/","/hip/")
+        args.csv_file_train = args.csv_file_train.replace("/skin/","/hip/")
+        args.csv_file_val = args.csv_file_val.replace("/skin/","/hip/")
+        args.csv_file_test = args.csv_file_test.replace("/skin/","/hip/")
     ## make logging file
     if not os.path.exists(snapshot_path):
         os.makedirs(snapshot_path)
@@ -110,12 +121,14 @@ if __name__ == "__main__":
                         format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
     logging.info(str(args))
-
     def create_model(ema=False):
         # Network definition
-        net = DenseNet121(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        num_class = 7
+        if args.task == 'hip':
+            num_class = 3
+        net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
         if args.task == 'chest':
-            net = DenseNet161(out_size=dataset.N_CLASSES, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+            net = DenseNet161(out_size=14, mode=args.label_uncertainty, drop_rate=args.drop_rate)
         if len(args.gpu.split(',')) > 1:
             net = torch.nn.DataParallel(net)
         model = net.cuda()
@@ -175,6 +188,7 @@ if __name__ == "__main__":
     print("train_dataset len:",len(train_dataset))
     train_dataset_num = len(train_dataset)
     labeled_num = int(train_dataset_num*args.labeled_rate)
+    print("labeled_num:",labeled_num)
     labeled_idxs = list(range(labeled_num))
     unlabeled_idxs = list(range(labeled_num, train_dataset_num))
     batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, batch_size, batch_size-labeled_bs)
@@ -191,7 +205,7 @@ if __name__ == "__main__":
     
     model.train()
 
-    loss_fn = losses.cross_entropy_loss()
+    loss_fn = losses.cross_entropy_loss(args)
     if args.task == 'chest':
         loss_fn = losses.Loss_Ones()
     if args.consistency_type == 'mse':
@@ -299,7 +313,7 @@ if __name__ == "__main__":
         logging.info("\nVAL Student: Epoch: {}, iteration: {}".format(epoch, i))
         logging.info("\nVAL AUROC: {:6f}, VAL Accus: {:6f}, VAL Senss: {:6f}, VAL Specs: {:6f}"
                     .format(AUROC_avg, Accus_avg, Senss_avg, Specs_avg))
-        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(dataset.CLASS_NAMES[i], v) for i,v in enumerate(AUROCs)]))
+        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(CLASS_NAMES[i], v) for i,v in enumerate(AUROCs)]))
         
         # test student
         # 
@@ -312,7 +326,7 @@ if __name__ == "__main__":
         logging.info("\nTEST Student: Epoch: {}, iteration: {}".format(epoch, i))
         logging.info("\nTEST AUROC: {:6f}, TEST Accus: {:6f}, TEST Senss: {:6f}, TEST Specs: {:6f}"
                     .format(AUROC_avg, Accus_avg, Senss_avg, Specs_avg))
-        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(dataset.CLASS_NAMES[i], v) for i,v in enumerate(AUROCs)]))
+        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(CLASS_NAMES[i], v) for i,v in enumerate(AUROCs)]))
 
         # save model
         save_mode_path = os.path.join(snapshot_path + 'checkpoint/', 'epoch_' + str(epoch+1) + '.pth')
