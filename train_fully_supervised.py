@@ -43,7 +43,7 @@ parser.add_argument('--labeled_bs', type=int, default=4, help='number of labeled
 parser.add_argument('--drop_rate', type=int, default=0.2, help='dropout rate')
 parser.add_argument('--ema_consistency', type=int, default=1, help='whether train baseline model')
 parser.add_argument('--labeled_rate', type=float, default=0.2, help='number of labeled')
-parser.add_argument('--base_lr', type=float,  default=1e-4, help='maximum epoch number to train')
+parser.add_argument('--base_lr', type=float,  default=0.001, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
@@ -51,9 +51,11 @@ parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
 parser.add_argument('--backbone', type=str,  default='xception', help='backbone network')
 parser.add_argument('--supervise_level', type=str,  default='full', help='full or semi supervised')
+
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')
 parser.add_argument('--start_epoch', type=int,  default=0, help='start_epoch')
 parser.add_argument('--global_step', type=int,  default=0, help='global_step')
+parser.add_argument('--resize', type=int,  default=256, help='image resize')
 ### costs
 parser.add_argument('--label_uncertainty', type=str,  default='U-Ones', help='label type')
 parser.add_argument('--consistency_relation_weight', type=int,  default=1, help='consistency relation weight')
@@ -66,12 +68,11 @@ parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
 
 train_data_path = args.root_path
-snapshot_path = "../model/" + args.exp + "/"
+snapshot_path = "../model/" + args.exp+"_"+args.backbone+"_"+args.supervise_level + "/"
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 batch_size = args.batch_size * len(args.gpu.split(','))
 base_lr = args.base_lr
-labeled_bs = args.labeled_bs * len(args.gpu.split(','))
 
 if args.deterministic:
     cudnn.benchmark = False
@@ -89,7 +90,7 @@ def get_current_consistency_weight(epoch):
 
 
 if __name__ == "__main__":
-    resize = 224
+    resize = args.resize
     CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
      'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
     if args.task == 'chest':
@@ -136,8 +137,9 @@ if __name__ == "__main__":
         return model
 
     model = create_model()
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.base_lr, 
-                                 betas=(0.9, 0.999), weight_decay=5e-4)
+    # optimizer = torch.optim.Adam(model.parameters(), lr=args.base_lr, 
+    #                              betas=(0.9, 0.999), weight_decay=5e-4)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.base_lr)
 
     if args.resume:
         assert os.path.isfile(args.resume), "=> no checkpoint found at '{}'".format(args.resume)
@@ -151,15 +153,16 @@ if __name__ == "__main__":
         logging.info("=> loaded checkpoint '{}' (epoch {})".format(args.resume, checkpoint['epoch']))
 
     # dataset
-    normalize = transforms.Normalize([0.485, 0.456, 0.406],
-                                     [0.229, 0.224, 0.225])
+    normalize = transforms.Normalize([0.605, 0.605, 0.605],
+                                     [0.156, 0.156, 0.156])
 
     train_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                             csv_file=args.csv_file_train,
                                             transform=transforms.Compose([
+                                                            transforms.RandomCrop(480),
+                                                transforms.RandomRotation(15),
+                                                transforms.RandomAffine(degrees=10, scale=(0.8, 1.2)),
                                                 transforms.Resize((resize, resize)),
-                                                transforms.RandomAffine(degrees=10, translate=(0.02, 0.02)),
-                                                transforms.RandomHorizontalFlip(),
                                                 # transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
                                                 # transforms.RandomRotation(10),
                                                 # transforms.RandomResizedCrop(224),
@@ -182,9 +185,6 @@ if __name__ == "__main__":
                                               normalize,
                                           ]))
     print("train_dataset len:",len(train_dataset))
-    train_dataset_num = len(train_dataset)
-    labeled_num = int(train_dataset_num*args.labeled_rate)
-    print("labeled_num:",labeled_num)
     #labeled_idxs = list(range(labeled_num))
     #unlabeled_idxs = list(range(labeled_num, train_dataset_num))
     #batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, batch_size, batch_size-labeled_bs)
@@ -193,7 +193,7 @@ if __name__ == "__main__":
     def worker_init_fn(worker_id):
         random.seed(args.seed+worker_id)
     train_dataloader = DataLoader(dataset=train_dataset, batch_size = batch_size,
-                                  num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
+                                  shuffle=True, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     val_dataloader = DataLoader(dataset=val_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
@@ -202,14 +202,6 @@ if __name__ == "__main__":
     model.train()
 
     loss_fn = losses.cross_entropy_loss(args)
-    if args.task == 'chest':
-        loss_fn = losses.Loss_Ones()
-    if args.consistency_type == 'mse':
-        consistency_criterion = losses.softmax_mse_loss
-    elif args.consistency_type == 'kl':
-        consistency_criterion = losses.softmax_kl_loss
-    else:
-        assert False, args.consistency_type
 
     writer = SummaryWriter(snapshot_path+'/log')
 
@@ -218,6 +210,8 @@ if __name__ == "__main__":
     model.train()
 
     #train
+    class_weight = torch.FloatTensor([1.0,6.0,1.5]).cuda()
+    criterion = torch.nn.CrossEntropyLoss(weight=class_weight)
     for epoch in range(args.start_epoch, args.epochs):
         meters_loss = MetricLogger(delimiter="  ")
         meters_loss_classification = MetricLogger(delimiter="  ")
@@ -228,13 +222,14 @@ if __name__ == "__main__":
         for i, (_, _, image_batch, label_batch) in enumerate(train_dataloader):
             time2 = time.time()
             # print('fetch data cost {}'.format(time2-time1))
-            image_batch, label_batch = image_batch.cuda(), label_batch.cuda()
+            image_batch, label_batch = image_batch.type(torch.FloatTensor).cuda(), label_batch.type(torch.LongTensor).cuda()
             inputs = image_batch #+ noise1
 
             outputs = model(inputs)
 
             ## calculate the loss
-            loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
+            label_batch = torch.max(label_batch, 1)[1]
+            loss_classification = criterion(outputs, label_batch)
             loss = loss_classification
 
             optimizer.zero_grad()

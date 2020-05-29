@@ -36,7 +36,7 @@ class CheXpertDataset(Dataset):
         self.labels = file.iloc[:, 1:-1].values.astype(int)
         self.transform = transform
 
-        print('Total # images:{}, labels:{}'.format(len(self.images),len(self.labels)))
+        print('single label  Total # images:{}, labels:{}'.format(len(self.images),len(self.labels)))
 
     def __getitem__(self, index):
         """

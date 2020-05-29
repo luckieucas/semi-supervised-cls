@@ -1,6 +1,7 @@
 # encoding: utf-8
 import sys
 import numpy as np
+import torch
 from sklearn.metrics.ranking import roc_auc_score
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score#, sensitivity_score
 from imblearn.metrics import sensitivity_score, specificity_score
@@ -64,19 +65,6 @@ def compute_metrics(gt, pred, args, competition=True):
     Returns:
         List of AUROCs of all classes.
     """
-
-    AUROCs, Accus, Senss, Recas, Specs = [], [], [], [], []
-    gt_np = gt.cpu().detach().numpy()
-    # if cfg.uncertainty == 'U-Zeros':
-    #     gt_np[np.where(gt_np==-1)] = 0
-    # if cfg.uncertainty == 'U-Ones':
-    #     gt_np[np.where(gt_np==-1)] = 1
-    pred_np = pred.cpu().detach().numpy()
-    THRESH = 0.18
-    #     indexes = TARGET_INDEXES if competition else range(N_CLASSES)
-    #indexes = range(n_classes)
-    
-#     pdb.set_trace()
     CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
         'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
     if args.task == 'chest':
@@ -84,7 +72,38 @@ def compute_metrics(gt, pred, args, competition=True):
         'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
          'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
     if args.task == 'hip':
-        CLASS_NAMES = ['Normal', 'ONFH_I', 'ONFH_II']  
+        CLASS_NAMES = ['Normal', 'ONFH_I', 'ONFH_II']
+    # compute true accu
+    correct = list(0. for i in range(len(CLASS_NAMES)))
+    total = list(0. for i in range(len(CLASS_NAMES)))
+    pred_true_acc = torch.max(pred, 1)[1]
+    gt_true_acc = torch.max(gt, 1)[1]
+    res = pred_true_acc == gt_true_acc
+    train_correct = (pred_true_acc == gt_true_acc).sum()
+    for label_idx in range(len(pred_true_acc)):
+        label_single = gt_true_acc[label_idx]
+        correct[label_single] += res[label_idx].item()
+        total[label_single] += 1
+    # compute true accu
+
+
+    pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
+    pred = torch.zeros(len(pred), 3).scatter_(1, pred, 1)
+    AUROCs, Accus, Senss, Recas, Specs = [], [], [], [], []
+    gt_np = gt.cpu().detach().numpy()
+    # if cfg.uncertainty == 'U-Zeros':
+    #     gt_np[np.where(gt_np==-1)] = 0
+    # if cfg.uncertainty == 'U-Ones':
+    #     gt_np[np.where(gt_np==-1)] = 1
+    pred_np = pred.numpy()
+    
+    
+    THRESH = 0.18
+    #     indexes = TARGET_INDEXES if competition else range(N_CLASSES)
+    #indexes = range(n_classes)
+    
+#     pdb.set_trace()
+
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):
@@ -95,7 +114,8 @@ def compute_metrics(gt, pred, args, competition=True):
             AUROCs.append(0)
         
         try:
-            Accus.append(accuracy_score(gt_np[:, i], (pred_np[:, i]>=THRESH)))
+            #Accus.append(accuracy_score(gt_np[:, i], (pred_np[:, i])))
+            Accus.append(correct[i]/total[i])
         except ValueError as error:
             print('Error in computing accuracy for {}.\n Error msg:{}'.format(i, error))
             Accus.append(0)
@@ -137,7 +157,7 @@ def compute_metrics_test(gt, pred, args, competition=True):
     # if cfg.uncertainty == 'U-Ones':
     #     gt_np[np.where(gt_np==-1)] = 1
     pred_np = pred.cpu().detach().numpy()
-    THRESH = 0.18
+    THRESH = 0.0
     #     indexes = TARGET_INDEXES if competition else range(N_CLASSES)
     #indexes = range(n_classes)
     
@@ -148,6 +168,8 @@ def compute_metrics_test(gt, pred, args, competition=True):
         CLASS_NAMES = [
         'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
          'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
+    if args.task == 'hip':
+        CLASS_NAMES = ['Normal','ONFH I','ONFH II']
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):
