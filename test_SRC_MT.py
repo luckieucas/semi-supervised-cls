@@ -44,6 +44,7 @@ parser.add_argument('--deterministic', type=int,  default=1, help='whether use d
 parser.add_argument('--seed', type=int,  default=1337, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1,2', help='GPU to use')
 ### tune
+parser.add_argument('--supervise_level', type=str,  default='semi', help='full or semi supervised')
 parser.add_argument('--resume', type=str,  default='../model/xxxx/checkpoint/epoch_1.pth', help='Model to resume')
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')
 parser.add_argument('--start_epoch', type=int,  default=0, help='start epoch')

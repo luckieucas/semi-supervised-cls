@@ -11,12 +11,14 @@ import pandas as pd
 from tensorboardX import SummaryWriter
 
 import torch
+from torch import nn
 import torch.optim as optim
 from torchvision import transforms
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torchvision.utils import make_grid
+import pretrainedmodels
 
 from networks.models import DenseNet121,DenseNet161
 from utils import losses, ramps
@@ -31,9 +33,9 @@ from validation import epochVal, epochVal_metrics
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='../dataset/skin/training_data/', help='dataset root dir')
-parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training.csv', help='training set csv file')
-parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/validation.csv', help='validation set csv file')
-parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing.csv', help='testing set csv file')
+parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training_fold1.csv', help='training set csv file')
+parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/testing_fold1.csv', help='validation set csv file')
+parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing_fold1.csv', help='testing set csv file')
 parser.add_argument('--exp', type=str,  default='xxxx', help='model_name')
 parser.add_argument('--epochs', type=int,  default=100, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=16, help='batch_size per gpu')
@@ -47,6 +49,8 @@ parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
+parser.add_argument('--backbone', type=str,  default='xception', help='backbone network')
+parser.add_argument('--supervise_level', type=str,  default='full', help='full or semi supervised')
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')
 parser.add_argument('--start_epoch', type=int,  default=0, help='start_epoch')
 parser.add_argument('--global_step', type=int,  default=0, help='global_step')
@@ -82,11 +86,6 @@ def get_current_consistency_weight(epoch):
 
     return args.consistency * ramps.sigmoid_rampup(epoch, args.consistency_rampup)
 
-def update_ema_variables(model, ema_model, alpha, global_step):
-    # Use the true average until the exponential average is more correct
-    alpha = min(1 - 1 / (global_step + 1), alpha)
-    for ema_param, param in zip(ema_model.parameters(), model.parameters()):
-        ema_param.data.mul_(alpha).add_(1 - alpha, param.data)
 
 
 if __name__ == "__main__":
@@ -121,24 +120,22 @@ if __name__ == "__main__":
                         format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
     logging.info(str(args))
-    def create_model(ema=False):
+    def create_model():
         # Network definition
         num_class = 7
         if args.task == 'hip':
             num_class = 3
-        net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
-        if args.task == 'chest':
-            net = DenseNet161(out_size=14, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        
+        net = pretrainedmodels.__dict__[args.backbone](num_classes=1000,
+                                                      pretrained='imagenet')
+        num_fc = net.last_linear.in_features
+        net.last_linear = nn.Linear(num_fc, num_class)
         if len(args.gpu.split(',')) > 1:
             net = torch.nn.DataParallel(net)
         model = net.cuda()
-        if ema:
-            for param in model.parameters():
-                param.detach_()
         return model
 
     model = create_model()
-    ema_model = create_model(ema=True)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.base_lr, 
                                  betas=(0.9, 0.999), weight_decay=5e-4)
 
@@ -150,7 +147,6 @@ if __name__ == "__main__":
         args.global_step = checkpoint['global_step']
         # best_prec1 = checkpoint['best_prec1']
         model.load_state_dict(checkpoint['state_dict'])
-        ema_model.load_state_dict(checkpoint['ema_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer'])
         logging.info("=> loaded checkpoint '{}' (epoch {})".format(args.resume, checkpoint['epoch']))
 
@@ -160,7 +156,7 @@ if __name__ == "__main__":
 
     train_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                             csv_file=args.csv_file_train,
-                                            transform=dataset.TransformTwice(transforms.Compose([
+                                            transform=transforms.Compose([
                                                 transforms.Resize((resize, resize)),
                                                 transforms.RandomAffine(degrees=10, translate=(0.02, 0.02)),
                                                 transforms.RandomHorizontalFlip(),
@@ -169,7 +165,7 @@ if __name__ == "__main__":
                                                 # transforms.RandomResizedCrop(224),
                                                 transforms.ToTensor(),
                                                 normalize,
-                                            ])))
+                                            ]))
 
     val_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                           csv_file=args.csv_file_val,
@@ -189,14 +185,14 @@ if __name__ == "__main__":
     train_dataset_num = len(train_dataset)
     labeled_num = int(train_dataset_num*args.labeled_rate)
     print("labeled_num:",labeled_num)
-    labeled_idxs = list(range(labeled_num))
-    unlabeled_idxs = list(range(labeled_num, train_dataset_num))
-    batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, batch_size, batch_size-labeled_bs)
+    #labeled_idxs = list(range(labeled_num))
+    #unlabeled_idxs = list(range(labeled_num, train_dataset_num))
+    #batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, batch_size, batch_size-labeled_bs)
 
     
     def worker_init_fn(worker_id):
         random.seed(args.seed+worker_id)
-    train_dataloader = DataLoader(dataset=train_dataset, batch_sampler=batch_sampler,
+    train_dataloader = DataLoader(dataset=train_dataset, batch_size = batch_size,
                                   num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     val_dataloader = DataLoader(dataset=val_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
@@ -228,55 +224,26 @@ if __name__ == "__main__":
         meters_loss_consistency = MetricLogger(delimiter="  ")
         meters_loss_consistency_relation = MetricLogger(delimiter="  ")
         time1 = time.time()
-        iter_max = len(train_dataloader)    
-        for i, (_,_, (image_batch, ema_image_batch), label_batch) in enumerate(train_dataloader):
+        iter_max = len(train_dataloader)  
+        for i, (_, _, image_batch, label_batch) in enumerate(train_dataloader):
             time2 = time.time()
             # print('fetch data cost {}'.format(time2-time1))
-            image_batch, ema_image_batch, label_batch = image_batch.cuda(), ema_image_batch.cuda(), label_batch.cuda()
-            # unlabeled_image_batch = ema_image_batch[labeled_bs:]
-
-            # noise1 = torch.clamp(torch.randn_like(image_batch) * 0.1, -0.1, 0.1)
-            # noise2 = torch.clamp(torch.randn_like(ema_image_batch) * 0.1, -0.1, 0.1)
-            ema_inputs = ema_image_batch #+ noise2
+            image_batch, label_batch = image_batch.cuda(), label_batch.cuda()
             inputs = image_batch #+ noise1
 
-            activations, outputs = model(inputs)
-            with torch.no_grad():
-                ema_activations, ema_output = ema_model(ema_inputs)
+            outputs = model(inputs)
 
             ## calculate the loss
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
 
-            ## MT loss (have no effect in the beginneing)
-            if args.ema_consistency == 1:
-                consistency_weight = get_current_consistency_weight(epoch)
-                consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output, args)) / batch_size #/ dataset.N_CLASSES
-                consistency_loss = consistency_weight * consistency_dist  
-
-                # consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
-                consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
-                consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
-            else:
-                consistency_loss = 0.0
-                consistency_relation_loss = 0.0
-                consistency_weight = 0.0
-                consistency_dist = 0.0
-             #+ consistency_loss
-
-            if (epoch > 20) and (args.ema_consistency == 1):
-                loss = loss_classification + consistency_loss + consistency_relation_loss
-
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            update_ema_variables(model, ema_model, args.ema_decay, iter_num)
 
             # outputs_soft = F.softmax(outputs, dim=1)
             meters_loss.update(loss=loss)
             meters_loss_classification.update(loss=loss_classification)
-            meters_loss_consistency.update(loss=consistency_loss)
-            meters_loss_consistency_relation.update(loss=consistency_relation_loss)
 
             iter_num = iter_num + 1
             # write tensorboard
@@ -284,20 +251,13 @@ if __name__ == "__main__":
                 writer.add_scalar('lr', lr_, iter_num)
                 writer.add_scalar('loss/loss', loss, iter_num)
                 writer.add_scalar('loss/loss_classification', loss_classification, iter_num)
-                writer.add_scalar('train/consistency_loss', consistency_loss, iter_num)
-                writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
-                writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
-                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, consistency weight: {:.6f}, lr: {}"
-                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
+                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, lr: {}"
+                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg,optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
                 writer.add_image('raw/Image', grid_image, iter_num)
-
-                image = ema_inputs[-1, :, :]
-                grid_image = make_grid(image, 5, normalize=True)
-                writer.add_image('noise/Image', grid_image, iter_num)
 
         timestamp = get_timestamp()
 
@@ -339,7 +299,6 @@ if __name__ == "__main__":
         torch.save({    'epoch': epoch + 1,
                         'global_step': iter_num,
                         'state_dict': model.state_dict(),
-                        'ema_state_dict': ema_model.state_dict(),
                         'optimizer' : optimizer.state_dict(),
                         'epochs'    : epoch,
                         # 'AUROC'     : AUROC_best,
