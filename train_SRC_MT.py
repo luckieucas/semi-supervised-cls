@@ -47,6 +47,7 @@ parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
+parser.add_argument('--supervise_level', type=str,  default='semi', help='full or semi supervised')
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')
 parser.add_argument('--start_epoch', type=int,  default=0, help='start_epoch')
 parser.add_argument('--global_step', type=int,  default=0, help='global_step')
