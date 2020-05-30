@@ -9,6 +9,7 @@ import random
 import numpy as np
 import pandas as pd
 from tensorboardX import SummaryWriter
+import torchvision
 
 import torch
 from torch import nn
