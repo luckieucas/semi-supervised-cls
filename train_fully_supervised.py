@@ -135,7 +135,7 @@ if __name__ == "__main__":
         if args.backbone == 'xception':
             num_fc = net.last_linear.in_features
             net.last_linear = nn.Linear(num_fc, num_class)
-        if args.bachbone == 'densenet121':
+        if args.backbone == 'densenet121':
             num_fc = model.classifier.in_features
             model.classifier = torch.nn.Linear(num_fc, num_class)
         if len(args.gpu.split(',')) > 1:
