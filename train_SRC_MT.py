@@ -198,7 +198,7 @@ if __name__ == "__main__":
     def worker_init_fn(worker_id):
         random.seed(args.seed+worker_id)
     train_dataloader = DataLoader(dataset=train_dataset, batch_sampler=batch_sampler,
-                                  num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
+                                  shuffle=True,num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     val_dataloader = DataLoader(dataset=val_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
