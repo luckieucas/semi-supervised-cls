@@ -111,6 +111,9 @@ if __name__ == "__main__":
         args.csv_file_train = args.csv_file_train.replace("/skin/","/hip/")
         args.csv_file_val = args.csv_file_val.replace("/skin/","/hip/")
         args.csv_file_test = args.csv_file_test.replace("/skin/","/hip/")
+    if args.task == 'hip_3cls':
+        CLASS_NAMES = ['Normal','OA','ONFH']
+        args.root_path = args.root_path.replace("/skin/","/hip_3cls/")
     ## make logging file
     if not os.path.exists(snapshot_path):
         os.makedirs(snapshot_path)
@@ -126,7 +129,7 @@ if __name__ == "__main__":
     def create_model(ema=False):
         # Network definition
         num_class = 7
-        if args.task == 'hip':
+        if args.task == 'hip' or args.task == 'hip_3cls':
             num_class = 3
         net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
         if args.task == 'chest':

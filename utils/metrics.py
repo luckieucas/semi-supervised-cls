@@ -73,6 +73,8 @@ def compute_metrics(gt, pred, args, competition=True):
          'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
     if args.task == 'hip':
         CLASS_NAMES = ['Normal', 'ONFH_I', 'ONFH_II']
+    if args.task == 'hip_3cls':
+        CLASS_NAMES = ['Normal', 'OA', 'ONFH']
     # compute true accu
     correct = list(0. for i in range(len(CLASS_NAMES)))
     total = list(0. for i in range(len(CLASS_NAMES)))
@@ -171,6 +173,8 @@ def compute_metrics_test(gt, pred, args, competition=True):
          'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia'] 
     if args.task == 'hip':
         CLASS_NAMES = ['Normal','ONFH I','ONFH II']
+    if args.task == 'hip_3cls':
+        CLASS_NAMES = ['Normal','OA','ONFH']
     indexes = range(len(CLASS_NAMES))
     
     for i, cls in enumerate(indexes):

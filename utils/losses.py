@@ -50,6 +50,9 @@ class cross_entropy_loss(object):
         if args.task == 'hip':
             CLASS_NUM = [1066,259,659]
             CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
+        if args.task == 'hip_3cls':
+            CLASS_NUM = [6046.0,6906.0,9832.0]
+            CLASS_WEIGHT = torch.Tensor([22784.0/i for i in CLASS_NUM]).cuda()
             #CLASS_WEIGHT = torch.Tensor([1,1,1]).cuda()
         self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
     
@@ -146,6 +149,9 @@ def softmax_mse_loss(input_logits, target_logits, args):
     if args.task == 'hip':
         CLASS_NUM = [1066,259,659]
         CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
+    if args.task == 'hip_3cls':
+        CLASS_NUM = [6046.0,6906.0,9832.0]
+        CLASS_WEIGHT = torch.Tensor([22784.0/i for i in CLASS_NUM]).cuda()
     mse_loss = (input_softmax-target_softmax)**2 * CLASS_WEIGHT
     return mse_loss
 
