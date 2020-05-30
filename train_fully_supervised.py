@@ -132,8 +132,12 @@ if __name__ == "__main__":
         
         net = pretrainedmodels.__dict__[args.backbone](num_classes=1000,
                                                       pretrained='imagenet')
-        num_fc = net.last_linear.in_features
-        net.last_linear = nn.Linear(num_fc, num_class)
+        if args.backbone == 'xception':
+            num_fc = net.last_linear.in_features
+            net.last_linear = nn.Linear(num_fc, num_class)
+        if args.bachbone == 'densenet121':
+            num_fc = model.classifier.in_features
+            model.classifier = torch.nn.Linear(num_fc, num_class)
         if len(args.gpu.split(',')) > 1:
             net = torch.nn.DataParallel(net)
         model = net.cuda()
