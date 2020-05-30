@@ -136,6 +136,7 @@ if __name__ == "__main__":
             num_fc = net.last_linear.in_features
             net.last_linear = nn.Linear(num_fc, num_class)
         if args.backbone == 'densenet121':
+            net = torchvision.models.densenet121(pretrained=True)
             num_fc = net.classifier.in_features
             net.classifier = torch.nn.Linear(num_fc, num_class)
         if len(args.gpu.split(',')) > 1:
