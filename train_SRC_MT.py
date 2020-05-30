@@ -63,7 +63,7 @@ parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
 
 train_data_path = args.root_path
-snapshot_path = "../model/" + args.exp + "/"
+snapshot_path = "../model/" + args.task + "_" + args.exp+"_"+args.backbone+"_"+args.supervise_level + "/"
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 batch_size = args.batch_size * len(args.gpu.split(','))

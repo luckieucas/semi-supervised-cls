@@ -68,7 +68,7 @@ parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
 
 train_data_path = args.root_path
-snapshot_path = "../model/" + args.exp+"_"+args.backbone+"_"+args.supervise_level + "/"
+snapshot_path = "../model/" + args.task + "_" + args.exp+"_"+args.backbone+"_"+args.supervise_level + "/"
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 batch_size = args.batch_size * len(args.gpu.split(','))
@@ -159,10 +159,12 @@ if __name__ == "__main__":
     train_dataset = dataset.CheXpertDataset(root_dir=args.root_path,
                                             csv_file=args.csv_file_train,
                                             transform=transforms.Compose([
-                                                            transforms.RandomCrop(480),
-                                                transforms.RandomRotation(15),
-                                                transforms.RandomAffine(degrees=10, scale=(0.8, 1.2)),
+                                                #             transforms.RandomCrop(480),
+                                                # transforms.RandomRotation(15),
+                                                # transforms.RandomAffine(degrees=10, scale=(0.8, 1.2)),
                                                 transforms.Resize((resize, resize)),
+                                                transforms.RandomAffine(degrees=10, translate=(0.02, 0.02)),
+                                                transforms.RandomHorizontalFlip(),
                                                 # transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
                                                 # transforms.RandomRotation(10),
                                                 # transforms.RandomResizedCrop(224),
@@ -228,8 +230,8 @@ if __name__ == "__main__":
             outputs = model(inputs)
 
             ## calculate the loss
-            label_batch = torch.max(label_batch, 1)[1]
-            loss_classification = criterion(outputs, label_batch)
+            #label_batch = torch.max(label_batch, 1)[1]
+            loss_classification = loss_fn(outputs, label_batch)
             loss = loss_classification
 
             optimizer.zero_grad()
