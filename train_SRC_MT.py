@@ -31,9 +31,9 @@ from validation import epochVal, epochVal_metrics
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='../dataset/skin/training_data/', help='dataset root dir')
-parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training.csv', help='training set csv file')
-parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/validation.csv', help='validation set csv file')
-parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing.csv', help='testing set csv file')
+parser.add_argument('--csv_file_train', type=str, default='../dataset/skin/training_fold1.csv', help='training set csv file')
+parser.add_argument('--csv_file_val', type=str, default='../dataset/skin/testing_fold1.csv', help='validation set csv file')
+parser.add_argument('--csv_file_test', type=str, default='../dataset/skin/testing_fold1.csv', help='testing set csv file')
 parser.add_argument('--exp', type=str,  default='xxxx', help='model_name')
 parser.add_argument('--epochs', type=int,  default=100, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=16, help='batch_size per gpu')

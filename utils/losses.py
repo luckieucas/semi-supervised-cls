@@ -49,8 +49,8 @@ class cross_entropy_loss(object):
         CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
         if args.task == 'hip':
             CLASS_NUM = [1066,259,659]
-            #CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
-            CLASS_WEIGHT = torch.Tensor([1,1,1]).cuda()
+            CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
+            #CLASS_WEIGHT = torch.Tensor([1,1,1]).cuda()
         self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
     
     def __call__(self, output, target):

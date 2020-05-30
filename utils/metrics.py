@@ -85,7 +85,8 @@ def compute_metrics(gt, pred, args, competition=True):
         correct[label_single] += res[label_idx].item()
         total[label_single] += 1
     # compute true accu
-
+    print("total:",total)
+    print("correct:",correct)
 
     pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
     pred = torch.zeros(len(pred), 3).scatter_(1, pred, 1)
