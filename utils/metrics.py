@@ -89,7 +89,7 @@ def compute_metrics(gt, pred, args, competition=True):
     print("correct:",correct)
 
     pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
-    pred = torch.zeros(len(pred), 3).scatter_(1, pred, 1)
+    pred = torch.zeros(len(pred), len(CLASS_NAMES)).scatter_(1, pred, 1)
     AUROCs, Accus, Senss, Recas, Specs = [], [], [], [], []
     gt_np = gt.cpu().detach().numpy()
     # if cfg.uncertainty == 'U-Zeros':
