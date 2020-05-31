@@ -45,16 +45,9 @@ class cross_entropy_loss(object):
     """
     
     def __init__(self, args):
-        CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
-        CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
-        if args.task == 'hip':
-            CLASS_NUM = [1066,259,659]
-            CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
-        if args.task == 'hip_3cls':
-            CLASS_NUM = [6046.0,6906.0,9832.0]
-            CLASS_WEIGHT = torch.Tensor([22784.0/i for i in CLASS_NUM]).cuda()
-            #CLASS_WEIGHT = torch.Tensor([1,1,1]).cuda()
-        self.base_loss = torch.nn.CrossEntropyLoss(weight=CLASS_WEIGHT, reduction='mean')
+        class_num = args.class_num
+        class_weight = torch.Tensor([sum(class_num)/i for i in class_num]).cuda()
+        self.base_loss = torch.nn.CrossEntropyLoss(weight=class_weight, reduction='mean')
     
     def __call__(self, output, target):
         # target[target == -1] = 2
@@ -140,19 +133,9 @@ def softmax_mse_loss(input_logits, target_logits, args):
     assert input_logits.size() == target_logits.size()
     input_softmax = F.softmax(input_logits, dim=1)
     target_softmax = F.softmax(target_logits, dim=1)
-    CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
-    CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
-    if args.task == 'chest':
-        CLASS_NUM = [11559, 2776, 13317, 19894, 5782, 6331, 1431, 5302, 4667, 2303,
-        2516, 1686, 3385, 227] # chest
-        CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
-    if args.task == 'hip':
-        CLASS_NUM = [1066,259,659]
-        CLASS_WEIGHT = torch.Tensor([1984/i for i in CLASS_NUM]).cuda()
-    if args.task == 'hip_3cls':
-        CLASS_NUM = [6046.0,6906.0,9832.0]
-        CLASS_WEIGHT = torch.Tensor([22784.0/i for i in CLASS_NUM]).cuda()
-    mse_loss = (input_softmax-target_softmax)**2 * CLASS_WEIGHT
+    class_num = args.class_num
+    class_weight = torch.Tensor([sum(class_num)/i for i in class_num]).cuda()
+    mse_loss = (input_softmax-target_softmax)**2 * class_weight
     return mse_loss
 
 def cam_attention_map(activations, channel_weight):

@@ -131,7 +131,7 @@ if __name__ == "__main__":
         if args.task == 'hip' or args.task == 'hip_3cls':
             num_class = 3
         
-        net = pretrainedmodels.__dict__[args.backbone](num_classes=1000,
+        net = pretrainedmodels.__dict__['xception'](num_classes=1000,
                                                       pretrained='imagenet')
         if args.backbone == 'xception':
             num_fc = net.last_linear.in_features

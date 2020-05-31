@@ -65,19 +65,10 @@ def compute_metrics(gt, pred, args, competition=True):
     Returns:
         List of AUROCs of all classes.
     """
-    CLASS_NAMES = [ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
-        'Benign keratosis', 'Dermatofibroma', 'Vascular lesion']
-    if args.task == 'chest':
-        CLASS_NAMES = [
-        'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
-         'Pneumothorax','Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
-    if args.task == 'hip':
-        CLASS_NAMES = ['Normal', 'ONFH_I', 'ONFH_II']
-    if args.task == 'hip_3cls':
-        CLASS_NAMES = ['Normal', 'OA', 'ONFH']
+    class_names = args.class_names
     # compute true accu
-    correct = list(0. for i in range(len(CLASS_NAMES)))
-    total = list(0. for i in range(len(CLASS_NAMES)))
+    correct = list(0. for i in range(len(class_names)))
+    total = list(0. for i in range(len(class_names)))
     pred_true_acc = torch.max(pred, 1)[1]
     gt_true_acc = torch.max(gt, 1)[1]
     res = pred_true_acc == gt_true_acc
@@ -91,7 +82,7 @@ def compute_metrics(gt, pred, args, competition=True):
     print("correct:",correct)
 
     pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
-    pred = torch.zeros(len(pred), len(CLASS_NAMES)).scatter_(1, pred, 1)
+    pred = torch.zeros(len(pred), len(class_names)).scatter_(1, pred, 1)
     AUROCs, Accus, Senss, Recas, Specs = [], [], [], [], []
     gt_np = gt.cpu().detach().numpy()
     # if cfg.uncertainty == 'U-Zeros':
@@ -107,7 +98,7 @@ def compute_metrics(gt, pred, args, competition=True):
     
 #     pdb.set_trace()
 
-    indexes = range(len(CLASS_NAMES))
+    indexes = range(len(class_names))
     
     for i, cls in enumerate(indexes):
         try:
