@@ -146,6 +146,7 @@ def train_semi_model(args,snapshot_path):
         meters_loss_classification = MetricLogger(delimiter="  ")
         meters_loss_consistency = MetricLogger(delimiter="  ")
         meters_loss_consistency_relation = MetricLogger(delimiter="  ")
+        meters_loss_bnm = MetricLogger(delimiter="  ")
         time1 = time.time()
         iter_max = len(train_dataloader)    
         for i, (_,_, (image_batch, ema_image_batch), label_batch) in enumerate(train_dataloader):
@@ -183,8 +184,14 @@ def train_semi_model(args,snapshot_path):
                 consistency_dist = 0.0
              #+ consistency_loss
 
+             # bnm loss
+            if args.bnm_loss == 1:
+                 bnm_loss = losses.bnm_loss()
+            else:
+                bnm_loss = 0.0
+
             if (epoch > 20) and (args.ema_consistency == 1):
-                loss = loss_classification + consistency_loss + consistency_relation_loss
+                loss = loss_classification + consistency_loss + consistency_relation_loss + bnm_loss
 
             optimizer.zero_grad()
             loss.backward()
@@ -194,6 +201,7 @@ def train_semi_model(args,snapshot_path):
             # outputs_soft = F.softmax(outputs, dim=1)
             meters_loss.update(loss=loss)
             meters_loss_classification.update(loss=loss_classification)
+            meters_loss_bnm.update(loss=bnm_loss)
             meters_loss_consistency.update(loss=consistency_loss)
             meters_loss_consistency_relation.update(loss=consistency_relation_loss)
 

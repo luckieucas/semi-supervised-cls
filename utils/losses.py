@@ -15,17 +15,6 @@ METHODS = ['U-Ignore', 'U-Zeros', 'U-Ones', 'U-SelfTrained', 'U-MultiClass']
 #CLASS_WEIGHT = torch.Tensor([10000/i for i in CLASS_NUM]).cuda()
 #CLASS_WEIGHT = torch.Tensor([81176/i for i in CLASS_NUM]).cuda() #chest
 
-class Loss_Zeros(object):
-    """
-    map all uncertainty values to 0
-    """
-    
-    def __init__(self):
-        self.base_loss = torch.nn.BCELoss(reduction='mean')
-    
-    def __call__(self, output, target):
-        target[target == -1] = 0
-        return self.base_loss(output, target)
 
 class Loss_Ones(object):
     """
@@ -57,6 +46,14 @@ class cross_entropy_loss(object):
         # print("target: ",target)
         return self.base_loss(output_softmax, target.long())
 
+
+def bnm_loss(out_logits):
+    """
+    compute batch nuclear-norm maximization loss
+    """
+    A = F.softmax(out_logits, dim=1)
+    L_bnm = -torch.norm(A,'nuc')
+    return L_bnm
 
 
 def get_UncertaintyLoss(method):
@@ -90,6 +87,7 @@ def dice_loss1(score, target):
     loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
     loss = 1 - loss
     return loss
+
 
 def entropy_loss(p,C=2):
     ## p N*C*W*H*D
