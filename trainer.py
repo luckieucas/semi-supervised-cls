@@ -212,11 +212,12 @@ def train_semi_model(args,snapshot_path):
                 writer.add_scalar('loss/loss', loss, iter_num)
                 writer.add_scalar('loss/loss_classification', loss_classification, iter_num)
                 writer.add_scalar('train/consistency_loss', consistency_loss, iter_num)
+                writer.add_scalar('train/bnm_loss', bnm_loss, iter_num)
                 writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
                 writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
-                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, consistency weight: {:.6f}, lr: {}"
-                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
+                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},consistency weight: {:.6f}, lr: {}"
+                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, meters_loss_bnm.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
