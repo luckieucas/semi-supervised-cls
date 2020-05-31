@@ -216,7 +216,6 @@ def train_semi_model(args,snapshot_path):
                 image = ema_inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
                 writer.add_image('noise/Image', grid_image, iter_num)
-            break
 
         timestamp = get_timestamp()
 
@@ -402,7 +401,6 @@ def train_full_model(args,snapshot_path):
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
                 writer.add_image('raw/Image', grid_image, iter_num)
-            break
         timestamp = get_timestamp()
 
         # validate student
