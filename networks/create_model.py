@@ -30,9 +30,9 @@ def create_full_model(args, ema=False):
     """
     print("create full supervised model")
     num_class = len(args.class_names)
-    net = pretrainedmodels.__dict__['xception'](num_classes=1000,
-                                                    pretrained='imagenet')
     if args.backbone == 'xception':
+        net = pretrainedmodels.__dict__['xception'](num_classes=1000,
+                                                    pretrained='imagenet')
         num_fc = net.last_linear.in_features
         net.last_linear = nn.Linear(num_fc, num_class)
     if args.backbone == 'densenet121':
