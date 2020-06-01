@@ -81,15 +81,15 @@ def compute_metrics(gt, pred, args, competition=True):
     print("total:",total)
     print("correct:",correct)
 
-    pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
-    pred = torch.zeros(len(pred), len(class_names)).scatter_(1, pred, 1)
+    # pred = torch.max(pred, 1)[1].unsqueeze(1).cpu() #add
+    # pred = torch.zeros(len(pred), len(class_names)).scatter_(1, pred, 1)
     AUROCs, Accus, Senss, Recas, Specs = [], [], [], [], []
     gt_np = gt.cpu().detach().numpy()
     # if cfg.uncertainty == 'U-Zeros':
     #     gt_np[np.where(gt_np==-1)] = 0
     # if cfg.uncertainty == 'U-Ones':
     #     gt_np[np.where(gt_np==-1)] = 1
-    pred_np = pred.numpy()
+    pred_np = pred.cpu().detach().numpy()
     
     
     THRESH = 0.18
