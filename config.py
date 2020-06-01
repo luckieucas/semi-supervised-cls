@@ -4,7 +4,7 @@ from networks.create_model import create_full_model,create_semi_model
 CLASS_NAMES_DICTS={ 'hip_onfh':['Normal','ONFH_I','ONFH_II'],
                     'hip_3cls':['Normal','OA','ONFH'],
                     'hip_4cls':['Normal','OA','ONFH','DDH'],
-                    'diaabetes':['level_0','level_1','level_2','level_3','level_4']
+                    'diaabetes':['level_0','level_1','level_2','level_3','level_4'],
                     'skin':[ 'Melanoma', 'Melanocytic nevus', 'Basal cell carcinoma', 'Actinic keratosis',
                             'Benign keratosis', 'Dermatofibroma', 'Vascular lesion'],
                     'chest':['Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 
