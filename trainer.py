@@ -125,6 +125,7 @@ def train_semi_model(args,snapshot_path):
     model.train()
 
     loss_fn = losses.cross_entropy_loss(args)
+    loss_supCon_fn = losses.SupConLoss()
     if args.task == 'chest':
         loss_fn = losses.Loss_Ones()
     if args.consistency_type == 'mse':
@@ -148,6 +149,7 @@ def train_semi_model(args,snapshot_path):
         meters_loss_consistency_relation = MetricLogger(delimiter="  ")
         meters_loss_bnm = MetricLogger(delimiter="  ")
         meters_loss_bnm_improve = MetricLogger(delimiter="  ")
+        meters_loss_supCon = MetricLogger(delimiter="  ")
         time1 = time.time()
         iter_max = len(train_dataloader)    
         for i, (_,_, (image_batch, ema_image_batch), label_batch) in enumerate(train_dataloader):
@@ -166,6 +168,7 @@ def train_semi_model(args,snapshot_path):
                 ema_activations, ema_output = ema_model(ema_inputs)
 
             ## calculate the loss
+            supCon_fea = torch.cat([activations.unsqueeze(1),ema_activations.unsqueeze(1)],dim=1)
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
 
@@ -196,9 +199,14 @@ def train_semi_model(args,snapshot_path):
                 bnm_loss_improve = losses.bnm_loss_improve(outputs)
             else:
                 bnm_loss_improve = 0.0
-
+            
+            # supervised Contrastive Learning
+            if args.supCon_loss == 1:
+                supCon_loss = args.supCon_loss_weight * loss_supCon_fn(supCon_fea[:labeled_bs], torch.argmax(label_batch[:labeled_bs], dim=1))
+            else:
+                supCon_loss = 0.0
             if (epoch > 20) and (args.ema_consistency == 1):
-                loss = loss_classification + consistency_loss + consistency_relation_loss + bnm_loss + bnm_loss_improve
+                loss = loss_classification + consistency_loss + consistency_relation_loss + bnm_loss + bnm_loss_improve + supCon_loss
 
             optimizer.zero_grad()
             loss.backward()
@@ -210,6 +218,7 @@ def train_semi_model(args,snapshot_path):
             meters_loss_classification.update(loss=loss_classification)
             meters_loss_bnm.update(loss=bnm_loss)
             meters_loss_bnm_improve.update(loss=bnm_loss_improve)
+            meters_loss_supCon.update(loss=supCon_loss)
             meters_loss_consistency.update(loss=consistency_loss)
             meters_loss_consistency_relation.update(loss=consistency_relation_loss)
 
@@ -222,11 +231,12 @@ def train_semi_model(args,snapshot_path):
                 writer.add_scalar('train/consistency_loss', consistency_loss, iter_num)
                 writer.add_scalar('train/bnm_loss', bnm_loss, iter_num)
                 writer.add_scalar('train/bnm_loss_improve', bnm_loss_improve, iter_num)
+                writer.add_scalar('train/supCon_loss', supCon_loss, iter_num)
                 writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
                 writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
-                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},consistency weight: {:.6f}, lr: {}"
-                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
+                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},supCon loss improve: {:.6f},consistency weight: {:.6f}, lr: {}"
+                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, meters_loss_supCon.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
