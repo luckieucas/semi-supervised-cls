@@ -168,7 +168,7 @@ def train_semi_model(args,snapshot_path):
                 ema_activations, ema_output = ema_model(ema_inputs)
 
             ## calculate the loss
-            supCon_fea = torch.cat([activations.unsqueeze(1),ema_activations.unsqueeze(1)],dim=1)
+            supCon_fea = torch.cat([F.normalize(activations,dim=1).unsqueeze(1),F.normalize(ema_activations,dim=1).unsqueeze(1)],dim=1)
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
 
@@ -235,7 +235,7 @@ def train_semi_model(args,snapshot_path):
                 writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
                 writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
-                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},supCon loss improve: {:.6f},consistency weight: {:.6f}, lr: {}"
+                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},supCon loss: {:.6f},consistency weight: {:.6f}, lr: {}"
                             .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, meters_loss_supCon.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
