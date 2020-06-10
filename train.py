@@ -44,6 +44,8 @@ parser.add_argument('--ema_consistency', type=int, default=1, help='whether trai
 parser.add_argument('--bnm_loss', type=int, default=1, help='whether use bnm loss to train model')
 parser.add_argument('--bnm_loss_improve', type=int, default=0, help='whether use imporved bnm loss')
 parser.add_argument('--bnm_loss_weight', type=float, default=1.0, help='weight of bnm_loss')
+parser.add_argument('--vat_loss', type=int, default=0, help='whether use vat loss')
+parser.add_argument('--vat_loss_weight', type=float, default=1.0, help='weight of vat_loss')
 parser.add_argument('--supCon_loss', type=int, default=0, help='whether use supervised contrastive loss')
 parser.add_argument('--supCon_loss_weight', type=float, default=1.0, help='whether use supervised contrastive loss')
 parser.add_argument('--labeled_rate', type=float, default=0.2, help='number of labeled')
@@ -113,5 +115,5 @@ if __name__ == "__main__":
     shutil.copytree('.', snapshot_path + '/code', shutil.ignore_patterns(['.git','__pycache__']))
     if args.supervise_level == 'semi':
         train_semi_model(args,snapshot_path)
-    else:
+    if args.supervise_level == 'full':
         train_full_model(args,snapshot_path)
