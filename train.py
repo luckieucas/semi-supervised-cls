@@ -53,6 +53,7 @@ parser.add_argument('--base_lr', type=float,  default=1e-4, help='maximum epoch 
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
+parser.add_argument('--multi_scale_densenet', type=int, default=0, help='whether use multi scale correlation')
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
 parser.add_argument('--backbone', type=str,  default='densenet121', help='backbone network')
@@ -113,7 +114,4 @@ if __name__ == "__main__":
     if os.path.exists(snapshot_path + '/code'):
         shutil.rmtree(snapshot_path + '/code')
     shutil.copytree('.', snapshot_path + '/code', shutil.ignore_patterns(['.git','__pycache__']))
-    if args.supervise_level == 'semi':
-        train_semi_model(args,snapshot_path)
-    if args.supervise_level == 'full':
-        train_full_model(args,snapshot_path)
+    train_semi_model(args,snapshot_path)

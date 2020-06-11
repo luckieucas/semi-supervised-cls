@@ -4,6 +4,7 @@ import torchvision
 
 import pretrainedmodels
 from .models import DenseNet121,DenseNet161
+from .densenet import DenseNet121MultiScale
 
 def create_semi_model(args, ema=False):
     """
@@ -15,6 +16,8 @@ def create_semi_model(args, ema=False):
     net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
     if args.task == 'chest':
         net = DenseNet161(out_size=14, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+    if args.multi_scale_densenet == 1:
+        net = DenseNet121MultiScale(drop_rate = args.drop_rate, num_classes=num_class)
     if len(args.gpu.split(',')) > 1:
         net = torch.nn.DataParallel(net)
     model = net.cuda()

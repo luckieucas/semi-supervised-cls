@@ -171,7 +171,6 @@ def train_semi_model(args,snapshot_path):
                 ema_activations, ema_output = ema_model(ema_inputs)
 
             ## calculate the loss
-            supCon_fea = torch.cat([F.normalize(activations,dim=1).unsqueeze(1),F.normalize(ema_activations,dim=1).unsqueeze(1)],dim=1)
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
 
@@ -182,7 +181,13 @@ def train_semi_model(args,snapshot_path):
                 consistency_loss = consistency_weight * consistency_dist  
 
                 # consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
-                consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
+                if args.multi_scale_densenet == 1:
+                    consistency_relation_dist0 = torch.sum(losses.relation_mse_loss(activations[0], ema_activations[0])) / batch_size
+                    consistency_relation_dist1 = torch.sum(losses.relation_mse_loss(activations[1], ema_activations[1])) / batch_size
+                    consistency_relation_dist2 = torch.sum(losses.relation_mse_loss(activations[2], ema_activations[2])) / batch_size
+                    consistency_relation_dist = consistency_relation_dist0 + consistency_relation_dist1 + consistency_relation_dist2
+                else:
+                    consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
                 consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
             else:
                 consistency_loss = 0.0
@@ -205,6 +210,7 @@ def train_semi_model(args,snapshot_path):
             
             # supervised Contrastive Learning
             if args.supCon_loss == 1:
+                supCon_fea = torch.cat([F.normalize(activations,dim=1).unsqueeze(1),F.normalize(ema_activations,dim=1).unsqueeze(1)],dim=1)
                 supCon_loss = args.supCon_loss_weight * loss_supCon_fn(supCon_fea[:labeled_bs],
                                                                        torch.argmax(label_batch[:labeled_bs], dim=1))
             else:
