@@ -253,27 +253,17 @@ class DenseNet121MultiScale(nn.Module):
 
         # Each denseblock
         num_features = num_init_features
-        self.denseblock_list = []
         for i, num_layers in enumerate(block_config):
             block = _DenseBlock(num_layers=num_layers, num_input_features=num_features,
                                 bn_size=bn_size, growth_rate=growth_rate, drop_rate=drop_rate)
-            #self.features.add_module('denseblock%d' % (i + 1), block)
+            self.features.add_module('denseblock%d' % (i + 1), block)
             num_features = num_features + num_layers * growth_rate
             if i != len(block_config) - 1:
                 trans = _Transition(num_input_features=num_features, num_output_features=num_features // 2)
-                #self.features.add_module('transition%d' % (i + 1), trans)
+                self.features.add_module('transition%d' % (i + 1), trans)
                 num_features = num_features // 2
-            if i != len(block_config) - 1:
-                self.denseblock_list.append(nn.Sequential(block,trans))
-            else:
-                self.denseblock_list.append(nn.Sequential(block))
-        self.denseblock1 = self.denseblock_list[0]
-        self.denseblock2 = self.denseblock_list[1]
-        self.denseblock3 = self.denseblock_list[2]
-        self.denseblock4 = self.denseblock_list[3]
         # Final batch norm
-        #self.features.add_module('norm5', nn.BatchNorm2d(num_features))
-        self.BN = nn.BatchNorm2d(num_features)
+        self.features.add_module('norm5', nn.BatchNorm2d(num_features))
         # Linear layer
         self.classifier = nn.Linear(num_features, num_classes)
 
@@ -288,15 +278,49 @@ class DenseNet121MultiScale(nn.Module):
                 nn.init.constant_(m.bias, 0)
 
     def forward(self, x):
-        features0 = self.features(x)
-        features1 = self.denseblock1(features0)
-        features2 = self.denseblock2(features1)
-        features3 = self.denseblock3(features2)
-        features4 = self.denseblock4(features3)
-        features = self.BN(features4)
+        x = self.features.conv0(x)
+        x = self.features.norm0(x)
+        x = self.features.relu0(x)
+        x = self.features.pool0(x)
+        x = self.features.denseblock1(x)
+        fea1 = self.features.transition1(x)
+        fea2 = self.features.denseblock2(fea1)
+        fea2 = self.features.transition2(fea2)
+        fea3 = self.features.denseblock3(fea2)
+        fea3 = self.features.transition3(fea3)
+        features = self.features.denseblock4(fea3)
         out = F.relu(features, inplace=True)
-        fea_out2 = F.adaptive_avg_pool2d(features2, (1, 1)).view(features2.size(0), -1)
-        fea_out3 = F.adaptive_avg_pool2d(features3, (1, 1)).view(features3.size(0), -1)
+        fea_out2 = F.adaptive_avg_pool2d(fea2, (1, 1)).view(fea2.size(0), -1)
+        fea_out3 = F.adaptive_avg_pool2d(fea3, (1, 1)).view(fea3.size(0), -1)
         fea_out = F.adaptive_avg_pool2d(out, (1, 1)).view(features.size(0), -1)
         out = self.classifier(fea_out)
         return [fea_out2,fea_out3,fea_out],out
+
+def densenet121_multi_scale(num_classes, drop_rate, pretrained=True):
+    r"""Densenet-121 model from
+    `"Densely Connected Convolutional Networks" <https://arxiv.org/pdf/1608.06993.pdf>`_
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    """
+    model = DenseNet121MultiScale(drop_rate=drop_rate)
+    if pretrained:
+        # '.'s are no longer allowed in module names, but pervious _DenseLayer
+        # has keys 'norm.1', 'relu.1', 'conv.1', 'norm.2', 'relu.2', 'conv.2'.
+        # They are also in the checkpoints in model_urls. This pattern is used
+        # to find such keys.
+        pattern = re.compile(
+            r'^(.*denselayer\d+\.(?:norm|relu|conv))\.((?:[12])\.(?:weight|bias|running_mean|running_var))$')
+        state_dict = model_zoo.load_url(model_urls['densenet121'])
+        for key in list(state_dict.keys()):
+            res = pattern.match(key)
+            if res:
+                new_key = res.group(1) + res.group(2)
+                state_dict[new_key] = state_dict[key]
+                del state_dict[key]
+        model.load_state_dict(state_dict)
+    num_ftrs = model.classifier.in_features
+    model.classifier = nn.Sequential(
+                nn.Linear(num_ftrs, num_classes),
+                #nn.Sigmoid()
+            )
+    return model
