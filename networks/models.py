@@ -144,6 +144,7 @@ class DenseNet121MultiScale(nn.Module):
         fea3 = self.densenet121.features.denseblock3(fea2)
         fea3 = self.densenet121.features.transition3(fea3)
         features = self.densenet121.features.denseblock4(fea3)
+        features = self.densenet121.features.norm5(features)
         out = F.relu(features, inplace=True) 
         fea_out2 = F.adaptive_avg_pool2d(fea2, (1, 1)).view(fea2.size(0), -1)
         fea_out3 = F.adaptive_avg_pool2d(fea3, (1, 1)).view(fea3.size(0), -1)
