@@ -54,6 +54,10 @@ parser.add_argument('--deterministic', type=int,  default=1, help='whether use d
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 parser.add_argument('--multi_scale_densenet', type=int, default=0, help='whether use multi scale correlation')
+parser.add_argument('--scale1_weight', type=float, default=1.0, help='multi scale 1 loss weight')
+parser.add_argument('--scale2_weight', type=float, default=1.0, help='multi scale 2 loss weight')
+parser.add_argument('--scale3_weight', type=float, default=1.0, help='multi scale 3 loss weight')
+
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
 parser.add_argument('--backbone', type=str,  default='densenet121', help='backbone network')
