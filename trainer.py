@@ -182,10 +182,11 @@ def train_semi_model(args,snapshot_path):
 
                 # consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
                 if args.multi_scale_densenet == 1:
-                    consistency_relation_dist0 = torch.sum(losses.relation_mse_loss(activations[0], ema_activations[0])) / batch_size
-                    consistency_relation_dist1 = torch.sum(losses.relation_mse_loss(activations[1], ema_activations[1])) / batch_size
+                    #consistency_relation_dist0 = torch.sum(losses.relation_mse_loss(activations[0], ema_activations[0])) / batch_size
+                    #consistency_relation_dist1 = torch.sum(losses.relation_mse_loss(activations[1], ema_activations[1])) / batch_size
                     consistency_relation_dist2 = torch.sum(losses.relation_mse_loss(activations[2], ema_activations[2])) / batch_size
-                    consistency_relation_dist = consistency_relation_dist0 + consistency_relation_dist1 + consistency_relation_dist2
+                    #consistency_relation_dist = consistency_relation_dist0 + consistency_relation_dist1 + consistency_relation_dist2
+                    consistency_relation_dist = consistency_relation_dist2
                 else:
                     consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
                 consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
