@@ -21,7 +21,7 @@ def create_semi_model(args, ema=False):
     if args.task == 'chest':
         net = DenseNet161(out_size=14, mode=args.label_uncertainty, drop_rate=args.drop_rate)
     if args.multi_scale_densenet == 1:
-        net = DenseNet121MultiScale(drop_rate = args.drop_rate, out_size=14)
+        net = DenseNet121MultiScale(drop_rate = args.drop_rate, out_size=num_class)
     if len(args.gpu.split(',')) > 1:
         net = torch.nn.DataParallel(net)
     model = net.cuda()
