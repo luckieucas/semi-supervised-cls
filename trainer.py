@@ -173,7 +173,6 @@ def train_semi_model(args,snapshot_path):
             ## calculate the loss
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
-
             ## MT loss (have no effect in the beginneing)
             if args.ema_consistency == 1:
                 consistency_weight = get_current_consistency_weight(args,epoch)
@@ -190,6 +189,7 @@ def train_semi_model(args,snapshot_path):
                     #consistency_relation_dist = consistency_relation_dist2
                 else:
                     consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
+
                 consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
             else:
                 consistency_loss = 0.0
