@@ -146,6 +146,7 @@ class DenseNet121MultiScale(nn.Module):
         features = self.densenet121.features.denseblock4(fea3)
         features = self.densenet121.features.norm5(features)
         out = F.relu(features, inplace=True) 
+        fea_out1 = F.adaptive_avg_pool2d(fea1, (1, 1)).view(fea2.size(0), -1)
         fea_out2 = F.adaptive_avg_pool2d(fea2, (1, 1)).view(fea2.size(0), -1)
         fea_out3 = F.adaptive_avg_pool2d(fea3, (1, 1)).view(fea3.size(0), -1)
         out = F.adaptive_avg_pool2d(out, (1, 1)).view(features.size(0), -1)
@@ -154,4 +155,4 @@ class DenseNet121MultiScale(nn.Module):
         self.activations = out
         out = self.densenet121.classifier(out)
             
-        return [fea_out2,fea_out3,self.activations], out
+        return [fea_out1,fea_out2,fea_out3,self.activations], out

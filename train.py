@@ -57,6 +57,7 @@ parser.add_argument('--multi_scale_densenet', type=int, default=0, help='whether
 parser.add_argument('--scale1_weight', type=float, default=1.0, help='multi scale 1 loss weight')
 parser.add_argument('--scale2_weight', type=float, default=1.0, help='multi scale 2 loss weight')
 parser.add_argument('--scale3_weight', type=float, default=1.0, help='multi scale 3 loss weight')
+parser.add_argument('--scale4_weight', type=float, default=1.0, help='multi scale 4 loss weight')
 
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
