@@ -202,7 +202,7 @@ def train_semi_model(args,snapshot_path):
 
              # bnm loss
             if args.bnm_loss == 1:
-                 bnm_loss = args.bnm_loss_weight * (losses.bnm_loss(outputs)+losses.bnm_loss(ema_output))
+                 bnm_loss = args.bnm_loss_weight * (losses.bnm_loss(outputs))
             else:
                 bnm_loss = 0.0
             

@@ -207,7 +207,7 @@ def bnm_loss_improve(out_logits):
     A = F.softmax(out_logits, dim=1) + 0.000001
     B = -1.0 * A *torch.log(A)
     C = B.sum(dim=1)
-    index = C.argsort(descending=True)[:24]
+    index = C.argsort(descending=True)[:12]
     D = A[index]
     L_bnm = -torch.norm(D,'nuc')
     return L_bnm
