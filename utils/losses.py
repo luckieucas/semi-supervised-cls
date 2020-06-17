@@ -197,7 +197,8 @@ def bnm_loss(out_logits):
     compute batch nuclear-norm maximization loss
     """
     A = F.softmax(out_logits, dim=1)
-    L_bnm = -torch.norm(A,'nuc')
+    L_bnm = -torch.norm(A,'nuc')/A.shape[0]
+    print("A shape:",A.shape[0])
     return L_bnm
 
 def bnm_loss_improve(out_logits):
@@ -209,7 +210,7 @@ def bnm_loss_improve(out_logits):
     C = B.sum(dim=1)
     index = C.argsort(descending=True)[:12]
     D = A[index]
-    L_bnm = -torch.norm(D,'nuc')
+    L_bnm = -torch.norm(D,'nuc')/D.shape[0]
     return L_bnm
 
 
