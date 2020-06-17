@@ -198,7 +198,6 @@ def bnm_loss(out_logits):
     """
     A = F.softmax(out_logits, dim=1)
     L_bnm = -torch.norm(A,'nuc')/A.shape[0]
-    print("A shape:",A.shape[0])
     return L_bnm
 
 def bnm_loss_improve(out_logits):
