@@ -225,7 +225,7 @@ def train_semi_model(args,snapshot_path):
                 vat_loss = args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
             else:
                 vat_loss = 0.0
-            
+            loss += bnm_loss
             if (epoch > 20) and (args.ema_consistency == 1):
                 loss = loss_classification + consistency_loss + consistency_relation_loss + bnm_loss + bnm_loss_improve + supCon_loss
 
