@@ -68,7 +68,7 @@ parser.add_argument('--start_epoch', type=int,  default=0, help='start_epoch')
 parser.add_argument('--global_step', type=int,  default=0, help='global_step')
 ### costs
 parser.add_argument('--label_uncertainty', type=str,  default='U-Ones', help='label type')
-parser.add_argument('--consistency_relation_weight', type=int,  default=1, help='consistency relation weight')
+parser.add_argument('--consistency_relation_weight', type=float,  default=1.0, help='consistency relation weight')
 parser.add_argument('--ema_decay', type=float,  default=0.99, help='ema_decay')
 parser.add_argument('--consistency_type', type=str,  default="mse", help='consistency_type')
 parser.add_argument('--consistency', type=float,  default=1, help='consistency')

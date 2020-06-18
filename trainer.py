@@ -190,7 +190,7 @@ def train_semi_model(args,snapshot_path):
                             args.scale4_weight * consistency_relation_dist3
                     #consistency_relation_dist = consistency_relation_dist2
                 else:
-                    consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
+                    consistency_relation_dist = args.consistency_relation_dist_weight * torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
 
                 consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
             else:
