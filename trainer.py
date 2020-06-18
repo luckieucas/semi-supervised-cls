@@ -151,6 +151,7 @@ def train_semi_model(args,snapshot_path):
         meters_loss_bnm_improve = MetricLogger(delimiter="  ")
         meters_loss_supCon = MetricLogger(delimiter="  ")
         meters_loss_vat = MetricLogger(delimiter="  ")
+        meters_loss_entropy = MetricLogger(delimiter="  ")
         time1 = time.time()
         iter_max = len(train_dataloader)
         #label_count = torch.LongTensor([-1])
@@ -226,8 +227,15 @@ def train_semi_model(args,snapshot_path):
             else:
                 vat_loss = 0.0
             #loss += bnm_loss
-            if (epoch > 20) and (args.ema_consistency == 1):
-                loss = loss_classification + consistency_loss + consistency_relation_loss + bnm_loss + bnm_loss_improve + supCon_loss + vat_loss
+
+            # use entropy mini loss
+            if args.entropy_loss == 1:
+                entropy_loss = arags.entropy_loss_weight * losses.entropy_loss(outputs[labeled_bs:])
+            else:
+                entropy_loss = 0.0
+            if epoch > 20 and args.baseline == 0:
+                loss = loss_classification + consistency_loss + consistency_relation_loss + \
+                    bnm_loss + bnm_loss_improve + supCon_loss + vat_loss + entropy_loss
 
             optimizer.zero_grad()
             loss.backward()
@@ -241,6 +249,7 @@ def train_semi_model(args,snapshot_path):
             meters_loss_bnm_improve.update(loss=bnm_loss_improve)
             meters_loss_supCon.update(loss=supCon_loss)
             meters_loss_vat.update(loss=vat_loss)
+            meters_loss_entropy.update(loss=entropy_loss)
             meters_loss_consistency.update(loss=consistency_loss)
             meters_loss_consistency_relation.update(loss=consistency_relation_loss)
 
@@ -255,11 +264,18 @@ def train_semi_model(args,snapshot_path):
                 writer.add_scalar('train/bnm_loss_improve', bnm_loss_improve, iter_num)
                 writer.add_scalar('train/supCon_loss', supCon_loss, iter_num)
                 writer.add_scalar('train/vat_loss', vat_loss, iter_num)
+                writer.add_scalar('train/entropy_loss', entropy_loss, iter_num)
                 writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
                 writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
-                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f}, consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},supCon loss: {:.6f},vat loss: {:.6f},consistency weight: {:.6f}, lr: {}"
-                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg, meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg, meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, meters_loss_supCon.loss.avg,meters_loss_vat.loss.avg, consistency_weight, optimizer.param_groups[0]['lr']))
+                logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f},\
+                     consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},\
+                         supCon loss: {:.6f},vat loss: {:.6f},entropy loss: {:.6f},consistency weight: {:.6f}, lr: {}"
+                            .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg,
+                                 meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg,
+                                 meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, 
+                                 meters_loss_supCon.loss.avg,meters_loss_vat.loss.avg,meters_loss_entropy.loss.avg, consistency_weight,
+                                  optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
