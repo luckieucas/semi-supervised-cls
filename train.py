@@ -41,7 +41,7 @@ parser.add_argument('--batch_size', type=int, default=16, help='batch_size per g
 parser.add_argument('--labeled_bs', type=int, default=4, help='number of labeled data per batch')
 parser.add_argument('--drop_rate', type=float, default=0.2, help='dropout rate')
 parser.add_argument('--ema_consistency', type=int, default=1, help='whether train baseline model')
-parser.add_argument('--bnm_loss', type=int, default=1, help='whether use bnm loss to train model')
+parser.add_argument('--bnm_loss', type=int, default=0, help='whether use bnm loss to train model')
 parser.add_argument('--bnm_loss_improve', type=int, default=0, help='whether use imporved bnm loss')
 parser.add_argument('--bnm_loss_weight', type=float, default=1.0, help='weight of bnm_loss')
 parser.add_argument('--vat_loss', type=int, default=0, help='whether use vat loss')
