@@ -20,7 +20,7 @@ CLASS_NUM_DICTS={'hip_onfh':[1066.0,259.0,659.0],
 RESIZE_DICTS={'hip_onfh':256,
                'hip_3cls':256,
                'hip_4cls':256,
-               'diabetes':384,
+               'diabetes':512,
                'skin':224,
                'chest':384}
 CREATE_MODEL_DICTS={'semi':create_semi_model,
