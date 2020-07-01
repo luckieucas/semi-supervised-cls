@@ -175,7 +175,7 @@ def train_semi_model(args,snapshot_path):
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
             ## MT loss (have no effect in the beginneing)
-            if args.ema_consistency == 1:
+            if args.ema_consistency == 1 and epoch > 20:
                 consistency_weight = get_current_consistency_weight(args,epoch)
                 consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output, args)) / batch_size #/ dataset.N_CLASSES
                 consistency_loss = consistency_weight * consistency_dist  
@@ -202,7 +202,7 @@ def train_semi_model(args,snapshot_path):
              #+ consistency_loss
 
              # bnm loss
-            if args.bnm_loss == 1:
+            if args.bnm_loss == 1 and epoch > 20:
                  bnm_loss = args.bnm_loss_weight * (losses.bnm_loss(outputs[labeled_bs:]))
             else:
                 bnm_loss = 0.0
@@ -214,7 +214,7 @@ def train_semi_model(args,snapshot_path):
                 bnm_loss_improve = 0.0
             
             # supervised Contrastive Learning
-            if args.supCon_loss == 1:
+            if args.supCon_loss == 1 and epoch>20:
                 supCon_fea = torch.cat([F.normalize(activations,dim=1).unsqueeze(1),F.normalize(ema_activations,dim=1).unsqueeze(1)],dim=1)
                 supCon_loss = args.supCon_loss_weight * loss_supCon_fn(supCon_fea[:labeled_bs],
                                                                        torch.argmax(label_batch[:labeled_bs], dim=1))
@@ -229,7 +229,7 @@ def train_semi_model(args,snapshot_path):
             #loss += bnm_loss
 
             # use entropy mini loss
-            if args.entropy_loss == 1:
+            if args.entropy_loss == 1 and epoch > 20:
                 entropy_loss = arags.entropy_loss_weight * losses.entropy_loss(outputs[labeled_bs:])
             else:
                 entropy_loss = 0.0
