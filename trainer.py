@@ -223,7 +223,8 @@ def train_semi_model(args,snapshot_path):
             
             # use VAT loss
             if args.vat_loss ==1 and epoch > 20:
-                vat_loss = args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
+                consistency_weight = get_current_consistency_weight(args,epoch)
+                vat_loss = consistency_weight * args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
             else:
                 vat_loss = 0.0
             #loss += bnm_loss
