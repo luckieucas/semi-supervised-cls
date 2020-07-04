@@ -74,6 +74,8 @@ def train_semi_model(args,snapshot_path):
         logging.info("=> loaded checkpoint '{}' (epoch {})".format(args.resume, checkpoint['epoch']))
 
     # dataset
+    if args.task == 'chest':
+        dataset = chest_xray_14
     normalize = transforms.Normalize([0.485, 0.456, 0.406],
                                      [0.229, 0.224, 0.225])
 
