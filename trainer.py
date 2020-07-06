@@ -9,6 +9,7 @@ import random
 import numpy as np
 import pandas as pd
 from tensorboardX import SummaryWriter
+import wandb
 
 import torch
 import torch.optim as optim
@@ -177,7 +178,7 @@ def train_semi_model(args,snapshot_path):
             loss_classification = loss_fn(outputs[:labeled_bs], label_batch[:labeled_bs])
             loss = loss_classification
             ## MT loss (have no effect in the beginneing)
-            if args.ema_consistency == 1 and epoch > 20:
+            if args.ema_consistency == 1 and epoch > args.consistency_began_epoch:
                 consistency_weight = get_current_consistency_weight(args,epoch)
                 consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output, args)) / batch_size #/ dataset.N_CLASSES
                 consistency_loss = consistency_weight * consistency_dist  
@@ -204,7 +205,7 @@ def train_semi_model(args,snapshot_path):
              #+ consistency_loss
 
              # bnm loss
-            if args.bnm_loss == 1 and epoch > 20:
+            if args.bnm_loss == 1 and epoch > args.consistency_began_epoch:
                  bnm_loss = args.bnm_loss_weight * (losses.bnm_loss(outputs[labeled_bs:]))
             else:
                 bnm_loss = 0.0
@@ -216,7 +217,7 @@ def train_semi_model(args,snapshot_path):
                 bnm_loss_improve = 0.0
             
             # supervised Contrastive Learning
-            if args.supCon_loss == 1 and epoch>20:
+            if args.supCon_loss == 1 and epoch > args.consistency_began_epoch:
                 supCon_fea = torch.cat([F.normalize(activations,dim=1).unsqueeze(1),F.normalize(ema_activations,dim=1).unsqueeze(1)],dim=1)
                 supCon_loss = args.supCon_loss_weight * loss_supCon_fn(supCon_fea[:labeled_bs],
                                                                        torch.argmax(label_batch[:labeled_bs], dim=1))
@@ -224,7 +225,7 @@ def train_semi_model(args,snapshot_path):
                 supCon_loss = 0.0
             
             # use VAT loss
-            if args.vat_loss ==1 and epoch > 20:
+            if args.vat_loss ==1 and epoch > args.consistency_began_epoch:
                 consistency_weight = get_current_consistency_weight(args,epoch)
                 vat_loss = consistency_weight * args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
             else:
@@ -232,11 +233,11 @@ def train_semi_model(args,snapshot_path):
             #loss += bnm_loss
 
             # use entropy mini loss
-            if args.entropy_loss == 1 and epoch > 20:
+            if args.entropy_loss == 1 and epoch > args.consistency_began_epoch:
                 entropy_loss = arags.entropy_loss_weight * losses.entropy_loss(outputs[labeled_bs:])
             else:
                 entropy_loss = 0.0
-            if epoch > 20 and args.baseline == 0:
+            if epoch > args.consistency_began_epoch and args.baseline == 0:
                 loss = loss_classification + consistency_loss + consistency_relation_loss + \
                     bnm_loss + bnm_loss_improve + supCon_loss + vat_loss + entropy_loss
 

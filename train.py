@@ -76,6 +76,7 @@ parser.add_argument('--ema_decay', type=float,  default=0.99, help='ema_decay')
 parser.add_argument('--consistency_type', type=str,  default="mse", help='consistency_type')
 parser.add_argument('--consistency', type=float,  default=1, help='consistency')
 parser.add_argument('--consistency_rampup', type=float,  default=30, help='consistency_rampup')
+parser.add_argument('--consistency_began_epoch', type=int,  default=20, help='consistency loss began epoch')
 #add by liupeng
 parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
