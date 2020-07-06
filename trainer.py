@@ -23,11 +23,12 @@ from networks.models import DenseNet121,DenseNet161
 from utils import losses, ramps
 from utils.metrics import compute_AUCs
 from utils.metric_logger import MetricLogger
-from dataloaders import  dataset
+from dataloaders import  dataset as dt
 from dataloaders import chest_xray_14
 from dataloaders.dataset import TwoStreamBatchSampler
 from utils.util import get_timestamp
 from validation import epochVal, epochVal_metrics
+from wcp_loss import wcp_loss_torch
 
 from networks.create_model import create_semi_model,create_full_model
 
@@ -75,6 +76,7 @@ def train_semi_model(args,snapshot_path):
         logging.info("=> loaded checkpoint '{}' (epoch {})".format(args.resume, checkpoint['epoch']))
 
     # dataset
+    dataset = dt
     if args.task == 'chest':
         dataset = chest_xray_14
     normalize = transforms.Normalize([0.485, 0.456, 0.406],
@@ -154,6 +156,7 @@ def train_semi_model(args,snapshot_path):
         meters_loss_bnm_improve = MetricLogger(delimiter="  ")
         meters_loss_supCon = MetricLogger(delimiter="  ")
         meters_loss_vat = MetricLogger(delimiter="  ")
+        meters_loss_wcp = MetricLogger(delimiter="  ")
         meters_loss_entropy = MetricLogger(delimiter="  ")
         time1 = time.time()
         iter_max = len(train_dataloader)
@@ -226,10 +229,16 @@ def train_semi_model(args,snapshot_path):
             
             # use VAT loss
             if args.vat_loss ==1 and epoch > args.consistency_began_epoch:
-                consistency_weight = get_current_consistency_weight(args,epoch)
+                #consistency_weight = get_current_consistency_weight(args,epoch)
+                consistency_weight = 1.0
                 vat_loss = consistency_weight * args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
             else:
                 vat_loss = 0.0
+
+            if args.wcp_loss ==1 and epoch > args.consistency_began_epoch:
+                wcp_loss = wcp_loss_torch(model,image_batch[labeled_bs:])
+            else:
+                wcp_loss = 0.0
             #loss += bnm_loss
 
             # use entropy mini loss
@@ -239,7 +248,7 @@ def train_semi_model(args,snapshot_path):
                 entropy_loss = 0.0
             if epoch > args.consistency_began_epoch and args.baseline == 0:
                 loss = loss_classification + consistency_loss + consistency_relation_loss + \
-                    bnm_loss + bnm_loss_improve + supCon_loss + vat_loss + entropy_loss
+                    bnm_loss + bnm_loss_improve + supCon_loss + vat_loss + entropy_loss + wcp_loss
 
             optimizer.zero_grad()
             loss.backward()
@@ -253,6 +262,7 @@ def train_semi_model(args,snapshot_path):
             meters_loss_bnm_improve.update(loss=bnm_loss_improve)
             meters_loss_supCon.update(loss=supCon_loss)
             meters_loss_vat.update(loss=vat_loss)
+            meters_loss_wcp.update(loss=wcp_loss)
             meters_loss_entropy.update(loss=entropy_loss)
             meters_loss_consistency.update(loss=consistency_loss)
             meters_loss_consistency_relation.update(loss=consistency_relation_loss)
@@ -268,17 +278,19 @@ def train_semi_model(args,snapshot_path):
                 writer.add_scalar('train/bnm_loss_improve', bnm_loss_improve, iter_num)
                 writer.add_scalar('train/supCon_loss', supCon_loss, iter_num)
                 writer.add_scalar('train/vat_loss', vat_loss, iter_num)
+                writer.add_scalar('train/wcp_loss', wcp_loss, iter_num)
                 writer.add_scalar('train/entropy_loss', entropy_loss, iter_num)
                 writer.add_scalar('train/consistency_weight', consistency_weight, iter_num)
                 writer.add_scalar('train/consistency_dist', consistency_dist, iter_num)
 
                 logging.info("\nEpoch: {}, iteration: {}/{}, ==> train <===, loss: {:.6f}, classification loss: {:.6f},\
                      consistency loss: {:.6f}, consistency relation loss: {:.6f}, bnm loss: {:.6f},bnm loss improve: {:.6f},\
-                         supCon loss: {:.6f},vat loss: {:.6f},entropy loss: {:.6f},consistency weight: {:.6f}, lr: {}"
+                         supCon loss: {:.6f},vat loss: {:.6f},wcp loss: {:.6f},entropy loss: {:.6f},consistency weight: {:.6f}, lr: {}"
                             .format(epoch, i, iter_max, meters_loss.loss.avg, meters_loss_classification.loss.avg,
                                  meters_loss_consistency.loss.avg, meters_loss_consistency_relation.loss.avg,
                                  meters_loss_bnm.loss.avg, meters_loss_bnm_improve.loss.avg, 
-                                 meters_loss_supCon.loss.avg,meters_loss_vat.loss.avg,meters_loss_entropy.loss.avg, consistency_weight,
+                                 meters_loss_supCon.loss.avg,meters_loss_vat.loss.avg,meters_loss_wcp.loss.avg,
+                                 meters_loss_entropy.loss.avg, consistency_weight,
                                   optimizer.param_groups[0]['lr']))
 
                 image = inputs[-1, :, :]
