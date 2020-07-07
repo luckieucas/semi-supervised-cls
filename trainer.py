@@ -243,7 +243,7 @@ def train_semi_model(args,snapshot_path):
 
             # use entropy mini loss
             if args.entropy_loss == 1 and epoch > args.consistency_began_epoch:
-                entropy_loss = arags.entropy_loss_weight * losses.entropy_y_x(outputs[labeled_bs:])
+                entropy_loss = args.entropy_loss_weight * losses.entropy_y_x(outputs[labeled_bs:])
             else:
                 entropy_loss = 0.0
             if epoch > args.consistency_began_epoch and args.baseline == 0:
