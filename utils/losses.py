@@ -246,12 +246,9 @@ def dice_loss1(score, target):
     return loss
 
 
-def entropy_loss(p):
-    ## p N*C*W*H*D
-    p = F.softmax(p, dim=1) + 0.000001
-    B = -1.0 * A *torch.log(A)
-    C = B.sum(dim=1)
-    return torch.mean(C)
+def entropy_y_x(logit):
+    soft_logit = F.softmax(logit, dim=1)
+    return -torch.mean(torch.sum(soft_logit* F.log_softmax(logit,dim=1), dim=1))
 
 def softmax_dice_loss(input_logits, target_logits):
     """Takes softmax on both sides and returns MSE loss
