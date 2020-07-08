@@ -46,7 +46,7 @@ parser.add_argument('--bnm_loss_improve', type=int, default=0, help='whether use
 parser.add_argument('--bnm_loss_weight', type=float, default=1.0, help='weight of bnm_loss')
 parser.add_argument('--vat_loss', type=int, default=0, help='whether use vat loss')
 parser.add_argument('--vat_loss_weight', type=float, default=1.0, help='weight of vat_loss')
-parser.add_argument('--wcp_loss', type=int, default=0, help='whether use wcp loss')
+parser.add_argument('--wcp_loss', type=int, default=1, help='whether use wcp loss')
 parser.add_argument('--wcp_loss_weight', type=float, default=1.0, help='weight of wcp_loss')
 parser.add_argument('--supCon_loss', type=int, default=0, help='whether use supervised contrastive loss')
 parser.add_argument('--supCon_loss_weight', type=float, default=1.0, help='whether use supervised contrastive loss')

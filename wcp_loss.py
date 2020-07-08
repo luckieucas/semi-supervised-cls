@@ -1,4 +1,5 @@
 import re
+import time
 import torch
 from torch import nn
 from torch.autograd import Variable
@@ -15,6 +16,7 @@ import torch.utils.model_zoo as model_zoo
 def delta_forward(model,logit, x, x_d, w_d, size_list):
     #h = x + x_d
     h = x
+    print("model:",model.state_dict())
     # densenet
     k=1
     h = F.conv2d(h,model.state_dict()['module.densenet121.features.conv0.weight'] + 
@@ -120,7 +122,10 @@ def wcp_loss_torch(model, x, epsilon=8., dr=0.5, num_simulations=1, xi=1e-6):
 #             print(module.weight.data)
 #             print(name)
 #             break
+        start = time.clock()
         logit_d = delta_forward(model, logit, x, x_d, w_d, size_list)
+        elapsed = (time.clock() - start)
+        print("delat forward time:",elapsed)
         logp_hat = F.log_softmax(logit_d, dim=1)
         kl_loss = F.kl_div(logp_hat,F.softmax(logit),reduction='batchmean')
         kl_loss.backward()

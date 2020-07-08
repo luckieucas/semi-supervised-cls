@@ -130,7 +130,7 @@ def train_semi_model(args,snapshot_path):
     model.train()
     loss_fn = losses.cross_entropy_loss(args)
     loss_supCon_fn = losses.SupConLoss()
-    vat_loss_fn = losses.VATLoss()
+    vat_loss_fn = losses.VATLoss(task=args.task)
     if args.task == 'chest':
         loss_fn = losses.Loss_Ones()
     if args.consistency_type == 'mse':
@@ -235,8 +235,11 @@ def train_semi_model(args,snapshot_path):
             else:
                 vat_loss = 0.0
 
-            if args.wcp_loss ==1 and epoch > args.consistency_began_epoch:
+            if args.wcp_loss ==1:
+                start = time.clock()
                 wcp_loss = wcp_loss_torch(model,image_batch[labeled_bs:])
+                elapsed = (time.clock()-start)
+                print("WCP time used:",elapsed)
             else:
                 wcp_loss = 0.0
             #loss += bnm_loss
