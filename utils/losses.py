@@ -34,7 +34,7 @@ def _l2_normalize(d):
 
 class VATLoss(nn.Module):
 
-    def __init__(self, xi=10.0, eps=1.0, ip=1, task='skin'):
+    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl'):
         """VAT loss
         :param xi: hyperparameter of VAT (default: 10.0)
         :param eps: hyperparameter of VAT (default: 1.0)
@@ -44,7 +44,7 @@ class VATLoss(nn.Module):
         self.xi = xi
         self.eps = eps
         self.ip = ip
-        self.task = task
+        self.dis = dis
 
     def forward(self, model, x):
         with torch.no_grad():
@@ -58,9 +58,12 @@ class VATLoss(nn.Module):
             for _ in range(self.ip):
                 d.requires_grad_()
                 _,pred_hat = model(x + self.xi * d)
-                if self.task=='chest':
+                if self.dis=='mse':
                     pred_hat_softmax = F.softmax(pred_hat, dim=1)
                     adv_distance = F.mse_loss(pred_hat_softmax,pred)
+                elif self.dis=='mae':
+                    pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                    adv_distance = F.l1_loss(pred_hat_softmax,pred)
                 else:
                     logp_hat = F.log_softmax(pred_hat, dim=1)
                     adv_distance = F.kl_div(logp_hat, pred, reduction='batchmean')
@@ -71,9 +74,12 @@ class VATLoss(nn.Module):
             # calc LDS
             r_adv = d * self.eps
             _,pred_hat = model(x + r_adv)
-            if self.task=='chest':
+            if self.dis=='mse':
                 pred_hat_softmax = F.softmax(pred_hat, dim=1)
                 lds = F.mse_loss(pred_hat_softmax,pred)
+            elif self.dis=='mae':
+                pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                lds = F.l1_loss(pred_hat_softmax,pred)
             else:
                 logp_hat = F.log_softmax(pred_hat, dim=1)
                 lds = F.kl_div(logp_hat, pred, reduction='batchmean')
