@@ -59,7 +59,8 @@ class VATLoss(nn.Module):
                 d.requires_grad_()
                 _,pred_hat = model(x + self.xi * d)
                 if self.task=='chest':
-                    adv_distance = F.mse_loss(pred_hat,pred)
+                    pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                    adv_distance = F.mse_loss(pred_hat_softmax,pred)
                 else:
                     logp_hat = F.log_softmax(pred_hat, dim=1)
                     adv_distance = F.kl_div(logp_hat, pred, reduction='batchmean')
@@ -71,7 +72,8 @@ class VATLoss(nn.Module):
             r_adv = d * self.eps
             _,pred_hat = model(x + r_adv)
             if self.task=='chest':
-                lds = F.mse_loss(pred_hat,pred)
+                pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                lds = F.mse_loss(pred_hat_softmax,pred)
             else:
                 logp_hat = F.log_softmax(pred_hat, dim=1)
                 lds = F.kl_div(logp_hat, pred, reduction='batchmean')
