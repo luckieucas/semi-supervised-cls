@@ -44,6 +44,7 @@ class VATLoss(nn.Module):
         self.xi = xi
         self.eps = eps
         self.ip = ip
+        self.task = task
 
     def forward(self, model, x):
         with torch.no_grad():
@@ -57,7 +58,7 @@ class VATLoss(nn.Module):
             for _ in range(self.ip):
                 d.requires_grad_()
                 _,pred_hat = model(x + self.xi * d)
-                if task=='chest':
+                if self.task=='chest':
                     adv_distance = F.mse_loss(pred_hat,pred)
                 else:
                     logp_hat = F.log_softmax(pred_hat, dim=1)
@@ -69,7 +70,7 @@ class VATLoss(nn.Module):
             # calc LDS
             r_adv = d * self.eps
             _,pred_hat = model(x + r_adv)
-            if task=='chest':
+            if self.task=='chest':
                 lds = F.mse_loss(pred_hat,pred)
             else:
                 logp_hat = F.log_softmax(pred_hat, dim=1)
