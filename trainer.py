@@ -130,7 +130,6 @@ def train_semi_model(args,snapshot_path):
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True)#, worker_init_fn=worker_init_fn)
 
-    wandb.watch(model)
     model.train()
     loss_fn = losses.cross_entropy_loss(args)
     loss_supCon_fn = losses.SupConLoss()
