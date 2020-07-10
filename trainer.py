@@ -56,7 +56,10 @@ def train_semi_model(args,snapshot_path):
                         format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
     logging.info(str(args))
-
+    
+    #use wandb to visulize model
+    wandb.init(project="semi-supervised",name=snapshot_path.split("/")[-2])
+    wandb.config.update(args)
 
 
     model = create_semi_model(args)
@@ -127,6 +130,7 @@ def train_semi_model(args,snapshot_path):
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True)#, worker_init_fn=worker_init_fn)
 
+    wandb.watch(model)
     model.train()
     loss_fn = losses.cross_entropy_loss(args)
     loss_supCon_fn = losses.SupConLoss()
@@ -295,6 +299,11 @@ def train_semi_model(args,snapshot_path):
                                  meters_loss_supCon.loss.avg,meters_loss_vat.loss.avg,meters_loss_wcp.loss.avg,
                                  meters_loss_entropy.loss.avg, consistency_weight,
                                   optimizer.param_groups[0]['lr']))
+                wandb.log({'Epoch':epoch,'loss':meters_loss.loss.avg,'classification loss':meters_loss_classification.loss.avg,
+                'consistency loss': meters_loss_consistency.loss.avg,'consistency relation loss':meters_loss_consistency_relation.loss.avg,
+                'bnm loss':meters_loss_bnm.loss.avg,'vat loss':meters_loss_vat.loss.avg,'entropy loss':meters_loss_entropy.loss.avg,
+                'lr':optimizer.param_groups[0]['lr']
+                })
 
                 image = inputs[-1, :, :]
                 grid_image = make_grid(image, 5, normalize=True)
@@ -320,7 +329,7 @@ def train_semi_model(args,snapshot_path):
         logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
         logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
         logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
-
+        wandb.log({'VAL AUROC': AUROC_avg,'VAL Accus':Accus_avg})
         # test student
         # 
         AUROCs, Accus, Senss, Specs = epochVal_metrics(model, test_dataloader, args)  
@@ -336,7 +345,7 @@ def train_semi_model(args,snapshot_path):
         logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
         logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
         logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
-
+        wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg})
         # save model
         save_mode_path = os.path.join(snapshot_path + 'checkpoint/', 'epoch_' + str(epoch+1) + '.pth')
         torch.save({    'epoch': epoch + 1,
@@ -358,6 +367,7 @@ def train_semi_model(args,snapshot_path):
     save_mode_path = os.path.join(snapshot_path, 'iter_'+str(iter_num+1)+'.pth')
     torch.save(model.state_dict(), save_mode_path)
     logging.info("save model to {}".format(save_mode_path))
+    wandb.join()
     writer.close()
 
 

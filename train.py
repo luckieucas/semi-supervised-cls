@@ -67,6 +67,9 @@ parser.add_argument('--scale4_weight', type=float, default=1.0, help='multi scal
 
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
+parser.add_argument('--class_names', type=str,  default=None, help='class name list')
+parser.add_argument('--class_num', type=str,  default=None, help='class num list')
+parser.add_argument('--resize', type=int,  default=224, help='resize the image')
 parser.add_argument('--backbone', type=str,  default='densenet121', help='backbone network')
 parser.add_argument('--supervise_level', type=str,  default='semi', help='full or semi supervised')
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')

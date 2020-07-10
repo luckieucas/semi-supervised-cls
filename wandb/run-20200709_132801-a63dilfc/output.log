@@ -1,0 +1,386 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+
+Epoch: 0, iteration: 0/175, ==> train <===, loss: 1.978953, classification loss: 1.978953,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 100/175, ==> train <===, loss: 1.739425, classification loss: 1.739425,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [75.0, 428.0, 52.0, 0.0, 9.0, 0.0, 0.0]
+
+VAL Student: Epoch: 0, iteration: 174
+
+VAL AUROC: 0.807086, VAL Accus: 0.332681, VAL Senss: 0.427932, VAL Specs: 0.889115
+AUROCs: Melanoma:0.834623 Melanocytic nevus:0.893855 Basal cell carcinoma:0.925065 Actinic keratosis:0.821974 Benign keratosis:0.753856 Dermatofibroma:0.607978 Vascular lesion:0.812250
+Accus: Melanoma:0.630252 Melanocytic nevus:0.645551 Basal cell carcinoma:0.962963 Actinic keratosis:0.000000 Benign keratosis:0.090000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.773109 Melanocytic nevus:0.728507 Basal cell carcinoma:0.981481 Actinic keratosis:0.242424 Benign keratosis:0.270000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.754824 Melanocytic nevus:0.881306 Basal cell carcinoma:0.649049 Actinic keratosis:0.988625 Benign keratosis:0.950000 Dermatofibroma:1.000000 Vascular lesion:1.000000
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [146.0, 865.0, 109.0, 2.0, 24.0, 0.0, 0.0]
+
+TEST Student: Epoch: 0, iteration: 174
+
+TEST AUROC: 0.816385, TEST Accus: 0.344399, TEST Senss: 0.432066, TEST Specs: 0.888357
+AUROCs: Melanoma:0.832130 Melanocytic nevus:0.887895 Basal cell carcinoma:0.935820 Actinic keratosis:0.858157 Benign keratosis:0.805163 Dermatofibroma:0.646216 Vascular lesion:0.749317
+Accus: Melanoma:0.632035 Melanocytic nevus:0.641216 Basal cell carcinoma:0.990909 Actinic keratosis:0.034483 Benign keratosis:0.112150 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.735931 Melanocytic nevus:0.716827 Basal cell carcinoma:1.000000 Actinic keratosis:0.258621 Benign keratosis:0.313084 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.744395 Melanocytic nevus:0.893393 Basal cell carcinoma:0.633596 Actinic keratosis:0.988758 Benign keratosis:0.958356 Dermatofibroma:1.000000 Vascular lesion:1.000000
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_1.pth
+
+Epoch: 1, iteration: 0/175, ==> train <===, loss: 1.488356, classification loss: 1.488356,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 9e-05
+
+Epoch: 1, iteration: 100/175, ==> train <===, loss: 1.700715, classification loss: 1.700715,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 9e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [36.0, 554.0, 42.0, 3.0, 42.0, 0.0, 9.0]
+
+VAL Student: Epoch: 1, iteration: 174
+
+VAL AUROC: 0.797273, VAL Accus: 0.432401, VAL Senss: 0.509117, VAL Specs: 0.903397
+AUROCs: Melanoma:0.762808 Melanocytic nevus:0.892665 Basal cell carcinoma:0.862990 Actinic keratosis:0.690389 Benign keratosis:0.802656 Dermatofibroma:0.647167 Vascular lesion:0.922234
+Accus: Melanoma:0.302521 Melanocytic nevus:0.835596 Basal cell carcinoma:0.777778 Actinic keratosis:0.090909 Benign keratosis:0.420000 Dermatofibroma:0.000000 Vascular lesion:0.600000
+Senss: Melanoma:0.378151 Melanocytic nevus:0.886878 Basal cell carcinoma:0.833333 Actinic keratosis:0.212121 Benign keratosis:0.520000 Dermatofibroma:0.000000 Vascular lesion:0.733333
+Specs: Melanoma:0.918275 Melanocytic nevus:0.747774 Basal cell carcinoma:0.775899 Actinic keratosis:0.977249 Benign keratosis:0.917778 Dermatofibroma:1.000000 Vascular lesion:0.986802
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [87.0, 1097.0, 90.0, 8.0, 92.0, 0.0, 19.0]
+
+TEST Student: Epoch: 1, iteration: 174
+
+TEST AUROC: 0.834409, TEST Accus: 0.455534, TEST Senss: 0.551404, TEST Specs: 0.905567
+AUROCs: Melanoma:0.774385 Melanocytic nevus:0.896944 Basal cell carcinoma:0.913658 Actinic keratosis:0.719213 Benign keratosis:0.851458 Dermatofibroma:0.701364 Vascular lesion:0.983838
+Accus: Melanoma:0.376623 Melanocytic nevus:0.813195 Basal cell carcinoma:0.818182 Actinic keratosis:0.137931 Benign keratosis:0.429907 Dermatofibroma:0.000000 Vascular lesion:0.612903
+Senss: Melanoma:0.480519 Melanocytic nevus:0.866568 Basal cell carcinoma:0.918182 Actinic keratosis:0.241379 Benign keratosis:0.546729 Dermatofibroma:0.000000 Vascular lesion:0.806452
+Specs: Melanoma:0.910874 Melanocytic nevus:0.770270 Basal cell carcinoma:0.784777 Actinic keratosis:0.976495 Benign keratosis:0.916713 Dermatofibroma:1.000000 Vascular lesion:0.979839
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_2.pth
+
+Epoch: 2, iteration: 0/175, ==> train <===, loss: 1.558506, classification loss: 1.558506,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 8.1e-05
+
+Epoch: 2, iteration: 100/175, ==> train <===, loss: 1.571996, classification loss: 1.571996,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 8.1e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 548.0, 42.0, 13.0, 34.0, 0.0, 11.0]
+
+VAL Student: Epoch: 2, iteration: 174
+
+VAL AUROC: 0.857669, VAL Accus: 0.516831, VAL Senss: 0.566826, VAL Specs: 0.916405
+AUROCs: Melanoma:0.828833 Melanocytic nevus:0.896715 Basal cell carcinoma:0.927198 Actinic keratosis:0.830842 Benign keratosis:0.826956 Dermatofibroma:0.711954 Vascular lesion:0.981184
+Accus: Melanoma:0.546218 Melanocytic nevus:0.826546 Basal cell carcinoma:0.777778 Actinic keratosis:0.393939 Benign keratosis:0.340000 Dermatofibroma:0.000000 Vascular lesion:0.733333
+Senss: Melanoma:0.630252 Melanocytic nevus:0.876320 Basal cell carcinoma:0.833333 Actinic keratosis:0.454545 Benign keratosis:0.440000 Dermatofibroma:0.000000 Vascular lesion:0.733333
+Specs: Melanoma:0.845630 Melanocytic nevus:0.747774 Basal cell carcinoma:0.894292 Actinic keratosis:0.966908 Benign keratosis:0.974444 Dermatofibroma:1.000000 Vascular lesion:0.985787
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [134.0, 1114.0, 88.0, 17.0, 68.0, 0.0, 25.0]
+
+TEST Student: Epoch: 2, iteration: 174
+
+TEST AUROC: 0.874417, TEST Accus: 0.517599, TEST Senss: 0.592854, TEST Specs: 0.913698
+AUROCs: Melanoma:0.840971 Melanocytic nevus:0.896720 Basal cell carcinoma:0.953691 Actinic keratosis:0.847286 Benign keratosis:0.855701 Dermatofibroma:0.731720 Vascular lesion:0.994830
+Accus: Melanoma:0.580087 Melanocytic nevus:0.825797 Basal cell carcinoma:0.800000 Actinic keratosis:0.293103 Benign keratosis:0.317757 Dermatofibroma:0.000000 Vascular lesion:0.806452
+Senss: Melanoma:0.675325 Melanocytic nevus:0.876205 Basal cell carcinoma:0.863636 Actinic keratosis:0.396552 Benign keratosis:0.467290 Dermatofibroma:0.000000 Vascular lesion:0.870968
+Specs: Melanoma:0.832399 Melanocytic nevus:0.741742 Basal cell carcinoma:0.906037 Actinic keratosis:0.961165 Benign keratosis:0.971682 Dermatofibroma:1.000000 Vascular lesion:0.982863
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_3.pth
+
+Epoch: 3, iteration: 0/175, ==> train <===, loss: 1.793458, classification loss: 1.793458,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 7.290000000000001e-05
+
+Epoch: 3, iteration: 100/175, ==> train <===, loss: 1.548372, classification loss: 1.548372,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 7.290000000000001e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [55.0, 521.0, 32.0, 28.0, 30.0, 0.0, 11.0]
+
+VAL Student: Epoch: 3, iteration: 174
+
+VAL AUROC: 0.830800, VAL Accus: 0.531774, VAL Senss: 0.578226, VAL Specs: 0.914855
+AUROCs: Melanoma:0.863648 Melanocytic nevus:0.898318 Basal cell carcinoma:0.851206 Actinic keratosis:0.925073 Benign keratosis:0.786367 Dermatofibroma:0.600229 Vascular lesion:0.890761
+Accus: Melanoma:0.462185 Melanocytic nevus:0.785822 Basal cell carcinoma:0.592593 Actinic keratosis:0.848485 Benign keratosis:0.300000 Dermatofibroma:0.000000 Vascular lesion:0.733333
+Senss: Melanoma:0.537815 Melanocytic nevus:0.843137 Basal cell carcinoma:0.648148 Actinic keratosis:0.848485 Benign keratosis:0.370000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.911464 Melanocytic nevus:0.818991 Basal cell carcinoma:0.880550 Actinic keratosis:0.863495 Benign keratosis:0.971111 Dermatofibroma:1.000000 Vascular lesion:0.958376
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [106.0, 1008.0, 67.0, 47.0, 72.0, 0.0, 26.0]
+
+TEST Student: Epoch: 3, iteration: 174
+
+TEST AUROC: 0.861384, TEST Accus: 0.542956, TEST Senss: 0.610349, TEST Specs: 0.910481
+AUROCs: Melanoma:0.846328 Melanocytic nevus:0.893619 Basal cell carcinoma:0.862286 Actinic keratosis:0.915379 Benign keratosis:0.797529 Dermatofibroma:0.726452 Vascular lesion:0.988098
+Accus: Melanoma:0.458874 Melanocytic nevus:0.747220 Basal cell carcinoma:0.609091 Actinic keratosis:0.810345 Benign keratosis:0.336449 Dermatofibroma:0.000000 Vascular lesion:0.838710
+Senss: Melanoma:0.528139 Melanocytic nevus:0.807265 Basal cell carcinoma:0.727273 Actinic keratosis:0.844828 Benign keratosis:0.397196 Dermatofibroma:0.000000 Vascular lesion:0.967742
+Specs: Melanoma:0.908632 Melanocytic nevus:0.834835 Basal cell carcinoma:0.856168 Actinic keratosis:0.861523 Benign keratosis:0.971682 Dermatofibroma:1.000000 Vascular lesion:0.940524
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_4.pth
+
+Epoch: 4, iteration: 0/175, ==> train <===, loss: 1.485451, classification loss: 1.485451,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 6.561000000000002e-05
+
+Epoch: 4, iteration: 100/175, ==> train <===, loss: 1.470538, classification loss: 1.470538,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 6.561000000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [45.0, 564.0, 19.0, 29.0, 40.0, 0.0, 12.0]
+
+VAL Student: Epoch: 4, iteration: 174
+
+VAL AUROC: 0.837370, VAL Accus: 0.522781, VAL Senss: 0.569142, VAL Specs: 0.924562
+AUROCs: Melanoma:0.852555 Melanocytic nevus:0.907511 Basal cell carcinoma:0.792636 Actinic keratosis:0.938109 Benign keratosis:0.791422 Dermatofibroma:0.673844 Vascular lesion:0.905516
+Accus: Melanoma:0.378151 Melanocytic nevus:0.850679 Basal cell carcinoma:0.351852 Actinic keratosis:0.878788 Benign keratosis:0.400000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.470588 Melanocytic nevus:0.888386 Basal cell carcinoma:0.425926 Actinic keratosis:0.909091 Benign keratosis:0.490000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.962543 Melanocytic nevus:0.795252 Basal cell carcinoma:0.947146 Actinic keratosis:0.839710 Benign keratosis:0.945556 Dermatofibroma:1.000000 Vascular lesion:0.981726
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [70.0, 1115.0, 43.0, 49.0, 83.0, 0.0, 29.0]
+
+TEST Student: Epoch: 4, iteration: 174
+
+TEST AUROC: 0.869055, TEST Accus: 0.526948, TEST Senss: 0.590024, TEST Specs: 0.915587
+AUROCs: Melanoma:0.856531 Melanocytic nevus:0.909577 Basal cell carcinoma:0.828074 Actinic keratosis:0.927616 Benign keratosis:0.830271 Dermatofibroma:0.734434 Vascular lesion:0.996878
+Accus: Melanoma:0.303030 Melanocytic nevus:0.826538 Basal cell carcinoma:0.390909 Actinic keratosis:0.844828 Benign keratosis:0.387850 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Senss: Melanoma:0.432900 Melanocytic nevus:0.869533 Basal cell carcinoma:0.454545 Actinic keratosis:0.896552 Benign keratosis:0.476636 Dermatofibroma:0.000000 Vascular lesion:1.000000
+Specs: Melanoma:0.950112 Melanocytic nevus:0.785285 Basal cell carcinoma:0.931234 Actinic keratosis:0.831886 Benign keratosis:0.937812 Dermatofibroma:1.000000 Vascular lesion:0.972782
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_5.pth
+
+Epoch: 5, iteration: 0/175, ==> train <===, loss: 1.729392, classification loss: 1.729392,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.904900000000002e-05
+
+Epoch: 5, iteration: 100/175, ==> train <===, loss: 1.543598, classification loss: 1.543598,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.904900000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [54.0, 539.0, 37.0, 24.0, 36.0, 0.0, 12.0]
+
+VAL Student: Epoch: 5, iteration: 174
+
+VAL AUROC: 0.832984, VAL Accus: 0.548459, VAL Senss: 0.597529, VAL Specs: 0.922537
+AUROCs: Melanoma:0.797470 Melanocytic nevus:0.913629 Basal cell carcinoma:0.920357 Actinic keratosis:0.835825 Benign keratosis:0.818689 Dermatofibroma:0.610772 Vascular lesion:0.934146
+Accus: Melanoma:0.453782 Melanocytic nevus:0.812971 Basal cell carcinoma:0.685185 Actinic keratosis:0.727273 Benign keratosis:0.360000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.521008 Melanocytic nevus:0.856712 Basal cell carcinoma:0.740741 Actinic keratosis:0.757576 Benign keratosis:0.440000 Dermatofibroma:0.000000 Vascular lesion:0.866667
+Specs: Melanoma:0.930760 Melanocytic nevus:0.830861 Basal cell carcinoma:0.887949 Actinic keratosis:0.883144 Benign keratosis:0.966667 Dermatofibroma:1.000000 Vascular lesion:0.958376
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [82.0, 1074.0, 78.0, 36.0, 82.0, 0.0, 30.0]
+
+TEST Student: Epoch: 5, iteration: 174
+
+TEST AUROC: 0.853543, TEST Accus: 0.547403, TEST Senss: 0.595324, TEST Specs: 0.919871
+AUROCs: Melanoma:0.794278 Melanocytic nevus:0.909988 Basal cell carcinoma:0.906364 Actinic keratosis:0.863822 Benign keratosis:0.843350 Dermatofibroma:0.659809 Vascular lesion:0.997187
+Accus: Melanoma:0.354978 Melanocytic nevus:0.796145 Basal cell carcinoma:0.709091 Actinic keratosis:0.620690 Benign keratosis:0.383178 Dermatofibroma:0.000000 Vascular lesion:0.967742
+Senss: Melanoma:0.450216 Melanocytic nevus:0.829503 Basal cell carcinoma:0.763636 Actinic keratosis:0.637931 Benign keratosis:0.485981 Dermatofibroma:0.000000 Vascular lesion:1.000000
+Specs: Melanoma:0.929933 Melanocytic nevus:0.839339 Basal cell carcinoma:0.872441 Actinic keratosis:0.889116 Benign keratosis:0.967240 Dermatofibroma:1.000000 Vascular lesion:0.941028
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_6.pth
+
+Epoch: 6, iteration: 0/175, ==> train <===, loss: 1.185331, classification loss: 1.185331,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.314410000000002e-05
+
+Epoch: 6, iteration: 100/175, ==> train <===, loss: 1.576755, classification loss: 1.576755,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.314410000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [43.0, 526.0, 47.0, 19.0, 50.0, 0.0, 12.0]
+
+VAL Student: Epoch: 6, iteration: 174
+
+VAL AUROC: 0.824000, VAL Accus: 0.557262, VAL Senss: 0.603428, VAL Specs: 0.922158
+AUROCs: Melanoma:0.793951 Melanocytic nevus:0.914788 Basal cell carcinoma:0.950904 Actinic keratosis:0.783962 Benign keratosis:0.832933 Dermatofibroma:0.570376 Vascular lesion:0.921083
+Accus: Melanoma:0.361345 Melanocytic nevus:0.793363 Basal cell carcinoma:0.870370 Actinic keratosis:0.575758 Benign keratosis:0.500000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.428571 Melanocytic nevus:0.843137 Basal cell carcinoma:0.925926 Actinic keratosis:0.636364 Benign keratosis:0.590000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.963678 Melanocytic nevus:0.824926 Basal cell carcinoma:0.824524 Actinic keratosis:0.942089 Benign keratosis:0.922222 Dermatofibroma:1.000000 Vascular lesion:0.977665
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [76.0, 1049.0, 98.0, 25.0, 117.0, 0.0, 29.0]
+
+TEST Student: Epoch: 6, iteration: 174
+
+TEST AUROC: 0.841183, TEST Accus: 0.558682, TEST Senss: 0.607347, TEST Specs: 0.919676
+AUROCs: Melanoma:0.796352 Melanocytic nevus:0.908964 Basal cell carcinoma:0.950098 Actinic keratosis:0.801147 Benign keratosis:0.858900 Dermatofibroma:0.576609 Vascular lesion:0.996212
+Accus: Melanoma:0.329004 Melanocytic nevus:0.777613 Basal cell carcinoma:0.890909 Actinic keratosis:0.431034 Benign keratosis:0.546729 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Senss: Melanoma:0.406926 Melanocytic nevus:0.821349 Basal cell carcinoma:0.936364 Actinic keratosis:0.534483 Benign keratosis:0.616822 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Specs: Melanoma:0.960762 Melanocytic nevus:0.839339 Basal cell carcinoma:0.812073 Actinic keratosis:0.935616 Benign keratosis:0.910605 Dermatofibroma:1.000000 Vascular lesion:0.979335
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_7.pth
+
+Epoch: 7, iteration: 0/175, ==> train <===, loss: 1.370510, classification loss: 1.370510,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.782969000000002e-05
+
+Epoch: 7, iteration: 100/175, ==> train <===, loss: 1.405111, classification loss: 1.405111,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.782969000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [35.0, 525.0, 47.0, 16.0, 68.0, 0.0, 12.0]
+
+VAL Student: Epoch: 7, iteration: 174
+
+VAL AUROC: 0.825567, VAL Accus: 0.560170, VAL Senss: 0.592959, VAL Specs: 0.921393
+AUROCs: Melanoma:0.789458 Melanocytic nevus:0.904865 Basal cell carcinoma:0.944601 Actinic keratosis:0.718122 Benign keratosis:0.861589 Dermatofibroma:0.645071 Vascular lesion:0.915262
+Accus: Melanoma:0.294118 Melanocytic nevus:0.791855 Basal cell carcinoma:0.870370 Actinic keratosis:0.484848 Benign keratosis:0.680000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.386555 Melanocytic nevus:0.840121 Basal cell carcinoma:0.888889 Actinic keratosis:0.515152 Benign keratosis:0.720000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.958002 Melanocytic nevus:0.824926 Basal cell carcinoma:0.854123 Actinic keratosis:0.950362 Benign keratosis:0.898889 Dermatofibroma:1.000000 Vascular lesion:0.963452
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [67.0, 1033.0, 93.0, 24.0, 143.0, 0.0, 30.0]
+
+TEST Student: Epoch: 7, iteration: 174
+
+TEST AUROC: 0.858184, TEST Accus: 0.564430, TEST Senss: 0.614546, TEST Specs: 0.922326
+AUROCs: Melanoma:0.790145 Melanocytic nevus:0.900347 Basal cell carcinoma:0.936609 Actinic keratosis:0.812494 Benign keratosis:0.884677 Dermatofibroma:0.687337 Vascular lesion:0.995675
+Accus: Melanoma:0.290043 Melanocytic nevus:0.765752 Basal cell carcinoma:0.845455 Actinic keratosis:0.413793 Benign keratosis:0.668224 Dermatofibroma:0.000000 Vascular lesion:0.967742
+Senss: Melanoma:0.398268 Melanocytic nevus:0.812454 Basal cell carcinoma:0.881818 Actinic keratosis:0.517241 Benign keratosis:0.724299 Dermatofibroma:0.000000 Vascular lesion:0.967742
+Specs: Melanoma:0.952915 Melanocytic nevus:0.842342 Basal cell carcinoma:0.849344 Actinic keratosis:0.958099 Benign keratosis:0.898945 Dermatofibroma:1.000000 Vascular lesion:0.954637
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_8.pth
+
+Epoch: 8, iteration: 0/175, ==> train <===, loss: 1.342952, classification loss: 1.342952,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.304672100000002e-05
+
+Epoch: 8, iteration: 100/175, ==> train <===, loss: 1.425549, classification loss: 1.425549,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.304672100000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [26.0, 548.0, 49.0, 11.0, 57.0, 0.0, 12.0]
+
+VAL Student: Epoch: 8, iteration: 174
+
+VAL AUROC: 0.802922, VAL Accus: 0.522253, VAL Senss: 0.569486, VAL Specs: 0.922661
+AUROCs: Melanoma:0.746068 Melanocytic nevus:0.893095 Basal cell carcinoma:0.937339 Actinic keratosis:0.673749 Benign keratosis:0.841678 Dermatofibroma:0.587208 Vascular lesion:0.941320
+Accus: Melanoma:0.218487 Melanocytic nevus:0.826546 Basal cell carcinoma:0.907407 Actinic keratosis:0.333333 Benign keratosis:0.570000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.268908 Melanocytic nevus:0.862745 Basal cell carcinoma:0.944444 Actinic keratosis:0.363636 Benign keratosis:0.680000 Dermatofibroma:0.000000 Vascular lesion:0.866667
+Specs: Melanoma:0.978434 Melanocytic nevus:0.798220 Basal cell carcinoma:0.836152 Actinic keratosis:0.963806 Benign keratosis:0.903333 Dermatofibroma:1.000000 Vascular lesion:0.978680
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [53.0, 1063.0, 97.0, 22.0, 133.0, 0.0, 29.0]
+
+TEST Student: Epoch: 8, iteration: 174
+
+TEST AUROC: 0.823068, TEST Accus: 0.547934, TEST Senss: 0.589339, TEST Specs: 0.923497
+AUROCs: Melanoma:0.751264 Melanocytic nevus:0.884151 Basal cell carcinoma:0.935113 Actinic keratosis:0.707540 Benign keratosis:0.845992 Dermatofibroma:0.640378 Vascular lesion:0.997041
+Accus: Melanoma:0.229437 Melanocytic nevus:0.787991 Basal cell carcinoma:0.881818 Actinic keratosis:0.379310 Benign keratosis:0.621495 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Senss: Melanoma:0.311688 Melanocytic nevus:0.823573 Basal cell carcinoma:0.909091 Actinic keratosis:0.431034 Benign keratosis:0.682243 Dermatofibroma:0.000000 Vascular lesion:0.967742
+Specs: Melanoma:0.974776 Melanocytic nevus:0.824324 Basal cell carcinoma:0.828346 Actinic keratosis:0.965764 Benign keratosis:0.893948 Dermatofibroma:1.000000 Vascular lesion:0.977319
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_9.pth
+
+Epoch: 9, iteration: 0/175, ==> train <===, loss: 1.308820, classification loss: 1.308820,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.874204890000002e-05
+
+Epoch: 9, iteration: 100/175, ==> train <===, loss: 1.400412, classification loss: 1.400412,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.874204890000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [38.0, 563.0, 43.0, 15.0, 74.0, 0.0, 12.0]
+
+VAL Student: Epoch: 9, iteration: 174
+
+VAL AUROC: 0.820055, VAL Accus: 0.565620, VAL Senss: 0.600913, VAL Specs: 0.929594
+AUROCs: Melanoma:0.800589 Melanocytic nevus:0.913197 Basal cell carcinoma:0.928236 Actinic keratosis:0.739432 Benign keratosis:0.881589 Dermatofibroma:0.600927 Vascular lesion:0.876413
+Accus: Melanoma:0.319328 Melanocytic nevus:0.849170 Basal cell carcinoma:0.796296 Actinic keratosis:0.454545 Benign keratosis:0.740000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.369748 Melanocytic nevus:0.879336 Basal cell carcinoma:0.851852 Actinic keratosis:0.545455 Benign keratosis:0.760000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.959137 Melanocytic nevus:0.816024 Basal cell carcinoma:0.914376 Actinic keratosis:0.954498 Benign keratosis:0.884444 Dermatofibroma:1.000000 Vascular lesion:0.978680
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [79.0, 1103.0, 88.0, 29.0, 163.0, 0.0, 29.0]
+
+TEST Student: Epoch: 9, iteration: 174
+
+TEST AUROC: 0.877589, TEST Accus: 0.593829, TEST Senss: 0.631737, TEST Specs: 0.932848
+AUROCs: Melanoma:0.785387 Melanocytic nevus:0.915642 Basal cell carcinoma:0.935786 Actinic keratosis:0.833145 Benign keratosis:0.908536 Dermatofibroma:0.767436 Vascular lesion:0.997187
+Accus: Melanoma:0.341991 Melanocytic nevus:0.817643 Basal cell carcinoma:0.800000 Actinic keratosis:0.500000 Benign keratosis:0.761682 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Senss: Melanoma:0.428571 Melanocytic nevus:0.856931 Basal cell carcinoma:0.836364 Actinic keratosis:0.551724 Benign keratosis:0.813084 Dermatofibroma:0.000000 Vascular lesion:0.935484
+Specs: Melanoma:0.952915 Melanocytic nevus:0.849850 Basal cell carcinoma:0.916535 Actinic keratosis:0.958099 Benign keratosis:0.871183 Dermatofibroma:1.000000 Vascular lesion:0.981351
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_10.pth
+
+Epoch: 10, iteration: 0/175, ==> train <===, loss: 1.370532, classification loss: 1.370532,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.4867844010000016e-05
+
+Epoch: 10, iteration: 100/175, ==> train <===, loss: 1.391376, classification loss: 1.391376,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.4867844010000016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [50.0, 525.0, 51.0, 16.0, 51.0, 0.0, 12.0]
+
+VAL Student: Epoch: 10, iteration: 174
+
+VAL AUROC: 0.817671, VAL Accus: 0.564474, VAL Senss: 0.595966, VAL Specs: 0.930368
+AUROCs: Melanoma:0.813643 Melanocytic nevus:0.912846 Basal cell carcinoma:0.942927 Actinic keratosis:0.724766 Benign keratosis:0.827267 Dermatofibroma:0.642149 Vascular lesion:0.860102
+Accus: Melanoma:0.420168 Melanocytic nevus:0.791855 Basal cell carcinoma:0.944444 Actinic keratosis:0.484848 Benign keratosis:0.510000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.512605 Melanocytic nevus:0.829563 Basal cell carcinoma:0.944444 Actinic keratosis:0.515152 Benign keratosis:0.570000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Specs: Melanoma:0.934166 Melanocytic nevus:0.860534 Basal cell carcinoma:0.859408 Actinic keratosis:0.950362 Benign keratosis:0.923333 Dermatofibroma:1.000000 Vascular lesion:0.984772
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [99.0, 1023.0, 96.0, 25.0, 129.0, 1.0, 28.0]
+
+TEST Student: Epoch: 10, iteration: 174
+
+TEST AUROC: 0.847707, TEST Accus: 0.577451, TEST Senss: 0.620480, TEST Specs: 0.928476
+AUROCs: Melanoma:0.810477 Melanocytic nevus:0.912478 Basal cell carcinoma:0.949203 Actinic keratosis:0.753282 Benign keratosis:0.847753 Dermatofibroma:0.664462 Vascular lesion:0.996293
+Accus: Melanoma:0.428571 Melanocytic nevus:0.758340 Basal cell carcinoma:0.872727 Actinic keratosis:0.431034 Benign keratosis:0.602804 Dermatofibroma:0.045455 Vascular lesion:0.903226
+Senss: Melanoma:0.489177 Melanocytic nevus:0.816901 Basal cell carcinoma:0.927273 Actinic keratosis:0.465517 Benign keratosis:0.663551 Dermatofibroma:0.045455 Vascular lesion:0.935484
+Specs: Melanoma:0.927691 Melanocytic nevus:0.881381 Basal cell carcinoma:0.848294 Actinic keratosis:0.949412 Benign keratosis:0.906163 Dermatofibroma:1.000000 Vascular lesion:0.986391
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_11.pth
+
+Epoch: 11, iteration: 0/175, ==> train <===, loss: 1.200647, classification loss: 1.200647,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.138105960900002e-05
+
+Epoch: 11, iteration: 100/175, ==> train <===, loss: 1.359370, classification loss: 1.359370,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.138105960900002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [48.0, 545.0, 50.0, 18.0, 54.0, 0.0, 12.0]
+
+VAL Student: Epoch: 11, iteration: 174
+
+VAL AUROC: 0.847147, VAL Accus: 0.576680, VAL Senss: 0.611597, VAL Specs: 0.930639
+AUROCs: Melanoma:0.801982 Melanocytic nevus:0.914609 Basal cell carcinoma:0.939257 Actinic keratosis:0.743349 Benign keratosis:0.851644 Dermatofibroma:0.787411 Vascular lesion:0.891777
+Accus: Melanoma:0.403361 Melanocytic nevus:0.822021 Basal cell carcinoma:0.925926 Actinic keratosis:0.545455 Benign keratosis:0.540000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.470588 Melanocytic nevus:0.856712 Basal cell carcinoma:0.925926 Actinic keratosis:0.545455 Benign keratosis:0.620000 Dermatofibroma:0.062500 Vascular lesion:0.800000
+Specs: Melanoma:0.948922 Melanocytic nevus:0.833828 Basal cell carcinoma:0.880550 Actinic keratosis:0.932782 Benign keratosis:0.936667 Dermatofibroma:0.998984 Vascular lesion:0.982741
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [93.0, 1084.0, 93.0, 30.0, 121.0, 1.0, 27.0]
+
+TEST Student: Epoch: 11, iteration: 174
+
+TEST AUROC: 0.869419, TEST Accus: 0.578671, TEST Senss: 0.641683, TEST Specs: 0.925988
+AUROCs: Melanoma:0.806357 Melanocytic nevus:0.915443 Basal cell carcinoma:0.944262 Actinic keratosis:0.808274 Benign keratosis:0.863350 Dermatofibroma:0.751904 Vascular lesion:0.996342
+Accus: Melanoma:0.402597 Melanocytic nevus:0.803558 Basal cell carcinoma:0.845455 Actinic keratosis:0.517241 Benign keratosis:0.565421 Dermatofibroma:0.045455 Vascular lesion:0.870968
+Senss: Melanoma:0.458874 Melanocytic nevus:0.841364 Basal cell carcinoma:0.863636 Actinic keratosis:0.551724 Benign keratosis:0.658879 Dermatofibroma:0.181818 Vascular lesion:0.935484
+Specs: Melanoma:0.928812 Melanocytic nevus:0.846847 Basal cell carcinoma:0.883465 Actinic keratosis:0.919775 Benign keratosis:0.921155 Dermatofibroma:0.997491 Vascular lesion:0.984375
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_12.pth
+
+Epoch: 12, iteration: 0/175, ==> train <===, loss: 1.702273, classification loss: 1.702273,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.8242953648100018e-05
+
+Epoch: 12, iteration: 100/175, ==> train <===, loss: 1.379360, classification loss: 1.379360,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.8242953648100018e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [43.0, 564.0, 50.0, 9.0, 59.0, 0.0, 12.0]
+
+VAL Student: Epoch: 12, iteration: 174
+
+VAL AUROC: 0.843216, VAL Accus: 0.542954, VAL Senss: 0.630688, VAL Specs: 0.932530
+AUROCs: Melanoma:0.814773 Melanocytic nevus:0.915889 Basal cell carcinoma:0.952882 Actinic keratosis:0.692175 Benign keratosis:0.891933 Dermatofibroma:0.734693 Vascular lesion:0.900169
+Accus: Melanoma:0.361345 Melanocytic nevus:0.850679 Basal cell carcinoma:0.925926 Actinic keratosis:0.272727 Benign keratosis:0.590000 Dermatofibroma:0.000000 Vascular lesion:0.800000
+Senss: Melanoma:0.462185 Melanocytic nevus:0.882353 Basal cell carcinoma:0.944444 Actinic keratosis:0.333333 Benign keratosis:0.680000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.965948 Melanocytic nevus:0.827893 Basal cell carcinoma:0.858351 Actinic keratosis:0.974147 Benign keratosis:0.927778 Dermatofibroma:0.990854 Vascular lesion:0.982741
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [86.0, 1116.0, 95.0, 22.0, 145.0, 4.0, 28.0]
+
+TEST Student: Epoch: 12, iteration: 174
+
+TEST AUROC: 0.870935, TEST Accus: 0.600734, TEST Senss: 0.662478, TEST Specs: 0.931469
+AUROCs: Melanoma:0.827922 Melanocytic nevus:0.911221 Basal cell carcinoma:0.954133 Actinic keratosis:0.759713 Benign keratosis:0.891960 Dermatofibroma:0.754003 Vascular lesion:0.997594
+Accus: Melanoma:0.372294 Melanocytic nevus:0.827279 Basal cell carcinoma:0.863636 Actinic keratosis:0.379310 Benign keratosis:0.677570 Dermatofibroma:0.181818 Vascular lesion:0.903226
+Senss: Melanoma:0.458874 Melanocytic nevus:0.862861 Basal cell carcinoma:0.918182 Actinic keratosis:0.396552 Benign keratosis:0.714953 Dermatofibroma:0.318182 Vascular lesion:0.967742
+Specs: Melanoma:0.950673 Melanocytic nevus:0.839339 Basal cell carcinoma:0.869816 Actinic keratosis:0.978028 Benign keratosis:0.910605 Dermatofibroma:0.989965 Vascular lesion:0.981855
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_13.pth
+
+Epoch: 13, iteration: 0/175, ==> train <===, loss: 1.204036, classification loss: 1.204036,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.5418658283290016e-05
+
+Epoch: 13, iteration: 100/175, ==> train <===, loss: 1.296511, classification loss: 1.296511,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.5418658283290016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [48.0, 540.0, 48.0, 18.0, 54.0, 5.0, 11.0]
+
+VAL Student: Epoch: 13, iteration: 174
+
+VAL AUROC: 0.858298, VAL Accus: 0.605431, VAL Senss: 0.680041, VAL Specs: 0.927576
+AUROCs: Melanoma:0.794781 Melanocytic nevus:0.920929 Basal cell carcinoma:0.952842 Actinic keratosis:0.778822 Benign keratosis:0.844856 Dermatofibroma:0.847497 Vascular lesion:0.868359
+Accus: Melanoma:0.403361 Melanocytic nevus:0.814480 Basal cell carcinoma:0.888889 Actinic keratosis:0.545455 Benign keratosis:0.540000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.487395 Melanocytic nevus:0.859729 Basal cell carcinoma:0.907407 Actinic keratosis:0.575758 Benign keratosis:0.630000 Dermatofibroma:0.500000 Vascular lesion:0.800000
+Specs: Melanoma:0.934166 Melanocytic nevus:0.851632 Basal cell carcinoma:0.874207 Actinic keratosis:0.952430 Benign keratosis:0.934444 Dermatofibroma:0.961382 Vascular lesion:0.984772
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [95.0, 1052.0, 92.0, 28.0, 129.0, 11.0, 26.0]
+
+TEST Student: Epoch: 13, iteration: 174
+
+TEST AUROC: 0.878360, TEST Accus: 0.635961, TEST Senss: 0.694279, TEST Specs: 0.924739
+AUROCs: Melanoma:0.812120 Melanocytic nevus:0.920760 Basal cell carcinoma:0.953472 Actinic keratosis:0.790178 Benign keratosis:0.865264 Dermatofibroma:0.816608 Vascular lesion:0.990114
+Accus: Melanoma:0.411255 Melanocytic nevus:0.779837 Basal cell carcinoma:0.836364 Actinic keratosis:0.482759 Benign keratosis:0.602804 Dermatofibroma:0.500000 Vascular lesion:0.838710
+Senss: Melanoma:0.484848 Melanocytic nevus:0.834692 Basal cell carcinoma:0.854545 Actinic keratosis:0.568966 Benign keratosis:0.668224 Dermatofibroma:0.545455 Vascular lesion:0.903226
+Specs: Melanoma:0.917601 Melanocytic nevus:0.866366 Basal cell carcinoma:0.885564 Actinic keratosis:0.952478 Benign keratosis:0.908939 Dermatofibroma:0.958354 Vascular lesion:0.983871
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_14.pth
+
+Epoch: 14, iteration: 0/175, ==> train <===, loss: 1.206349, classification loss: 1.206349,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.2876792454961016e-05
+
+Epoch: 14, iteration: 100/175, ==> train <===, loss: 1.276627, classification loss: 1.276627,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.2876792454961016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [30.0, 568.0, 49.0, 19.0, 53.0, 7.0, 11.0]
+
+VAL Student: Epoch: 14, iteration: 174
+
+VAL AUROC: 0.863096, VAL Accus: 0.613259, VAL Senss: 0.696529, VAL Specs: 0.925607
+AUROCs: Melanoma:0.794418 Melanocytic nevus:0.894200 Basal cell carcinoma:0.946588 Actinic keratosis:0.815675 Benign keratosis:0.840356 Dermatofibroma:0.879573 Vascular lesion:0.870863
+Accus: Melanoma:0.252101 Melanocytic nevus:0.856712 Basal cell carcinoma:0.907407 Actinic keratosis:0.575758 Benign keratosis:0.530000 Dermatofibroma:0.437500 Vascular lesion:0.733333
+Senss: Melanoma:0.344538 Melanocytic nevus:0.889894 Basal cell carcinoma:0.907407 Actinic keratosis:0.636364 Benign keratosis:0.610000 Dermatofibroma:0.687500 Vascular lesion:0.800000
+Specs: Melanoma:0.986379 Melanocytic nevus:0.783383 Basal cell carcinoma:0.915433 Actinic keratosis:0.938987 Benign keratosis:0.921111 Dermatofibroma:0.949187 Vascular lesion:0.984772
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [57.0, 1130.0, 83.0, 35.0, 129.0, 12.0, 27.0]
+
+TEST Student: Epoch: 14, iteration: 174
+
+TEST AUROC: 0.879066, TEST Accus: 0.637376, TEST Senss: 0.682608, TEST Specs: 0.920778
+AUROCs: Melanoma:0.794309 Melanocytic nevus:0.888636 Basal cell carcinoma:0.941792 Actinic keratosis:0.854994 Benign keratosis:0.839168 Dermatofibroma:0.848219 Vascular lesion:0.986342
+Accus: Melanoma:0.246753 Melanocytic nevus:0.837658 Basal cell carcinoma:0.754545 Actinic keratosis:0.603448 Benign keratosis:0.602804 Dermatofibroma:0.545455 Vascular lesion:0.870968
+Senss: Melanoma:0.333333 Melanocytic nevus:0.875463 Basal cell carcinoma:0.790909 Actinic keratosis:0.603448 Benign keratosis:0.635514 Dermatofibroma:0.636364 Vascular lesion:0.903226
+Specs: Melanoma:0.973655 Melanocytic nevus:0.789790 Basal cell carcinoma:0.914436 Actinic keratosis:0.944813 Benign keratosis:0.890061 Dermatofibroma:0.948319 Vascular lesion:0.984375
+save model to ../model/skin_0602_wcp_test_densenet121_semi/checkpoint/epoch_15.pth
+
+Epoch: 15, iteration: 0/175, ==> train <===, loss: 1.196857, classification loss: 1.196857,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.0589113209464913e-05
+
+Epoch: 15, iteration: 100/175, ==> train <===, loss: 1.265280, classification loss: 1.265280,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.0589113209464913e-05

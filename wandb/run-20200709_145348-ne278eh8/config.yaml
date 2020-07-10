@@ -1,0 +1,120 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.9.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+backbone:
+  desc: null
+  value: densenet121
+base_lr:
+  desc: null
+  value: 0.00012837529633325816
+batch_size:
+  desc: null
+  value: 50
+bnm_loss_weight:
+  desc: null
+  value: 2
+consistency:
+  desc: null
+  value: 2
+consistency_began_epoch:
+  desc: null
+  value: 32
+consistency_rampup:
+  desc: null
+  value: 27
+consistency_relation_weight:
+  desc: null
+  value: 2
+consistency_type:
+  desc: null
+  value: mse
+csv_file_test:
+  desc: null
+  value: ../dataset/skin/testing.csv
+csv_file_train:
+  desc: null
+  value: ../dataset/skin/training.csv
+csv_file_val:
+  desc: null
+  value: ../dataset/skin/validation.csv
+deterministic:
+  desc: null
+  value: 2
+drop_rate:
+  desc: null
+  value: 0.2746468882348567
+ema_consistency:
+  desc: null
+  value: 2
+ema_decay:
+  desc: null
+  value: 1.687578116260041
+entropy_loss_weight:
+  desc: null
+  value: 2
+epochs:
+  desc: null
+  value: 52
+exp:
+  desc: null
+  value: 0709_wcp_test
+gpu:
+  desc: null
+  value: '0'
+label_uncertainty:
+  desc: null
+  value: U-Ones
+labeled_bs:
+  desc: null
+  value: 7
+labeled_rate:
+  desc: null
+  value: 0.2221163876154723
+resize:
+  desc: null
+  value: 238
+root_path:
+  desc: null
+  value: ../dataset/skin/training_data/
+scale1_weight:
+  desc: null
+  value: 1
+scale2_weight:
+  desc: null
+  value: 1
+scale3_weight:
+  desc: null
+  value: 2
+scale4_weight:
+  desc: null
+  value: 1
+seed:
+  desc: null
+  value: 32999
+supCon_loss_weight:
+  desc: null
+  value: 2
+supervise_level:
+  desc: null
+  value: semi
+task:
+  desc: null
+  value: skin
+vat_dis_type:
+  desc: null
+  value: mae
+vat_loss:
+  desc: null
+  value: 1
+vat_loss_weight:
+  desc: null
+  value: 2
+wcp_loss_weight:
+  desc: null
+  value: 1

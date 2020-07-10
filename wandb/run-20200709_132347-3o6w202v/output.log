@@ -1,0 +1,19 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+
+Epoch: 0, iteration: 0/175, ==> train <===, loss: 1.978953, classification loss: 1.978953,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+Traceback (most recent call last):
+  File "train.py", line 129, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 308, in train_semi_model
+    optimizer.param_groups[0]['lr']))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/wandb/__init__.py", line 771, in log
+    run.log(row, commit, step, sync, *args, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/wandb/wandb_run.py", line 732, in log
+    if isinstance(row[k], Visualize):
+TypeError: string indices must be integers
