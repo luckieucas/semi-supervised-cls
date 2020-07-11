@@ -54,7 +54,7 @@ class VATLoss(nn.Module):
             A = pred + 0.000001
             B = -1.0 * A *torch.log(A)
             C = B.sum(dim=1)
-            index = C.argsort(descending=True)[:8]
+            index = C.argsort(descending=True)[-16:]
             pred = pred[index]
             x = x[index]
         # prepare random unit tensor

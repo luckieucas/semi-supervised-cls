@@ -1,0 +1,9 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+
+Epoch: 0, iteration: 0/175, ==> train <===, loss: 1.978953, classification loss: 1.978953,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.048632,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 0.0001
