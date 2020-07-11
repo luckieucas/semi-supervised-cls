@@ -78,10 +78,7 @@ def epochVal_metrics(model, dataLoader, args):
     with torch.no_grad():
         for i, (study, _, image, label) in enumerate(dataLoader):
             image, label = image.cuda(), label.cuda()
-            if args.supervise_level == 'full':
-                output = model(image)
-            else:
-                _,output = model(image)
+            _,output = model(image)
             output = F.softmax(output, dim=1)
             # _, output = model(image)
 

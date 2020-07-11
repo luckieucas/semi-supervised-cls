@@ -49,7 +49,12 @@ class VATLoss(nn.Module):
     def forward(self, model, x):
         with torch.no_grad():
             pred = F.softmax(model(x)[1], dim=1)
-
+        A = pred + 0.000001
+        B = -1.0 * A *torch.log(A)
+        C = B.sum(dim=1)
+        index = C.argsort(descending=True)[:4]
+        pred = pred[index]
+        x = x[index]
         # prepare random unit tensor
         d = torch.rand(x.shape).sub(0.5).to(x.device)
         d = _l2_normalize(d)

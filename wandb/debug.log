@@ -1,131 +1,57 @@
-2020-07-09 22:53:30,955 INFO    MainThread:30799 [wandb_agent.py:run():194] Running runs: []
-2020-07-09 22:53:31,463 INFO    MainThread:30799 [wandb_agent.py:_process_command():256] Agent received command: run
-2020-07-09 22:53:31,464 INFO    MainThread:30799 [wandb_agent.py:_command_run():286] Agent starting run with config:
-	backbone: densenet121
-	base_lr: 0.00019916143466276422
-	batch_size: 45
-	bnm_loss_weight: 2
-	consistency: 2
-	consistency_began_epoch: 40
-	consistency_rampup: 59
-	consistency_relation_weight: 2
-	consistency_type: mse
-	csv_file_test: ../dataset/skin/testing.csv
-	csv_file_train: ../dataset/skin/training.csv
-	csv_file_val: ../dataset/skin/validation.csv
-	deterministic: 1
-	drop_rate: 0.13815446308401247
-	ema_consistency: 2
-	ema_decay: 1.0057158998022775
-	entropy_loss_weight: 1
-	epochs: 101
-	exp: 0709_wcp_test
-	gpu: 0
-	label_uncertainty: U-Ones
-	labeled_bs: 14
-	labeled_rate: 0.14351901527260688
-	resize: 442
-	root_path: ../dataset/skin/training_data/
-	scale1_weight: 2
-	scale2_weight: 1
-	scale3_weight: 2
-	scale4_weight: 2
-	seed: 16268
-	supCon_loss_weight: 2
-	supervise_level: semi
-	task: skin
-	vat_dis_type: mae
-	vat_loss: 1
-	vat_loss_weight: 2
-	wcp_loss_weight: 1
-2020-07-09 22:53:31,468 DEBUG   MainThread:30799 [wandb_config.py:_load_defaults():129] wandb dir not provided, skipping defaults
-2020-07-09 22:53:31,840 INFO    MainThread:30799 [wandb_agent.py:_command_run():325] About to run command: /usr/bin/env python train.py --backbone=densenet121 --base_lr=0.00019916143466276422 --batch_size=45 --bnm_loss_weight=2 --consistency=2 --consistency_began_epoch=40 --consistency_rampup=59 --consistency_relation_weight=2 --consistency_type=mse --csv_file_test=../dataset/skin/testing.csv --csv_file_train=../dataset/skin/training.csv --csv_file_val=../dataset/skin/validation.csv --deterministic=1 --drop_rate=0.13815446308401247 --ema_consistency=2 --ema_decay=1.0057158998022775 --entropy_loss_weight=1 --epochs=101 --exp=0709_wcp_test --gpu=0 --label_uncertainty=U-Ones --labeled_bs=14 --labeled_rate=0.14351901527260688 --resize=442 --root_path=../dataset/skin/training_data/ --scale1_weight=2 --scale2_weight=1 --scale3_weight=2 --scale4_weight=2 --seed=16268 --supCon_loss_weight=2 --supervise_level=semi --task=skin --vat_dis_type=mae --vat_loss=1 --vat_loss_weight=2 --wcp_loss_weight=1
-2020-07-09 22:53:36,855 INFO    MainThread:30799 [wandb_agent.py:run():194] Running runs: ['ggwwjwom']
-2020-07-09 22:53:36,856 INFO    MainThread:30799 [wandb_agent.py:run():209] Cleaning up finished run: ggwwjwom
-2020-07-09 22:53:37,307 INFO    MainThread:30799 [wandb_agent.py:_process_command():256] Agent received command: run
-2020-07-09 22:53:37,308 INFO    MainThread:30799 [wandb_agent.py:_command_run():286] Agent starting run with config:
-	backbone: densenet121
-	base_lr: 0.00010497757213984037
-	batch_size: 57
-	bnm_loss_weight: 2
-	consistency: 1
-	consistency_began_epoch: 33
-	consistency_rampup: 59
-	consistency_relation_weight: 1
-	consistency_type: mse
-	csv_file_test: ../dataset/skin/testing.csv
-	csv_file_train: ../dataset/skin/training.csv
-	csv_file_val: ../dataset/skin/validation.csv
-	deterministic: 2
-	drop_rate: 0.28383089925735955
-	ema_consistency: 1
-	ema_decay: 1.5087718581059941
-	entropy_loss_weight: 2
-	epochs: 197
-	exp: 0602_wcp_test
-	gpu: 1
-	label_uncertainty: U-Ones
-	labeled_bs: 5
-	labeled_rate: 0.294581436849079
-	resize: 152
-	root_path: ../dataset/skin/training_data/
-	scale1_weight: 1
-	scale2_weight: 2
-	scale3_weight: 2
-	scale4_weight: 1
-	seed: 13170
-	supCon_loss_weight: 1
-	supervise_level: semi
-	task: skin
-	vat_dis_type: mae
-	vat_loss: 1
-	vat_loss_weight: 1
-	wcp_loss_weight: 1
-2020-07-09 22:53:37,316 DEBUG   MainThread:30799 [wandb_config.py:_load_defaults():129] wandb dir not provided, skipping defaults
-2020-07-09 22:53:37,692 INFO    MainThread:30799 [wandb_agent.py:_command_run():325] About to run command: /usr/bin/env python train.py --backbone=densenet121 --base_lr=0.00010497757213984037 --batch_size=57 --bnm_loss_weight=2 --consistency=1 --consistency_began_epoch=33 --consistency_rampup=59 --consistency_relation_weight=1 --consistency_type=mse --csv_file_test=../dataset/skin/testing.csv --csv_file_train=../dataset/skin/training.csv --csv_file_val=../dataset/skin/validation.csv --deterministic=2 --drop_rate=0.28383089925735955 --ema_consistency=1 --ema_decay=1.5087718581059941 --entropy_loss_weight=2 --epochs=197 --exp=0602_wcp_test --gpu=1 --label_uncertainty=U-Ones --labeled_bs=5 --labeled_rate=0.294581436849079 --resize=152 --root_path=../dataset/skin/training_data/ --scale1_weight=1 --scale2_weight=2 --scale3_weight=2 --scale4_weight=1 --seed=13170 --supCon_loss_weight=1 --supervise_level=semi --task=skin --vat_dis_type=mae --vat_loss=1 --vat_loss_weight=1 --wcp_loss_weight=1
-2020-07-09 22:53:42,707 INFO    MainThread:30799 [wandb_agent.py:run():194] Running runs: ['72cjcn7t']
-2020-07-09 22:53:42,709 INFO    MainThread:30799 [wandb_agent.py:run():209] Cleaning up finished run: 72cjcn7t
-2020-07-09 22:53:48,063 INFO    MainThread:30799 [wandb_agent.py:_process_command():256] Agent received command: run
-2020-07-09 22:53:48,063 INFO    MainThread:30799 [wandb_agent.py:_command_run():286] Agent starting run with config:
-	backbone: densenet121
-	base_lr: 0.00012837529633325816
-	batch_size: 50
-	bnm_loss_weight: 2
-	consistency: 2
-	consistency_began_epoch: 32
-	consistency_rampup: 27
-	consistency_relation_weight: 2
-	consistency_type: mse
-	csv_file_test: ../dataset/skin/testing.csv
-	csv_file_train: ../dataset/skin/training.csv
-	csv_file_val: ../dataset/skin/validation.csv
-	deterministic: 2
-	drop_rate: 0.2746468882348567
-	ema_consistency: 2
-	ema_decay: 1.687578116260041
-	entropy_loss_weight: 2
-	epochs: 52
-	exp: 0709_wcp_test
-	gpu: 0
-	label_uncertainty: U-Ones
-	labeled_bs: 7
-	labeled_rate: 0.2221163876154723
-	resize: 238
-	root_path: ../dataset/skin/training_data/
-	scale1_weight: 1
-	scale2_weight: 1
-	scale3_weight: 2
-	scale4_weight: 1
-	seed: 32999
-	supCon_loss_weight: 2
-	supervise_level: semi
-	task: skin
-	vat_dis_type: mae
-	vat_loss: 1
-	vat_loss_weight: 2
-	wcp_loss_weight: 1
-2020-07-09 22:53:48,070 DEBUG   MainThread:30799 [wandb_config.py:_load_defaults():129] wandb dir not provided, skipping defaults
-2020-07-09 22:53:48,440 INFO    MainThread:30799 [wandb_agent.py:_command_run():325] About to run command: /usr/bin/env python train.py --backbone=densenet121 --base_lr=0.00012837529633325816 --batch_size=50 --bnm_loss_weight=2 --consistency=2 --consistency_began_epoch=32 --consistency_rampup=27 --consistency_relation_weight=2 --consistency_type=mse --csv_file_test=../dataset/skin/testing.csv --csv_file_train=../dataset/skin/training.csv --csv_file_val=../dataset/skin/validation.csv --deterministic=2 --drop_rate=0.2746468882348567 --ema_consistency=2 --ema_decay=1.687578116260041 --entropy_loss_weight=2 --epochs=52 --exp=0709_wcp_test --gpu=0 --label_uncertainty=U-Ones --labeled_bs=7 --labeled_rate=0.2221163876154723 --resize=238 --root_path=../dataset/skin/training_data/ --scale1_weight=1 --scale2_weight=1 --scale3_weight=2 --scale4_weight=1 --seed=32999 --supCon_loss_weight=2 --supervise_level=semi --task=skin --vat_dis_type=mae --vat_loss=1 --vat_loss_weight=2 --wcp_loss_weight=1
-2020-07-09 22:53:53,455 INFO    MainThread:30799 [wandb_agent.py:run():194] Running runs: ['ne278eh8']
-2020-07-09 22:53:53,456 ERROR   MainThread:30799 [wandb_agent.py:run():205] Detected 3 failed runs in the first 60 seconds, shutting down.
-2020-07-09 22:53:53,457 INFO    MainThread:30799 [wandb_agent.py:run():206] To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2020-07-11 20:29:06,464 DEBUG   MainThread:4482 [wandb_config.py:_load_defaults():133] no defaults not found in config-defaults.yaml
+2020-07-11 20:29:09,189 DEBUG   MainThread:4482 [meta.py:_setup_code_git():49] probe for git information
+2020-07-11 20:29:09,229 DEBUG   MainThread:4482 [run_manager.py:__init__():547] Initialized sync for semi-supervised/zud3otzm
+2020-07-11 20:29:09,234 INFO    MainThread:4482 [run_manager.py:wrap_existing_process():1147] wrapping existing process 4378
+2020-07-11 20:29:09,235 WARNING MainThread:4482 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-11 20:29:09,587 INFO    MainThread:4482 [run_manager.py:init_run():926] system metrics and metadata threads started
+2020-07-11 20:29:09,587 INFO    MainThread:4482 [run_manager.py:init_run():965] upserting run before process can begin, waiting at most 10 seconds
+2020-07-11 20:29:10,186 INFO    Thread-4  :4482 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:29:11,159 INFO    Thread-15 :4482 [run_manager.py:_upsert_run():1054] saving pip packages
+2020-07-11 20:29:11,160 INFO    Thread-15 :4482 [run_manager.py:_upsert_run():1056] initializing streaming files api
+2020-07-11 20:29:11,160 INFO    Thread-15 :4482 [run_manager.py:_upsert_run():1063] unblocking file change observer, beginning sync with W&B servers
+2020-07-11 20:29:11,161 INFO    Thread-4  :4482 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:29:11,162 INFO    MainThread:4482 [run_manager.py:wrap_existing_process():1164] informing user process we are ready to proceed
+2020-07-11 20:29:11,172 INFO    MainThread:4482 [run_manager.py:_sync_etc():1296] entering loop for messages from user process
+2020-07-11 20:29:11,183 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/config.yaml
+2020-07-11 20:29:15,564 INFO    Thread-4  :4482 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/requirements.txt
+2020-07-11 20:29:15,566 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:29:15,566 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/config.yaml
+2020-07-11 20:29:16,187 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:29:25,192 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:29:25,193 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:29:25,198 INFO    Thread-4  :4482 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-summary.json
+2020-07-11 20:29:26,193 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:29:39,200 INFO    Thread-4  :4482 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-events.jsonl
+2020-07-11 20:29:42,202 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:29:58,212 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:30:10,219 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-events.jsonl
+2020-07-11 20:30:14,222 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:30:30,232 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:30:41,240 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-summary.json
+2020-07-11 20:30:41,240 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:30:41,241 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:30:41,241 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-events.jsonl
+2020-07-11 20:30:46,243 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:31:02,254 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:31:12,259 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-events.jsonl
+2020-07-11 20:31:18,262 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:31:34,272 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:31:42,280 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-summary.json
+2020-07-11 20:31:42,281 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:31:42,281 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:31:43,280 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-events.jsonl
+2020-07-11 20:31:50,289 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-metadata.json
+2020-07-11 20:31:52,290 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-summary.json
+2020-07-11 20:31:52,293 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:31:52,294 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:31:53,291 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:31:56,292 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-summary.json
+2020-07-11 20:31:56,293 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/output.log
+2020-07-11 20:31:56,293 INFO    Thread-4  :4482 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:31:58,522 INFO    MainThread:4482 [run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
+2020-07-11 20:31:58,523 INFO    MainThread:4482 [run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
+2020-07-11 20:31:58,524 INFO    MainThread:4482 [run_manager.py:shutdown():1070] shutting down system stats and metadata service
+ INFO    Thread-4  :4482 [zud3otzm:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_122905-zud3otzm/wandb-history.jsonl
+2020-07-11 20:31:58,522 INFO    MainThread:4482 [zud3otzm:run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
+2020-07-11 20:31:58,523 INFO    MainThread:4482 [zud3otzm:run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
+2020-07-11 20:31:58,524 INFO    MainThread:4482 [zud3otzm:run_manager.py:shutdown():1070] shutting down system stats and metadata service

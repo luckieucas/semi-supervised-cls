@@ -1,0 +1,42 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+
+Epoch: 0, iteration: 0/175, ==> train <===, loss: 1.978953, classification loss: 1.978953,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 100/175, ==> train <===, loss: 1.739425, classification loss: 1.739425,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [75.0, 428.0, 52.0, 0.0, 9.0, 0.0, 0.0]
+
+VAL Student: Epoch: 0, iteration: 174
+
+VAL AUROC: 0.807086, VAL Accus: 0.332681, VAL Senss: 0.427932, VAL Specs: 0.889115
+AUROCs: Melanoma:0.834623 Melanocytic nevus:0.893855 Basal cell carcinoma:0.925065 Actinic keratosis:0.821974 Benign keratosis:0.753856 Dermatofibroma:0.607978 Vascular lesion:0.812250
+Accus: Melanoma:0.630252 Melanocytic nevus:0.645551 Basal cell carcinoma:0.962963 Actinic keratosis:0.000000 Benign keratosis:0.090000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.773109 Melanocytic nevus:0.728507 Basal cell carcinoma:0.981481 Actinic keratosis:0.242424 Benign keratosis:0.270000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.754824 Melanocytic nevus:0.881306 Basal cell carcinoma:0.649049 Actinic keratosis:0.988625 Benign keratosis:0.950000 Dermatofibroma:1.000000 Vascular lesion:1.000000
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [146.0, 865.0, 109.0, 2.0, 24.0, 0.0, 0.0]
+
+TEST Student: Epoch: 0, iteration: 174
+
+TEST AUROC: 0.816385, TEST Accus: 0.344399, TEST Senss: 0.432066, TEST Specs: 0.888357
+AUROCs: Melanoma:0.832130 Melanocytic nevus:0.887895 Basal cell carcinoma:0.935820 Actinic keratosis:0.858157 Benign keratosis:0.805163 Dermatofibroma:0.646216 Vascular lesion:0.749317
+Accus: Melanoma:0.632035 Melanocytic nevus:0.641216 Basal cell carcinoma:0.990909 Actinic keratosis:0.034483 Benign keratosis:0.112150 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.735931 Melanocytic nevus:0.716827 Basal cell carcinoma:1.000000 Actinic keratosis:0.258621 Benign keratosis:0.313084 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.744395 Melanocytic nevus:0.893393 Basal cell carcinoma:0.633596 Actinic keratosis:0.988758 Benign keratosis:0.958356 Dermatofibroma:1.000000 Vascular lesion:1.000000
+save model to ../model/skin_0709_wcp_test_densenet121/checkpoint/epoch_1.pth
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 192, in train_semi_model
+    consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
+  File "/media/luckie/vol4/semi_supervised_cls/code/utils/losses.py", line 390, in relation_mse_loss_cam
+    activations = cam_activation(activations.clone(), channel_weight)
+  File "/media/luckie/vol4/semi_supervised_cls/code/utils/losses.py", line 328, in cam_activation
+    batch_feature = batch_feature.permute(0,2,3,1)
+RuntimeError: number of dims don't match in permute

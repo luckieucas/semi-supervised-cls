@@ -1,0 +1,9 @@
+create semi supervised model
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 65, in train_semi_model
+    model = create_semi_model(args)
+  File "/media/luckie/vol4/semi_supervised_cls/code/networks/create_model.py", line 20, in create_semi_model
+    net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+AttributeError: 'Namespace' object has no attribute 'label_uncertainty'

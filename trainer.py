@@ -189,19 +189,8 @@ def train_semi_model(args,snapshot_path):
                 consistency_dist = torch.sum(losses.softmax_mse_loss(outputs, ema_output, args)) / batch_size #/ dataset.N_CLASSES
                 consistency_loss = consistency_weight * consistency_dist  
 
-                # consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
-                if args.multi_scale_densenet == 1:
-                    consistency_relation_dist0 = torch.sum(losses.relation_mse_loss(activations[0], ema_activations[0])) / batch_size
-                    consistency_relation_dist1 = torch.sum(losses.relation_mse_loss(activations[1], ema_activations[1])) / batch_size
-                    consistency_relation_dist2 = torch.sum(losses.relation_mse_loss(activations[2], ema_activations[2])) / batch_size
-                    consistency_relation_dist3 = torch.sum(losses.relation_mse_loss(activations[3], ema_activations[3])) / batch_size
-                    consistency_relation_dist = args.scale1_weight * consistency_relation_dist0 + \
-                        args.scale2_weight * consistency_relation_dist1 + args.scale3_weight * consistency_relation_dist2+ \
-                            args.scale4_weight * consistency_relation_dist3
-                    #consistency_relation_dist = consistency_relation_dist2
-                else:
-                    consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
-
+                #consistency_relation_dist = torch.sum(losses.relation_mse_loss_cam(activations, ema_activations, model, label_batch)) / batch_size
+                consistency_relation_dist = torch.sum(losses.relation_mse_loss(activations, ema_activations)) / batch_size
                 consistency_relation_loss = consistency_weight * consistency_relation_dist * args.consistency_relation_weight
             else:
                 consistency_loss = 0.0
@@ -231,14 +220,14 @@ def train_semi_model(args,snapshot_path):
                 supCon_loss = 0.0
             
             # use VAT loss
-            if args.vat_loss ==1 and epoch > args.consistency_began_epoch:
+            if args.vat_loss ==1:
                 #consistency_weight = get_current_consistency_weight(args,epoch)
                 consistency_weight = 1.0
                 vat_loss = consistency_weight * args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
             else:
                 vat_loss = 0.0
 
-            if args.wcp_loss ==1:
+            if args.wcp_loss ==1 and epoch > args.consistency_began_epoch:
                 start = time.clock()
                 wcp_loss = wcp_loss_torch(model,image_batch[labeled_bs:])
                 elapsed = (time.clock()-start)

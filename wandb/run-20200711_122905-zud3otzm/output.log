@@ -1,0 +1,34 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+
+Epoch: 0, iteration: 0/175, ==> train <===, loss: 1.978953, classification loss: 1.978953,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.043970,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 0.0001
+
+Epoch: 0, iteration: 100/175, ==> train <===, loss: 1.745729, classification loss: 1.745729,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.109713,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 0.0001
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [72.0, 524.0, 44.0, 0.0, 12.0, 0.0, 0.0]
+
+VAL Student: Epoch: 0, iteration: 174
+
+VAL AUROC: 0.829824, VAL Accus: 0.332886, VAL Senss: 0.391433, VAL Specs: 0.889959
+AUROCs: Melanoma:0.826515 Melanocytic nevus:0.902135 Basal cell carcinoma:0.917195 Actinic keratosis:0.785811 Benign keratosis:0.786689 Dermatofibroma:0.689914 Vascular lesion:0.900508
+Accus: Melanoma:0.605042 Melanocytic nevus:0.790347 Basal cell carcinoma:0.814815 Actinic keratosis:0.000000 Benign keratosis:0.120000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.756303 Melanocytic nevus:0.876320 Basal cell carcinoma:0.907407 Actinic keratosis:0.000000 Benign keratosis:0.200000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.727582 Melanocytic nevus:0.753709 Basal cell carcinoma:0.791755 Actinic keratosis:1.000000 Benign keratosis:0.956667 Dermatofibroma:1.000000 Vascular lesion:1.000000
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [152.0, 1041.0, 88.0, 0.0, 35.0, 0.0, 0.0]
+
+TEST Student: Epoch: 0, iteration: 174
+
+TEST AUROC: 0.848679, TEST Accus: 0.341892, TEST Senss: 0.408484, TEST Specs: 0.893280
+AUROCs: Melanoma:0.853141 Melanocytic nevus:0.898764 Basal cell carcinoma:0.916884 Actinic keratosis:0.812265 Benign keratosis:0.809872 Dermatofibroma:0.733887 Vascular lesion:0.915940
+Accus: Melanoma:0.658009 Melanocytic nevus:0.771683 Basal cell carcinoma:0.800000 Actinic keratosis:0.000000 Benign keratosis:0.163551 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.818182 Melanocytic nevus:0.851742 Basal cell carcinoma:0.909091 Actinic keratosis:0.000000 Benign keratosis:0.280374 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.728700 Melanocytic nevus:0.758258 Basal cell carcinoma:0.792651 Actinic keratosis:1.000000 Benign keratosis:0.973348 Dermatofibroma:1.000000 Vascular lesion:1.000000
+save model to ../model/skin_0709_wcp_test_densenet121/checkpoint/epoch_1.pth
+
+Epoch: 1, iteration: 0/175, ==> train <===, loss: 1.548718, classification loss: 1.426475,                     consistency loss: 0.009084, consistency relation loss: 0.000264, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.112895,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 9e-05

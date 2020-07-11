@@ -59,11 +59,6 @@ parser.add_argument('--deterministic', type=int,  default=1, help='whether use d
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
 parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
 parser.add_argument('--baseline', type=int, default=0, help='whether train baseline model')
-parser.add_argument('--multi_scale_densenet', type=int, default=0, help='whether use multi scale correlation')
-parser.add_argument('--scale1_weight', type=float, default=1.0, help='multi scale 1 loss weight')
-parser.add_argument('--scale2_weight', type=float, default=1.0, help='multi scale 2 loss weight')
-parser.add_argument('--scale3_weight', type=float, default=1.0, help='multi scale 3 loss weight')
-parser.add_argument('--scale4_weight', type=float, default=1.0, help='multi scale 4 loss weight')
 
 ### tune
 parser.add_argument('--resume', type=str,  default=None, help='model to resume')
@@ -71,12 +66,10 @@ parser.add_argument('--class_names', type=str,  default=None, help='class name l
 parser.add_argument('--class_num', type=str,  default=None, help='class num list')
 parser.add_argument('--resize', type=int,  default=224, help='resize the image')
 parser.add_argument('--backbone', type=str,  default='densenet121', help='backbone network')
-parser.add_argument('--supervise_level', type=str,  default='semi', help='full or semi supervised')
 # parser.add_argument('--resume', type=str,  default=None, help='GPU to use')
 parser.add_argument('--start_epoch', type=int,  default=0, help='start_epoch')
 parser.add_argument('--global_step', type=int,  default=0, help='global_step')
 ### costs
-parser.add_argument('--label_uncertainty', type=str,  default='U-Ones', help='label type')
 parser.add_argument('--consistency_relation_weight', type=float,  default=1.0, help='consistency relation weight')
 parser.add_argument('--ema_decay', type=float,  default=0.99, help='ema_decay')
 parser.add_argument('--consistency_type', type=str,  default="mse", help='consistency_type')
@@ -88,7 +81,7 @@ parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
 
 train_data_path = args.root_path
-snapshot_path = "../model/" + args.task + "_" + args.exp+"_"+args.backbone+"_"+args.supervise_level + "/"
+snapshot_path = "../model/" + args.task + "_" + args.exp+"_"+args.backbone+"/"
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 

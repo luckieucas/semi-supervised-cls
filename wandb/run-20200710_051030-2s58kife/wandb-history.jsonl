@@ -1,0 +1,4 @@
+{"Epoch": 0, "loss": 1.9789526462554932, "classification loss": 1.9789526462554932, "consistency loss": 0.0, "consistency relation loss": 0.0, "bnm loss": 0.0, "vat loss": 0.0, "entropy loss": 0.0, "lr": 0.0001, "_runtime": 15.5828218460083, "_timestamp": 1594357845.4088147, "_step": 0}
+{"Epoch": 0, "loss": 1.7394254207611084, "classification loss": 1.7394254207611084, "consistency loss": 0.0, "consistency relation loss": 0.0, "bnm loss": 0.0, "vat loss": 0.0, "entropy loss": 0.0, "lr": 0.0001, "_runtime": 54.43182015419006, "_timestamp": 1594357884.257813, "_step": 1}
+{"VAL AUROC": 0.8070856885643395, "VAL Accus": 0.33268079881525253, "_runtime": 87.40858316421509, "_timestamp": 1594357917.234576, "_step": 2}
+{"TEST AUROC": 0.8163853946394466, "TEST Accus": 0.34439881851705606, "_runtime": 96.40395760536194, "_timestamp": 1594357926.2299504, "_step": 3}

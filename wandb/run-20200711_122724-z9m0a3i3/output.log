@@ -1,0 +1,17 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 1400
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 226, in train_semi_model
+    vat_loss = consistency_weight * args.vat_loss_weight * vat_loss_fn(model,image_batch[labeled_bs:])
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/luckie/vol4/semi_supervised_cls/code/utils/losses.py", line 55, in forward
+    index = C.argsort(descending=True)[:0.1*A.shape[0]]
+TypeError: slice indices must be integers or None or have an __index__ method

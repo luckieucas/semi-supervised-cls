@@ -17,9 +17,9 @@ def create_semi_model(args, ema=False):
     # Network definition
     print("create semi supervised model")
     num_class = len(args.class_names)
-    net = DenseNet121(out_size=num_class, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+    net = DenseNet121(out_size=num_class, drop_rate=args.drop_rate)
     if args.task == 'chest':
-        net = DenseNet161(out_size=14, mode=args.label_uncertainty, drop_rate=args.drop_rate)
+        net = DenseNet161(out_size=14, drop_rate=args.drop_rate)
     # if args.multi_scale_densenet == 1:
     #     net = DenseNet121MultiScale(drop_rate = args.drop_rate, out_size=num_class)
     if len(args.gpu.split(',')) > 1:
