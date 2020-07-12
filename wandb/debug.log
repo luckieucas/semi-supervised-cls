@@ -1,35 +1,146 @@
-2020-07-11 22:14:28,449 DEBUG   MainThread:15888 [wandb_config.py:_load_defaults():133] no defaults not found in config-defaults.yaml
-2020-07-11 22:14:28,826 DEBUG   MainThread:15888 [meta.py:_setup_code_git():49] probe for git information
-2020-07-11 22:14:28,863 DEBUG   MainThread:15888 [run_manager.py:__init__():547] Initialized sync for semi-supervised/pqigubi1
-2020-07-11 22:14:28,868 INFO    MainThread:15888 [run_manager.py:wrap_existing_process():1147] wrapping existing process 15792
-2020-07-11 22:14:28,869 WARNING MainThread:15888 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
-2020-07-11 22:14:29,218 INFO    MainThread:15888 [run_manager.py:init_run():926] system metrics and metadata threads started
-2020-07-11 22:14:29,218 INFO    MainThread:15888 [run_manager.py:init_run():965] upserting run before process can begin, waiting at most 10 seconds
-2020-07-11 22:14:29,611 INFO    Thread-15 :15888 [run_manager.py:_upsert_run():1054] saving pip packages
-2020-07-11 22:14:29,612 INFO    Thread-15 :15888 [run_manager.py:_upsert_run():1056] initializing streaming files api
-2020-07-11 22:14:29,612 INFO    Thread-15 :15888 [run_manager.py:_upsert_run():1063] unblocking file change observer, beginning sync with W&B servers
-2020-07-11 22:14:29,613 INFO    MainThread:15888 [run_manager.py:wrap_existing_process():1164] informing user process we are ready to proceed
-2020-07-11 22:14:29,621 INFO    MainThread:15888 [run_manager.py:_sync_etc():1296] entering loop for messages from user process
-2020-07-11 22:14:29,823 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/config.yaml
-2020-07-11 22:14:30,235 INFO    Thread-4  :15888 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/output.log
-2020-07-11 22:14:30,236 INFO    Thread-4  :15888 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/requirements.txt
-2020-07-11 22:14:30,236 INFO    Thread-4  :15888 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-metadata.json
-2020-07-11 22:14:34,823 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/output.log
-2020-07-11 22:14:43,831 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-history.jsonl
-2020-07-11 22:14:43,832 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/output.log
-2020-07-11 22:14:43,833 INFO    Thread-4  :15888 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-summary.json
-2020-07-11 22:14:45,842 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-metadata.json
-2020-07-11 22:14:58,850 INFO    Thread-4  :15888 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-events.jsonl
-2020-07-11 22:15:01,852 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-metadata.json
-2020-07-11 22:15:14,185 INFO    MainThread:15888 [run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
-2020-07-11 22:15:14,196 INFO    MainThread:15888 [run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
-2020-07-11 22:15:14,198 INFO    MainThread:15888 [run_manager.py:shutdown():1070] shutting down system stats and metadata service
-2020-07-11 22:15:14,861 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-events.jsonl
-2020-07-11 22:15:15,267 INFO    MainThread:15888 [run_manager.py:shutdown():1084] stopping streaming files and file change observer
-2020-07-11 22:15:15,861 INFO    Thread-4  :15888 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200711_141427-pqigubi1/wandb-metadata.json
-2020-07-11 22:15:18,344 INFO    MainThread:15888 [run_manager.py:_sync_etc():1425] rendering summary
-2020-07-11 22:15:18,345 INFO    MainThread:15888 [run_manager.py:_sync_etc():1457] syncing files to cloud storage
-2020-07-11 22:15:18,346 INFO    MainThread:15888 [run_manager.py:_sync_etc():1466] syncing complete: https://app.wandb.ai/luckiepeng/semi-supervised/runs/pqigubi1
-18,344 INFO    MainThread:15888 [pqigubi1:run_manager.py:_sync_etc():1425] rendering summary
-2020-07-11 22:15:18,345 INFO    MainThread:15888 [pqigubi1:run_manager.py:_sync_etc():1457] syncing files to cloud storage
-2020-07-11 22:15:18,346 INFO    MainThread:15888 [pqigubi1:run_manager.py:_sync_etc():1466] syncing complete: https://app.wandb.ai/luckiepeng/semi-supervised/runs/pqigubi1
+2020-07-12 10:47:47,054 DEBUG   MainThread:28792 [wandb_config.py:_load_defaults():133] no defaults not found in config-defaults.yaml
+2020-07-12 10:47:47,427 DEBUG   MainThread:28792 [meta.py:_setup_code_git():49] probe for git information
+2020-07-12 10:47:47,463 DEBUG   MainThread:28792 [run_manager.py:__init__():547] Initialized sync for semi-supervised/34wnpkii
+2020-07-12 10:47:47,468 INFO    MainThread:28792 [run_manager.py:wrap_existing_process():1147] wrapping existing process 28706
+2020-07-12 10:47:47,469 WARNING MainThread:28792 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-12 10:47:47,821 INFO    MainThread:28792 [run_manager.py:init_run():926] system metrics and metadata threads started
+2020-07-12 10:47:47,822 INFO    MainThread:28792 [run_manager.py:init_run():965] upserting run before process can begin, waiting at most 10 seconds
+2020-07-12 10:47:48,216 INFO    Thread-15 :28792 [run_manager.py:_upsert_run():1054] saving pip packages
+2020-07-12 10:47:48,217 INFO    Thread-15 :28792 [run_manager.py:_upsert_run():1056] initializing streaming files api
+2020-07-12 10:47:48,218 INFO    Thread-15 :28792 [run_manager.py:_upsert_run():1063] unblocking file change observer, beginning sync with W&B servers
+2020-07-12 10:47:48,219 INFO    MainThread:28792 [run_manager.py:wrap_existing_process():1164] informing user process we are ready to proceed
+2020-07-12 10:47:48,224 INFO    MainThread:28792 [run_manager.py:_sync_etc():1296] entering loop for messages from user process
+2020-07-12 10:47:48,425 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/config.yaml
+2020-07-12 10:47:48,842 INFO    Thread-4  :28792 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:47:48,843 INFO    Thread-4  :28792 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:47:48,843 INFO    Thread-4  :28792 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/requirements.txt
+2020-07-12 10:47:53,424 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:48:02,430 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:48:02,431 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:48:03,431 INFO    Thread-4  :28792 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:48:04,432 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:48:17,438 INFO    Thread-4  :28792 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:48:20,440 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:48:36,449 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:48:48,455 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:48:52,458 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:49:08,471 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:49:19,478 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:49:19,478 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:49:19,479 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:49:19,479 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:49:24,481 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:49:40,492 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:49:50,498 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:49:56,501 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:50:12,512 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:50:20,516 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:50:20,517 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:50:20,518 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:50:21,517 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:50:28,521 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:50:30,522 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:50:30,523 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:50:30,528 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:50:31,523 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:50:33,524 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:50:33,525 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:50:33,528 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:50:44,531 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:50:52,537 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:51:00,541 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:51:16,554 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:51:23,558 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:51:32,564 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:51:48,574 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:51:54,578 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:51:57,580 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:51:57,581 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:51:57,581 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:52:04,588 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:52:20,596 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:52:25,600 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:52:36,609 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:52:52,618 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:52:56,624 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:53:03,629 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:53:03,630 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:53:03,631 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:53:08,632 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:53:13,635 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:53:13,636 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:53:13,636 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:53:14,636 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:53:17,639 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:53:17,639 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:53:17,640 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:53:24,643 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:53:27,644 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:53:40,652 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:53:56,663 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:53:58,664 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:54:12,674 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:54:28,687 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:54:29,687 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:54:40,694 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:54:40,695 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:54:40,696 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:54:44,697 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:55:00,707 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:55:00,707 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:55:16,719 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:55:31,728 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:55:32,729 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:55:45,739 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:55:45,740 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:55:45,741 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:55:48,740 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:55:55,744 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:55:55,744 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:55:55,745 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:55:59,746 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:55:59,746 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:55:59,747 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:56:02,748 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:56:04,749 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:56:20,759 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:56:34,767 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:56:36,768 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:56:52,783 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:57:05,803 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:57:08,805 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:57:22,817 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:57:22,819 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:57:22,820 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:57:24,818 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:57:36,836 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:57:40,838 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:57:56,848 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:58:07,854 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:58:12,857 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:58:28,871 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:58:28,872 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:58:28,872 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:58:28,872 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:58:38,882 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:58:38,883 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:58:38,883 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:58:38,883 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:58:41,884 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/output.log
+2020-07-12 10:58:41,884 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-summary.json
+2020-07-12 10:58:41,885 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:58:44,886 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:00,895 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:10,905 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:59:16,909 INFO    Thread-4  :28792 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:26,362 INFO    MainThread:28792 [run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
+2020-07-12 10:59:26,363 INFO    MainThread:28792 [run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
+2020-07-12 10:59:26,364 INFO    MainThread:28792 [run_manager.py:shutdown():1070] shutting down system stats and metadata service
+wandb/run-20200712_024745-34wnpkii/wandb-history.jsonl
+2020-07-12 10:58:44,886 INFO    Thread-4  :28792 [34wnpkii:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:00,895 INFO    Thread-4  :28792 [34wnpkii:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:10,905 INFO    Thread-4  :28792 [34wnpkii:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-events.jsonl
+2020-07-12 10:59:16,909 INFO    Thread-4  :28792 [34wnpkii:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200712_024745-34wnpkii/wandb-metadata.json
+2020-07-12 10:59:26,362 INFO    MainThread:28792 [34wnpkii:run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
+2020-07-12 10:59:26,363 INFO    MainThread:28792 [34wnpkii:run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
+2020-07-12 10:59:26,364 INFO    MainThread:28792 [34wnpkii:run_manager.py:shutdown():1070] shutting down system stats and metadata service

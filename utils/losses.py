@@ -34,7 +34,7 @@ def _l2_normalize(d):
 
 class VATLoss(nn.Module):
 
-    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False):
+    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_num=8):
         """VAT loss
         :param xi: hyperparameter of VAT (default: 10.0)
         :param eps: hyperparameter of VAT (default: 1.0)
@@ -46,6 +46,7 @@ class VATLoss(nn.Module):
         self.ip = ip
         self.dis = dis
         self.filter_batch = filter_batch
+        self.filter_num = filter_num
 
     def forward(self, model, x):
         with torch.no_grad():
@@ -54,7 +55,7 @@ class VATLoss(nn.Module):
             A = pred + 0.000001
             B = -1.0 * A *torch.log(A)
             C = B.sum(dim=1)
-            index = C.argsort(descending=True)[-16:]
+            index = C.argsort(descending=True)[-1*self.filter_num:]
             pred = pred[index]
             x = x[index]
         # prepare random unit tensor

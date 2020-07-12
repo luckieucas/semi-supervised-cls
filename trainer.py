@@ -133,7 +133,7 @@ def train_semi_model(args,snapshot_path):
     model.train()
     loss_fn = losses.cross_entropy_loss(args)
     loss_supCon_fn = losses.SupConLoss()
-    vat_loss_fn = losses.VATLoss(dis=args.vat_dis_type,filter_batch=args.vat_filter_batch)
+    vat_loss_fn = losses.VATLoss(dis=args.vat_dis_type,filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
     if args.task == 'chest':
         loss_fn = losses.Loss_Ones()
     if args.consistency_type == 'mse':
