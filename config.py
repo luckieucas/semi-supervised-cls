@@ -22,6 +22,6 @@ RESIZE_DICTS={'hip_onfh':256,
                'hip_4cls':256,
                'diabetes':256,
                'skin':224,
-               'chest':384}
+               'chest':320}
 CREATE_MODEL_DICTS={'semi':create_semi_model,
                     'full':create_full_model}
