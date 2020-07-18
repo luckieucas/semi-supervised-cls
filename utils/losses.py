@@ -50,7 +50,7 @@ class VATLoss(nn.Module):
 
     def forward(self, model, x):
         with torch.no_grad():
-            pred = F.softmax(model(x)[1], dim=1)
+            pred = F.softmax(model(x), dim=1)
         if self.filter_batch:
             A = pred + 0.000001
             B = -1.0 * A *torch.log(A)
@@ -65,7 +65,7 @@ class VATLoss(nn.Module):
             # calc adversarial direction
             for _ in range(self.ip):
                 d.requires_grad_()
-                _,pred_hat = model(x + self.xi * d)
+                pred_hat = model(x + self.xi * d)
                 if self.dis=='mse':
                     pred_hat_softmax = F.softmax(pred_hat, dim=1)
                     adv_distance = F.mse_loss(pred_hat_softmax,pred)
@@ -81,7 +81,7 @@ class VATLoss(nn.Module):
 
             # calc LDS
             r_adv = d * self.eps
-            _,pred_hat = model(x + r_adv)
+            pred_hat = model(x + r_adv)
             if self.dis=='mse':
                 pred_hat_softmax = F.softmax(pred_hat, dim=1)
                 lds = F.mse_loss(pred_hat_softmax,pred)

@@ -1,0 +1,56 @@
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+began  validation
+began test
+AUROC mean  0.5262969870007135
+Atelectasis   0.5620754695670834
+Cardiomegaly   0.5288948969246368
+Effusion   0.6302623076370772
+Infiltration   0.5857404674132781
+Mass   0.5540554580502485
+Nodule   0.5314499641040047
+Pneumonia   0.40190181335692177
+Pneumothorax   0.6655519824147196
+Consolidation   0.5015513278855975
+Edema   0.5465069249352325
+Emphysema   0.5691993548438357
+Fibrosis   0.4303670942061035
+Pleural_Thickening   0.45634543752231227
+Hernia   0.4042553191489362
+Epoch [1] [save] [16072020-145047] loss= tensor(0.6602, device='cuda:0')
+began  validation
+began test
+AUROC mean  0.5359612011180428
+Atelectasis   0.5872395215667672
+Cardiomegaly   0.552520245828796
+Effusion   0.6467821841418759
+Infiltration   0.6189028868820695
+Mass   0.5300703893492046
+Nodule   0.5372440459468739
+Pneumonia   0.4157983193277311
+Pneumothorax   0.6275889440690385
+Consolidation   0.5198225229826354
+Edema   0.545771799608662
+Emphysema   0.5659894645680552
+Fibrosis   0.46123839009287926
+Pleural_Thickening   0.442759377883754
+Hernia   0.4517287234042553
+Epoch [2] [save] [16072020-145140] loss= tensor(0.5361, device='cuda:0')
+began  validation
+began test
+AUROC mean  0.5490327485280991
+Atelectasis   0.6017596765267283
+Cardiomegaly   0.5384326536742894
+Effusion   0.6654710049541679
+Infiltration   0.6174632931580825
+Mass   0.5441528973918464
+Nodule   0.5231138995536411
+Pneumonia   0.42197257850508624
+Pneumothorax   0.5980023202800618
+Consolidation   0.5617232720463058
+Edema   0.6522720564926051
+Emphysema   0.5783324461111862
+Fibrosis   0.4923485183547103
+Pleural_Thickening   0.4307090751106351
+Hernia   0.46070478723404257
+Epoch [3] [save] [16072020-145230] loss= tensor(0.4250, device='cuda:0')

@@ -1,0 +1,53 @@
+create semi supervised model
+create semi supervised model
+Total # images:75709, labels:75709
+Total # images:10815, labels:10815
+Total # images:25596, labels:25596
+train_dataset len: 75709
+labeled_num: 15141
+
+Epoch: 0, iteration: 0/1892, ==> train <===, loss: 0.974211, classification loss: 0.974211,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 100/1892, ==> train <===, loss: 0.707934, classification loss: 0.707934,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 200/1892, ==> train <===, loss: 0.697294, classification loss: 0.697294,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 300/1892, ==> train <===, loss: 0.695224, classification loss: 0.695224,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 400/1892, ==> train <===, loss: 0.694374, classification loss: 0.694374,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 500/1892, ==> train <===, loss: 0.693987, classification loss: 0.693987,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 600/1892, ==> train <===, loss: 0.693769, classification loss: 0.693769,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 700/1892, ==> train <===, loss: 0.693624, classification loss: 0.693624,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 800/1892, ==> train <===, loss: 0.693523, classification loss: 0.693523,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 900/1892, ==> train <===, loss: 0.693448, classification loss: 0.693448,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1000/1892, ==> train <===, loss: 0.693404, classification loss: 0.693404,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1100/1892, ==> train <===, loss: 0.693368, classification loss: 0.693368,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1200/1892, ==> train <===, loss: 0.693342, classification loss: 0.693342,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1300/1892, ==> train <===, loss: 0.693317, classification loss: 0.693317,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1400/1892, ==> train <===, loss: 0.693303, classification loss: 0.693303,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1500/1892, ==> train <===, loss: 0.693283, classification loss: 0.693283,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1600/1892, ==> train <===, loss: 0.693269, classification loss: 0.693269,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1700/1892, ==> train <===, loss: 0.693261, classification loss: 0.693261,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1800/1892, ==> train <===, loss: 0.693249, classification loss: 0.693249,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+Traceback (most recent call last):
+  File "train.py", line 127, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 306, in train_semi_model
+    AUROCs, Accus, Senss, Specs = epochVal_metrics(model, val_dataloader, args)
+  File "/media/luckie/vol4/semi_supervised_cls/code/validation.py", line 81, in epochVal_metrics
+    _,output = model(image)
+ValueError: too many values to unpack (expected 2)

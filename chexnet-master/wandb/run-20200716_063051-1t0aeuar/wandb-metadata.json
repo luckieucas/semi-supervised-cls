@@ -1,0 +1,20 @@
+{
+    "root": "/media/luckie/vol4/paper_with_code/chexnet-master",
+    "program": "/media/luckie/vol4/paper_with_code/chexnet-master/Main.py",
+    "startedAt": "2020-07-16T06:30:52.709214",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-107-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "DENSE-NET-121",
+    "project": "chest-supervised",
+    "heartbeatAt": "2020-07-16T06:39:59.035983"
+}

@@ -1,0 +1,99 @@
+create semi supervised model
+Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x7fc8d7c0bd10>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/url[34m[1mwandb[0m: Network error (ConnectTimeout), entering retry loop. See /media/luckie/vol4/semi_supervised_cls/code/wandb/debug.log for full traceback.
+lib3/util/retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x7fc8d7c0bd10>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/wandb/retry.py", line 95, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/wandb/apis/internal.py", line 108, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x7fc8d7c0bd10>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+create semi supervised model
+Total # images:75709, labels:75709
+Total # images:10815, labels:10815
+Total # images:25596, labels:25596
+train_dataset len: 75709
+labeled_num: 15141
+[34m[1mwandb[0m: Network error resolved after 0:00:43.684229, resuming normal operation.
+
+Epoch: 0, iteration: 0/1892, ==> train <===, loss: 0.974211, classification loss: 0.974211,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 100/1892, ==> train <===, loss: 0.708709, classification loss: 0.708709,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 200/1892, ==> train <===, loss: 0.697873, classification loss: 0.697873,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 300/1892, ==> train <===, loss: 0.695722, classification loss: 0.695722,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 400/1892, ==> train <===, loss: 0.694795, classification loss: 0.694795,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 500/1892, ==> train <===, loss: 0.694389, classification loss: 0.694389,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 600/1892, ==> train <===, loss: 0.694127, classification loss: 0.694127,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 700/1892, ==> train <===, loss: 0.693945, classification loss: 0.693945,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 800/1892, ==> train <===, loss: 0.693839, classification loss: 0.693839,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 900/1892, ==> train <===, loss: 0.693728, classification loss: 0.693728,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1000/1892, ==> train <===, loss: 0.693674, classification loss: 0.693674,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1100/1892, ==> train <===, loss: 0.693637, classification loss: 0.693637,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1200/1892, ==> train <===, loss: 0.693604, classification loss: 0.693604,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1300/1892, ==> train <===, loss: 0.693580, classification loss: 0.693580,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+
+Epoch: 0, iteration: 1400/1892, ==> train <===, loss: 0.693582, classification loss: 0.693582,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001

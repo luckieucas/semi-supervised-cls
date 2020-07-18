@@ -6,7 +6,7 @@ import pretrainedmodels
 import torch.utils.model_zoo as model_zoo
 
 
-from .models import DenseNet121,DenseNet161,DenseNet121MultiScale
+from .models import DenseNet121,DenseNet169,DenseNet201
 
 
 
@@ -17,9 +17,9 @@ def create_semi_model(args, ema=False):
     # Network definition
     print("create semi supervised model")
     num_class = len(args.class_names)
-    net = DenseNet121(out_size=num_class, drop_rate=args.drop_rate)
+    net = DenseNet121(num_class, True)
     if args.task == 'chest':
-        net = DenseNet161(out_size=14, drop_rate=args.drop_rate)
+        net = DenseNet169(14, True)
     # if args.multi_scale_densenet == 1:
     #     net = DenseNet121MultiScale(drop_rate = args.drop_rate, out_size=num_class)
     if len(args.gpu.split(',')) > 1:

@@ -1,0 +1,18 @@
+Training NN architecture =  DENSE-NET-121
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+began  validation
+began test
+AUROC mean  0.5326414950202042
+Traceback (most recent call last):
+  File "Main.py", line 82, in <module>
+    main()
+  File "Main.py", line 13, in main
+    runTrain()
+  File "Main.py", line 55, in runTrain
+    ChexnetTrainer.train(pathDirData, pathFileTrain, pathFileVal, nnArchitecture, nnIsTrained, nnClassCount, trBatchSize, trMaxEpoch, imgtransResize, imgtransCrop, timestampLaunch, None)
+  File "/media/luckie/vol4/paper_with_code/chexnet-master/ChexnetTrainer.py", line 98, in train
+    ChexnetTrainer.epochTest(model,pathDirData)
+  File "/media/luckie/vol4/paper_with_code/chexnet-master/ChexnetTrainer.py", line 221, in epochTest
+    wandb.log({'AUROC': aurocMean})
+NameError: name 'wandb' is not defined

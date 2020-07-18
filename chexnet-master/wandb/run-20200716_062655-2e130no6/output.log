@@ -1,0 +1,27 @@
+Training NN architecture =  DENSE-NET-121
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+began  validation
+began test
+Traceback (most recent call last):
+  File "Main.py", line 82, in <module>
+    main()
+  File "Main.py", line 13, in main
+    runTrain()
+  File "Main.py", line 55, in runTrain
+    ChexnetTrainer.train(pathDirData, pathFileTrain, pathFileVal, nnArchitecture, nnIsTrained, nnClassCount, trBatchSize, trMaxEpoch, imgtransResize, imgtransCrop, timestampLaunch, None)
+  File "/media/luckie/vol4/paper_with_code/chexnet-master/ChexnetTrainer.py", line 98, in train
+    ChexnetTrainer.epochTest(model,pathDirData)
+  File "/media/luckie/vol4/paper_with_code/chexnet-master/ChexnetTrainer.py", line 217, in epochTest
+    aurocIndividual = ChexnetTrainer.computeAUROC(outGT, outPRED, nnClassCount)
+  File "/media/luckie/vol4/paper_with_code/chexnet-master/ChexnetTrainer.py", line 243, in computeAUROC
+    outAUROC.append(roc_auc_score(datanpGT[:, i], datanpPRED[:, i]))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 393, in roc_auc_score
+    sample_weight=sample_weight)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_base.py", line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 223, in _binary_roc_auc_score
+    raise ValueError("Only one class present in y_true. ROC AUC score "
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.

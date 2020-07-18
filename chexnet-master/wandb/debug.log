@@ -1,0 +1,26 @@
+2020-07-18 22:46:27,504 DEBUG   MainThread:1666 [wandb_config.py:_load_defaults():133] no defaults not found in config-defaults.yaml
+2020-07-18 22:46:27,876 DEBUG   MainThread:1666 [git_repo.py:repo():30] git repository is invalid
+2020-07-18 22:46:27,885 DEBUG   MainThread:1666 [run_manager.py:__init__():547] Initialized sync for chest-supervised/3prk6iu7
+2020-07-18 22:46:27,890 INFO    MainThread:1666 [run_manager.py:wrap_existing_process():1147] wrapping existing process 1588
+2020-07-18 22:46:27,891 WARNING MainThread:1666 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-18 22:46:28,228 INFO    MainThread:1666 [run_manager.py:init_run():926] system metrics and metadata threads started
+2020-07-18 22:46:28,228 INFO    MainThread:1666 [run_manager.py:init_run():965] upserting run before process can begin, waiting at most 10 seconds
+2020-07-18 22:46:28,635 INFO    Thread-15 :1666 [run_manager.py:_upsert_run():1054] saving pip packages
+2020-07-18 22:46:28,636 INFO    Thread-15 :1666 [run_manager.py:_upsert_run():1056] initializing streaming files api
+2020-07-18 22:46:28,638 INFO    Thread-15 :1666 [run_manager.py:_upsert_run():1063] unblocking file change observer, beginning sync with W&B servers
+2020-07-18 22:46:28,638 INFO    MainThread:1666 [run_manager.py:wrap_existing_process():1164] informing user process we are ready to proceed
+2020-07-18 22:46:28,646 INFO    MainThread:1666 [run_manager.py:_sync_etc():1296] entering loop for messages from user process
+2020-07-18 22:46:28,873 INFO    Thread-4  :1666 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/config.yaml
+2020-07-18 22:46:29,266 INFO    Thread-4  :1666 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/output.log
+2020-07-18 22:46:29,267 INFO    Thread-4  :1666 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/wandb-metadata.json
+2020-07-18 22:46:29,267 INFO    Thread-4  :1666 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/requirements.txt
+2020-07-18 22:46:35,238 INFO    MainThread:1666 [run_manager.py:_sync_etc():1319] received message from user process: {"exitcode": 1}
+2020-07-18 22:46:35,239 INFO    MainThread:1666 [run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
+2020-07-18 22:46:35,239 INFO    MainThread:1666 [run_manager.py:shutdown():1070] shutting down system stats and metadata service
+2020-07-18 22:46:35,875 INFO    Thread-4  :1666 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/output.log
+2020-07-18 22:46:35,876 INFO    Thread-4  :1666 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/wandb-events.jsonl
+2020-07-18 22:46:36,238 INFO    MainThread:1666 [run_manager.py:shutdown():1084] stopping streaming files and file change observer
+2020-07-18 22:46:36,876 INFO    Thread-4  :1666 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/wandb-metadata.json
+2020-07-18 22:46:39,127 INFO    MainThread:1666 [run_manager.py:_sync_etc():1418] process only ran for 12 seconds, not syncing files
+prk6iu7:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/paper_with_code/chexnet-master/wandb/run-20200718_144626-3prk6iu7/wandb-metadata.json
+2020-07-18 22:46:39,127 INFO    MainThread:1666 [3prk6iu7:run_manager.py:_sync_etc():1418] process only ran for 12 seconds, not syncing files

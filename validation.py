@@ -31,7 +31,7 @@ def epochVal(model, dataLoader, loss_fn, args):
     with torch.no_grad():
         for i, (study, image, label) in enumerate(dataLoader):
             image, label = image.cuda(), label.cuda()
-            _, output = model(image)
+            output = model(image)
             # _, output = model(image)
 
             loss = loss_fn(output, label.clone())
@@ -78,7 +78,7 @@ def epochVal_metrics(model, dataLoader, args):
     with torch.no_grad():
         for i, (study, _, image, label) in enumerate(dataLoader):
             image, label = image.cuda(), label.cuda()
-            _,output = model(image)
+            output = model(image)
             output = F.softmax(output, dim=1)
             # _, output = model(image)
 
@@ -104,6 +104,38 @@ def epochVal_metrics(model, dataLoader, args):
 
     return AUROCs, Accus, Senss, Specs
 
+def epochTest_metrics(model, dataLoader, args):
+    training = model.training
+    model.eval()
+
+    meters = MetricLogger()
+
+    gt = torch.FloatTensor().cuda()
+    pred = torch.FloatTensor().cuda()
+    
+    gt_study   = {}
+    pred_study = {}
+    studies    = []
+    
+    with torch.no_grad():
+        for i, (study, _, inp, target) in enumerate(dataLoader):
+            target = target.cuda()
+            gt = torch.cat((gt, target), 0)
+            bs, n_crops, c, h, w = inp.size()
+            input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+            output = model(input_var)
+            output_mean = output.view(bs, n_crops, -1).mean(1)
+            pred = torch.cat((pred, output_mean.data), 0)
+
+        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred,args, competition=True)
+    
+    model.train(training)
+
+    return AUROCs, Accus, Senss, Specs
+
+
+
+
 def epochVal_metrics_test(model, dataLoader, args):
     training = model.training
     model.eval()
@@ -123,7 +155,7 @@ def epochVal_metrics_test(model, dataLoader, args):
             if args.supervise_level == 'full':
                 output = model(image)
             else:
-                _,output = model(image)
+                output = model(image)
             output = F.softmax(output, dim=1)
             # _, output = model(image)
 

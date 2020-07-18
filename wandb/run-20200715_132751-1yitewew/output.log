@@ -1,0 +1,13 @@
+create semi supervised model
+create semi supervised model
+Total # images:75709, labels:75709
+Total # images:10815, labels:10815
+Total # images:25596, labels:25596
+train_dataset len: 75709
+labeled_num: 15141
+Traceback (most recent call last):
+  File "train.py", line 127, in <module>
+    train_semi_model(args,snapshot_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/trainer.py", line 261, in train_semi_model
+    meters_loss_consistency_relation.update(loss=consistency_relation_loss)
+NameError: name 'consistency_relation_loss' is not defined

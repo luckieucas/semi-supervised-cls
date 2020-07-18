@@ -18,7 +18,7 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torchvision.utils import make_grid
 
-from networks.models import DenseNet121,DenseNet161
+from networks.models import DenseNet121,DenseNet169
 from utils import losses, ramps
 from utils.metrics import compute_AUCs
 from utils.metric_logger import MetricLogger
@@ -28,7 +28,7 @@ from dataloaders.dataset import TwoStreamBatchSampler
 from utils.util import get_timestamp
 from validation import epochVal, epochVal_metrics
 from config import CLASS_NAMES_DICTS,CLASS_NUM_DICTS,RESIZE_DICTS,CREATE_MODEL_DICTS
-from trainer import train_semi_model,train_full_model
+from trainer import train_semi_model
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str, default='../dataset/skin/training_data/', help='dataset root dir')

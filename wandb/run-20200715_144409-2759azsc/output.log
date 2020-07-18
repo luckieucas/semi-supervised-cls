@@ -1,0 +1,1159 @@
+create semi supervised model
+create semi supervised model
+Total # images:75709, labels:75709
+Total # images:10815, labels:10815
+Total # images:25596, labels:25596
+train_dataset len: 75709
+labeled_num: 378
+
+Epoch: 0, iteration: 0/47, ==> train <===, loss: 0.943015, classification loss: 0.943015,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [143.0, 10.0, 0.0, 312.0, 1.0, 195.0, 7.0, 0.0, 20.0, 3.0, 3.0, 2.0, 0.0, 0.0]
+
+VAL Student: Epoch: 0, iteration: 46
+
+VAL AUROC: 0.516727, VAL Accus: 0.073619, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.494261 Cardiomegaly:0.475963 Effusion:0.576737 Infiltration:0.517652 Mass:0.500515 Nodule:0.511763 Pneumonia:0.468390 Pneumothorax:0.509396 Consolidation:0.649136 Edema:0.603207 Emphysema:0.363892 Fibrosis:0.495927 Pleural_Thickening:0.452726 Hernia:0.614613
+Accus: Atelectasis:0.022174 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.205263 Mass:0.002188 Nodule:0.423913 Pneumonia:0.093333 Pneumothorax:0.000000 Consolidation:0.069444 Edema:0.037975 Emphysema:0.021277 Fibrosis:0.062500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [130.0, 48.0, 1.0, 1266.0, 0.0, 217.0, 9.0, 0.0, 83.0, 16.0, 2.0, 14.0, 0.0, 0.0]
+
+TEST Student: Epoch: 0, iteration: 46
+
+TEST AUROC: 0.542737, TEST Accus: 0.079372, TEST Senss: 0.000058, TEST Specs: 0.999936
+AUROCs: Atelectasis:0.572609 Cardiomegaly:0.549712 Effusion:0.608274 Infiltration:0.575007 Mass:0.525148 Nodule:0.520993 Pneumonia:0.511932 Pneumothorax:0.500642 Consolidation:0.623415 Edema:0.580660 Emphysema:0.450699 Fibrosis:0.478227 Pleural_Thickening:0.509952 Hernia:0.591048
+Accus: Atelectasis:0.009893 Cardiomegaly:0.101911 Effusion:0.000367 Infiltration:0.513799 Mass:0.000000 Nodule:0.275381 Pneumonia:0.028846 Pneumothorax:0.000000 Consolidation:0.061618 Edema:0.041995 Emphysema:0.002928 Fibrosis:0.074468 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000818 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:0.999918 Effusion:1.000000 Infiltration:0.999435 Mass:1.000000 Nodule:0.999750 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_1.pth
+
+Epoch: 1, iteration: 0/47, ==> train <===, loss: 0.735590, classification loss: 0.734811,                     consistency loss: 0.000049, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000730,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 9e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [597.0, 12.0, 0.0, 584.0, 0.0, 115.0, 10.0, 1.0, 5.0, 5.0, 1.0, 7.0, 0.0, 0.0]
+
+VAL Student: Epoch: 1, iteration: 46
+
+VAL AUROC: 0.518291, VAL Accus: 0.091650, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.540065 Cardiomegaly:0.516780 Effusion:0.549651 Infiltration:0.519853 Mass:0.502672 Nodule:0.534156 Pneumonia:0.498300 Pneumothorax:0.456405 Consolidation:0.627696 Edema:0.627335 Emphysema:0.351047 Fibrosis:0.551486 Pleural_Thickening:0.460010 Hernia:0.520618
+Accus: Atelectasis:0.092572 Cardiomegaly:0.111111 Effusion:0.000000 Infiltration:0.384211 Mass:0.000000 Nodule:0.250000 Pneumonia:0.133333 Pneumothorax:0.005376 Consolidation:0.017361 Edema:0.063291 Emphysema:0.007092 Fibrosis:0.218750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [710.0, 29.0, 0.0, 2054.0, 0.0, 31.0, 6.0, 0.0, 15.0, 0.0, 0.0, 5.0, 0.0, 0.0]
+
+TEST Student: Epoch: 1, iteration: 46
+
+TEST AUROC: 0.540742, TEST Accus: 0.074679, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.573979 Cardiomegaly:0.540136 Effusion:0.574918 Infiltration:0.633875 Mass:0.530559 Nodule:0.510499 Pneumonia:0.535128 Pneumothorax:0.474785 Consolidation:0.642824 Edema:0.633625 Emphysema:0.444892 Fibrosis:0.466454 Pleural_Thickening:0.462357 Hernia:0.546351
+Accus: Atelectasis:0.054033 Cardiomegaly:0.061571 Effusion:0.000000 Infiltration:0.833604 Mass:0.000000 Nodule:0.039340 Pneumonia:0.019231 Pneumothorax:0.000000 Consolidation:0.011136 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.026596 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_2.pth
+
+Epoch: 2, iteration: 0/47, ==> train <===, loss: 0.708065, classification loss: 0.707734,                     consistency loss: 0.000026, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000306,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 8.1e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [228.0, 6.0, 1.0, 728.0, 0.0, 60.0, 15.0, 0.0, 4.0, 2.0, 0.0, 1.0, 1.0, 0.0]
+
+VAL Student: Epoch: 2, iteration: 46
+
+VAL AUROC: 0.505360, VAL Accus: 0.069769, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.540265 Cardiomegaly:0.448195 Effusion:0.581293 Infiltration:0.524652 Mass:0.498349 Nodule:0.519357 Pneumonia:0.492920 Pneumothorax:0.429440 Consolidation:0.608203 Edema:0.592070 Emphysema:0.356007 Fibrosis:0.545096 Pleural_Thickening:0.477555 Hernia:0.461640
+Accus: Atelectasis:0.035354 Cardiomegaly:0.055556 Effusion:0.001252 Infiltration:0.478947 Mass:0.000000 Nodule:0.130435 Pneumonia:0.200000 Pneumothorax:0.000000 Consolidation:0.013889 Edema:0.025316 Emphysema:0.000000 Fibrosis:0.031250 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [590.0, 87.0, 0.0, 1836.0, 0.0, 8.0, 17.0, 0.0, 10.0, 1.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 2, iteration: 46
+
+TEST AUROC: 0.543646, TEST Accus: 0.075339, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.594400 Cardiomegaly:0.483075 Effusion:0.619182 Infiltration:0.625504 Mass:0.537044 Nodule:0.496026 Pneumonia:0.503134 Pneumothorax:0.529651 Consolidation:0.625722 Edema:0.608162 Emphysema:0.500204 Fibrosis:0.468163 Pleural_Thickening:0.483780 Hernia:0.536993
+Accus: Atelectasis:0.044901 Cardiomegaly:0.184713 Effusion:0.000000 Infiltration:0.745130 Mass:0.000000 Nodule:0.010152 Pneumonia:0.054487 Pneumothorax:0.000000 Consolidation:0.007424 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_3.pth
+
+Epoch: 3, iteration: 0/47, ==> train <===, loss: 0.701252, classification loss: 0.701067,                     consistency loss: 0.000010, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000176,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.290000000000001e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [143.0, 4.0, 0.0, 992.0, 0.0, 35.0, 8.0, 0.0, 1.0, 0.0, 2.0, 3.0, 0.0, 0.0]
+
+VAL Student: Epoch: 3, iteration: 46
+
+VAL AUROC: 0.514181, VAL Accus: 0.071857, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.546604 Cardiomegaly:0.441185 Effusion:0.608976 Infiltration:0.529585 Mass:0.494032 Nodule:0.529500 Pneumonia:0.497249 Pneumothorax:0.408900 Consolidation:0.609674 Edema:0.615175 Emphysema:0.341300 Fibrosis:0.542144 Pleural_Thickening:0.483852 Hernia:0.550359
+Accus: Atelectasis:0.022174 Cardiomegaly:0.037037 Effusion:0.000000 Infiltration:0.652632 Mass:0.000000 Nodule:0.076087 Pneumonia:0.106667 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.093750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [734.0, 42.0, 0.0, 2129.0, 0.0, 6.0, 3.0, 0.0, 1.0, 2.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 3, iteration: 46
+
+TEST AUROC: 0.551210, TEST Accus: 0.074115, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.593731 Cardiomegaly:0.483765 Effusion:0.624592 Infiltration:0.630523 Mass:0.546673 Nodule:0.535674 Pneumonia:0.481959 Pneumothorax:0.534148 Consolidation:0.613836 Edema:0.611729 Emphysema:0.504894 Fibrosis:0.497960 Pleural_Thickening:0.502434 Hernia:0.555020
+Accus: Atelectasis:0.055860 Cardiomegaly:0.089172 Effusion:0.000000 Infiltration:0.864042 Mass:0.000000 Nodule:0.007614 Pneumonia:0.009615 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_4.pth
+
+Epoch: 4, iteration: 0/47, ==> train <===, loss: 0.698697, classification loss: 0.698596,                     consistency loss: 0.000004, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000098,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 6.561000000000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [191.0, 10.0, 9.0, 858.0, 0.0, 32.0, 6.0, 0.0, 1.0, 0.0, 2.0, 4.0, 2.0, 0.0]
+
+VAL Student: Epoch: 4, iteration: 46
+
+VAL AUROC: 0.520873, VAL Accus: 0.071407, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.537794 Cardiomegaly:0.424592 Effusion:0.651666 Infiltration:0.530040 Mass:0.504896 Nodule:0.533062 Pneumonia:0.489285 Pneumothorax:0.436227 Consolidation:0.632466 Edema:0.598414 Emphysema:0.348391 Fibrosis:0.572512 Pleural_Thickening:0.485279 Hernia:0.547603
+Accus: Atelectasis:0.029617 Cardiomegaly:0.092593 Effusion:0.011264 Infiltration:0.564474 Mass:0.000000 Nodule:0.069565 Pneumonia:0.080000 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.125000 Pleural_Thickening:0.009524 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [515.0, 65.0, 0.0, 2043.0, 0.0, 0.0, 1.0, 0.0, 2.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+
+TEST Student: Epoch: 4, iteration: 46
+
+TEST AUROC: 0.546725, TEST Accus: 0.072976, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.582672 Cardiomegaly:0.459698 Effusion:0.610456 Infiltration:0.622952 Mass:0.530391 Nodule:0.537942 Pneumonia:0.497041 Pneumothorax:0.518673 Consolidation:0.618274 Edema:0.594715 Emphysema:0.499440 Fibrosis:0.526729 Pleural_Thickening:0.490405 Hernia:0.564762
+Accus: Atelectasis:0.039193 Cardiomegaly:0.138004 Effusion:0.000000 Infiltration:0.829140 Mass:0.000000 Nodule:0.000000 Pneumonia:0.003205 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.010638 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_5.pth
+
+Epoch: 5, iteration: 0/47, ==> train <===, loss: 0.697433, classification loss: 0.697360,                     consistency loss: 0.000002, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000071,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.904900000000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [154.0, 10.0, 0.0, 730.0, 0.0, 49.0, 6.0, 0.0, 4.0, 0.0, 4.0, 10.0, 1.0, 0.0]
+
+VAL Student: Epoch: 5, iteration: 46
+
+VAL AUROC: 0.518706, VAL Accus: 0.081627, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.552307 Cardiomegaly:0.450066 Effusion:0.627383 Infiltration:0.525675 Mass:0.514053 Nodule:0.518413 Pneumonia:0.471542 Pneumothorax:0.418283 Consolidation:0.617482 Edema:0.645412 Emphysema:0.353549 Fibrosis:0.555720 Pleural_Thickening:0.484635 Hernia:0.527365
+Accus: Atelectasis:0.023880 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.480263 Mass:0.000000 Nodule:0.106522 Pneumonia:0.080000 Pneumothorax:0.000000 Consolidation:0.013889 Edema:0.000000 Emphysema:0.028369 Fibrosis:0.312500 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [467.0, 63.0, 0.0, 1955.0, 0.0, 1.0, 0.0, 0.0, 4.0, 1.0, 0.0, 15.0, 0.0, 0.0]
+
+TEST Student: Epoch: 5, iteration: 46
+
+TEST AUROC: 0.545233, TEST Accus: 0.074955, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.574773 Cardiomegaly:0.481569 Effusion:0.607575 Infiltration:0.618133 Mass:0.531023 Nodule:0.538528 Pneumonia:0.480065 Pneumothorax:0.541546 Consolidation:0.591203 Edema:0.567079 Emphysema:0.495297 Fibrosis:0.559134 Pleural_Thickening:0.501875 Hernia:0.545465
+Accus: Atelectasis:0.035540 Cardiomegaly:0.133758 Effusion:0.000000 Infiltration:0.793425 Mass:0.000000 Nodule:0.001269 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002970 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.079787 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_6.pth
+
+Epoch: 6, iteration: 0/47, ==> train <===, loss: 0.696471, classification loss: 0.696410,                     consistency loss: 0.000001, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000060,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.314410000000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [185.0, 5.0, 3.0, 927.0, 0.0, 58.0, 6.0, 0.0, 1.0, 0.0, 0.0, 4.0, 0.0, 0.0]
+
+VAL Student: Epoch: 6, iteration: 46
+
+VAL AUROC: 0.517875, VAL Accus: 0.073083, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.535417 Cardiomegaly:0.440045 Effusion:0.631392 Infiltration:0.528391 Mass:0.512180 Nodule:0.527207 Pneumonia:0.492307 Pneumothorax:0.428996 Consolidation:0.622236 Edema:0.615645 Emphysema:0.362858 Fibrosis:0.549698 Pleural_Thickening:0.481055 Hernia:0.522818
+Accus: Atelectasis:0.028687 Cardiomegaly:0.046296 Effusion:0.003755 Infiltration:0.609868 Mass:0.000000 Nodule:0.126087 Pneumonia:0.080000 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.125000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [378.0, 50.0, 0.0, 2130.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, 0.0, 0.0]
+
+TEST Student: Epoch: 6, iteration: 46
+
+TEST AUROC: 0.545502, TEST Accus: 0.072331, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.575195 Cardiomegaly:0.490351 Effusion:0.616598 Infiltration:0.620122 Mass:0.531588 Nodule:0.560449 Pneumonia:0.471763 Pneumothorax:0.531003 Consolidation:0.604778 Edema:0.574229 Emphysema:0.493593 Fibrosis:0.550759 Pleural_Thickening:0.503867 Hernia:0.512729
+Accus: Atelectasis:0.028767 Cardiomegaly:0.106157 Effusion:0.000000 Infiltration:0.864448 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.010638 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_7.pth
+
+Epoch: 7, iteration: 0/47, ==> train <===, loss: 0.695764, classification loss: 0.695721,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000043,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.782969000000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [249.0, 6.0, 7.0, 606.0, 0.0, 56.0, 13.0, 0.0, 9.0, 0.0, 1.0, 10.0, 1.0, 0.0]
+
+VAL Student: Epoch: 7, iteration: 46
+
+VAL AUROC: 0.520848, VAL Accus: 0.082306, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.537000 Cardiomegaly:0.446646 Effusion:0.638350 Infiltration:0.530702 Mass:0.508660 Nodule:0.521905 Pneumonia:0.477591 Pneumothorax:0.450021 Consolidation:0.633170 Edema:0.591845 Emphysema:0.363391 Fibrosis:0.561066 Pleural_Thickening:0.478147 Hernia:0.553377
+Accus: Atelectasis:0.038611 Cardiomegaly:0.055556 Effusion:0.008761 Infiltration:0.398684 Mass:0.000000 Nodule:0.121739 Pneumonia:0.173333 Pneumothorax:0.000000 Consolidation:0.031250 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.312500 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [494.0, 62.0, 0.0, 1984.0, 0.0, 1.0, 0.0, 0.0, 6.0, 3.0, 0.0, 10.0, 0.0, 0.0]
+
+TEST Student: Epoch: 7, iteration: 46
+
+TEST AUROC: 0.546985, TEST Accus: 0.074372, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.565714 Cardiomegaly:0.472598 Effusion:0.626924 Infiltration:0.627838 Mass:0.519929 Nodule:0.550249 Pneumonia:0.493390 Pneumothorax:0.546292 Consolidation:0.609335 Edema:0.592546 Emphysema:0.485832 Fibrosis:0.550706 Pleural_Thickening:0.501538 Hernia:0.514904
+Accus: Atelectasis:0.037595 Cardiomegaly:0.131635 Effusion:0.000000 Infiltration:0.805195 Mass:0.000000 Nodule:0.001269 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.004454 Edema:0.007874 Emphysema:0.000000 Fibrosis:0.053191 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_8.pth
+
+Epoch: 8, iteration: 0/47, ==> train <===, loss: 0.695313, classification loss: 0.695278,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000035,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.304672100000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [359.0, 5.0, 2.0, 682.0, 0.0, 64.0, 6.0, 1.0, 4.0, 0.0, 1.0, 9.0, 2.0, 0.0]
+
+VAL Student: Epoch: 8, iteration: 46
+
+VAL AUROC: 0.521541, VAL Accus: 0.077815, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.544992 Cardiomegaly:0.436558 Effusion:0.632705 Infiltration:0.528587 Mass:0.516150 Nodule:0.520051 Pneumonia:0.458803 Pneumothorax:0.459365 Consolidation:0.608022 Edema:0.620142 Emphysema:0.391657 Fibrosis:0.558498 Pleural_Thickening:0.480840 Hernia:0.545204
+Accus: Atelectasis:0.055668 Cardiomegaly:0.046296 Effusion:0.002503 Infiltration:0.448684 Mass:0.000000 Nodule:0.139130 Pneumonia:0.080000 Pneumothorax:0.005376 Consolidation:0.013889 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.281250 Pleural_Thickening:0.009524 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [246.0, 76.0, 0.0, 2093.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 8, iteration: 46
+
+TEST AUROC: 0.549957, TEST Accus: 0.074023, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.574557 Cardiomegaly:0.481082 Effusion:0.618685 Infiltration:0.626381 Mass:0.533210 Nodule:0.565189 Pneumonia:0.481396 Pneumothorax:0.548661 Consolidation:0.582716 Edema:0.562836 Emphysema:0.480202 Fibrosis:0.570057 Pleural_Thickening:0.521911 Hernia:0.552518
+Accus: Atelectasis:0.018721 Cardiomegaly:0.161359 Effusion:0.000000 Infiltration:0.849432 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_9.pth
+
+Epoch: 9, iteration: 0/47, ==> train <===, loss: 0.695076, classification loss: 0.695048,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000028,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.874204890000002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [247.0, 6.0, 0.0, 896.0, 0.0, 29.0, 5.0, 0.0, 2.0, 0.0, 2.0, 4.0, 1.0, 0.0]
+
+VAL Student: Epoch: 9, iteration: 46
+
+VAL AUROC: 0.522769, VAL Accus: 0.068852, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.537882 Cardiomegaly:0.433144 Effusion:0.621504 Infiltration:0.529330 Mass:0.516600 Nodule:0.518898 Pneumonia:0.490149 Pneumothorax:0.434246 Consolidation:0.618174 Edema:0.641995 Emphysema:0.368670 Fibrosis:0.553014 Pleural_Thickening:0.483089 Hernia:0.572070
+Accus: Atelectasis:0.038301 Cardiomegaly:0.055556 Effusion:0.000000 Infiltration:0.589474 Mass:0.000000 Nodule:0.063043 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.006944 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.125000 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [603.0, 67.0, 0.0, 2053.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 2.0, 0.0, 0.0]
+
+TEST Student: Epoch: 9, iteration: 46
+
+TEST AUROC: 0.550524, TEST Accus: 0.074006, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.564826 Cardiomegaly:0.468362 Effusion:0.612888 Infiltration:0.627270 Mass:0.532693 Nodule:0.568363 Pneumonia:0.492282 Pneumothorax:0.550076 Consolidation:0.587880 Edema:0.594482 Emphysema:0.501638 Fibrosis:0.576608 Pleural_Thickening:0.503585 Hernia:0.526386
+Accus: Atelectasis:0.045890 Cardiomegaly:0.142251 Effusion:0.000000 Infiltration:0.833198 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.010638 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_10.pth
+
+Epoch: 10, iteration: 0/47, ==> train <===, loss: 0.694820, classification loss: 0.694792,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000028,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.4867844010000016e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [185.0, 19.0, 2.0, 588.0, 0.0, 36.0, 5.0, 0.0, 5.0, 0.0, 2.0, 9.0, 2.0, 0.0]
+
+VAL Student: Epoch: 10, iteration: 46
+
+VAL AUROC: 0.519148, VAL Accus: 0.075800, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.542877 Cardiomegaly:0.443746 Effusion:0.634339 Infiltration:0.531343 Mass:0.518491 Nodule:0.511924 Pneumonia:0.472383 Pneumothorax:0.455335 Consolidation:0.619336 Edema:0.610120 Emphysema:0.366541 Fibrosis:0.554858 Pleural_Thickening:0.476697 Hernia:0.530086
+Accus: Atelectasis:0.028687 Cardiomegaly:0.175926 Effusion:0.002503 Infiltration:0.386842 Mass:0.000000 Nodule:0.078261 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.017361 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.281250 Pleural_Thickening:0.009524 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [442.0, 183.0, 0.0, 1630.0, 0.0, 0.0, 0.0, 0.0, 9.0, 1.0, 0.0, 8.0, 0.0, 0.0]
+
+TEST Student: Epoch: 10, iteration: 46
+
+TEST AUROC: 0.547475, TEST Accus: 0.081111, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557412 Cardiomegaly:0.483508 Effusion:0.612059 Infiltration:0.626904 Mass:0.521296 Nodule:0.543976 Pneumonia:0.517519 Pneumothorax:0.554285 Consolidation:0.598362 Edema:0.600289 Emphysema:0.489384 Fibrosis:0.548705 Pleural_Thickening:0.503464 Hernia:0.507493
+Accus: Atelectasis:0.033638 Cardiomegaly:0.388535 Effusion:0.000000 Infiltration:0.661526 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.006682 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.042553 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_11.pth
+
+Epoch: 11, iteration: 0/47, ==> train <===, loss: 0.694695, classification loss: 0.694674,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000021,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.138105960900002e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [134.0, 10.0, 9.0, 843.0, 0.0, 11.0, 1.0, 0.0, 2.0, 0.0, 1.0, 10.0, 1.0, 0.0]
+
+VAL Student: Epoch: 11, iteration: 46
+
+VAL AUROC: 0.516833, VAL Accus: 0.074842, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.525589 Cardiomegaly:0.446628 Effusion:0.643425 Infiltration:0.533330 Mass:0.509457 Nodule:0.530136 Pneumonia:0.456565 Pneumothorax:0.442682 Consolidation:0.632428 Edema:0.621625 Emphysema:0.365360 Fibrosis:0.543355 Pleural_Thickening:0.473948 Hernia:0.511128
+Accus: Atelectasis:0.020778 Cardiomegaly:0.092593 Effusion:0.011264 Infiltration:0.554605 Mass:0.000000 Nodule:0.023913 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.006944 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.312500 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [216.0, 68.0, 0.0, 1995.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 24.0, 0.0, 0.0]
+
+TEST Student: Epoch: 11, iteration: 46
+
+TEST AUROC: 0.548072, TEST Accus: 0.078625, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557452 Cardiomegaly:0.481431 Effusion:0.615325 Infiltration:0.624577 Mass:0.520652 Nodule:0.554508 Pneumonia:0.497359 Pneumothorax:0.542104 Consolidation:0.594162 Edema:0.577055 Emphysema:0.481924 Fibrosis:0.569768 Pleural_Thickening:0.504641 Hernia:0.552048
+Accus: Atelectasis:0.016438 Cardiomegaly:0.144374 Effusion:0.000000 Infiltration:0.809659 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.127660 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_12.pth
+
+Epoch: 12, iteration: 0/47, ==> train <===, loss: 0.694597, classification loss: 0.694576,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000021,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.8242953648100018e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [273.0, 8.0, 0.0, 777.0, 0.0, 30.0, 3.0, 0.0, 0.0, 0.0, 1.0, 8.0, 0.0, 0.0]
+
+VAL Student: Epoch: 12, iteration: 46
+
+VAL AUROC: 0.518260, VAL Accus: 0.070707, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.527607 Cardiomegaly:0.433565 Effusion:0.635251 Infiltration:0.531220 Mass:0.510495 Nodule:0.511434 Pneumonia:0.465075 Pneumothorax:0.432962 Consolidation:0.625134 Edema:0.639619 Emphysema:0.381026 Fibrosis:0.563345 Pleural_Thickening:0.480246 Hernia:0.518664
+Accus: Atelectasis:0.042332 Cardiomegaly:0.074074 Effusion:0.000000 Infiltration:0.511184 Mass:0.000000 Nodule:0.065217 Pneumonia:0.040000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.250000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [530.0, 89.0, 0.0, 1899.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 13.0, 0.0, 0.0]
+
+TEST Student: Epoch: 12, iteration: 46
+
+TEST AUROC: 0.549727, TEST Accus: 0.076608, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.559647 Cardiomegaly:0.476925 Effusion:0.606460 Infiltration:0.619458 Mass:0.526009 Nodule:0.565888 Pneumonia:0.497941 Pneumothorax:0.548902 Consolidation:0.577761 Edema:0.592996 Emphysema:0.499896 Fibrosis:0.571612 Pleural_Thickening:0.505424 Hernia:0.547256
+Accus: Atelectasis:0.040335 Cardiomegaly:0.188960 Effusion:0.000000 Infiltration:0.770698 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.069149 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_13.pth
+
+Epoch: 13, iteration: 0/47, ==> train <===, loss: 0.694426, classification loss: 0.694404,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000022,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.5418658283290016e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [187.0, 9.0, 0.0, 631.0, 0.0, 38.0, 2.0, 0.0, 3.0, 0.0, 2.0, 10.0, 0.0, 0.0]
+
+VAL Student: Epoch: 13, iteration: 46
+
+VAL AUROC: 0.519323, VAL Accus: 0.069560, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.520028 Cardiomegaly:0.415820 Effusion:0.643986 Infiltration:0.532717 Mass:0.515167 Nodule:0.519619 Pneumonia:0.455108 Pneumothorax:0.443235 Consolidation:0.622258 Edema:0.643250 Emphysema:0.378696 Fibrosis:0.551842 Pleural_Thickening:0.488697 Hernia:0.540102
+Accus: Atelectasis:0.028997 Cardiomegaly:0.083333 Effusion:0.000000 Infiltration:0.415132 Mass:0.000000 Nodule:0.082609 Pneumonia:0.026667 Pneumothorax:0.000000 Consolidation:0.010417 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.312500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [508.0, 117.0, 0.0, 1725.0, 0.0, 0.0, 0.0, 0.0, 11.0, 2.0, 0.0, 14.0, 0.0, 0.0]
+
+TEST Student: Epoch: 13, iteration: 46
+
+TEST AUROC: 0.547620, TEST Accus: 0.076788, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.560263 Cardiomegaly:0.463292 Effusion:0.609584 Infiltration:0.624289 Mass:0.524456 Nodule:0.565344 Pneumonia:0.491375 Pneumothorax:0.546372 Consolidation:0.593951 Edema:0.600250 Emphysema:0.495587 Fibrosis:0.571024 Pleural_Thickening:0.509370 Hernia:0.511524
+Accus: Atelectasis:0.038661 Cardiomegaly:0.248408 Effusion:0.000000 Infiltration:0.700081 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.008166 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.074468 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_14.pth
+
+Epoch: 14, iteration: 0/47, ==> train <===, loss: 0.694363, classification loss: 0.694345,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000017,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.2876792454961016e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [227.0, 6.0, 0.0, 823.0, 0.0, 23.0, 5.0, 0.0, 1.0, 0.0, 3.0, 8.0, 0.0, 0.0]
+
+VAL Student: Epoch: 14, iteration: 46
+
+VAL AUROC: 0.524586, VAL Accus: 0.073116, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.551477 Cardiomegaly:0.434725 Effusion:0.638693 Infiltration:0.533812 Mass:0.507497 Nodule:0.523350 Pneumonia:0.457369 Pneumothorax:0.441288 Consolidation:0.630640 Edema:0.650204 Emphysema:0.386552 Fibrosis:0.552730 Pleural_Thickening:0.484152 Hernia:0.551709
+Accus: Atelectasis:0.035199 Cardiomegaly:0.055556 Effusion:0.000000 Infiltration:0.541447 Mass:0.000000 Nodule:0.050000 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.021277 Fibrosis:0.250000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [724.0, 66.0, 0.0, 1911.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 14.0, 0.0, 0.0]
+
+TEST Student: Epoch: 14, iteration: 46
+
+TEST AUROC: 0.549319, TEST Accus: 0.075090, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.567533 Cardiomegaly:0.453229 Effusion:0.602631 Infiltration:0.619762 Mass:0.528924 Nodule:0.561555 Pneumonia:0.487824 Pneumothorax:0.548704 Consolidation:0.590864 Edema:0.604590 Emphysema:0.509954 Fibrosis:0.582109 Pleural_Thickening:0.501645 Hernia:0.531141
+Accus: Atelectasis:0.055099 Cardiomegaly:0.140127 Effusion:0.000000 Infiltration:0.775568 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.074468 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_15.pth
+
+Epoch: 15, iteration: 0/47, ==> train <===, loss: 0.694250, classification loss: 0.694232,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000017,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.0589113209464913e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [141.0, 4.0, 3.0, 955.0, 0.0, 29.0, 0.0, 1.0, 0.0, 0.0, 0.0, 6.0, 0.0, 0.0]
+
+VAL Student: Epoch: 15, iteration: 46
+
+VAL AUROC: 0.520262, VAL Accus: 0.067633, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.541358 Cardiomegaly:0.419810 Effusion:0.639643 Infiltration:0.533910 Mass:0.512797 Nodule:0.522657 Pneumonia:0.450985 Pneumothorax:0.430498 Consolidation:0.626383 Edema:0.668634 Emphysema:0.371178 Fibrosis:0.562030 Pleural_Thickening:0.479138 Hernia:0.524650
+Accus: Atelectasis:0.021864 Cardiomegaly:0.037037 Effusion:0.003755 Infiltration:0.628289 Mass:0.000000 Nodule:0.063043 Pneumonia:0.000000 Pneumothorax:0.005376 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.187500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [425.0, 47.0, 0.0, 2045.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 18.0, 0.0, 0.0]
+
+TEST Student: Epoch: 15, iteration: 46
+
+TEST AUROC: 0.551558, TEST Accus: 0.075800, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557013 Cardiomegaly:0.495008 Effusion:0.609854 Infiltration:0.631434 Mass:0.525194 Nodule:0.560347 Pneumonia:0.478080 Pneumothorax:0.540092 Consolidation:0.600601 Edema:0.615368 Emphysema:0.501780 Fibrosis:0.574480 Pleural_Thickening:0.511442 Hernia:0.521114
+Accus: Atelectasis:0.032344 Cardiomegaly:0.099788 Effusion:0.000000 Infiltration:0.829951 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.095745 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_16.pth
+
+Epoch: 16, iteration: 0/47, ==> train <===, loss: 0.694317, classification loss: 0.694302,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000015,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.8530201888518422e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [247.0, 9.0, 0.0, 730.0, 0.0, 42.0, 6.0, 0.0, 0.0, 0.0, 2.0, 8.0, 0.0, 0.0]
+
+VAL Student: Epoch: 16, iteration: 46
+
+VAL AUROC: 0.521659, VAL Accus: 0.074099, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.529039 Cardiomegaly:0.428430 Effusion:0.648556 Infiltration:0.531665 Mass:0.512723 Nodule:0.519580 Pneumonia:0.449179 Pneumothorax:0.457913 Consolidation:0.621585 Edema:0.629111 Emphysema:0.386521 Fibrosis:0.554015 Pleural_Thickening:0.480620 Hernia:0.554294
+Accus: Atelectasis:0.038301 Cardiomegaly:0.083333 Effusion:0.000000 Infiltration:0.480263 Mass:0.000000 Nodule:0.091304 Pneumonia:0.080000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.250000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [478.0, 129.0, 0.0, 1800.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 6.0, 0.0, 0.0]
+
+TEST Student: Epoch: 16, iteration: 46
+
+TEST AUROC: 0.546040, TEST Accus: 0.076809, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.567766 Cardiomegaly:0.458168 Effusion:0.618644 Infiltration:0.626755 Mass:0.523527 Nodule:0.546485 Pneumonia:0.478998 Pneumothorax:0.535996 Consolidation:0.593870 Edema:0.596115 Emphysema:0.484084 Fibrosis:0.562508 Pleural_Thickening:0.504198 Hernia:0.547447
+Accus: Atelectasis:0.036377 Cardiomegaly:0.273885 Effusion:0.000000 Infiltration:0.730519 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.031915 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_17.pth
+
+Epoch: 17, iteration: 0/47, ==> train <===, loss: 0.694235, classification loss: 0.694221,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000013,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.667718169966658e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [200.0, 8.0, 0.0, 812.0, 0.0, 39.0, 5.0, 0.0, 0.0, 0.0, 2.0, 7.0, 1.0, 0.0]
+
+VAL Student: Epoch: 17, iteration: 46
+
+VAL AUROC: 0.521948, VAL Accus: 0.073460, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.539182 Cardiomegaly:0.425567 Effusion:0.644923 Infiltration:0.530593 Mass:0.514610 Nodule:0.520687 Pneumonia:0.462330 Pneumothorax:0.439363 Consolidation:0.619502 Edema:0.642212 Emphysema:0.373757 Fibrosis:0.563686 Pleural_Thickening:0.481035 Hernia:0.549829
+Accus: Atelectasis:0.031013 Cardiomegaly:0.074074 Effusion:0.000000 Infiltration:0.534211 Mass:0.000000 Nodule:0.084783 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.218750 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [462.0, 92.0, 0.0, 1940.0, 0.0, 0.0, 0.0, 0.0, 4.0, 3.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 17, iteration: 46
+
+TEST AUROC: 0.551967, TEST Accus: 0.073856, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.569542 Cardiomegaly:0.479856 Effusion:0.610616 Infiltration:0.634874 Mass:0.528387 Nodule:0.562951 Pneumonia:0.492021 Pneumothorax:0.527680 Consolidation:0.602385 Edema:0.623297 Emphysema:0.480060 Fibrosis:0.568974 Pleural_Thickening:0.506849 Hernia:0.540050
+Accus: Atelectasis:0.035160 Cardiomegaly:0.195329 Effusion:0.000000 Infiltration:0.787338 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002970 Edema:0.007874 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_18.pth
+
+Epoch: 18, iteration: 0/47, ==> train <===, loss: 0.694102, classification loss: 0.694088,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000014,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.5009463529699922e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [386.0, 12.0, 4.0, 547.0, 0.0, 34.0, 4.0, 0.0, 4.0, 0.0, 3.0, 10.0, 0.0, 0.0]
+
+VAL Student: Epoch: 18, iteration: 46
+
+VAL AUROC: 0.517770, VAL Accus: 0.072197, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.521447 Cardiomegaly:0.427819 Effusion:0.646777 Infiltration:0.532071 Mass:0.504026 Nodule:0.515183 Pneumonia:0.453298 Pneumothorax:0.449166 Consolidation:0.618838 Edema:0.633268 Emphysema:0.378873 Fibrosis:0.564711 Pleural_Thickening:0.476448 Hernia:0.526855
+Accus: Atelectasis:0.059854 Cardiomegaly:0.111111 Effusion:0.005006 Infiltration:0.359868 Mass:0.000000 Nodule:0.073913 Pneumonia:0.053333 Pneumothorax:0.000000 Consolidation:0.013889 Edema:0.000000 Emphysema:0.021277 Fibrosis:0.312500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [801.0, 150.0, 0.0, 1678.0, 0.0, 0.0, 0.0, 0.0, 7.0, 2.0, 0.0, 8.0, 0.0, 0.0]
+
+TEST Student: Epoch: 18, iteration: 46
+
+TEST AUROC: 0.553534, TEST Accus: 0.079531, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.556348 Cardiomegaly:0.482483 Effusion:0.615523 Infiltration:0.631101 Mass:0.524382 Nodule:0.568109 Pneumonia:0.500504 Pneumothorax:0.556300 Consolidation:0.584639 Edema:0.609937 Emphysema:0.490857 Fibrosis:0.557660 Pleural_Thickening:0.513170 Hernia:0.558465
+Accus: Atelectasis:0.060959 Cardiomegaly:0.318471 Effusion:0.000000 Infiltration:0.681006 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.005197 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.042553 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_19.pth
+
+Epoch: 19, iteration: 0/47, ==> train <===, loss: 0.694070, classification loss: 0.694055,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000014,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.350851717672993e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [170.0, 10.0, 0.0, 945.0, 0.0, 29.0, 0.0, 0.0, 1.0, 0.0, 2.0, 7.0, 0.0, 0.0]
+
+VAL Student: Epoch: 19, iteration: 46
+
+VAL AUROC: 0.517663, VAL Accus: 0.074294, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.514378 Cardiomegaly:0.423546 Effusion:0.637860 Infiltration:0.531974 Mass:0.507962 Nodule:0.518249 Pneumonia:0.441179 Pneumothorax:0.434099 Consolidation:0.613556 Edema:0.668053 Emphysema:0.380105 Fibrosis:0.550555 Pleural_Thickening:0.478582 Hernia:0.547182
+Accus: Atelectasis:0.026361 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.621711 Mass:0.000000 Nodule:0.063043 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.218750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [522.0, 74.0, 0.0, 2007.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 19, iteration: 46
+
+TEST AUROC: 0.552368, TEST Accus: 0.072674, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.549795 Cardiomegaly:0.487756 Effusion:0.600669 Infiltration:0.619416 Mass:0.532138 Nodule:0.575296 Pneumonia:0.492191 Pneumothorax:0.557897 Consolidation:0.556007 Edema:0.585984 Emphysema:0.498629 Fibrosis:0.580537 Pleural_Thickening:0.519458 Hernia:0.577381
+Accus: Atelectasis:0.039726 Cardiomegaly:0.157113 Effusion:0.000000 Infiltration:0.814529 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_20.pth
+
+Epoch: 20, iteration: 0/47, ==> train <===, loss: 0.694112, classification loss: 0.694099,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000013,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.2157665459056937e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [208.0, 15.0, 0.0, 863.0, 0.0, 37.0, 1.0, 0.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0]
+
+VAL Student: Epoch: 20, iteration: 46
+
+VAL AUROC: 0.521422, VAL Accus: 0.064954, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.527797 Cardiomegaly:0.424651 Effusion:0.634720 Infiltration:0.530523 Mass:0.506342 Nodule:0.519797 Pneumonia:0.460439 Pneumothorax:0.455217 Consolidation:0.616537 Edema:0.653590 Emphysema:0.386245 Fibrosis:0.569830 Pleural_Thickening:0.476546 Hernia:0.537670
+Accus: Atelectasis:0.032253 Cardiomegaly:0.138889 Effusion:0.000000 Infiltration:0.567763 Mass:0.000000 Nodule:0.080435 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.062500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [465.0, 120.0, 0.0, 1857.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 20, iteration: 46
+
+TEST AUROC: 0.555341, TEST Accus: 0.075366, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.555488 Cardiomegaly:0.492746 Effusion:0.606323 Infiltration:0.630221 Mass:0.537865 Nodule:0.577982 Pneumonia:0.490337 Pneumothorax:0.556892 Consolidation:0.574956 Edema:0.605463 Emphysema:0.495955 Fibrosis:0.578698 Pleural_Thickening:0.523247 Hernia:0.548605
+Accus: Atelectasis:0.035388 Cardiomegaly:0.254777 Effusion:0.000000 Infiltration:0.753653 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_21.pth
+
+Epoch: 21, iteration: 0/47, ==> train <===, loss: 0.694093, classification loss: 0.694081,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000011,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.0941898913151244e-05
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [374.0, 5.0, 0.0, 816.0, 0.0, 27.0, 1.0, 0.0, 1.0, 0.0, 2.0, 6.0, 0.0, 0.0]
+
+VAL Student: Epoch: 21, iteration: 46
+
+VAL AUROC: 0.515916, VAL Accus: 0.065594, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.514842 Cardiomegaly:0.417762 Effusion:0.624815 Infiltration:0.531078 Mass:0.501777 Nodule:0.520552 Pneumonia:0.451951 Pneumothorax:0.445738 Consolidation:0.630995 Edema:0.639560 Emphysema:0.377914 Fibrosis:0.550523 Pleural_Thickening:0.481467 Hernia:0.533854
+Accus: Atelectasis:0.057993 Cardiomegaly:0.046296 Effusion:0.000000 Infiltration:0.536842 Mass:0.000000 Nodule:0.058696 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.187500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [658.0, 70.0, 0.0, 1979.0, 0.0, 0.0, 0.0, 0.0, 3.0, 1.0, 0.0, 5.0, 0.0, 0.0]
+
+TEST Student: Epoch: 21, iteration: 46
+
+TEST AUROC: 0.553468, TEST Accus: 0.073808, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.551269 Cardiomegaly:0.485704 Effusion:0.607296 Infiltration:0.629759 Mass:0.523727 Nodule:0.572188 Pneumonia:0.491509 Pneumothorax:0.557178 Consolidation:0.570946 Edema:0.599887 Emphysema:0.493208 Fibrosis:0.575292 Pleural_Thickening:0.517138 Hernia:0.573444
+Accus: Atelectasis:0.050076 Cardiomegaly:0.148620 Effusion:0.000000 Infiltration:0.803166 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002227 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.026596 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_22.pth
+
+Epoch: 22, iteration: 0/47, ==> train <===, loss: 0.694044, classification loss: 0.694029,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000016,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 9.84770902183612e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [241.0, 9.0, 0.0, 889.0, 0.0, 20.0, 0.0, 0.0, 0.0, 0.0, 3.0, 7.0, 0.0, 0.0]
+
+VAL Student: Epoch: 22, iteration: 46
+
+VAL AUROC: 0.514610, VAL Accus: 0.070648, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.539806 Cardiomegaly:0.405688 Effusion:0.630912 Infiltration:0.530411 Mass:0.494060 Nodule:0.517172 Pneumonia:0.435787 Pneumothorax:0.442130 Consolidation:0.616973 Edema:0.644868 Emphysema:0.380804 Fibrosis:0.556594 Pleural_Thickening:0.473018 Hernia:0.536315
+Accus: Atelectasis:0.037370 Cardiomegaly:0.083333 Effusion:0.000000 Infiltration:0.584868 Mass:0.000000 Nodule:0.043478 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.021277 Fibrosis:0.218750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [283.0, 83.0, 0.0, 2018.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 3.0, 0.0, 0.0]
+
+TEST Student: Epoch: 22, iteration: 46
+
+TEST AUROC: 0.554710, TEST Accus: 0.073952, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.558774 Cardiomegaly:0.492958 Effusion:0.615013 Infiltration:0.628868 Mass:0.529527 Nodule:0.575864 Pneumonia:0.486172 Pneumothorax:0.553641 Consolidation:0.564795 Edema:0.590725 Emphysema:0.484893 Fibrosis:0.600566 Pleural_Thickening:0.517322 Hernia:0.566821
+Accus: Atelectasis:0.021537 Cardiomegaly:0.176221 Effusion:0.000000 Infiltration:0.818994 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.015957 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_23.pth
+
+Epoch: 23, iteration: 0/47, ==> train <===, loss: 0.694013, classification loss: 0.693999,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000014,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 8.862938119652508e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [362.0, 6.0, 0.0, 751.0, 0.0, 46.0, 2.0, 0.0, 0.0, 0.0, 0.0, 7.0, 0.0, 0.0]
+
+VAL Student: Epoch: 23, iteration: 46
+
+VAL AUROC: 0.518567, VAL Accus: 0.067942, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.533658 Cardiomegaly:0.417728 Effusion:0.627116 Infiltration:0.531016 Mass:0.506962 Nodule:0.509043 Pneumonia:0.465432 Pneumothorax:0.439247 Consolidation:0.620037 Edema:0.654350 Emphysema:0.385391 Fibrosis:0.568301 Pleural_Thickening:0.465390 Hernia:0.536262
+Accus: Atelectasis:0.056133 Cardiomegaly:0.055556 Effusion:0.000000 Infiltration:0.494079 Mass:0.000000 Nodule:0.100000 Pneumonia:0.026667 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.218750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [715.0, 82.0, 0.0, 1882.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 12.0, 0.0, 0.0]
+
+TEST Student: Epoch: 23, iteration: 46
+
+TEST AUROC: 0.550718, TEST Accus: 0.075732, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.550312 Cardiomegaly:0.490386 Effusion:0.590757 Infiltration:0.625101 Mass:0.536242 Nodule:0.578099 Pneumonia:0.488661 Pneumothorax:0.551723 Consolidation:0.556768 Edema:0.583247 Emphysema:0.497327 Fibrosis:0.592199 Pleural_Thickening:0.522955 Hernia:0.546269
+Accus: Atelectasis:0.054414 Cardiomegaly:0.174098 Effusion:0.000000 Infiltration:0.763799 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.063830 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_24.pth
+
+Epoch: 24, iteration: 0/47, ==> train <===, loss: 0.694021, classification loss: 0.694010,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000011,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.976644307687257e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [108.0, 11.0, 0.0, 545.0, 0.0, 20.0, 1.0, 0.0, 1.0, 0.0, 2.0, 15.0, 0.0, 0.0]
+
+VAL Student: Epoch: 24, iteration: 46
+
+VAL AUROC: 0.518145, VAL Accus: 0.072884, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.512653 Cardiomegaly:0.410343 Effusion:0.636536 Infiltration:0.531237 Mass:0.509982 Nodule:0.523519 Pneumonia:0.452911 Pneumothorax:0.448333 Consolidation:0.625421 Edema:0.664240 Emphysema:0.384411 Fibrosis:0.548658 Pleural_Thickening:0.474899 Hernia:0.530885
+Accus: Atelectasis:0.016747 Cardiomegaly:0.101852 Effusion:0.000000 Infiltration:0.358553 Mass:0.000000 Nodule:0.043478 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.468750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [184.0, 102.0, 0.0, 1728.0, 0.0, 0.0, 0.0, 0.0, 4.0, 1.0, 0.0, 24.0, 0.0, 0.0]
+
+TEST Student: Epoch: 24, iteration: 46
+
+TEST AUROC: 0.551404, TEST Accus: 0.076080, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.549348 Cardiomegaly:0.499838 Effusion:0.602570 Infiltration:0.622472 Mass:0.541075 Nodule:0.568364 Pneumonia:0.482810 Pneumothorax:0.538165 Consolidation:0.567582 Edema:0.572517 Emphysema:0.489621 Fibrosis:0.589106 Pleural_Thickening:0.518782 Hernia:0.577406
+Accus: Atelectasis:0.014003 Cardiomegaly:0.216561 Effusion:0.000000 Infiltration:0.701299 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002970 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.127660 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_25.pth
+
+Epoch: 25, iteration: 0/47, ==> train <===, loss: 0.693967, classification loss: 0.693956,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000011,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.1789798769185315e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [122.0, 4.0, 1.0, 939.0, 0.0, 33.0, 6.0, 0.0, 0.0, 0.0, 2.0, 3.0, 0.0, 0.0]
+
+VAL Student: Epoch: 25, iteration: 46
+
+VAL AUROC: 0.520161, VAL Accus: 0.066760, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.530988 Cardiomegaly:0.412450 Effusion:0.625934 Infiltration:0.531259 Mass:0.512047 Nodule:0.522477 Pneumonia:0.449569 Pneumothorax:0.448270 Consolidation:0.615226 Edema:0.663343 Emphysema:0.380438 Fibrosis:0.564048 Pleural_Thickening:0.476348 Hernia:0.549852
+Accus: Atelectasis:0.018918 Cardiomegaly:0.037037 Effusion:0.001252 Infiltration:0.617763 Mass:0.000000 Nodule:0.071739 Pneumonia:0.080000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.093750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [439.0, 71.0, 0.0, 2081.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 25, iteration: 46
+
+TEST AUROC: 0.550141, TEST Accus: 0.074100, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.566969 Cardiomegaly:0.471635 Effusion:0.590759 Infiltration:0.631101 Mass:0.526523 Nodule:0.576141 Pneumonia:0.491429 Pneumothorax:0.525330 Consolidation:0.567713 Edema:0.592185 Emphysema:0.484588 Fibrosis:0.589587 Pleural_Thickening:0.509867 Hernia:0.578144
+Accus: Atelectasis:0.033409 Cardiomegaly:0.150743 Effusion:0.000000 Infiltration:0.844562 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_26.pth
+
+Epoch: 26, iteration: 0/47, ==> train <===, loss: 0.693935, classification loss: 0.693921,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000014,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 6.461081889226678e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [246.0, 13.0, 0.0, 776.0, 0.0, 12.0, 3.0, 0.0, 0.0, 0.0, 1.0, 8.0, 0.0, 0.0]
+
+VAL Student: Epoch: 26, iteration: 46
+
+VAL AUROC: 0.517925, VAL Accus: 0.070873, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.517992 Cardiomegaly:0.421833 Effusion:0.639126 Infiltration:0.530520 Mass:0.509193 Nodule:0.522867 Pneumonia:0.433293 Pneumothorax:0.461049 Consolidation:0.611840 Edema:0.646598 Emphysema:0.390966 Fibrosis:0.556108 Pleural_Thickening:0.472949 Hernia:0.536619
+Accus: Atelectasis:0.038145 Cardiomegaly:0.120370 Effusion:0.000000 Infiltration:0.510526 Mass:0.000000 Nodule:0.026087 Pneumonia:0.040000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.250000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [426.0, 160.0, 0.0, 1688.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 6.0, 0.0, 0.0]
+
+TEST Student: Epoch: 26, iteration: 46
+
+TEST AUROC: 0.552596, TEST Accus: 0.078087, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.555039 Cardiomegaly:0.475430 Effusion:0.609054 Infiltration:0.627927 Mass:0.532452 Nodule:0.570031 Pneumonia:0.497862 Pneumothorax:0.545647 Consolidation:0.569567 Edema:0.594982 Emphysema:0.492473 Fibrosis:0.576934 Pleural_Thickening:0.513289 Hernia:0.575661
+Accus: Atelectasis:0.032420 Cardiomegaly:0.339703 Effusion:0.000000 Infiltration:0.685065 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.031915 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_27.pth
+
+Epoch: 27, iteration: 0/47, ==> train <===, loss: 0.693998, classification loss: 0.693987,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000011,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.81497370030401e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [316.0, 10.0, 0.0, 742.0, 0.0, 30.0, 3.0, 1.0, 1.0, 0.0, 1.0, 7.0, 0.0, 0.0]
+
+VAL Student: Epoch: 27, iteration: 46
+
+VAL AUROC: 0.519318, VAL Accus: 0.069261, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.516271 Cardiomegaly:0.435372 Effusion:0.629824 Infiltration:0.532557 Mass:0.504727 Nodule:0.518891 Pneumonia:0.443213 Pneumothorax:0.466050 Consolidation:0.622302 Edema:0.643180 Emphysema:0.385732 Fibrosis:0.558376 Pleural_Thickening:0.477262 Hernia:0.536695
+Accus: Atelectasis:0.049000 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.488158 Mass:0.000000 Nodule:0.065217 Pneumonia:0.040000 Pneumothorax:0.005376 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.218750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [443.0, 151.0, 0.0, 1707.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 0.0, 11.0, 0.0, 0.0]
+
+TEST Student: Epoch: 27, iteration: 46
+
+TEST AUROC: 0.550626, TEST Accus: 0.079452, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.550906 Cardiomegaly:0.489925 Effusion:0.607602 Infiltration:0.629851 Mass:0.526594 Nodule:0.563751 Pneumonia:0.492922 Pneumothorax:0.549770 Consolidation:0.574833 Edema:0.599649 Emphysema:0.491905 Fibrosis:0.570439 Pleural_Thickening:0.506672 Hernia:0.553952
+Accus: Atelectasis:0.033714 Cardiomegaly:0.320594 Effusion:0.000000 Infiltration:0.692776 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.058511 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_28.pth
+
+Epoch: 28, iteration: 0/47, ==> train <===, loss: 0.693959, classification loss: 0.693947,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000013,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.23347633027361e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [132.0, 10.0, 0.0, 871.0, 0.0, 28.0, 2.0, 0.0, 1.0, 0.0, 1.0, 5.0, 0.0, 0.0]
+
+VAL Student: Epoch: 28, iteration: 46
+
+VAL AUROC: 0.520735, VAL Accus: 0.067174, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.529445 Cardiomegaly:0.410990 Effusion:0.634449 Infiltration:0.532462 Mass:0.501436 Nodule:0.525235 Pneumonia:0.459243 Pneumothorax:0.451940 Consolidation:0.617751 Edema:0.652324 Emphysema:0.376013 Fibrosis:0.563451 Pleural_Thickening:0.483557 Hernia:0.551996
+Accus: Atelectasis:0.020468 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.573026 Mass:0.000000 Nodule:0.060870 Pneumonia:0.026667 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.156250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [487.0, 120.0, 0.0, 1840.0, 0.0, 0.0, 0.0, 0.0, 7.0, 3.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 28, iteration: 46
+
+TEST AUROC: 0.552353, TEST Accus: 0.075499, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.563251 Cardiomegaly:0.466289 Effusion:0.603621 Infiltration:0.621469 Mass:0.530363 Nodule:0.576141 Pneumonia:0.487806 Pneumothorax:0.554700 Consolidation:0.559340 Edema:0.587875 Emphysema:0.504254 Fibrosis:0.598033 Pleural_Thickening:0.516863 Hernia:0.562935
+Accus: Atelectasis:0.037062 Cardiomegaly:0.254777 Effusion:0.000000 Infiltration:0.746753 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.005197 Edema:0.007874 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_29.pth
+
+Epoch: 29, iteration: 0/47, ==> train <===, loss: 0.693937, classification loss: 0.693928,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.710128697246249e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [183.0, 3.0, 0.0, 1098.0, 0.0, 27.0, 1.0, 0.0, 1.0, 0.0, 0.0, 3.0, 0.0, 0.0]
+
+VAL Student: Epoch: 29, iteration: 46
+
+VAL AUROC: 0.517711, VAL Accus: 0.067698, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.516251 Cardiomegaly:0.409828 Effusion:0.646559 Infiltration:0.529855 Mass:0.496845 Nodule:0.526590 Pneumonia:0.462166 Pneumothorax:0.443748 Consolidation:0.609963 Edema:0.641249 Emphysema:0.383173 Fibrosis:0.559212 Pleural_Thickening:0.490654 Hernia:0.531869
+Accus: Atelectasis:0.028376 Cardiomegaly:0.027778 Effusion:0.000000 Infiltration:0.722368 Mass:0.000000 Nodule:0.058696 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.093750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [275.0, 60.0, 0.0, 2127.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0]
+
+TEST Student: Epoch: 29, iteration: 46
+
+TEST AUROC: 0.548490, TEST Accus: 0.072494, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557085 Cardiomegaly:0.471960 Effusion:0.592865 Infiltration:0.620904 Mass:0.538802 Nodule:0.585393 Pneumonia:0.478735 Pneumothorax:0.539303 Consolidation:0.556106 Edema:0.574480 Emphysema:0.492671 Fibrosis:0.580460 Pleural_Thickening:0.518598 Hernia:0.571499
+Accus: Atelectasis:0.020928 Cardiomegaly:0.127389 Effusion:0.000000 Infiltration:0.863231 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_30.pth
+
+Epoch: 30, iteration: 0/47, ==> train <===, loss: 0.693973, classification loss: 0.693963,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.239115827521624e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [155.0, 15.0, 2.0, 587.0, 0.0, 51.0, 5.0, 0.0, 1.0, 0.0, 2.0, 6.0, 2.0, 0.0]
+
+VAL Student: Epoch: 30, iteration: 46
+
+VAL AUROC: 0.515684, VAL Accus: 0.067416, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.540674 Cardiomegaly:0.438982 Effusion:0.650175 Infiltration:0.529934 Mass:0.504471 Nodule:0.518824 Pneumonia:0.440743 Pneumothorax:0.461293 Consolidation:0.619897 Edema:0.588793 Emphysema:0.391213 Fibrosis:0.537095 Pleural_Thickening:0.454688 Hernia:0.542788
+Accus: Atelectasis:0.024035 Cardiomegaly:0.138889 Effusion:0.002503 Infiltration:0.386184 Mass:0.000000 Nodule:0.110870 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.187500 Pleural_Thickening:0.009524 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [319.0, 162.0, 0.0, 1716.0, 0.0, 0.0, 0.0, 0.0, 6.0, 6.0, 0.0, 3.0, 0.0, 0.0]
+
+TEST Student: Epoch: 30, iteration: 46
+
+TEST AUROC: 0.558678, TEST Accus: 0.078630, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.570951 Cardiomegaly:0.489633 Effusion:0.615804 Infiltration:0.635207 Mass:0.535054 Nodule:0.566079 Pneumonia:0.486363 Pneumothorax:0.542378 Consolidation:0.579276 Edema:0.595103 Emphysema:0.484429 Fibrosis:0.579019 Pleural_Thickening:0.532217 Hernia:0.609980
+Accus: Atelectasis:0.024277 Cardiomegaly:0.343949 Effusion:0.000000 Infiltration:0.696429 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.004454 Edema:0.015748 Emphysema:0.000000 Fibrosis:0.015957 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_31.pth
+
+Epoch: 31, iteration: 0/47, ==> train <===, loss: 0.693946, classification loss: 0.693936,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.815204244769462e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [197.0, 15.0, 24.0, 854.0, 0.0, 24.0, 2.0, 1.0, 3.0, 0.0, 4.0, 1.0, 0.0, 0.0]
+
+VAL Student: Epoch: 31, iteration: 46
+
+VAL AUROC: 0.518693, VAL Accus: 0.065398, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.515751 Cardiomegaly:0.435717 Effusion:0.657894 Infiltration:0.533239 Mass:0.515295 Nodule:0.528909 Pneumonia:0.433890 Pneumothorax:0.456983 Consolidation:0.645126 Edema:0.608616 Emphysema:0.382310 Fibrosis:0.551624 Pleural_Thickening:0.471721 Hernia:0.524632
+Accus: Atelectasis:0.030547 Cardiomegaly:0.138889 Effusion:0.030038 Infiltration:0.561842 Mass:0.000000 Nodule:0.052174 Pneumonia:0.026667 Pneumothorax:0.005376 Consolidation:0.010417 Edema:0.000000 Emphysema:0.028369 Fibrosis:0.031250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [326.0, 136.0, 0.0, 1828.0, 0.0, 0.0, 0.0, 0.0, 8.0, 4.0, 0.0, 0.0, 0.0, 0.0]
+
+TEST Student: Epoch: 31, iteration: 46
+
+TEST AUROC: 0.550421, TEST Accus: 0.076563, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.563206 Cardiomegaly:0.465481 Effusion:0.618763 Infiltration:0.614914 Mass:0.522554 Nodule:0.568039 Pneumonia:0.457491 Pneumothorax:0.531978 Consolidation:0.576504 Edema:0.554300 Emphysema:0.489809 Fibrosis:0.584106 Pleural_Thickening:0.519098 Hernia:0.639649
+Accus: Atelectasis:0.024810 Cardiomegaly:0.288747 Effusion:0.000000 Infiltration:0.741883 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.005939 Edema:0.010499 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_32.pth
+
+Epoch: 32, iteration: 0/47, ==> train <===, loss: 0.693896, classification loss: 0.693886,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000011,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.4336838202925156e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [169.0, 5.0, 0.0, 896.0, 0.0, 14.0, 0.0, 0.0, 1.0, 0.0, 1.0, 9.0, 0.0, 0.0]
+
+VAL Student: Epoch: 32, iteration: 46
+
+VAL AUROC: 0.517998, VAL Accus: 0.070302, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.514247 Cardiomegaly:0.392651 Effusion:0.634909 Infiltration:0.533247 Mass:0.510270 Nodule:0.524971 Pneumonia:0.438174 Pneumothorax:0.442031 Consolidation:0.618456 Edema:0.676461 Emphysema:0.384257 Fibrosis:0.570491 Pleural_Thickening:0.481143 Hernia:0.530672
+Accus: Atelectasis:0.026206 Cardiomegaly:0.046296 Effusion:0.000000 Infiltration:0.589474 Mass:0.000000 Nodule:0.030435 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.281250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [603.0, 55.0, 0.0, 2033.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 5.0, 0.0, 0.0]
+
+TEST Student: Epoch: 32, iteration: 46
+
+TEST AUROC: 0.546369, TEST Accus: 0.072693, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.542594 Cardiomegaly:0.479693 Effusion:0.591060 Infiltration:0.614754 Mass:0.527853 Nodule:0.582001 Pneumonia:0.473344 Pneumothorax:0.557725 Consolidation:0.538281 Edema:0.567747 Emphysema:0.497177 Fibrosis:0.592115 Pleural_Thickening:0.527019 Hernia:0.557796
+Accus: Atelectasis:0.045890 Cardiomegaly:0.116773 Effusion:0.000000 Infiltration:0.825081 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.026596 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_33.pth
+
+Epoch: 33, iteration: 0/47, ==> train <===, loss: 0.693852, classification loss: 0.693843,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.090315438263264e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [264.0, 5.0, 0.0, 810.0, 0.0, 20.0, 5.0, 0.0, 0.0, 0.0, 3.0, 10.0, 0.0, 0.0]
+
+VAL Student: Epoch: 33, iteration: 46
+
+VAL AUROC: 0.520177, VAL Accus: 0.076004, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.535690 Cardiomegaly:0.413851 Effusion:0.638267 Infiltration:0.533911 Mass:0.504809 Nodule:0.523148 Pneumonia:0.441402 Pneumothorax:0.450786 Consolidation:0.618534 Edema:0.667164 Emphysema:0.383953 Fibrosis:0.554734 Pleural_Thickening:0.466163 Hernia:0.550072
+Accus: Atelectasis:0.040937 Cardiomegaly:0.046296 Effusion:0.000000 Infiltration:0.532895 Mass:0.000000 Nodule:0.043478 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.021277 Fibrosis:0.312500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [503.0, 66.0, 0.0, 2003.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0, 0.0, 0.0]
+
+TEST Student: Epoch: 33, iteration: 46
+
+TEST AUROC: 0.552482, TEST Accus: 0.074607, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.559648 Cardiomegaly:0.482271 Effusion:0.599658 Infiltration:0.626702 Mass:0.532405 Nodule:0.580042 Pneumonia:0.471969 Pneumothorax:0.552794 Consolidation:0.567094 Edema:0.579343 Emphysema:0.495970 Fibrosis:0.590307 Pleural_Thickening:0.525438 Hernia:0.571111
+Accus: Atelectasis:0.038280 Cardiomegaly:0.140127 Effusion:0.000000 Infiltration:0.812906 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.053191 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_34.pth
+
+Epoch: 34, iteration: 0/47, ==> train <===, loss: 0.693903, classification loss: 0.693892,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.7812838944369375e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [229.0, 13.0, 2.0, 819.0, 0.0, 20.0, 4.0, 0.0, 1.0, 0.0, 2.0, 2.0, 0.0, 0.0]
+
+VAL Student: Epoch: 34, iteration: 46
+
+VAL AUROC: 0.520663, VAL Accus: 0.062440, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.525367 Cardiomegaly:0.417624 Effusion:0.642533 Infiltration:0.530139 Mass:0.512045 Nodule:0.524241 Pneumonia:0.458965 Pneumothorax:0.449281 Consolidation:0.627668 Edema:0.638917 Emphysema:0.386015 Fibrosis:0.551865 Pleural_Thickening:0.476218 Hernia:0.548409
+Accus: Atelectasis:0.035509 Cardiomegaly:0.120370 Effusion:0.002503 Infiltration:0.538816 Mass:0.000000 Nodule:0.043478 Pneumonia:0.053333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.062500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [533.0, 136.0, 0.0, 1776.0, 0.0, 0.0, 0.0, 0.0, 10.0, 2.0, 0.0, 2.0, 0.0, 0.0]
+
+TEST Student: Epoch: 34, iteration: 46
+
+TEST AUROC: 0.547253, TEST Accus: 0.076672, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.553907 Cardiomegaly:0.465240 Effusion:0.589483 Infiltration:0.621811 Mass:0.529508 Nodule:0.579289 Pneumonia:0.478148 Pneumothorax:0.542734 Consolidation:0.556847 Edema:0.575546 Emphysema:0.487645 Fibrosis:0.591607 Pleural_Thickening:0.513950 Hernia:0.575822
+Accus: Atelectasis:0.040563 Cardiomegaly:0.288747 Effusion:0.000000 Infiltration:0.720779 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.007424 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.010638 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_35.pth
+
+Epoch: 35, iteration: 0/47, ==> train <===, loss: 0.693895, classification loss: 0.693886,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.503155504993244e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [260.0, 18.0, 0.0, 583.0, 0.0, 33.0, 0.0, 0.0, 1.0, 0.0, 2.0, 11.0, 0.0, 0.0]
+
+VAL Student: Epoch: 35, iteration: 46
+
+VAL AUROC: 0.517963, VAL Accus: 0.073120, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.519614 Cardiomegaly:0.417536 Effusion:0.639344 Infiltration:0.530909 Mass:0.504296 Nodule:0.519024 Pneumonia:0.440726 Pneumothorax:0.452107 Consolidation:0.619279 Edema:0.654695 Emphysema:0.386687 Fibrosis:0.568443 Pleural_Thickening:0.476990 Hernia:0.521836
+Accus: Atelectasis:0.040316 Cardiomegaly:0.166667 Effusion:0.000000 Infiltration:0.383553 Mass:0.000000 Nodule:0.071739 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.343750 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [572.0, 163.0, 0.0, 1658.0, 0.0, 0.0, 0.0, 0.0, 4.0, 1.0, 0.0, 7.0, 0.0, 0.0]
+
+TEST Student: Epoch: 35, iteration: 46
+
+TEST AUROC: 0.551183, TEST Accus: 0.078952, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.547222 Cardiomegaly:0.497715 Effusion:0.598899 Infiltration:0.623616 Mass:0.541898 Nodule:0.576617 Pneumonia:0.480992 Pneumothorax:0.555343 Consolidation:0.548827 Edema:0.561781 Emphysema:0.494020 Fibrosis:0.592018 Pleural_Thickening:0.528498 Hernia:0.569114
+Accus: Atelectasis:0.043531 Cardiomegaly:0.346072 Effusion:0.000000 Infiltration:0.672890 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002970 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.037234 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_36.pth
+
+Epoch: 36, iteration: 0/47, ==> train <===, loss: 0.693833, classification loss: 0.693824,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.2528399544939195e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [425.0, 10.0, 1.0, 793.0, 0.0, 31.0, 5.0, 0.0, 0.0, 0.0, 1.0, 6.0, 0.0, 0.0]
+
+VAL Student: Epoch: 36, iteration: 46
+
+VAL AUROC: 0.517164, VAL Accus: 0.072150, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.532498 Cardiomegaly:0.418568 Effusion:0.639817 Infiltration:0.531283 Mass:0.506237 Nodule:0.519426 Pneumonia:0.451188 Pneumothorax:0.450722 Consolidation:0.618450 Edema:0.629644 Emphysema:0.378542 Fibrosis:0.548389 Pleural_Thickening:0.467982 Hernia:0.547550
+Accus: Atelectasis:0.065902 Cardiomegaly:0.092593 Effusion:0.001252 Infiltration:0.521711 Mass:0.000000 Nodule:0.067391 Pneumonia:0.066667 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.187500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [765.0, 116.0, 0.0, 1842.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 5.0, 0.0, 0.0]
+
+TEST Student: Epoch: 36, iteration: 46
+
+TEST AUROC: 0.553090, TEST Accus: 0.077235, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.559412 Cardiomegaly:0.479256 Effusion:0.608287 Infiltration:0.628574 Mass:0.533117 Nodule:0.571819 Pneumonia:0.488492 Pneumothorax:0.547430 Consolidation:0.562169 Edema:0.584533 Emphysema:0.493323 Fibrosis:0.589836 Pleural_Thickening:0.517253 Hernia:0.579760
+Accus: Atelectasis:0.058219 Cardiomegaly:0.246285 Effusion:0.000000 Infiltration:0.747565 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.026596 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_37.pth
+
+Epoch: 37, iteration: 0/47, ==> train <===, loss: 0.693884, classification loss: 0.693875,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.0275559590445276e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [251.0, 12.0, 3.0, 582.0, 0.0, 35.0, 4.0, 0.0, 1.0, 0.0, 2.0, 6.0, 1.0, 0.0]
+
+VAL Student: Epoch: 37, iteration: 46
+
+VAL AUROC: 0.518525, VAL Accus: 0.062573, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.517785 Cardiomegaly:0.424170 Effusion:0.650214 Infiltration:0.533521 Mass:0.504042 Nodule:0.514798 Pneumonia:0.455588 Pneumothorax:0.462001 Consolidation:0.619982 Edema:0.643192 Emphysema:0.387712 Fibrosis:0.565917 Pleural_Thickening:0.468756 Hernia:0.511670
+Accus: Atelectasis:0.038921 Cardiomegaly:0.111111 Effusion:0.003755 Infiltration:0.382895 Mass:0.000000 Nodule:0.076087 Pneumonia:0.053333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.187500 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [768.0, 129.0, 0.0, 1754.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 3.0, 0.0, 0.0]
+
+TEST Student: Epoch: 37, iteration: 46
+
+TEST AUROC: 0.556047, TEST Accus: 0.076018, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.554674 Cardiomegaly:0.485619 Effusion:0.621681 Infiltration:0.635593 Mass:0.529824 Nodule:0.564147 Pneumonia:0.491455 Pneumothorax:0.540796 Consolidation:0.584901 Edema:0.602423 Emphysema:0.482498 Fibrosis:0.586618 Pleural_Thickening:0.512225 Hernia:0.592205
+Accus: Atelectasis:0.058447 Cardiomegaly:0.273885 Effusion:0.000000 Infiltration:0.711851 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.015957 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_38.pth
+
+Epoch: 38, iteration: 0/47, ==> train <===, loss: 0.693798, classification loss: 0.693789,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.824800363140075e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [156.0, 5.0, 0.0, 929.0, 0.0, 25.0, 4.0, 0.0, 1.0, 0.0, 1.0, 4.0, 0.0, 0.0]
+
+VAL Student: Epoch: 38, iteration: 46
+
+VAL AUROC: 0.513899, VAL Accus: 0.066065, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.521553 Cardiomegaly:0.397143 Effusion:0.624620 Infiltration:0.532241 Mass:0.500230 Nodule:0.516909 Pneumonia:0.452707 Pneumothorax:0.449655 Consolidation:0.625360 Edema:0.650618 Emphysema:0.376078 Fibrosis:0.543913 Pleural_Thickening:0.475680 Hernia:0.527881
+Accus: Atelectasis:0.024190 Cardiomegaly:0.046296 Effusion:0.000000 Infiltration:0.611184 Mass:0.000000 Nodule:0.054348 Pneumonia:0.053333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.125000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [207.0, 59.0, 0.0, 2111.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 0.0, 0.0]
+
+TEST Student: Epoch: 38, iteration: 46
+
+TEST AUROC: 0.552159, TEST Accus: 0.073168, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.541032 Cardiomegaly:0.479769 Effusion:0.582026 Infiltration:0.629151 Mass:0.529752 Nodule:0.584173 Pneumonia:0.491148 Pneumothorax:0.559395 Consolidation:0.548120 Edema:0.571511 Emphysema:0.496404 Fibrosis:0.604777 Pleural_Thickening:0.534856 Hernia:0.578112
+Accus: Atelectasis:0.015753 Cardiomegaly:0.125265 Effusion:0.000000 Infiltration:0.856737 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.026596 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_39.pth
+
+Epoch: 39, iteration: 0/47, ==> train <===, loss: 0.693786, classification loss: 0.693776,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.6423203268260674e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [830.0, 9.0, 0.0, 615.0, 0.0, 24.0, 3.0, 1.0, 7.0, 0.0, 2.0, 9.0, 0.0, 0.0]
+
+VAL Student: Epoch: 39, iteration: 46
+
+VAL AUROC: 0.516870, VAL Accus: 0.073852, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.517424 Cardiomegaly:0.431390 Effusion:0.626343 Infiltration:0.529436 Mass:0.503713 Nodule:0.513491 Pneumonia:0.441203 Pneumothorax:0.460749 Consolidation:0.633893 Edema:0.630590 Emphysema:0.403027 Fibrosis:0.557776 Pleural_Thickening:0.472669 Hernia:0.514472
+Accus: Atelectasis:0.128702 Cardiomegaly:0.083333 Effusion:0.000000 Infiltration:0.404605 Mass:0.000000 Nodule:0.052174 Pneumonia:0.040000 Pneumothorax:0.005376 Consolidation:0.024306 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.281250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [1511.0, 106.0, 0.0, 1705.0, 0.0, 0.0, 0.0, 0.0, 8.0, 0.0, 0.0, 18.0, 0.0, 0.0]
+
+TEST Student: Epoch: 39, iteration: 46
+
+TEST AUROC: 0.552423, TEST Accus: 0.080978, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.545793 Cardiomegaly:0.504101 Effusion:0.612086 Infiltration:0.630289 Mass:0.530549 Nodule:0.559683 Pneumonia:0.495426 Pneumothorax:0.560961 Consolidation:0.576173 Edema:0.597448 Emphysema:0.493138 Fibrosis:0.588502 Pleural_Thickening:0.513661 Hernia:0.526112
+Accus: Atelectasis:0.114992 Cardiomegaly:0.225053 Effusion:0.000000 Infiltration:0.691964 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.005939 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.095745 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_40.pth
+
+Epoch: 40, iteration: 0/47, ==> train <===, loss: 0.693892, classification loss: 0.693884,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.4780882941434607e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [387.0, 6.0, 0.0, 614.0, 0.0, 57.0, 4.0, 0.0, 2.0, 0.0, 1.0, 9.0, 0.0, 0.0]
+
+VAL Student: Epoch: 40, iteration: 46
+
+VAL AUROC: 0.518594, VAL Accus: 0.070860, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.514959 Cardiomegaly:0.437676 Effusion:0.643863 Infiltration:0.529847 Mass:0.503176 Nodule:0.511536 Pneumonia:0.452149 Pneumothorax:0.460712 Consolidation:0.629024 Edema:0.639417 Emphysema:0.390353 Fibrosis:0.546969 Pleural_Thickening:0.479496 Hernia:0.521139
+Accus: Atelectasis:0.060009 Cardiomegaly:0.055556 Effusion:0.000000 Infiltration:0.403947 Mass:0.000000 Nodule:0.123913 Pneumonia:0.053333 Pneumothorax:0.000000 Consolidation:0.006944 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.281250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [712.0, 104.0, 0.0, 1795.0, 0.0, 0.0, 0.0, 0.0, 6.0, 3.0, 0.0, 16.0, 0.0, 0.0]
+
+TEST Student: Epoch: 40, iteration: 46
+
+TEST AUROC: 0.550694, TEST Accus: 0.078637, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.551983 Cardiomegaly:0.469686 Effusion:0.605070 Infiltration:0.626931 Mass:0.520901 Nodule:0.569206 Pneumonia:0.493855 Pneumothorax:0.556154 Consolidation:0.571076 Edema:0.606244 Emphysema:0.486709 Fibrosis:0.568465 Pleural_Thickening:0.508354 Hernia:0.575076
+Accus: Atelectasis:0.054186 Cardiomegaly:0.220807 Effusion:0.000000 Infiltration:0.728490 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.004454 Edema:0.007874 Emphysema:0.000000 Fibrosis:0.085106 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_41.pth
+
+Epoch: 41, iteration: 0/47, ==> train <===, loss: 0.693866, classification loss: 0.693857,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000008,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.3302794647291146e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [357.0, 7.0, 0.0, 702.0, 0.0, 28.0, 3.0, 0.0, 0.0, 0.0, 1.0, 10.0, 0.0, 0.0]
+
+VAL Student: Epoch: 41, iteration: 46
+
+VAL AUROC: 0.514059, VAL Accus: 0.071605, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.518814 Cardiomegaly:0.413749 Effusion:0.617260 Infiltration:0.531668 Mass:0.496294 Nodule:0.513719 Pneumonia:0.446385 Pneumothorax:0.448518 Consolidation:0.618534 Edema:0.653900 Emphysema:0.399216 Fibrosis:0.554898 Pleural_Thickening:0.483946 Hernia:0.499921
+Accus: Atelectasis:0.055357 Cardiomegaly:0.064815 Effusion:0.000000 Infiltration:0.461842 Mass:0.000000 Nodule:0.060870 Pneumonia:0.040000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.312500 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [1273.0, 152.0, 0.0, 1507.0, 0.0, 0.0, 0.0, 0.0, 6.0, 1.0, 0.0, 11.0, 0.0, 0.0]
+
+TEST Student: Epoch: 41, iteration: 46
+
+TEST AUROC: 0.549181, TEST Accus: 0.078342, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.540002 Cardiomegaly:0.480867 Effusion:0.601398 Infiltration:0.616787 Mass:0.531287 Nodule:0.568661 Pneumonia:0.493580 Pneumothorax:0.574425 Consolidation:0.548878 Edema:0.573766 Emphysema:0.502810 Fibrosis:0.587994 Pleural_Thickening:0.519857 Hernia:0.548227
+Accus: Atelectasis:0.096880 Cardiomegaly:0.322718 Effusion:0.000000 Infiltration:0.611607 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.004454 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.058511 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_42.pth
+
+Epoch: 42, iteration: 0/47, ==> train <===, loss: 0.693738, classification loss: 0.693729,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.1972515182562032e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [278.0, 13.0, 1.0, 642.0, 0.0, 38.0, 7.0, 0.0, 0.0, 0.0, 1.0, 6.0, 1.0, 0.0]
+
+VAL Student: Epoch: 42, iteration: 46
+
+VAL AUROC: 0.523424, VAL Accus: 0.068742, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.524433 Cardiomegaly:0.427823 Effusion:0.647528 Infiltration:0.532397 Mass:0.512321 Nodule:0.524501 Pneumonia:0.448203 Pneumothorax:0.465625 Consolidation:0.605278 Edema:0.671103 Emphysema:0.397902 Fibrosis:0.553828 Pleural_Thickening:0.470679 Hernia:0.546315
+Accus: Atelectasis:0.043107 Cardiomegaly:0.120370 Effusion:0.001252 Infiltration:0.422368 Mass:0.000000 Nodule:0.082609 Pneumonia:0.093333 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.187500 Pleural_Thickening:0.004762 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [664.0, 122.0, 0.0, 1741.0, 0.0, 0.0, 0.0, 0.0, 1.0, 4.0, 0.0, 7.0, 0.0, 0.0]
+
+TEST Student: Epoch: 42, iteration: 46
+
+TEST AUROC: 0.551530, TEST Accus: 0.076043, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557932 Cardiomegaly:0.471613 Effusion:0.604982 Infiltration:0.623289 Mass:0.539132 Nodule:0.573793 Pneumonia:0.479482 Pneumothorax:0.549644 Consolidation:0.557991 Edema:0.573472 Emphysema:0.505811 Fibrosis:0.592883 Pleural_Thickening:0.521076 Hernia:0.570315
+Accus: Atelectasis:0.050533 Cardiomegaly:0.259023 Effusion:0.000000 Infiltration:0.706575 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.010499 Emphysema:0.000000 Fibrosis:0.037234 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_43.pth
+
+Epoch: 43, iteration: 0/47, ==> train <===, loss: 0.693822, classification loss: 0.693813,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000009,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.0775263664305828e-06
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [322.0, 4.0, 0.0, 969.0, 0.0, 23.0, 1.0, 0.0, 1.0, 0.0, 1.0, 4.0, 0.0, 0.0]
+
+VAL Student: Epoch: 43, iteration: 46
+
+VAL AUROC: 0.517747, VAL Accus: 0.065955, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.539556 Cardiomegaly:0.410769 Effusion:0.646179 Infiltration:0.531627 Mass:0.508893 Nodule:0.521494 Pneumonia:0.437542 Pneumothorax:0.443256 Consolidation:0.623500 Edema:0.636396 Emphysema:0.383302 Fibrosis:0.548725 Pleural_Thickening:0.475433 Hernia:0.541792
+Accus: Atelectasis:0.049930 Cardiomegaly:0.037037 Effusion:0.000000 Infiltration:0.637500 Mass:0.000000 Nodule:0.050000 Pneumonia:0.013333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.125000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [1000.0, 64.0, 0.0, 1995.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 2.0, 0.0, 0.0]
+
+TEST Student: Epoch: 43, iteration: 46
+
+TEST AUROC: 0.548177, TEST Accus: 0.074028, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.557735 Cardiomegaly:0.458877 Effusion:0.588931 Infiltration:0.619096 Mass:0.530908 Nodule:0.580608 Pneumonia:0.477020 Pneumothorax:0.551322 Consolidation:0.546818 Edema:0.574581 Emphysema:0.500394 Fibrosis:0.590545 Pleural_Thickening:0.521184 Hernia:0.576460
+Accus: Atelectasis:0.076104 Cardiomegaly:0.135881 Effusion:0.000000 Infiltration:0.809659 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.001485 Edema:0.002625 Emphysema:0.000000 Fibrosis:0.010638 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_44.pth
+
+Epoch: 44, iteration: 0/47, ==> train <===, loss: 0.693832, classification loss: 0.693822,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 9.697737297875246e-07
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [114.0, 9.0, 0.0, 669.0, 0.0, 15.0, 2.0, 0.0, 0.0, 0.0, 2.0, 12.0, 0.0, 0.0]
+
+VAL Student: Epoch: 44, iteration: 46
+
+VAL AUROC: 0.515613, VAL Accus: 0.070686, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.507585 Cardiomegaly:0.413095 Effusion:0.638500 Infiltration:0.530456 Mass:0.507224 Nodule:0.521879 Pneumonia:0.451259 Pneumothorax:0.449142 Consolidation:0.622435 Edema:0.658299 Emphysema:0.393059 Fibrosis:0.536228 Pleural_Thickening:0.475389 Hernia:0.514030
+Accus: Atelectasis:0.017677 Cardiomegaly:0.083333 Effusion:0.000000 Infiltration:0.440132 Mass:0.000000 Nodule:0.032609 Pneumonia:0.026667 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.014184 Fibrosis:0.375000 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [263.0, 108.0, 0.0, 1811.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 18.0, 0.0, 0.0]
+
+TEST Student: Epoch: 44, iteration: 46
+
+TEST AUROC: 0.549025, TEST Accus: 0.077305, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.543742 Cardiomegaly:0.485977 Effusion:0.607019 Infiltration:0.623332 Mass:0.528454 Nodule:0.570445 Pneumonia:0.488872 Pneumothorax:0.558700 Consolidation:0.565203 Edema:0.583913 Emphysema:0.493195 Fibrosis:0.580875 Pleural_Thickening:0.516896 Hernia:0.539723
+Accus: Atelectasis:0.020015 Cardiomegaly:0.229299 Effusion:0.000000 Infiltration:0.734984 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.002227 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.095745 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_45.pth
+
+Epoch: 45, iteration: 0/47, ==> train <===, loss: 0.693803, classification loss: 0.693795,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000008,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 8.727963568087721e-07
+total: [6449.0, 108.0, 799.0, 1520.0, 457.0, 460.0, 75.0, 186.0, 288.0, 79.0, 141.0, 32.0, 210.0, 11.0]
+correct: [272.0, 10.0, 0.0, 732.0, 0.0, 36.0, 7.0, 0.0, 1.0, 0.0, 1.0, 5.0, 0.0, 0.0]
+
+VAL Student: Epoch: 45, iteration: 46
+
+VAL AUROC: 0.518770, VAL Accus: 0.068197, VAL Senss: 0.000000, VAL Specs: 1.000000
+AUROCs: Atelectasis:0.538584 Cardiomegaly:0.417999 Effusion:0.641894 Infiltration:0.532080 Mass:0.507790 Nodule:0.521967 Pneumonia:0.446019 Pneumothorax:0.457819 Consolidation:0.613452 Edema:0.639040 Emphysema:0.383331 Fibrosis:0.558345 Pleural_Thickening:0.477034 Hernia:0.527432
+Accus: Atelectasis:0.042177 Cardiomegaly:0.092593 Effusion:0.000000 Infiltration:0.481579 Mass:0.000000 Nodule:0.078261 Pneumonia:0.093333 Pneumothorax:0.000000 Consolidation:0.003472 Edema:0.000000 Emphysema:0.007092 Fibrosis:0.156250 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [13140.0, 471.0, 2728.0, 2464.0, 1334.0, 788.0, 312.0, 953.0, 1347.0, 381.0, 683.0, 188.0, 753.0, 54.0]
+correct: [794.0, 102.0, 0.0, 1862.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 1.0, 0.0, 0.0]
+
+TEST Student: Epoch: 45, iteration: 46
+
+TEST AUROC: 0.550205, TEST Accus: 0.074570, TEST Senss: 0.000000, TEST Specs: 1.000000
+AUROCs: Atelectasis:0.562130 Cardiomegaly:0.472515 Effusion:0.600134 Infiltration:0.621549 Mass:0.529880 Nodule:0.573238 Pneumonia:0.486238 Pneumothorax:0.540230 Consolidation:0.571119 Edema:0.588484 Emphysema:0.487298 Fibrosis:0.584751 Pleural_Thickening:0.510891 Hernia:0.574416
+Accus: Atelectasis:0.060426 Cardiomegaly:0.216561 Effusion:0.000000 Infiltration:0.755682 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000742 Edema:0.005249 Emphysema:0.000000 Fibrosis:0.005319 Pleural_Thickening:0.000000 Hernia:0.000000
+Senss: Atelectasis:0.000000 Cardiomegaly:0.000000 Effusion:0.000000 Infiltration:0.000000 Mass:0.000000 Nodule:0.000000 Pneumonia:0.000000 Pneumothorax:0.000000 Consolidation:0.000000 Edema:0.000000 Emphysema:0.000000 Fibrosis:0.000000 Pleural_Thickening:0.000000 Hernia:0.000000
+Specs: Atelectasis:1.000000 Cardiomegaly:1.000000 Effusion:1.000000 Infiltration:1.000000 Mass:1.000000 Nodule:1.000000 Pneumonia:1.000000 Pneumothorax:1.000000 Consolidation:1.000000 Edema:1.000000 Emphysema:1.000000 Fibrosis:1.000000 Pleural_Thickening:1.000000 Hernia:1.000000
+save model to ../model/chest_0709_wcp_test_densenet121/checkpoint/epoch_46.pth
+
+Epoch: 46, iteration: 0/47, ==> train <===, loss: 0.693814, classification loss: 0.693804,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000010,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.855167211278949e-07
