@@ -1,0 +1,26 @@
+train_dataset len: 76524
+labeled_num: 22424
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "Main.py", line 85, in <module>
+    main()
+  File "Main.py", line 13, in main
+    runTrain()
+  File "Main.py", line 58, in runTrain
+    labeledNum,labeledBatchSize)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chexnet-master/ChexnetTrainer.py", line 107, in train
+    ChexnetTrainer.epochTrain (model, dataLoaderTrain, optimizer, scheduler, trMaxEpoch, nnClassCount, loss,labeledBatchSize)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chexnet-master/ChexnetTrainer.py", line 132, in epochTrain
+    for batchID, (input, target) in enumerate (dataLoader):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 278, in __iter__
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 636, in __init__
+    super(_MultiProcessingDataLoaderIter, self).__init__(loader)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 311, in __init__
+    self.sampler_iter = iter(self.index_sampler)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chexnet-master/DatasetGenerator.py", line 83, in __iter__
+    secondary_iter = iterate_eternally(self.secondary_indices)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chexnet-master/DatasetGenerator.py", line 102, in iterate_eternally
+    return itertools.chain.from_iterable(infinite_shuffles())
+NameError: name 'itertools' is not defined

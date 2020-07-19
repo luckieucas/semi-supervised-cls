@@ -25,7 +25,7 @@ def runTrain():
     timestampLaunch = timestampDate + '-' + timestampTime
     
     #---- Path to the directory with images
-    pathDirData = '/media/luckie/vol4/semi_supervised_cls/dataset/chest/training_data'
+    pathDirData = '../../dataset/chest/training_data'
     
     #---- Paths to the files with training, validation and testing sets.
     #---- Each file should contains pairs [path to image, output vector]
@@ -40,10 +40,10 @@ def runTrain():
     nnIsTrained = True
     nnClassCount = 14
     labeledNum = 22424
-    labeledBatchSize = 16
+    labeledBatchSize = 32
     
     #---- Training settings: batch size, maximum number of epochs
-    trBatchSize = 32
+    trBatchSize = 64
     trMaxEpoch = 100
     
     #---- Parameters related to image transforms: size of the down-scaled image, cropped image

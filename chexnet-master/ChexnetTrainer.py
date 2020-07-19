@@ -21,6 +21,7 @@ from DensenetModels import DenseNet121
 from DensenetModels import DenseNet169
 from DensenetModels import DenseNet201
 from DatasetGenerator import DatasetGenerator,TwoStreamBatchSampler
+from losses import VATLoss
 
 
 #-------------------------------------------------------------------------------- 
@@ -45,7 +46,7 @@ class ChexnetTrainer ():
         nnClassCount,trBatchSize, trMaxEpoch, transResize, transCrop, launchTimestamp,
         checkpoint, labeledNum, labeledBatchSize):
 
-        wandb.init(project="chest-supervised",name=nnArchitecture+"_semi")
+        wandb.init(project="chest-supervised",name=nnArchitecture+"_semi-test")
         #-------------------- SETTINGS: NETWORK ARCHITECTURE
         if nnArchitecture == 'DENSE-NET-121': model = DenseNet121(nnClassCount, nnIsTrained).cuda()
         elif nnArchitecture == 'DENSE-NET-169': model = DenseNet169(nnClassCount, nnIsTrained).cuda()
@@ -78,7 +79,7 @@ class ChexnetTrainer ():
 
 
         dataLoaderTrain = DataLoader(dataset=datasetTrain,batch_sampler=batch_sampler, num_workers=8, pin_memory=True)
-        dataLoaderVal = DataLoader(dataset=datasetVal, batch_size=trBatchSize, shuffle=False, num_workers=8, pin_memory=True)
+        dataLoaderVal = DataLoader(dataset=datasetVal, batch_size=64, shuffle=False, num_workers=8, pin_memory=True)
         
         #-------------------- SETTINGS: OPTIMIZER & SCHEDULER
         optimizer = optim.Adam (model.parameters(), lr=0.0001, betas=(0.9, 0.999), eps=1e-08, weight_decay=1e-5)
@@ -86,6 +87,7 @@ class ChexnetTrainer ():
                 
         #-------------------- SETTINGS: LOSS
         loss = torch.nn.BCELoss(size_average = True)
+
         
         #---- Load checkpoint 
         if checkpoint != None:
@@ -104,9 +106,11 @@ class ChexnetTrainer ():
             timestampDate = time.strftime("%d%m%Y")
             timestampSTART = timestampDate + '-' + timestampTime
                          
-            ChexnetTrainer.epochTrain (model, dataLoaderTrain, optimizer, scheduler, trMaxEpoch, nnClassCount, loss,labeledBatchSize)
+            ChexnetTrainer.epochTrain (model, epochID, dataLoaderTrain, optimizer, scheduler, trMaxEpoch, nnClassCount,
+             loss, labeledBatchSize,wandb)
             print("began  validation")
-            lossVal, losstensor = ChexnetTrainer.epochVal (model, dataLoaderVal, optimizer, scheduler, trMaxEpoch, nnClassCount, loss)
+            lossVal, losstensor = ChexnetTrainer.epochVal (model, dataLoaderVal, optimizer, scheduler, trMaxEpoch, 
+            nnClassCount, loss)
             print("began test")
             ChexnetTrainer.epochTest(model,pathDirData)
             timestampTime = time.strftime("%H%M%S")
@@ -125,7 +129,7 @@ class ChexnetTrainer ():
                      
     #-------------------------------------------------------------------------------- 
        
-    def epochTrain (model, dataLoader, optimizer, scheduler, epochMax, classCount, loss, labeledBatchSize):
+    def epochTrain (model, epochID, dataLoader, optimizer, scheduler, epochMax, classCount, loss, labeledBatchSize,wandb):
         
         model.train()
         
@@ -137,7 +141,16 @@ class ChexnetTrainer ():
             varTarget = torch.autograd.Variable(target)         
             varOutput = model(varInput)
             
-            lossvalue = loss(varOutput[:labeledBatchSize], varTarget[:labeledBatchSize])
+            cls_loss = loss(varOutput[:labeledBatchSize], varTarget[:labeledBatchSize])
+            #use vat
+            vat_loss_fn = VATLoss()
+            if epochID >= 0:
+                vat_loss = vat_loss_fn(model,varInput[labeledBatchSize:])
+            else:
+                vat_loss = 0.0
+            lossvalue = cls_loss + vat_loss
+            if batchID % 200==0:
+                wandb.log({'classification loss':cls_loss,'vat loss':vat_loss,'total loss':lossvalue})
                        
             optimizer.zero_grad()
             lossvalue.backward()
@@ -182,7 +195,7 @@ class ChexnetTrainer ():
     def epochTest(model,pathDirData):  
         pathFileTest = './dataset/test_0.txt'
         nnClassCount = 14
-        trBatchSize = 16
+        trBatchSize = 64
         transResize = 256
         transCrop = 224
         pathFileTest = './dataset/test_0.txt'

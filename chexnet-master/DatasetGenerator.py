@@ -5,6 +5,7 @@ from PIL import Image
 import torch
 from torch.utils.data import Dataset
 from torch.utils.data.sampler import Sampler
+import itertools
 
 #-------------------------------------------------------------------------------- 
 
@@ -90,3 +91,20 @@ class TwoStreamBatchSampler(Sampler):
 
     def __len__(self):
         return len(self.primary_indices) // self.primary_batch_size 
+
+def iterate_once(iterable):
+    return np.random.permutation(iterable)
+
+
+def iterate_eternally(indices):
+    def infinite_shuffles():
+        while True:
+            yield np.random.permutation(indices)
+    return itertools.chain.from_iterable(infinite_shuffles())
+
+
+def grouper(iterable, n):
+    "Collect data into fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3) --> ABC DEF"
+    args = [iter(iterable)] * n
+    return zip(*args)

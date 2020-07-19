@@ -1,0 +1,22 @@
+train_dataset len: 76524
+labeled_num: 22424
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+began  validation
+began test
+AUROC mean  0.7182626632510443
+Atelectasis   0.7134283980236236
+Cardiomegaly   0.7466734914125137
+Effusion   0.7717392610486683
+Infiltration   0.6815461182810677
+Mass   0.649339127140212
+Nodule   0.6706900961196964
+Pneumonia   0.6626468074856764
+Pneumothorax   0.7567561201628018
+Consolidation   0.6862578443355304
+Edema   0.781487006847957
+Emphysema   0.7019033164301745
+Fibrosis   0.7577548175953754
+Pleural_Thickening   0.6761791747977685
+Hernia   0.7992757058335537
+Epoch [1] [save] [19072020-115224] loss= tensor(0.1775, device='cuda:0')
