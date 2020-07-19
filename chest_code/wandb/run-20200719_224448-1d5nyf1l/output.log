@@ -1,0 +1,9 @@
+labeled_num: 80
+Traceback (most recent call last):
+  File "main.py", line 69, in <module>
+    main()
+  File "main.py", line 65, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 73, in train
+    dataLoaderTest = DataLoader(dataset=dataasetTest, batch_size=args.test_bs, num_workers=8,
+NameError: name 'dataasetTest' is not defined

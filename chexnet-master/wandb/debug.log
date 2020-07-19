@@ -1,29 +1,22 @@
-2020-07-19 12:01:21,641 DEBUG   MainThread:20671 [wandb_config.py:_load_defaults():133] no defaults not found in config-defaults.yaml
-2020-07-19 12:01:22,016 DEBUG   MainThread:20671 [meta.py:_setup_code_git():49] probe for git information
-2020-07-19 12:01:22,054 DEBUG   MainThread:20671 [run_manager.py:__init__():547] Initialized sync for chest-supervised/2ydpa4oh
-2020-07-19 12:01:22,058 INFO    MainThread:20671 [run_manager.py:wrap_existing_process():1147] wrapping existing process 20615
-2020-07-19 12:01:22,059 WARNING MainThread:20671 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
-2020-07-19 12:01:22,407 INFO    MainThread:20671 [run_manager.py:init_run():926] system metrics and metadata threads started
-2020-07-19 12:01:22,407 INFO    MainThread:20671 [run_manager.py:init_run():965] upserting run before process can begin, waiting at most 10 seconds
-2020-07-19 12:01:22,819 INFO    Thread-15 :20671 [run_manager.py:_upsert_run():1054] saving pip packages
-2020-07-19 12:01:22,820 INFO    Thread-15 :20671 [run_manager.py:_upsert_run():1056] initializing streaming files api
-2020-07-19 12:01:22,821 INFO    Thread-15 :20671 [run_manager.py:_upsert_run():1063] unblocking file change observer, beginning sync with W&B servers
-2020-07-19 12:01:22,822 INFO    MainThread:20671 [run_manager.py:wrap_existing_process():1164] informing user process we are ready to proceed
-2020-07-19 12:01:22,830 INFO    MainThread:20671 [run_manager.py:_sync_etc():1296] entering loop for messages from user process
-2020-07-19 12:01:23,014 INFO    Thread-4  :20671 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/config.yaml
-2020-07-19 12:01:23,406 INFO    Thread-4  :20671 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/requirements.txt
-2020-07-19 12:01:23,407 INFO    Thread-4  :20671 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/output.log
-2020-07-19 12:01:23,407 INFO    Thread-4  :20671 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-metadata.json
-2020-07-19 12:01:29,015 INFO    Thread-4  :20671 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/output.log
-2020-07-19 12:01:39,021 INFO    Thread-4  :20671 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-metadata.json
-2020-07-19 12:01:42,023 INFO    Thread-4  :20671 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-history.jsonl
-2020-07-19 12:01:42,024 INFO    Thread-4  :20671 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-summary.json
-2020-07-19 12:01:44,533 INFO    MainThread:20671 [run_manager.py:_sync_etc():1353] process received interrupt signal, shutting down
-2020-07-19 12:01:44,533 INFO    MainThread:20671 [run_manager.py:_sync_etc():1406] closing log streams and sending exitcode to W&B
-2020-07-19 12:01:44,534 INFO    MainThread:20671 [run_manager.py:shutdown():1070] shutting down system stats and metadata service
-2020-07-19 12:01:45,025 INFO    Thread-4  :20671 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-events.jsonl
-2020-07-19 12:01:45,432 INFO    MainThread:20671 [run_manager.py:shutdown():1084] stopping streaming files and file change observer
-2020-07-19 12:01:46,026 INFO    Thread-4  :20671 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-metadata.json
-2020-07-19 12:01:48,513 INFO    MainThread:20671 [run_manager.py:_sync_etc():1418] process only ran for 27 seconds, not syncing files
-NFO    Thread-4  :20671 [2ydpa4oh:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_040120-2ydpa4oh/wandb-metadata.json
-2020-07-19 12:01:48,513 INFO    MainThread:20671 [2ydpa4oh:run_manager.py:_sync_etc():1418] process only ran for 27 seconds, not syncing files
+2020-07-19 23:57:49,258 DEBUG   MainThread:9611 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
+2020-07-19 23:57:49,906 DEBUG   MainThread:9611 [meta.py:_setup_code_git():49] probe for git information
+2020-07-19 23:57:49,939 DEBUG   MainThread:9611 [run_manager.py:__init__():547] Initialized sync for chest-supervised/2ue4fsvf
+2020-07-19 23:57:49,945 INFO    MainThread:9611 [run_manager.py:wrap_existing_process():1149] wrapping existing process 9555
+2020-07-19 23:57:49,946 WARNING MainThread:9611 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-19 23:57:50,291 INFO    MainThread:9611 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-07-19 23:57:50,291 INFO    MainThread:9611 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-07-19 23:57:50,904 INFO    Thread-4  :9611 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-metadata.json
+2020-07-19 23:57:50,958 INFO    Thread-15 :9611 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-07-19 23:57:50,960 INFO    Thread-15 :9611 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-07-19 23:57:50,960 INFO    Thread-15 :9611 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-07-19 23:57:50,962 INFO    Thread-4  :9611 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/output.log
+2020-07-19 23:57:50,962 INFO    MainThread:9611 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
+2020-07-19 23:57:50,971 INFO    MainThread:9611 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
+2020-07-19 23:57:51,901 INFO    Thread-4  :9611 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/config.yaml
+2020-07-19 23:57:52,588 INFO    Thread-4  :9611 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/requirements.txt
+2020-07-19 23:57:56,904 INFO    Thread-4  :9611 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/output.log
+2020-07-19 23:58:06,910 INFO    Thread-4  :9611 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-metadata.json
+2020-07-19 23:58:10,912 INFO    Thread-4  :9611 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-history.jsonl
+2020-07-19 23:58:10,914 INFO    Thread-4  :9611 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-summary.json
+a/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-history.jsonl
+2020-07-19 23:58:10,914 INFO    Thread-4  :9611 [2ue4fsvf:run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chexnet-master/wandb/run-20200719_235747-2ue4fsvf/wandb-summary.json

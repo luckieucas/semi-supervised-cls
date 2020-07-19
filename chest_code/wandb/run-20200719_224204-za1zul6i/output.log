@@ -1,0 +1,11 @@
+labeled_num: 22424
+Traceback (most recent call last):
+  File "main.py", line 69, in <module>
+    main()
+  File "main.py", line 65, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 69, in train
+    args.train_bs-args.labeled_bs)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/DatasetGenerator.py", line 80, in __init__
+    assert len(self.secondary_indices) >= self.secondary_batch_size > 0
+AssertionError

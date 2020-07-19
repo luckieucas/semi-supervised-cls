@@ -21,7 +21,7 @@ from DensenetModels import DenseNet121
 from DensenetModels import DenseNet169
 from DensenetModels import DenseNet201
 from DatasetGenerator import DatasetGenerator,TwoStreamBatchSampler
-from losses import VATLoss
+from losses import VATLoss,bnm_loss
 
 
 #-------------------------------------------------------------------------------- 
@@ -46,7 +46,7 @@ class ChexnetTrainer ():
         nnClassCount,trBatchSize, trMaxEpoch, transResize, transCrop, launchTimestamp,
         checkpoint, labeledNum, labeledBatchSize):
 
-        wandb.init(project="chest-supervised",name=nnArchitecture+"_semi-test")
+        wandb.init(project="chest-supervised",name=nnArchitecture+"_semi-vat-bnm")
         #-------------------- SETTINGS: NETWORK ARCHITECTURE
         if nnArchitecture == 'DENSE-NET-121': model = DenseNet121(nnClassCount, nnIsTrained).cuda()
         elif nnArchitecture == 'DENSE-NET-169': model = DenseNet169(nnClassCount, nnIsTrained).cuda()
@@ -146,11 +146,13 @@ class ChexnetTrainer ():
             vat_loss_fn = VATLoss()
             if epochID >= 0:
                 vat_loss = vat_loss_fn(model,varInput[labeledBatchSize:])
+                bnm_loss_val = bnm_loss(varOutput[labeledBatchSize:])
             else:
                 vat_loss = 0.0
-            lossvalue = cls_loss + vat_loss
+                bnm_loss_val = 0.0
+            lossvalue = cls_loss + vat_loss + bnm_loss_val
             if batchID % 200==0:
-                wandb.log({'classification loss':cls_loss,'vat loss':vat_loss,'total loss':lossvalue})
+                wandb.log({'classification loss':cls_loss,'vat loss':vat_loss, "bnm loss":bnm_loss_val,'total loss':lossvalue})
                        
             optimizer.zero_grad()
             lossvalue.backward()
