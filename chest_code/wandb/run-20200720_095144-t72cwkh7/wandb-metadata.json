@@ -1,0 +1,25 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "/media/luckie/vol4/semi_supervised_cls/code/chest_code/main.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "7ca8bf511e086f8d3baa983bc8762c6de20345bd"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-07-20T01:51:45.901043",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-107-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "chest_model_test_densenet121",
+    "project": "chest-semi-supervised",
+    "heartbeatAt": "2020-07-20T01:53:09.124216"
+}

@@ -1,0 +1,15 @@
+{"train cls loss": 0.6636902689933777, "train vat loss": 0.0, "train total loss": 0.6636902689933777, "_runtime": 15.59194016456604, "_timestamp": 1595211373.485284, "_step": 0}
+{"AUROC": 0.5115544927158623, "_runtime": 67.04497194290161, "_timestamp": 1595211424.9383159, "_step": 1}
+{"train cls loss": 0.6098503470420837, "train vat loss": 0.0, "train total loss": 0.6098503470420837, "_runtime": 70.5904712677002, "_timestamp": 1595211428.4838152, "_step": 2}
+{"AUROC": 0.5089670073917877, "_runtime": 109.04062962532043, "_timestamp": 1595211466.9339736, "_step": 3}
+{"train cls loss": 0.5721144676208496, "train vat loss": 0.0, "train total loss": 0.5721144676208496, "_runtime": 112.12272667884827, "_timestamp": 1595211470.0160706, "_step": 4}
+{"AUROC": 0.5080828649247631, "_runtime": 146.49277544021606, "_timestamp": 1595211504.3861194, "_step": 5}
+{"train cls loss": 0.5346628427505493, "train vat loss": 0.0, "train total loss": 0.5346628427505493, "_runtime": 148.99841141700745, "_timestamp": 1595211506.8917553, "_step": 6}
+{"AUROC": 0.509149404893572, "_runtime": 182.06706953048706, "_timestamp": 1595211539.9604135, "_step": 7}
+{"train cls loss": 0.49580731987953186, "train vat loss": 0.0, "train total loss": 0.49580731987953186, "_runtime": 184.7655963897705, "_timestamp": 1595211542.6589403, "_step": 8}
+{"AUROC": 0.5091218261025386, "_runtime": 217.44606733322144, "_timestamp": 1595211575.3394113, "_step": 9}
+{"train cls loss": 0.47373446822166443, "train vat loss": 0.0, "train total loss": 0.47373446822166443, "_runtime": 220.11382412910461, "_timestamp": 1595211578.007168, "_step": 10}
+{"AUROC": 0.5083479282139262, "_runtime": 255.06208753585815, "_timestamp": 1595211612.9554315, "_step": 11}
+{"train cls loss": 0.4328784942626953, "train vat loss": 0.0, "train total loss": 0.4328784942626953, "_runtime": 257.64608883857727, "_timestamp": 1595211615.5394328, "_step": 12}
+{"AUROC": 0.5078848341145036, "_runtime": 291.16264939308167, "_timestamp": 1595211649.0559933, "_step": 13}
+{"train cls loss": 0.39003103971481323, "train vat loss": 0.0, "train total loss": 0.39003103971481323, "_runtime": 294.0152544975281, "_timestamp": 1595211651.9085984, "_step": 14}

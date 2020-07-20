@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "main.py", line 70, in <module>
+    main()
+  File "main.py", line 66, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 31, in train
+    model = torch.nn.DataParallel(model).cuda()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 311, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 230, in _apply
+    param_applied = fn(param)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 311, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+RuntimeError: CUDA error: out of memory

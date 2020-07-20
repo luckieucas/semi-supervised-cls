@@ -1,0 +1,13 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "main.py", line 70, in <module>
+    main()
+  File "main.py", line 66, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 92, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 110, in epochTrain
+    varTarget = torch.autograd.Variable(taraget)
+NameError: name 'taraget' is not defined

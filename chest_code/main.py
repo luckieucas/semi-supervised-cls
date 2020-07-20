@@ -21,7 +21,7 @@ parser.add_argument('--val_file', type=str, default='./dataSplit/val_1_test.txt'
 parser.add_argument('--resize', type=int, default=256, help='reize image')
 parser.add_argument('--crop_size', type=int, default=224, help='image crop')
 #semi-supervised setting
-parser.add_argument('--labeled_num', type=int, default=22424, help='number of labeled samples')
+parser.add_argument('--labeled_num', type=int, default=80, help='number of labeled samples')
 parser.add_argument('--labeled_bs', type=int, default=32, help='num of labeled samples in each batch')
 # Optimization options
 parser.add_argument('--epochs', type=int, default=100, help='number of total epochs to run')
@@ -37,6 +37,8 @@ parser.add_argument('--backbone', type=str, default='densenet121', help='backbon
 # loss
 parser.add_argument('--vat_loss_weight', type=float, default=0.0,help='weight of vat_loss')
 parser.add_argument('--vat_start_epoch', type=int, default=0, help='vat loss start epoch')
+parser.add_argument('--bnm_loss_weight', type=float, default=0.0,help='weight of vat_loss')
+parser.add_argument('--bnm_start_epoch', type=int, default=0, help='vat loss start epoch')
 #Miscs
 parser.add_argument('--manualSeed', type=int, default=1337, help='manual seed')
 parser.add_argument('--pretrained', type=bool, default=True, help='is use pretrained model')

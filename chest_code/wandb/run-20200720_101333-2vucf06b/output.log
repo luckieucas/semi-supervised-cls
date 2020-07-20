@@ -1,0 +1,23 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "main.py", line 70, in <module>
+    main()
+  File "main.py", line 66, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 95, in train
+    Trainer.epochTest(args, wandb, model, epoch, dataLoaderTest)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 168, in epochTest
+    aurocIndividual = Trainer.computeAUROC(outGT, outPRED, args.class_num)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 186, in computeAUROC
+    outAUROC.append(roc_auc_score(datanpGT[:, i], datanpPRED[:, i]))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 393, in roc_auc_score
+    sample_weight=sample_weight)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_base.py", line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 223, in _binary_roc_auc_score
+    raise ValueError("Only one class present in y_true. ROC AUC score "
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.

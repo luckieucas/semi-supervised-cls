@@ -1,0 +1,227 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+image path: ../../dataset/chest/training_data/00005259_000.png
+image path: ../../dataset/chest/training_data/00005607_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EC77410>
+image path: ../../dataset/chest/training_data/00009792_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EF32C50>
+image path: ../../dataset/chest/training_data/00003392_023.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00003548_005.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00007028_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00020294_005.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493690>
+image path: ../../dataset/chest/training_data/00000209_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00004034_011.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00003565_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00000913_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C448FED0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+image path: ../../dataset/chest/training_data/00017703_000.png
+image path: ../../dataset/chest/training_data/00008707_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00020094_009.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00014452_012.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00014362_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00020294_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00018853_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00022193_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493690>
+image path: ../../dataset/chest/training_data/00018724_042.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00025110_003.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00013692_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB57390>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C448FED0>
+image path: ../../dataset/chest/training_data/00009907_000.png
+image path: ../../dataset/chest/training_data/00010335_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00012422_013.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00003265_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00019176_062.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00010886_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00001574_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00002664_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00019528_012.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00000242_003.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493690>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00021315_000.png
+image path: ../../dataset/chest/training_data/00009691_005.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AAEE90>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EF32C50>
+image path: ../../dataset/chest/training_data/00000244_002.png
+image path: ../../dataset/chest/training_data/00017807_003.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EC77410>
+image path: ../../dataset/chest/training_data/00017486_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00012256_000.png
+image path: ../../dataset/chest/training_data/00019643_033.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+image path: ../../dataset/chest/training_data/00023582_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00005991_014.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00001255_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00005921_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00012257_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EF32C50>
+image path: ../../dataset/chest/training_data/00008835_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00018362_022.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C448FED0>
+image path: ../../dataset/chest/training_data/00007627_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00007534_031.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00024299_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00022662_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AB89D0>
+image path: ../../dataset/chest/training_data/00002144_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AB2C10>
+image path: ../../dataset/chest/training_data/00011394_003.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00002633_015.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB57390>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00003122_008.png
+image path: ../../dataset/chest/training_data/00014145_008.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00023483_000.png
+image path: ../../dataset/chest/training_data/00002580_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AAEE90>
+image path: ../../dataset/chest/training_data/00013601_021.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+image path: ../../dataset/chest/training_data/00002270_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00021278_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00012495_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00013908_001.png
+image path: ../../dataset/chest/training_data/00021041_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EF32C50>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00015246_001.png
+image path: ../../dataset/chest/training_data/00021629_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00012682_006.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EC77410>
+image path: ../../dataset/chest/training_data/00024967_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00011137_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493690>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00015384_004.png
+image path: ../../dataset/chest/training_data/00012024_004.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00016652_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+image path: ../../dataset/chest/training_data/00010281_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+image path: ../../dataset/chest/training_data/00003188_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00011596_002.png
+image path: ../../dataset/chest/training_data/00024259_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AAEE90>
+image path: ../../dataset/chest/training_data/00022918_002.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+image path: ../../dataset/chest/training_data/00000581_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00016595_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C448FED0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00024259_000.png
+image path: ../../dataset/chest/training_data/00011959_004.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00011137_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C448FED0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00025169_005.png
+image path: ../../dataset/chest/training_data/00014653_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AB2C10>
+image path: ../../dataset/chest/training_data/00013616_005.png
+image path: ../../dataset/chest/training_data/00010727_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EC77410>
+image path: ../../dataset/chest/training_data/00005832_024.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44939D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00011351_004.png
+image path: ../../dataset/chest/training_data/00010171_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EC77410>
+image path: ../../dataset/chest/training_data/00010171_000.png
+image path: ../../dataset/chest/training_data/00000581_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00005832_024.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00017799_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00003188_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00011325_007.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EF32C50>
+image path: ../../dataset/chest/training_data/00020229_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB57390>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4AB8450>
+image path: ../../dataset/chest/training_data/00011325_007.png
+image path: ../../dataset/chest/training_data/00021629_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00013616_005.png
+image path: ../../dataset/chest/training_data/00003523_038.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00020294_008.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00024967_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB57390>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00013307_008.png
+image path: ../../dataset/chest/training_data/00015384_004.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD76EB575D0>
+image path: ../../dataset/chest/training_data/00003523_008.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00003523_038.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+image path: ../../dataset/chest/training_data/00020229_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493690>
+image path: ../../dataset/chest/training_data/00003523_008.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44934D0>
+image path: ../../dataset/chest/training_data/00023069_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493C50>
+image path: ../../dataset/chest/training_data/00017618_003.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493190>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C44938D0>
+image path: ../../dataset/chest/training_data/00011959_004.png
+image path: ../../dataset/chest/training_data/00017799_000.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493250>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7FD7C4493910>
+image path: ../../dataset/chest/training_data/00021575_000.png
+image path: ../../dataset/chest/training_data/00025169_005.png

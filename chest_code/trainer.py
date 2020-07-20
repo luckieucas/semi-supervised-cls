@@ -11,11 +11,12 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch.nn.functional as F 
 from torch.utils.data import DataLoader
+import torch.backends.cudnn as cudnn
 from sklearn.metrics.ranking import roc_auc_score
 
 from models import DenseNet121,DenseNet169,DenseNet201
 from DatasetGenerator import DatasetGenerator, TwoStreamBatchSampler
-from losses import VATLoss
+from losses import VATLoss,bnm_loss
 from utils import AverageMeter
 
 
@@ -36,7 +37,6 @@ class Trainer():
         trainval_transforms_list = []
         trainval_transforms_list.append(transforms.RandomResizedCrop(args.crop_size))
         trainval_transforms_list.append(transforms.RandomHorizontalFlip())
-        trainval_transforms_list.append(transforms.ToTensor())
         trainval_transforms_list.append(transforms.ToTensor())
         trainval_transforms_list.append(normalize)
         trainval_transform_sequence = transforms.Compose(trainval_transforms_list)
@@ -80,7 +80,7 @@ class Trainer():
         scheduler = ReduceLROnPlateau(optimizer, factor = 0.1, patience = 5, mode='min')
 
         #--------------------SETTINGS: LOSS
-        loss = torch.nn.BCELoss(size_average=True)
+        loss_fn = torch.nn.BCELoss(size_average=True)
 
         #------Load checkpoint
         if args.checkpoint != None:
@@ -90,11 +90,11 @@ class Trainer():
         
         #-----TRAIN MODEL
         for epoch in range(args.start_epoch, args.epochs):
-            Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler)
-            Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal)
+            Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+            Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal,loss_fn)
             Trainer.epochTest(args, wandb, model, epoch, dataLoaderTest)
 
-    def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler):
+    def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler,loss_fn):
         model.train()
         batch_time = AverageMeter()
         data_time = AverageMeter()
@@ -108,25 +108,31 @@ class Trainer():
             data_time.update(time.time() - end)
             target = target.cuda()
             varInput = torch.autograd.Variable(input)
-            varTarget = torch.autograd.Variable(taraget)
+            varTarget = torch.autograd.Variable(target)
             varOutput = model(varInput)
 
-            cls_loss = loss(varOutput[:args.labeled_bs], varTarget[:args.labeled_s])
+            cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
             vat_loss_fn = VATLoss()
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
                 vat_loss = vat_loss_fn(model, varInput[args.labeled_bs:])
             else:
                 vat_loss = 0.0
-            lossvalue = cls_loss + vat_loss
+
+            if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
+                loss_bnm = bnm_loss(varOutput[args.labeled_bs:])
+            else:
+                loss_bnm = 0.0
+            lossvalue = cls_loss + vat_loss + loss_bnm
             if step % 200 == 0:
-                wandb.log({'train cls loss':cls_loss, 'train vat loss':vat_loss, 'train total loss':lossvalue})
+                wandb.log({'train cls loss':cls_loss, 'train vat loss':vat_loss,'train bnm loss':loss_bnm, 
+                'train total loss':lossvalue})
             
-            optimizer.zero_grad()
+            optimzer.zero_grad()
             lossvalue.backward()
             optimzer.step()
     
-    def epochVal(args, wandb, model, epoch, dataloader):
+    def epochVal(args, wandb, model, epoch, dataloader, loss_fn):
         model.eval()
         lossVal = 0
         lossValNorm = 0
@@ -136,8 +142,8 @@ class Trainer():
             varOutput = model(torch.autograd.Variable(input.cuda()))
             varTarget = torch.autograd.Variable(target.cuda())
 
-            losstensor = loss(varOutput, varTarget)
-            lossstensorMean += losstensor.data 
+            losstensor = loss_fn(varOutput, varTarget)
+            losstensorMean += losstensor.data 
             lossVal += losstensor.data 
             lossValNorm += 1
         outLoss = lossVal / lossValNorm 
@@ -158,7 +164,7 @@ class Trainer():
 
         for i, (input,target) in enumerate(dataloader):
             target = target.cuda()
-            outGT = toorch.cat((outGT, target), 0)
+            outGT = torch.cat((outGT, target), 0)
             bs, n_crops, c, h, w = input.size()
             with torch.no_grad():
                 out = model(input.view(-1, c, h, w).cuda())

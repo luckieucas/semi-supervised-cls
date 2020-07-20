@@ -1,0 +1,32 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+image path: ../../dataset/chest/training_data/00013756_000.png
+image path: ../../dataset/chest/training_data/00000209_000.png
+Traceback (most recent call last):
+  File "main.py", line 70, in <module>
+    main()
+  File "main.py", line 66, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 93, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 106, in epochTrain
+    for step, (input, target) in enumerate(dataloader):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 819, in __next__
+    return self._process_data(data)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 846, in _process_data
+    data.reraise()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/_utils.py", line 369, in reraise
+    raise self.exc_type(msg)
+NameError: Caught NameError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/_utils/worker.py", line 178, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/DatasetGenerator.py", line 54, in __getitem__
+    print9("img data:",imageData)
+NameError: name 'print9' is not defined
+

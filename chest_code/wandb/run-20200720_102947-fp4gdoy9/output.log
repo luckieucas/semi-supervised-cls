@@ -1,0 +1,34 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+[34m[1mwandb[0m: Network error resolved after 0:00:32.417167, resuming normal operation.
+AUROC mean  0.5063880977845433
+Atelectasis   0.5360334833472495
+Cardiomegaly   0.4531861692723461
+Effusion   0.615952428580068
+Infiltration   0.4812847003924645
+Mass   0.4784749544662499
+Nodule   0.47290511880866004
+Pneumonia   0.48583911800734997
+Pneumothorax   0.4396513126389435
+Consolidation   0.49209167743196414
+Edema   0.5749076782346497
+Emphysema   0.6974325359073718
+Fibrosis   0.4901117011536349
+Pleural_Thickening   0.44122253148157375
+Hernia   0.43033995926108026
+AUROC mean  0.5051070927165066
+Atelectasis   0.532409486747431
+Cardiomegaly   0.45124138105220624
+Effusion   0.6210487018575463
+Infiltration   0.495781562903107
+Mass   0.49223363741730985
+Nodule   0.4516724060671909
+Pneumonia   0.4737117190690078
+Pneumothorax   0.447323135383046
+Consolidation   0.500347985260679
+Edema   0.5976521473986154
+Emphysema   0.6758707102582546
+Fibrosis   0.4937836717778699
+Pleural_Thickening   0.4361434805202201
+Hernia   0.4022792723186065

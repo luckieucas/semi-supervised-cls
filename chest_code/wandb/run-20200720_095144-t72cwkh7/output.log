@@ -1,0 +1,7 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+image path: ../../dataset/chest/training_data/00002664_000.png
+image path: ../../dataset/chest/training_data/00015246_001.png
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7F216344D290>
+img data: <PIL.Image.Image image mode=RGB size=1024x1024 at 0x7F216344D5D0>

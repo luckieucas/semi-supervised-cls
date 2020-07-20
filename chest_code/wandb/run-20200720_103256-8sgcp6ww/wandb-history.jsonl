@@ -1,0 +1,9 @@
+{"train cls loss": 0.6594294309616089, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.6594294309616089, "_runtime": 15.608867645263672, "_timestamp": 1595212390.5661972, "_step": 0}
+{"AUROC": 0.5081383465455299, "_runtime": 55.887126207351685, "_timestamp": 1595212430.8444557, "_step": 1}
+{"train cls loss": 0.6153650283813477, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.6153650283813477, "_runtime": 59.60714769363403, "_timestamp": 1595212434.5644772, "_step": 2}
+{"AUROC": 0.50444927301978, "_runtime": 97.46223378181458, "_timestamp": 1595212472.4195633, "_step": 3}
+{"train cls loss": 0.5721904635429382, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.5721904635429382, "_runtime": 99.89250564575195, "_timestamp": 1595212474.8498352, "_step": 4}
+{"AUROC": 0.5022777808467869, "_runtime": 134.2203061580658, "_timestamp": 1595212509.1776357, "_step": 5}
+{"train cls loss": 0.5281949639320374, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.5281949639320374, "_runtime": 137.28535151481628, "_timestamp": 1595212512.242681, "_step": 6}
+{"AUROC": 0.5019001207885377, "_runtime": 173.34845900535583, "_timestamp": 1595212548.3057885, "_step": 7}
+{"train cls loss": 0.5062628388404846, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.5062628388404846, "_runtime": 176.47254467010498, "_timestamp": 1595212551.4298742, "_step": 8}

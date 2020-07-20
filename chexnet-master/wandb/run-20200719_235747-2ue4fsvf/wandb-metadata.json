@@ -16,10 +16,11 @@
     "gpu_count": 2,
     "cpu_count": 32,
     "args": [],
-    "state": "running",
+    "state": "finished",
     "jobType": null,
     "mode": "run",
     "name": "DENSE-NET-121_semi-vat-bnm",
     "project": "chest-supervised",
-    "heartbeatAt": "2020-07-19T15:58:06.307013"
+    "heartbeatAt": "2020-07-20T01:32:12.317990",
+    "exitcode": 0
 }

@@ -1,0 +1,105 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.9.3
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+backbone:
+  desc: null
+  value: densenet121
+bnm_loss_weight:
+  desc: null
+  value: 0.0
+bnm_start_epoch:
+  desc: null
+  value: 0
+checkpoint:
+  desc: null
+  value: null
+class_names:
+  desc: null
+  value:
+  - Atelectasis
+  - Cardiomegaly
+  - Effusion
+  - Infiltration
+  - Mass
+  - Nodule
+  - Pneumonia
+  - Pneumothorax
+  - Consolidation
+  - Edema
+  - Emphysema
+  - Fibrosis
+  - Pleural_Thickening
+  - Hernia
+class_num:
+  desc: null
+  value: 14
+crop_size:
+  desc: null
+  value: 224
+drop:
+  desc: null
+  value: 0
+epochs:
+  desc: null
+  value: 100
+exp:
+  desc: null
+  value: model_test
+gpu_ids:
+  desc: null
+  value: 0,1
+labeled_bs:
+  desc: null
+  value: 32
+labeled_num:
+  desc: null
+  value: 80
+lr:
+  desc: null
+  value: 0.0001
+manualSeed:
+  desc: null
+  value: 1337
+pretrained:
+  desc: null
+  value: true
+resize:
+  desc: null
+  value: 256
+root_path:
+  desc: null
+  value: ../../dataset/chest/training_data/
+start_epoch:
+  desc: null
+  value: 0
+task:
+  desc: null
+  value: chest
+test_bs:
+  desc: null
+  value: 64
+test_file:
+  desc: null
+  value: ./dataSplit/test_1_test.txt
+train_bs:
+  desc: null
+  value: 64
+train_file:
+  desc: null
+  value: ./dataSplit/train_1_test.txt
+val_file:
+  desc: null
+  value: ./dataSplit/val_1_test.txt
+vat_loss_weight:
+  desc: null
+  value: 0.0
+vat_start_epoch:
+  desc: null
+  value: 0
