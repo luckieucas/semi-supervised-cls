@@ -15,7 +15,7 @@ parser.add_argument('--task', type=str, default='chest', help='train which task'
 # Datasets
 parser.add_argument('--root_path', type=str, default='../../dataset/chest/training_data/',
                     help='dataset root dir')
-parser.add_argument('--train_file', type=str, default='./dataSplit/train_0_shuflle.txt')
+parser.add_argument('--train_file', type=str, default='./dataSplit/train_0_shuffle.txt')
 parser.add_argument('--test_file', type=str, default='./dataSplit/test_0.txt')
 parser.add_argument('--val_file', type=str, default='./dataSplit/val_0.txt')
 parser.add_argument('--resize', type=int, default=256, help='reize image')
