@@ -21,7 +21,7 @@ parser.add_argument('--val_file', type=str, default='./dataSplit/val_1_test.txt'
 parser.add_argument('--resize', type=int, default=256, help='reize image')
 parser.add_argument('--crop_size', type=int, default=224, help='image crop')
 #semi-supervised setting
-parser.add_argument('--labeled_num', type=int, default=80, help='number of labeled samples')
+parser.add_argument('--labeled_num', type=int, default=22424, help='number of labeled samples')
 parser.add_argument('--labeled_bs', type=int, default=32, help='num of labeled samples in each batch')
 # Optimization options
 parser.add_argument('--epochs', type=int, default=100, help='number of total epochs to run')
@@ -62,7 +62,7 @@ def main():
     class_num = len(class_names)
     args.class_names = class_names
     args.class_num = class_num
-    snap_name = args.task + "_" + args.exp + "_" + args.backbone
+    snap_name = args.task + "_" + args.exp + "_" + args.backbone+"_labeledNum"+str(args.labeled_num)
     wandb.init(project="chest-semi-supervised", name=snap_name)
     wandb.config.update(args)
     Trainer.train(args,wandb)
