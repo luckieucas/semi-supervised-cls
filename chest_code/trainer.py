@@ -113,7 +113,7 @@ class Trainer():
 
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
-            vat_loss_fn = VATLoss()
+            vat_loss_fn = VATLoss(filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
                 vat_loss = vat_loss_fn(model, varInput[args.labeled_bs:])
             else:
