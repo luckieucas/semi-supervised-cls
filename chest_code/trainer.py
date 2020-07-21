@@ -176,7 +176,7 @@ class Trainer():
         aurocMean = np.array(aurocIndividual).mean()
         
         print ('AUROC mean ', aurocMean)
-        wandb.log({'AUROC': aurocMean})
+        wandb.log({'epoch':epoch,'AUROC': aurocMean})
         for i in range (0, len(aurocIndividual)):
             print (CLASS_NAMES[i], ' ', aurocIndividual[i])
         
