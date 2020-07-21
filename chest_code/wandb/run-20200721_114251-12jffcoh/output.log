@@ -1,0 +1,14 @@
+labeled_num: 80
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+AUROC mean  0.5186964816287954
+Traceback (most recent call last):
+  File "main.py", line 74, in <module>
+    main()
+  File "main.py", line 70, in main
+    Trainer.train(args,wandb)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 95, in train
+    Trainer.epochTest_new(args,model,args.root_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 236, in epochTest_new
+    wandb.log({'without test aug AUROC': aurocMean})
+NameError: name 'wandb' is not defined

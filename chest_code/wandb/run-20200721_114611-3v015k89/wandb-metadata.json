@@ -1,0 +1,37 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "main.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "23a51ebda2a2b542050f720af2c53cd0e4bac617"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-07-21T03:46:12.671283",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [
+        "--labeled_num",
+        "80",
+        "--exp",
+        "test",
+        "--train_file",
+        "./dataSplit/train_1_test.txt",
+        "--test_file",
+        "./dataSplit/test_1_test.txt",
+        "--val_file",
+        "./dataSplit/val_1_test.txt"
+    ],
+    "state": "killed",
+    "jobType": null,
+    "mode": "run",
+    "name": "chest_test_densenet121_labeledNum80",
+    "project": "chest-semi-supervised",
+    "heartbeatAt": "2020-07-21T03:56:01.067720",
+    "exitcode": 255
+}

@@ -1,0 +1,41 @@
+{"train cls loss": 0.6647571325302124, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.6647571325302124, "_runtime": 15.11445951461792, "_timestamp": 1595303185.8995595, "_step": 0}
+{"without test aug AUROC": 0.5171527266924459, "_runtime": 29.71572709083557, "_timestamp": 1595303200.500827, "_step": 1}
+{"AUROC": 0.5098824088607742, "_runtime": 60.68901014328003, "_timestamp": 1595303231.4741101, "_step": 2}
+{"train cls loss": 0.6150013208389282, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.6150013208389282, "_runtime": 62.7838408946991, "_timestamp": 1595303233.5689409, "_step": 3}
+{"without test aug AUROC": 0.5289536721660245, "_runtime": 79.18186664581299, "_timestamp": 1595303249.9669666, "_step": 4}
+{"AUROC": 0.5079634445777292, "_runtime": 104.42855167388916, "_timestamp": 1595303275.2136517, "_step": 5}
+{"train cls loss": 0.5802304148674011, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.5802304148674011, "_runtime": 106.49863862991333, "_timestamp": 1595303277.2837386, "_step": 6}
+{"without test aug AUROC": 0.5132692291467678, "_runtime": 119.82406497001648, "_timestamp": 1595303290.609165, "_step": 7}
+{"AUROC": 0.5107246139032452, "_runtime": 144.60783982276917, "_timestamp": 1595303315.3929398, "_step": 8}
+{"train cls loss": 0.5365225672721863, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.5365225672721863, "_runtime": 146.54739236831665, "_timestamp": 1595303317.3324924, "_step": 9}
+{"without test aug AUROC": 0.5152378882615191, "_runtime": 160.47197651863098, "_timestamp": 1595303331.2570765, "_step": 10}
+{"AUROC": 0.5138471143510362, "_runtime": 186.30437064170837, "_timestamp": 1595303357.0894706, "_step": 11}
+{"train cls loss": 0.4929599463939667, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.4929599463939667, "_runtime": 188.52940559387207, "_timestamp": 1595303359.3145056, "_step": 12}
+{"without test aug AUROC": 0.5148046139620958, "_runtime": 201.65106177330017, "_timestamp": 1595303372.4361618, "_step": 13}
+{"AUROC": 0.5149929880853269, "_runtime": 227.81843614578247, "_timestamp": 1595303398.6035361, "_step": 14}
+{"train cls loss": 0.46297556161880493, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.46297556161880493, "_runtime": 229.8425316810608, "_timestamp": 1595303400.6276317, "_step": 15}
+{"without test aug AUROC": 0.5102013187251042, "_runtime": 242.91047716140747, "_timestamp": 1595303413.6955771, "_step": 16}
+{"AUROC": 0.5143867727215403, "_runtime": 268.21993374824524, "_timestamp": 1595303439.0050337, "_step": 17}
+{"train cls loss": 0.43165579438209534, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.43165579438209534, "_runtime": 270.3548367023468, "_timestamp": 1595303441.1399367, "_step": 18}
+{"without test aug AUROC": 0.5188888611986704, "_runtime": 283.5050051212311, "_timestamp": 1595303454.290105, "_step": 19}
+{"AUROC": 0.5116485236418777, "_runtime": 308.765664100647, "_timestamp": 1595303479.550764, "_step": 20}
+{"train cls loss": 0.39842572808265686, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.39842572808265686, "_runtime": 310.7748599052429, "_timestamp": 1595303481.55996, "_step": 21}
+{"without test aug AUROC": 0.5100074206346851, "_runtime": 324.76704716682434, "_timestamp": 1595303495.5521472, "_step": 22}
+{"AUROC": 0.5088555859326569, "_runtime": 350.54420351982117, "_timestamp": 1595303521.3293035, "_step": 23}
+{"train cls loss": 0.375202476978302, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.375202476978302, "_runtime": 352.564252614975, "_timestamp": 1595303523.3493526, "_step": 24}
+{"without test aug AUROC": 0.5114828065341571, "_runtime": 366.0550444126129, "_timestamp": 1595303536.8401444, "_step": 25}
+{"AUROC": 0.5063657547545434, "_runtime": 390.6675353050232, "_timestamp": 1595303561.4526353, "_step": 26}
+{"train cls loss": 0.3545994758605957, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.3545994758605957, "_runtime": 392.75695872306824, "_timestamp": 1595303563.5420587, "_step": 27}
+{"without test aug AUROC": 0.5042623457240004, "_runtime": 406.66704082489014, "_timestamp": 1595303577.4521408, "_step": 28}
+{"AUROC": 0.502381676482309, "_runtime": 431.88310718536377, "_timestamp": 1595303602.6682072, "_step": 29}
+{"train cls loss": 0.3310941159725189, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.3310941159725189, "_runtime": 433.9749400615692, "_timestamp": 1595303604.76004, "_step": 30}
+{"without test aug AUROC": 0.49773827945612975, "_runtime": 447.28419613838196, "_timestamp": 1595303618.0692961, "_step": 31}
+{"AUROC": 0.5027355142664106, "_runtime": 472.6597352027893, "_timestamp": 1595303643.4448352, "_step": 32}
+{"train cls loss": 0.30960461497306824, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.30960461497306824, "_runtime": 474.64216709136963, "_timestamp": 1595303645.427267, "_step": 33}
+{"without test aug AUROC": 0.4988389889834455, "_runtime": 488.4431664943695, "_timestamp": 1595303659.2282665, "_step": 34}
+{"AUROC": 0.5055561619333354, "_runtime": 516.9798438549042, "_timestamp": 1595303687.7649438, "_step": 35}
+{"train cls loss": 0.28934216499328613, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.28934216499328613, "_runtime": 519.2666921615601, "_timestamp": 1595303690.0517921, "_step": 36}
+{"without test aug AUROC": 0.4975099016956687, "_runtime": 532.425764799118, "_timestamp": 1595303703.2108648, "_step": 37}
+{"AUROC": 0.5107704001244168, "_runtime": 559.3321368694305, "_timestamp": 1595303730.1172369, "_step": 38}
+{"train cls loss": 0.2755837142467499, "train vat loss": 0.0, "train bnm loss": 0.0, "train total loss": 0.2755837142467499, "_runtime": 561.5421540737152, "_timestamp": 1595303732.327254, "_step": 39}
+{"without test aug AUROC": 0.5221067124504312, "_runtime": 575.5800094604492, "_timestamp": 1595303746.3651094, "_step": 40}

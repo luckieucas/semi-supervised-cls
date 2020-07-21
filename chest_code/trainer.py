@@ -92,6 +92,7 @@ class Trainer():
         for epoch in range(args.start_epoch, args.epochs):
             Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
             Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal,loss_fn)
+            Trainer.epochTest_new(args,wandb, model,args.root_path)
             Trainer.epochTest(args, wandb, model, epoch, dataLoaderTest)
 
     def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler,loss_fn):
@@ -176,6 +177,63 @@ class Trainer():
         
         print ('AUROC mean ', aurocMean)
         wandb.log({'AUROC': aurocMean})
+        for i in range (0, len(aurocIndividual)):
+            print (CLASS_NAMES[i], ' ', aurocIndividual[i])
+        
+     
+        return
+
+
+    def epochTest_new(args, wandb, model, pathDirData):  
+        nnClassCount = 14
+        trBatchSize = 64
+        transResize = 256
+        transCrop = 224
+        pathFileTest = './dataSplit/test_1_test.txt'
+        timestampLaunch = ''      
+        
+        CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
+                'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
+        
+        cudnn.benchmark = True
+        
+        #-------------------- SETTINGS: NETWORK ARCHITECTURE, MODEL LOAD
+
+        #-------------------- SETTINGS: DATA TRANSFORMS, TEN CROPS
+        normalize = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        
+        #-------------------- SETTINGS: DATASET BUILDERS
+        transforms_list = []
+        transforms_list.append(transforms.RandomResizedCrop(args.crop_size))
+        transforms_list.append(transforms.RandomHorizontalFlip())
+        transforms_list.append(transforms.ToTensor())
+        transforms_list.append(normalize)
+        transform_sequence = transforms.Compose(transforms_list)
+        
+        datasetTest = DatasetGenerator(pathImageDirectory=pathDirData, pathDatasetFile=pathFileTest, transform=transform_sequence)
+        dataLoaderTest = DataLoader(dataset=datasetTest, batch_size=trBatchSize, num_workers=8, shuffle=False, pin_memory=True)
+        
+        outGT = torch.FloatTensor().cuda()
+        outPRED = torch.FloatTensor().cuda()
+       
+        model.eval()
+        
+        for i, (input, target) in enumerate(dataLoaderTest):
+
+
+            target = target.cuda()
+            outGT = torch.cat((outGT, target), 0)
+            
+            #varInput = torch.autograd.Variable(input.view(-1, c, h, w).cuda())
+            with torch.no_grad():
+                out = model(input.cuda())
+            outPRED = torch.cat((outPRED, out.data), 0)
+
+        aurocIndividual = Trainer.computeAUROC(outGT, outPRED, nnClassCount)
+        aurocMean = np.array(aurocIndividual).mean()
+        
+        print ('AUROC mean ', aurocMean)
+        wandb.log({'without test aug AUROC': aurocMean})
         for i in range (0, len(aurocIndividual)):
             print (CLASS_NAMES[i], ' ', aurocIndividual[i])
         

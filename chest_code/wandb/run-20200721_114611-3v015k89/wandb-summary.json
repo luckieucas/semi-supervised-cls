@@ -1,0 +1,1 @@
+{"train vat loss": 0.0, "_timestamp": 1595303746.3651094, "_step": 40, "_runtime": 575.5800094604492, "train bnm loss": 0.0, "train total loss": 0.2755837142467499, "train cls loss": 0.2755837142467499, "without test aug AUROC": 0.5221067124504312, "AUROC": 0.5107704001244168}
