@@ -58,7 +58,7 @@ def train_semi_model(args,snapshot_path):
     logging.info(str(args))
     
     #use wandb to visulize model
-    wandb.init(project="semi-supervised",name=snapshot_path.split("/")[-2])
+    wandb.init(project=args.task + "-semi-supervised",name=snapshot_path.split("/")[-2])
     wandb.config.update(args)
 
 
@@ -128,16 +128,7 @@ def train_semi_model(args,snapshot_path):
     val_dataloader = DataLoader(dataset=val_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
-                                shuffle=False, num_workers=8, pin_memory=True)#, worker_init_fn=worker_init_fn)
-
-    model.train()
-    loss_fn = losses.cross_entropy_loss(args)
-    loss_supCon_fn = losses.SupConLoss()
-    vat_loss_fn = losses.VATLoss(dis=args.vat_dis_type,filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
-    if args.task == 'chest':
-        loss_fn = losses.Loss_Ones()
-    if args.consistency_type == 'mse':
-        consistency_criterion = losses.softmax_mse_loss
+                                    wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':n = losses.softmax_mse_loss
     elif args.consistency_type == 'kl':
         consistency_criterion = losses.softmax_kl_loss
     else:
@@ -332,7 +323,7 @@ def train_semi_model(args,snapshot_path):
         logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
         logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
         logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
-        wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg})
+        wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,'TEST Specs':Specs_avg})
         # save model
         save_mode_path = os.path.join(snapshot_path + 'checkpoint/', 'epoch_' + str(epoch+1) + '.pth')
         torch.save({    'epoch': epoch + 1,
