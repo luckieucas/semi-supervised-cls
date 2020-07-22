@@ -58,7 +58,7 @@ def train_semi_model(args,snapshot_path):
     logging.info(str(args))
     
     #use wandb to visulize model
-    wandb.init(project=args.task + "-semi-supervised",name=snapshot_path.split("/")[-2])
+    wandb.init(project=args.task+"-semi-supervised",name=snapshot_path.split("/")[-2])
     wandb.config.update(args)
 
 
@@ -128,7 +128,16 @@ def train_semi_model(args,snapshot_path):
     val_dataloader = DataLoader(dataset=val_dataset, batch_size=batch_size,
                                 shuffle=False, num_workers=8, pin_memory=True, worker_init_fn=worker_init_fn)
     test_dataloader = DataLoader(dataset=test_dataset, batch_size=batch_size,
-                                    wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':n = losses.softmax_mse_loss
+                                shuffle=False, num_workers=8, pin_memory=True)#, worker_init_fn=worker_init_fn)
+
+    model.train()
+    loss_fn = losses.cross_entropy_loss(args)
+    loss_supCon_fn = losses.SupConLoss()
+    vat_loss_fn = losses.VATLoss(dis=args.vat_dis_type,filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
+    if args.task == 'chest':
+        loss_fn = losses.Loss_Ones()
+    if args.consistency_type == 'mse':
+        consistency_criterion = losses.softmax_mse_loss
     elif args.consistency_type == 'kl':
         consistency_criterion = losses.softmax_kl_loss
     else:
