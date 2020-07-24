@@ -73,7 +73,7 @@ def main():
     snap_name = args.task + "_" + args.exp + "_" + args.backbone+"_labeledNum"+str(args.labeled_num)
     logging.basicConfig(filename="../../log/"+snap_name+"_log.txt", level=logging.INFO,
                         format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
-    wandb.init(project="chest-semi-supervised", name=snap_name)
+    wandb.init(project=args.task + "-semi-supervised-newcode", name=snap_name)
     wandb.config.update(args)
     Trainer.train(args,wandb,logging)
 
