@@ -195,17 +195,17 @@ class cross_entropy_loss(object):
     """
     
     def __init__(self, args):
-        class_num = args.class_num
+        class_num = args.class_num_dict
         class_weight = torch.Tensor([sum(class_num)/i for i in class_num]).cuda()
         self.base_loss = torch.nn.CrossEntropyLoss(weight=class_weight, reduction='mean')
     
     def __call__(self, output, target):
         # target[target == -1] = 2
-        output_softmax = F.softmax(output, dim=1)
+        #output_softmax = F.softmax(output, dim=1)
         target = torch.argmax(target, dim=1)
         # print("output_softmax:",output_softmax)
         # print("target: ",target)
-        return self.base_loss(output_softmax, target.long())
+        return self.base_loss(output, target.long())
 
 
 def bnm_loss(out_logits):

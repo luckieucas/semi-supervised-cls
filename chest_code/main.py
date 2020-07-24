@@ -6,12 +6,13 @@ import random
 
 import torch
 import wandb
+import logging
 from trainer import Trainer
 from config import CLASS_NAMES_DICTS,CLASS_NUM_DICTS
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp', type=str, default='model_test', help='the name of this run')
-parser.add_argument('--task', type=str, default='chest', help='train which task')
+parser.add_argument('--task', type=str, default='skin', help='train which task')
 # Datasets
 parser.add_argument('--root_path', type=str, default='../../dataset/chest/training_data/',
                     help='dataset root dir')
@@ -21,7 +22,7 @@ parser.add_argument('--val_file', type=str, default='./dataSplit/val_0.txt')
 parser.add_argument('--resize', type=int, default=256, help='reize image')
 parser.add_argument('--crop_size', type=int, default=224, help='image crop')
 #semi-supervised setting
-parser.add_argument('--labeled_num', type=int, default=22424, help='number of labeled samples')
+parser.add_argument('--labeled_num', type=int, default=500, help='number of labeled samples')
 parser.add_argument('--labeled_bs', type=int, default=32, help='num of labeled samples in each batch')
 # Optimization options
 parser.add_argument('--epochs', type=int, default=100, help='number of total epochs to run')
@@ -61,13 +62,20 @@ if use_cuda:
 
 def main():
     class_names = CLASS_NAMES_DICTS[args.task]
+    args.class_num_dict = CLASS_NUM_DICTS[args.task]
     class_num = len(class_names)
     args.class_names = class_names
     args.class_num = class_num
+    args.root_path = '../../dataset/'+args.task+'/training_data/'
+    args.train_file = '../../dataset/'+args.task+'/training.txt'
+    args.test_file = '../../dataset/'+args.task+'/testing.txt'
+    args.val_file = '../../dataset/'+args.task+'/validation.txt'
     snap_name = args.task + "_" + args.exp + "_" + args.backbone+"_labeledNum"+str(args.labeled_num)
+    logging.basicConfig(filename="../../log/"+snap_name+"_log.txt", level=logging.INFO,
+                        format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
     wandb.init(project="chest-semi-supervised", name=snap_name)
     wandb.config.update(args)
-    Trainer.train(args,wandb)
+    Trainer.train(args,wandb,logging)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,19 @@
+labeled_num: 1000
+Traceback (most recent call last):
+  File "main.py", line 82, in <module>
+    main()
+  File "main.py", line 78, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 97, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 119, in epochTrain
+    cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/loss.py", line 916, in forward
+    ignore_index=self.ignore_index, reduction=self.reduction)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 1995, in cross_entropy
+    return nll_loss(log_softmax(input, 1), target, weight, None, ignore_index, None, reduction)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 1824, in nll_loss
+    ret = torch._C._nn.nll_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index)
+RuntimeError: multi-target not supported at /opt/conda/conda-bld/pytorch_1565272271120/work/aten/src/THCUNN/generic/ClassNLLCriterion.cu:15

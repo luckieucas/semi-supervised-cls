@@ -18,12 +18,14 @@ from models import DenseNet121,DenseNet169,DenseNet201
 from DatasetGenerator import DatasetGenerator, TwoStreamBatchSampler
 from losses import VATLoss,bnm_loss
 from utils import AverageMeter
+from metrics import compute_metrics_test
+from losses import cross_entropy_loss
 
 
 class Trainer():
     # train the classification model
 
-    def train(args,wandb):
+    def train(args,wandb,logging):
         """
         train model
         """
@@ -80,7 +82,10 @@ class Trainer():
         scheduler = ReduceLROnPlateau(optimizer, factor = 0.1, patience = 5, mode='min')
 
         #--------------------SETTINGS: LOSS
-        loss_fn = torch.nn.BCELoss(size_average=True)
+        class_weight = torch.Tensor([sum(args.class_num_dict)/i for i in args.class_num_dict]).cuda()
+        loss_fn = cross_entropy_loss(args)
+        if args.task == 'chest':
+            loss_fn = torch.nn.BCELoss(size_average=True)
 
         #------Load checkpoint
         if args.checkpoint != None:
@@ -92,8 +97,8 @@ class Trainer():
         for epoch in range(args.start_epoch, args.epochs):
             Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
             Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal,loss_fn)
-            Trainer.epochTest_new(args,wandb, model,args.root_path)
-            Trainer.epochTest(args, wandb, model, epoch, dataLoaderTest)
+            Trainer.epochTest_new(args,wandb, logging, model, epoch, args.root_path)
+            Trainer.epochTest(args, wandb, logging, model, epoch, dataLoaderTest)
 
     def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler,loss_fn):
         model.train()
@@ -109,7 +114,7 @@ class Trainer():
             data_time.update(time.time() - end)
             target = target.cuda()
             varInput = torch.autograd.Variable(input)
-            varTarget = torch.autograd.Variable(target)
+            varTarget = torch.autograd.Variable(target).long()
             varOutput = model(varInput)
 
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
@@ -152,7 +157,7 @@ class Trainer():
 
         return outLoss, losstensorMean
 
-    def epochTest(args, wandb, model, epoch, dataloader):
+    def epochTest(args, wandb, logging, model, epoch, dataloader):
         model.eval()
         CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
         'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
@@ -172,24 +177,34 @@ class Trainer():
             outMean = out.view(bs, n_crops, -1).mean(1)
             outPRED = torch.cat((outPRED, outMean.data), 0)
 
-        aurocIndividual = Trainer.computeAUROC(outGT, outPRED, args.class_num)
-        aurocMean = np.array(aurocIndividual).mean()
-        
-        print ('AUROC mean ', aurocMean)
-        wandb.log({'epoch':epoch,'AUROC': aurocMean})
-        for i in range (0, len(aurocIndividual)):
-            print (CLASS_NAMES[i], ' ', aurocIndividual[i])
+        AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(outGT, outPRED, args, competition=True)
+        AUROC_avg = np.array(AUROCs).mean()
+        Accus_avg = np.array(Accus).mean()
+        Senss_avg = np.array(Senss).mean()
+        Specs_avg = np.array(Specs).mean()
+        Pre_avg = np.array(Pre).mean()
+        F1_avg = np.array(F1).mean()
+        #aurocMean = np.array(aurocIndividual).mean()
+        logging.info("\nTEST Student: Epoch: {}".format(epoch))
+        logging.info("\nTEST AUROC: {:6f}, TEST Accus: {:6f}, TEST Senss: {:6f}, TEST Specs: {:6f}, TEST Pre: {:6f}, TEST F1: {:6f}"
+                    .format(AUROC_avg, Accus_avg, Senss_avg, Specs_avg, Pre_avg, F1_avg))
+        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(AUROCs)]))
+        logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
+        logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
+        logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
+        wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
+        'TEST Specs':Specs_avg,'TEST Pre':Pre_avg,'TEST F1':F1_avg})
         
      
         return
 
 
-    def epochTest_new(args, wandb, model, pathDirData):  
-        nnClassCount = 14
+    def epochTest_new(args, wandb, logging, model, epoch, pathDirData):  
+        nnClassCount = args.class_num
         trBatchSize = 64
         transResize = 256
         transCrop = 224
-        pathFileTest = './dataSplit/test_1_test.txt'
+        pathFileTest = args.test_file
         timestampLaunch = ''      
         
         CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
@@ -229,13 +244,28 @@ class Trainer():
                 out = model(input.cuda())
             outPRED = torch.cat((outPRED, out.data), 0)
 
-        aurocIndividual = Trainer.computeAUROC(outGT, outPRED, nnClassCount)
-        aurocMean = np.array(aurocIndividual).mean()
-        
-        print ('AUROC mean ', aurocMean)
-        wandb.log({'without test aug AUROC': aurocMean})
-        for i in range (0, len(aurocIndividual)):
-            print (CLASS_NAMES[i], ' ', aurocIndividual[i])
+        #aurocIndividual = Trainer.computeAUROC(outGT, outPRED, nnClassCount)
+        AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(outGT, outPRED, args, competition=True)
+        AUROC_avg = np.array(AUROCs).mean()
+        Accus_avg = np.array(Accus).mean()
+        Senss_avg = np.array(Senss).mean()
+        Specs_avg = np.array(Specs).mean()
+        Pre_avg = np.array(Pre).mean()
+        F1_avg = np.array(F1).mean()
+        #aurocMean = np.array(aurocIndividual).mean()
+        logging.info("\nTEST Student without aug: Epoch: {}".format(epoch))
+        logging.info("\nTEST AUROC without aug: {:6f}, TEST Accus without aug: {:6f}, TEST Senss without aug: {:6f}, TEST Specs: {:6f}, TEST Pre: {:6f}, TEST F1 without aug: {:6f}"
+                    .format(AUROC_avg, Accus_avg, Senss_avg, Specs_avg, Pre_avg, F1_avg))
+        logging.info("AUROCs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(AUROCs)]))
+        logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
+        logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
+        logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
+        wandb.log({'TEST AUROC without aug': AUROC_avg,'TEST Accus without aug':Accus_avg,'TEST Senss without aug':Senss_avg,
+        'TEST Specs without aug':Specs_avg,'TEST Pre without aug':Pre_avg,'TEST F1 without aug':F1_avg})
+        # print ('AUROC mean ', aurocMean)
+        # wandb.log({'without test aug AUROC': aurocMean})
+        # for i in range (0, len(aurocIndividual)):
+        #     print (CLASS_NAMES[i], ' ', aurocIndividual[i])
         
      
         return

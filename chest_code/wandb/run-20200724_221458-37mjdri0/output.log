@@ -1,0 +1,11 @@
+labeled_num: 1000
+Traceback (most recent call last):
+  File "main.py", line 82, in <module>
+    main()
+  File "main.py", line 78, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 100, in train
+    Trainer.epochTest_new(args,wandb, logging, model, epoch, args.root_path)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 234, in epochTest_new
+    model.eval()
+AttributeError: 'int' object has no attribute 'eval'
