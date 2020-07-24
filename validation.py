@@ -127,11 +127,11 @@ def epochTest_metrics(model, dataLoader, args):
             output_mean = output.view(bs, n_crops, -1).mean(1)
             pred = torch.cat((pred, output_mean.data), 0)
 
-        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred,args, competition=True)
+        AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(gt, pred,competition=True)
     
     model.train(training)
 
-    return AUROCs, Accus, Senss, Specs
+    return AUROCs, Accus, Senss, Specs, Pre, F1
 
 
 
@@ -152,10 +152,7 @@ def epochVal_metrics_test(model, dataLoader, args):
     with torch.no_grad():
         for i, (study, _, image, label) in enumerate(dataLoader):
             image, label = image.cuda(), label.cuda()
-            if args.supervise_level == 'full':
-                output = model(image)
-            else:
-                output = model(image)
+            _, output = model(image)
             output = F.softmax(output, dim=1)
             # _, output = model(image)
 

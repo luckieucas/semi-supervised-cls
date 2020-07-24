@@ -1,0 +1,1084 @@
+create semi supervised model
+create semi supervised model
+single label  Total # images:7000, labels:7000
+single label  Total # images:1000, labels:1000
+single label  Total # images:2015, labels:2015
+train_dataset len: 7000
+labeled_num: 700
+
+Epoch: 0, iteration: 0/87, ==> train <===, loss: 1.940537, classification loss: 1.940537,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 0.0001
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [38.0, 446.0, 29.0, 22.0, 64.0, 0.0, 0.0]
+
+VAL Student: Epoch: 0, iteration: 86
+
+VAL AUROC: 0.793872, VAL Accus: 0.405104, VAL Senss: 0.558496, VAL Specs: 0.863721
+AUROCs: Melanoma:0.771850 Melanocytic nevus:0.874950 Basal cell carcinoma:0.909013 Actinic keratosis:0.943217 Benign keratosis:0.820378 Dermatofibroma:0.459286 Vascular lesion:0.778409
+Accus: Melanoma:0.319328 Melanocytic nevus:0.672700 Basal cell carcinoma:0.537037 Actinic keratosis:0.666667 Benign keratosis:0.640000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:0.579832 Melanocytic nevus:0.701357 Basal cell carcinoma:0.888889 Actinic keratosis:0.939394 Benign keratosis:0.800000 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Specs: Melanoma:0.800227 Melanocytic nevus:0.884273 Basal cell carcinoma:0.805497 Actinic keratosis:0.879007 Benign keratosis:0.681111 Dermatofibroma:0.995935 Vascular lesion:1.000000
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [63.0, 854.0, 60.0, 31.0, 145.0, 0.0, 0.0]
+
+TEST Student: Epoch: 0, iteration: 86
+
+TEST AUROC: 0.821356, TEST Accus: 0.380471, TEST Senss: 0.954982, TEST Specs: 0.228288
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+Accus: Melanoma:0.272727 Melanocytic nevus:0.633062 Basal cell carcinoma:0.545455 Actinic keratosis:0.534483 Benign keratosis:0.677570 Dermatofibroma:0.000000 Vascular lesion:0.000000
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth
+
+Epoch: 1, iteration: 0/87, ==> train <===, loss: 1.913160, classification loss: 1.913160,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 9e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [56.0, 476.0, 20.0, 25.0, 50.0, 1.0, 11.0]
+
+VAL Student: Epoch: 1, iteration: 86
+
+VAL AUROC: 0.846006, VAL Accus: 0.516045, VAL Senss: 0.664907, VAL Specs: 0.861299
+AUROCs: Melanoma:0.811835 Melanocytic nevus:0.881628 Basal cell carcinoma:0.926004 Actinic keratosis:0.928739 Benign keratosis:0.858356 Dermatofibroma:0.587970 Vascular lesion:0.927513
+Accus: Melanoma:0.470588 Melanocytic nevus:0.717949 Basal cell carcinoma:0.370370 Actinic keratosis:0.757576 Benign keratosis:0.500000 Dermatofibroma:0.062500 Vascular lesion:0.733333
+Senss: Melanoma:0.697479 Melanocytic nevus:0.832579 Basal cell carcinoma:0.777778 Actinic keratosis:0.818182 Benign keratosis:0.670000 Dermatofibroma:0.125000 Vascular lesion:0.733333
+Specs: Melanoma:0.794552 Melanocytic nevus:0.753709 Basal cell carcinoma:0.866808 Actinic keratosis:0.873837 Benign keratosis:0.860000 Dermatofibroma:0.985772 Vascular lesion:0.894416
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [109.0, 896.0, 56.0, 36.0, 132.0, 1.0, 29.0]
+
+TEST Student: Epoch: 1, iteration: 86
+
+TEST AUROC: 0.855136, TEST Accus: 0.551943, TEST Senss: 0.902730, TEST Specs: 0.426578
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+Accus: Melanoma:0.471861 Melanocytic nevus:0.664196 Basal cell carcinoma:0.509091 Actinic keratosis:0.620690 Benign keratosis:0.616822 Dermatofibroma:0.045455 Vascular lesion:0.935484
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth
+
+Epoch: 2, iteration: 0/87, ==> train <===, loss: 1.935019, classification loss: 1.935019,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 8.1e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [64.0, 445.0, 35.0, 22.0, 59.0, 1.0, 9.0]
+
+VAL Student: Epoch: 2, iteration: 86
+
+VAL AUROC: 0.850204, VAL Accus: 0.539474, VAL Senss: 0.692522, VAL Specs: 0.869177
+AUROCs: Melanoma:0.782490 Melanocytic nevus:0.903926 Basal cell carcinoma:0.951824 Actinic keratosis:0.941368 Benign keratosis:0.834511 Dermatofibroma:0.655615 Vascular lesion:0.881692
+Accus: Melanoma:0.537815 Melanocytic nevus:0.671192 Basal cell carcinoma:0.648148 Actinic keratosis:0.666667 Benign keratosis:0.590000 Dermatofibroma:0.062500 Vascular lesion:0.600000
+Senss: Melanoma:0.680672 Melanocytic nevus:0.811463 Basal cell carcinoma:0.870370 Actinic keratosis:0.848485 Benign keratosis:0.720000 Dermatofibroma:0.250000 Vascular lesion:0.666667
+Specs: Melanoma:0.750284 Melanocytic nevus:0.830861 Basal cell carcinoma:0.885835 Actinic keratosis:0.889349 Benign keratosis:0.812222 Dermatofibroma:0.951220 Vascular lesion:0.964467
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [132.0, 875.0, 65.0, 42.0, 132.0, 6.0, 22.0]
+
+TEST Student: Epoch: 2, iteration: 86
+
+TEST AUROC: 0.867501, TEST Accus: 0.590619, TEST Senss: 0.894556, TEST Specs: 0.586864
+AUROCs: Melanoma:0.814850 Melanocytic nevus:0.906486 Basal cell carcinoma:0.929821 Actinic keratosis:0.921370 Benign keratosis:0.856814 Dermatofibroma:0.690234 Vascular lesion:0.952930
+Accus: Melanoma:0.571429 Melanocytic nevus:0.648629 Basal cell carcinoma:0.590909 Actinic keratosis:0.724138 Benign keratosis:0.616822 Dermatofibroma:0.272727 Vascular lesion:0.709677
+Senss: Melanoma:0.948052 Melanocytic nevus:0.945886 Basal cell carcinoma:0.972727 Actinic keratosis:0.948276 Benign keratosis:0.920561 Dermatofibroma:0.590909 Vascular lesion:0.935484
+Specs: Melanoma:0.439462 Melanocytic nevus:0.596096 Basal cell carcinoma:0.609974 Actinic keratosis:0.621870 Benign keratosis:0.525819 Dermatofibroma:0.598595 Vascular lesion:0.716230
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_3.pth
+
+Epoch: 3, iteration: 0/87, ==> train <===, loss: 1.930994, classification loss: 1.930994,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 7.290000000000001e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [76.0, 497.0, 39.0, 16.0, 55.0, 3.0, 11.0]
+
+VAL Student: Epoch: 3, iteration: 86
+
+VAL AUROC: 0.826518, VAL Accus: 0.580883, VAL Senss: 0.708376, VAL Specs: 0.881678
+AUROCs: Melanoma:0.846565 Melanocytic nevus:0.914945 Basal cell carcinoma:0.965938 Actinic keratosis:0.794961 Benign keratosis:0.874489 Dermatofibroma:0.480437 Vascular lesion:0.908291
+Accus: Melanoma:0.638655 Melanocytic nevus:0.749623 Basal cell carcinoma:0.722222 Actinic keratosis:0.484848 Benign keratosis:0.550000 Dermatofibroma:0.187500 Vascular lesion:0.733333
+Senss: Melanoma:0.806723 Melanocytic nevus:0.853695 Basal cell carcinoma:0.851852 Actinic keratosis:0.636364 Benign keratosis:0.760000 Dermatofibroma:0.250000 Vascular lesion:0.800000
+Specs: Melanoma:0.721907 Melanocytic nevus:0.813056 Basal cell carcinoma:0.914376 Actinic keratosis:0.956567 Benign keratosis:0.840000 Dermatofibroma:0.955285 Vascular lesion:0.970558
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [163.0, 966.0, 86.0, 26.0, 122.0, 5.0, 28.0]
+
+TEST Student: Epoch: 3, iteration: 86
+
+TEST AUROC: 0.866924, TEST Accus: 0.621771, TEST Senss: 0.860013, TEST Specs: 0.686272
+AUROCs: Melanoma:0.869142 Melanocytic nevus:0.917697 Basal cell carcinoma:0.961861 Actinic keratosis:0.863725 Benign keratosis:0.892466 Dermatofibroma:0.568490 Vascular lesion:0.995090
+Accus: Melanoma:0.705628 Melanocytic nevus:0.716086 Basal cell carcinoma:0.781818 Actinic keratosis:0.448276 Benign keratosis:0.570093 Dermatofibroma:0.227273 Vascular lesion:0.903226
+Senss: Melanoma:0.969697 Melanocytic nevus:0.939956 Basal cell carcinoma:0.990909 Actinic keratosis:0.775862 Benign keratosis:0.934579 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.397422 Melanocytic nevus:0.689189 Basal cell carcinoma:0.790026 Actinic keratosis:0.790496 Benign keratosis:0.569128 Dermatofibroma:0.755143 Vascular lesion:0.812500
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_4.pth
+
+Epoch: 4, iteration: 0/87, ==> train <===, loss: 1.843418, classification loss: 1.843418,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 6.561000000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [70.0, 492.0, 31.0, 24.0, 62.0, 2.0, 9.0]
+
+VAL Student: Epoch: 4, iteration: 86
+
+VAL AUROC: 0.877464, VAL Accus: 0.568095, VAL Senss: 0.718176, VAL Specs: 0.895493
+AUROCs: Melanoma:0.818550 Melanocytic nevus:0.922191 Basal cell carcinoma:0.927218 Actinic keratosis:0.961612 Benign keratosis:0.857533 Dermatofibroma:0.751524 Vascular lesion:0.903621
+Accus: Melanoma:0.588235 Melanocytic nevus:0.742081 Basal cell carcinoma:0.574074 Actinic keratosis:0.727273 Benign keratosis:0.620000 Dermatofibroma:0.125000 Vascular lesion:0.600000
+Senss: Melanoma:0.747899 Melanocytic nevus:0.844646 Basal cell carcinoma:0.703704 Actinic keratosis:0.848485 Benign keratosis:0.770000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.759364 Melanocytic nevus:0.830861 Basal cell carcinoma:0.958774 Actinic keratosis:0.915202 Benign keratosis:0.837778 Dermatofibroma:0.977642 Vascular lesion:0.988832
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [148.0, 953.0, 60.0, 44.0, 133.0, 5.0, 25.0]
+
+TEST Student: Epoch: 4, iteration: 86
+
+TEST AUROC: 0.883126, TEST Accus: 0.615205, TEST Senss: 0.852244, TEST Specs: 0.742637
+AUROCs: Melanoma:0.843925 Melanocytic nevus:0.928072 Basal cell carcinoma:0.929912 Actinic keratosis:0.923995 Benign keratosis:0.865742 Dermatofibroma:0.722689 Vascular lesion:0.967547
+Accus: Melanoma:0.640693 Melanocytic nevus:0.706449 Basal cell carcinoma:0.545455 Actinic keratosis:0.758621 Benign keratosis:0.621495 Dermatofibroma:0.227273 Vascular lesion:0.806452
+Senss: Melanoma:0.943723 Melanocytic nevus:0.925130 Basal cell carcinoma:0.881818 Actinic keratosis:0.913793 Benign keratosis:0.911215 Dermatofibroma:0.454545 Vascular lesion:0.935484
+Specs: Melanoma:0.489350 Melanocytic nevus:0.720721 Basal cell carcinoma:0.875591 Actinic keratosis:0.834951 Benign keratosis:0.561355 Dermatofibroma:0.831410 Vascular lesion:0.885081
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_5.pth
+
+Epoch: 5, iteration: 0/87, ==> train <===, loss: 1.871700, classification loss: 1.871700,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.904900000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [73.0, 511.0, 32.0, 18.0, 50.0, 7.0, 12.0]
+
+VAL Student: Epoch: 5, iteration: 86
+
+VAL AUROC: 0.844152, VAL Accus: 0.608533, VAL Senss: 0.707290, VAL Specs: 0.889091
+AUROCs: Melanoma:0.826019 Melanocytic nevus:0.926622 Basal cell carcinoma:0.947126 Actinic keratosis:0.861834 Benign keratosis:0.828067 Dermatofibroma:0.670668 Vascular lesion:0.848731
+Accus: Melanoma:0.613445 Melanocytic nevus:0.770739 Basal cell carcinoma:0.592593 Actinic keratosis:0.545455 Benign keratosis:0.500000 Dermatofibroma:0.437500 Vascular lesion:0.800000
+Senss: Melanoma:0.764706 Melanocytic nevus:0.897436 Basal cell carcinoma:0.722222 Actinic keratosis:0.666667 Benign keratosis:0.600000 Dermatofibroma:0.500000 Vascular lesion:0.800000
+Specs: Melanoma:0.724177 Melanocytic nevus:0.777448 Basal cell carcinoma:0.959831 Actinic keratosis:0.948294 Benign keratosis:0.891111 Dermatofibroma:0.934959 Vascular lesion:0.987817
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [156.0, 1013.0, 73.0, 33.0, 116.0, 7.0, 25.0]
+
+TEST Student: Epoch: 5, iteration: 86
+
+TEST AUROC: 0.885593, TEST Accus: 0.617935, TEST Senss: 0.850755, TEST Specs: 0.760637
+AUROCs: Melanoma:0.857313 Melanocytic nevus:0.923915 Basal cell carcinoma:0.946471 Actinic keratosis:0.900737 Benign keratosis:0.866489 Dermatofibroma:0.720796 Vascular lesion:0.983432
+Accus: Melanoma:0.675325 Melanocytic nevus:0.750927 Basal cell carcinoma:0.663636 Actinic keratosis:0.568966 Benign keratosis:0.542056 Dermatofibroma:0.318182 Vascular lesion:0.806452
+Senss: Melanoma:0.943723 Melanocytic nevus:0.965901 Basal cell carcinoma:0.881818 Actinic keratosis:0.810345 Benign keratosis:0.827103 Dermatofibroma:0.590909 Vascular lesion:0.935484
+Specs: Melanoma:0.507287 Melanocytic nevus:0.588589 Basal cell carcinoma:0.858793 Actinic keratosis:0.871231 Benign keratosis:0.782898 Dermatofibroma:0.791771 Vascular lesion:0.923891
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_6.pth
+
+Epoch: 6, iteration: 0/87, ==> train <===, loss: 1.848934, classification loss: 1.848934,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 5.314410000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 538.0, 30.0, 17.0, 47.0, 6.0, 12.0]
+
+VAL Student: Epoch: 6, iteration: 86
+
+VAL AUROC: 0.847146, VAL Accus: 0.581913, VAL Senss: 0.679733, VAL Specs: 0.899938
+AUROCs: Melanoma:0.851630 Melanocytic nevus:0.921555 Basal cell carcinoma:0.909385 Actinic keratosis:0.878788 Benign keratosis:0.856400 Dermatofibroma:0.670033 Vascular lesion:0.842234
+Accus: Melanoma:0.546218 Melanocytic nevus:0.811463 Basal cell carcinoma:0.555556 Actinic keratosis:0.515152 Benign keratosis:0.470000 Dermatofibroma:0.375000 Vascular lesion:0.800000
+Senss: Melanoma:0.756303 Melanocytic nevus:0.885370 Basal cell carcinoma:0.592593 Actinic keratosis:0.636364 Benign keratosis:0.650000 Dermatofibroma:0.437500 Vascular lesion:0.800000
+Specs: Melanoma:0.793417 Melanocytic nevus:0.768546 Basal cell carcinoma:0.968288 Actinic keratosis:0.948294 Benign keratosis:0.891111 Dermatofibroma:0.963415 Vascular lesion:0.966497
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [144.0, 1077.0, 66.0, 33.0, 113.0, 6.0, 30.0]
+
+TEST Student: Epoch: 6, iteration: 86
+
+TEST AUROC: 0.886775, TEST Accus: 0.622745, TEST Senss: 0.870268, TEST Specs: 0.772727
+AUROCs: Melanoma:0.860103 Melanocytic nevus:0.916658 Basal cell carcinoma:0.917561 Actinic keratosis:0.903811 Benign keratosis:0.881177 Dermatofibroma:0.732062 Vascular lesion:0.996049
+Accus: Melanoma:0.623377 Melanocytic nevus:0.798369 Basal cell carcinoma:0.600000 Actinic keratosis:0.568966 Benign keratosis:0.528037 Dermatofibroma:0.272727 Vascular lesion:0.967742
+Senss: Melanoma:0.922078 Melanocytic nevus:0.954040 Basal cell carcinoma:0.818182 Actinic keratosis:0.879310 Benign keratosis:0.836449 Dermatofibroma:0.681818 Vascular lesion:1.000000
+Specs: Melanoma:0.586883 Melanocytic nevus:0.609610 Basal cell carcinoma:0.895538 Actinic keratosis:0.866633 Benign keratosis:0.744031 Dermatofibroma:0.835424 Vascular lesion:0.870968
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_7.pth
+
+Epoch: 7, iteration: 0/87, ==> train <===, loss: 1.825244, classification loss: 1.825244,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.782969000000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [66.0, 475.0, 25.0, 26.0, 44.0, 5.0, 12.0]
+
+VAL Student: Epoch: 7, iteration: 86
+
+VAL AUROC: 0.839829, VAL Accus: 0.582058, VAL Senss: 0.669930, VAL Specs: 0.901661
+AUROCs: Melanoma:0.817511 Melanocytic nevus:0.924191 Basal cell carcinoma:0.918272 Actinic keratosis:0.952023 Benign keratosis:0.794344 Dermatofibroma:0.633003 Vascular lesion:0.839459
+Accus: Melanoma:0.554622 Melanocytic nevus:0.716440 Basal cell carcinoma:0.462963 Actinic keratosis:0.787879 Benign keratosis:0.440000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Senss: Melanoma:0.663866 Melanocytic nevus:0.811463 Basal cell carcinoma:0.592593 Actinic keratosis:0.909091 Benign keratosis:0.600000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.802497 Melanocytic nevus:0.878338 Basal cell carcinoma:0.950317 Actinic keratosis:0.872802 Benign keratosis:0.877778 Dermatofibroma:0.946138 Vascular lesion:0.983756
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [135.0, 946.0, 72.0, 46.0, 120.0, 6.0, 26.0]
+
+TEST Student: Epoch: 7, iteration: 86
+
+TEST AUROC: 0.878642, TEST Accus: 0.629358, TEST Senss: 0.833331, TEST Specs: 0.797643
+AUROCs: Melanoma:0.842438 Melanocytic nevus:0.928666 Basal cell carcinoma:0.937919 Actinic keratosis:0.927766 Benign keratosis:0.825738 Dermatofibroma:0.709688 Vascular lesion:0.978278
+Accus: Melanoma:0.584416 Melanocytic nevus:0.701260 Basal cell carcinoma:0.654545 Actinic keratosis:0.793103 Benign keratosis:0.560748 Dermatofibroma:0.272727 Vascular lesion:0.838710
+Senss: Melanoma:0.883117 Melanocytic nevus:0.884359 Basal cell carcinoma:0.890909 Actinic keratosis:0.931034 Benign keratosis:0.808411 Dermatofibroma:0.500000 Vascular lesion:0.935484
+Specs: Melanoma:0.644058 Melanocytic nevus:0.786787 Basal cell carcinoma:0.857218 Actinic keratosis:0.784875 Benign keratosis:0.703498 Dermatofibroma:0.865028 Vascular lesion:0.942036
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_8.pth
+
+Epoch: 8, iteration: 0/87, ==> train <===, loss: 1.830860, classification loss: 1.830860,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 4.304672100000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 546.0, 29.0, 23.0, 46.0, 6.0, 12.0]
+
+VAL Student: Epoch: 8, iteration: 86
+
+VAL AUROC: 0.866203, VAL Accus: 0.603135, VAL Senss: 0.689871, VAL Specs: 0.907010
+AUROCs: Melanoma:0.844438 Melanocytic nevus:0.925104 Basal cell carcinoma:0.925202 Actinic keratosis:0.937921 Benign keratosis:0.864589 Dermatofibroma:0.705793 Vascular lesion:0.860372
+Accus: Melanoma:0.529412 Melanocytic nevus:0.823529 Basal cell carcinoma:0.537037 Actinic keratosis:0.696970 Benign keratosis:0.460000 Dermatofibroma:0.375000 Vascular lesion:0.800000
+Senss: Melanoma:0.689076 Melanocytic nevus:0.901961 Basal cell carcinoma:0.685185 Actinic keratosis:0.787879 Benign keratosis:0.590000 Dermatofibroma:0.375000 Vascular lesion:0.800000
+Specs: Melanoma:0.828604 Melanocytic nevus:0.774481 Basal cell carcinoma:0.942918 Actinic keratosis:0.924509 Benign keratosis:0.934444 Dermatofibroma:0.953252 Vascular lesion:0.990863
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [139.0, 1135.0, 85.0, 42.0, 107.0, 8.0, 26.0]
+
+TEST Student: Epoch: 8, iteration: 86
+
+TEST AUROC: 0.895246, TEST Accus: 0.663187, TEST Senss: 0.844249, TEST Specs: 0.806475
+AUROCs: Melanoma:0.866679 Melanocytic nevus:0.926473 Basal cell carcinoma:0.951014 Actinic keratosis:0.915723 Benign keratosis:0.882814 Dermatofibroma:0.728162 Vascular lesion:0.995854
+Accus: Melanoma:0.601732 Melanocytic nevus:0.841364 Basal cell carcinoma:0.772727 Actinic keratosis:0.724138 Benign keratosis:0.500000 Dermatofibroma:0.363636 Vascular lesion:0.838710
+Senss: Melanoma:0.900433 Melanocytic nevus:0.962194 Basal cell carcinoma:0.900000 Actinic keratosis:0.862069 Benign keratosis:0.785047 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Specs: Melanoma:0.639574 Melanocytic nevus:0.624625 Basal cell carcinoma:0.883990 Actinic keratosis:0.833929 Benign keratosis:0.823987 Dermatofibroma:0.887105 Vascular lesion:0.952117
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_9.pth
+
+Epoch: 9, iteration: 0/87, ==> train <===, loss: 1.795632, classification loss: 1.795632,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.874204890000002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 530.0, 29.0, 25.0, 52.0, 5.0, 10.0]
+
+VAL Student: Epoch: 9, iteration: 86
+
+VAL AUROC: 0.871976, VAL Accus: 0.588941, VAL Senss: 0.672096, VAL Specs: 0.912668
+AUROCs: Melanoma:0.842644 Melanocytic nevus:0.933711 Basal cell carcinoma:0.915610 Actinic keratosis:0.967002 Benign keratosis:0.863244 Dermatofibroma:0.711573 Vascular lesion:0.870051
+Accus: Melanoma:0.529412 Melanocytic nevus:0.799397 Basal cell carcinoma:0.537037 Actinic keratosis:0.757576 Benign keratosis:0.520000 Dermatofibroma:0.312500 Vascular lesion:0.666667
+Senss: Melanoma:0.722689 Melanocytic nevus:0.906486 Basal cell carcinoma:0.648148 Actinic keratosis:0.818182 Benign keratosis:0.630000 Dermatofibroma:0.312500 Vascular lesion:0.666667
+Specs: Melanoma:0.834279 Melanocytic nevus:0.821958 Basal cell carcinoma:0.954545 Actinic keratosis:0.919338 Benign keratosis:0.914444 Dermatofibroma:0.951220 Vascular lesion:0.992893
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [152.0, 1088.0, 79.0, 41.0, 121.0, 8.0, 27.0]
+
+TEST Student: Epoch: 9, iteration: 86
+
+TEST AUROC: 0.896967, TEST Accus: 0.669948, TEST Senss: 0.831896, TEST Specs: 0.822466
+AUROCs: Melanoma:0.872777 Melanocytic nevus:0.931657 Basal cell carcinoma:0.945397 Actinic keratosis:0.935105 Benign keratosis:0.875806 Dermatofibroma:0.729896 Vascular lesion:0.988131
+Accus: Melanoma:0.658009 Melanocytic nevus:0.806523 Basal cell carcinoma:0.718182 Actinic keratosis:0.706897 Benign keratosis:0.565421 Dermatofibroma:0.363636 Vascular lesion:0.870968
+Senss: Melanoma:0.904762 Melanocytic nevus:0.954781 Basal cell carcinoma:0.900000 Actinic keratosis:0.879310 Benign keratosis:0.794393 Dermatofibroma:0.454545 Vascular lesion:0.935484
+Specs: Melanoma:0.654709 Melanocytic nevus:0.678679 Basal cell carcinoma:0.899738 Actinic keratosis:0.853347 Benign keratosis:0.818434 Dermatofibroma:0.880080 Vascular lesion:0.972278
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_10.pth
+
+Epoch: 10, iteration: 0/87, ==> train <===, loss: 1.819713, classification loss: 1.819713,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.4867844010000016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [56.0, 526.0, 29.0, 22.0, 59.0, 4.0, 12.0]
+
+VAL Student: Epoch: 10, iteration: 86
+
+VAL AUROC: 0.840446, VAL Accus: 0.586808, VAL Senss: 0.679643, VAL Specs: 0.916217
+AUROCs: Melanoma:0.838400 Melanocytic nevus:0.924925 Basal cell carcinoma:0.900673 Actinic keratosis:0.911285 Benign keratosis:0.853833 Dermatofibroma:0.607914 Vascular lesion:0.846091
+Accus: Melanoma:0.470588 Melanocytic nevus:0.793363 Basal cell carcinoma:0.537037 Actinic keratosis:0.666667 Benign keratosis:0.590000 Dermatofibroma:0.250000 Vascular lesion:0.800000
+Senss: Melanoma:0.697479 Melanocytic nevus:0.871795 Basal cell carcinoma:0.648148 Actinic keratosis:0.757576 Benign keratosis:0.670000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.844495 Melanocytic nevus:0.839763 Basal cell carcinoma:0.964059 Actinic keratosis:0.915202 Benign keratosis:0.885556 Dermatofibroma:0.979675 Vascular lesion:0.984772
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [134.0, 1081.0, 73.0, 46.0, 123.0, 6.0, 28.0]
+
+TEST Student: Epoch: 10, iteration: 86
+
+TEST AUROC: 0.878402, TEST Accus: 0.655554, TEST Senss: 0.814767, TEST Specs: 0.832103
+AUROCs: Melanoma:0.858548 Melanocytic nevus:0.930743 Basal cell carcinoma:0.925125 Actinic keratosis:0.923863 Benign keratosis:0.872003 Dermatofibroma:0.641655 Vascular lesion:0.996878
+Accus: Melanoma:0.580087 Melanocytic nevus:0.801334 Basal cell carcinoma:0.663636 Actinic keratosis:0.793103 Benign keratosis:0.574766 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.874459 Melanocytic nevus:0.938473 Basal cell carcinoma:0.854545 Actinic keratosis:0.896552 Benign keratosis:0.775701 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.705157 Melanocytic nevus:0.714715 Basal cell carcinoma:0.888714 Actinic keratosis:0.844660 Benign keratosis:0.790117 Dermatofibroma:0.931259 Vascular lesion:0.950101
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_11.pth
+
+Epoch: 11, iteration: 0/87, ==> train <===, loss: 1.808301, classification loss: 1.808301,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 3.138105960900002e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 526.0, 32.0, 19.0, 46.0, 5.0, 12.0]
+
+VAL Student: Epoch: 11, iteration: 86
+
+VAL AUROC: 0.866378, VAL Accus: 0.580518, VAL Senss: 0.667244, VAL Specs: 0.912848
+AUROCs: Melanoma:0.840794 Melanocytic nevus:0.929383 Basal cell carcinoma:0.895016 Actinic keratosis:0.947636 Benign keratosis:0.853378 Dermatofibroma:0.731771 Vascular lesion:0.866667
+Accus: Melanoma:0.529412 Melanocytic nevus:0.793363 Basal cell carcinoma:0.592593 Actinic keratosis:0.575758 Benign keratosis:0.460000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Senss: Melanoma:0.705882 Melanocytic nevus:0.888386 Basal cell carcinoma:0.666667 Actinic keratosis:0.727273 Benign keratosis:0.570000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.830874 Melanocytic nevus:0.810089 Basal cell carcinoma:0.946089 Actinic keratosis:0.948294 Benign keratosis:0.915556 Dermatofibroma:0.952236 Vascular lesion:0.986802
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [151.0, 1094.0, 83.0, 37.0, 113.0, 8.0, 28.0]
+
+TEST Student: Epoch: 11, iteration: 86
+
+TEST AUROC: 0.895334, TEST Accus: 0.664575, TEST Senss: 0.810875, TEST Specs: 0.838787
+AUROCs: Melanoma:0.863379 Melanocytic nevus:0.937902 Basal cell carcinoma:0.950146 Actinic keratosis:0.914040 Benign keratosis:0.878782 Dermatofibroma:0.727204 Vascular lesion:0.995886
+Accus: Melanoma:0.653680 Melanocytic nevus:0.810971 Basal cell carcinoma:0.754545 Actinic keratosis:0.637931 Benign keratosis:0.528037 Dermatofibroma:0.363636 Vascular lesion:0.903226
+Senss: Melanoma:0.883117 Melanocytic nevus:0.942179 Basal cell carcinoma:0.909091 Actinic keratosis:0.844828 Benign keratosis:0.752336 Dermatofibroma:0.409091 Vascular lesion:0.935484
+Specs: Melanoma:0.670404 Melanocytic nevus:0.716216 Basal cell carcinoma:0.891339 Actinic keratosis:0.895759 Benign keratosis:0.838978 Dermatofibroma:0.901154 Vascular lesion:0.957661
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_12.pth
+
+Epoch: 12, iteration: 0/87, ==> train <===, loss: 1.838937, classification loss: 1.838937,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.8242953648100018e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [62.0, 545.0, 28.0, 19.0, 55.0, 5.0, 12.0]
+
+VAL Student: Epoch: 12, iteration: 86
+
+VAL AUROC: 0.847496, VAL Accus: 0.585687, VAL Senss: 0.659972, VAL Specs: 0.910940
+AUROCs: Melanoma:0.848682 Melanocytic nevus:0.925198 Basal cell carcinoma:0.882037 Actinic keratosis:0.906991 Benign keratosis:0.831822 Dermatofibroma:0.685086 Vascular lesion:0.852657
+Accus: Melanoma:0.521008 Melanocytic nevus:0.822021 Basal cell carcinoma:0.518519 Actinic keratosis:0.575758 Benign keratosis:0.550000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Senss: Melanoma:0.689076 Melanocytic nevus:0.900452 Basal cell carcinoma:0.611111 Actinic keratosis:0.666667 Benign keratosis:0.640000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.843360 Melanocytic nevus:0.786350 Basal cell carcinoma:0.960888 Actinic keratosis:0.947260 Benign keratosis:0.884444 Dermatofibroma:0.962398 Vascular lesion:0.991878
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [127.0, 1148.0, 81.0, 38.0, 109.0, 7.0, 26.0]
+
+TEST Student: Epoch: 12, iteration: 86
+
+TEST AUROC: 0.885648, TEST Accus: 0.636937, TEST Senss: 0.814088, TEST Specs: 0.827298
+AUROCs: Melanoma:0.866529 Melanocytic nevus:0.927665 Basal cell carcinoma:0.943336 Actinic keratosis:0.909723 Benign keratosis:0.851067 Dermatofibroma:0.703234 Vascular lesion:0.997984
+Accus: Melanoma:0.549784 Melanocytic nevus:0.851001 Basal cell carcinoma:0.736364 Actinic keratosis:0.655172 Benign keratosis:0.509346 Dermatofibroma:0.318182 Vascular lesion:0.838710
+Senss: Melanoma:0.887446 Melanocytic nevus:0.960712 Basal cell carcinoma:0.854545 Actinic keratosis:0.862069 Benign keratosis:0.757009 Dermatofibroma:0.409091 Vascular lesion:0.967742
+Specs: Melanoma:0.679933 Melanocytic nevus:0.647147 Basal cell carcinoma:0.893438 Actinic keratosis:0.891671 Benign keratosis:0.771793 Dermatofibroma:0.922228 Vascular lesion:0.984879
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_13.pth
+
+Epoch: 13, iteration: 0/87, ==> train <===, loss: 1.787075, classification loss: 1.787075,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.5418658283290016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [72.0, 543.0, 31.0, 20.0, 53.0, 6.0, 12.0]
+
+VAL Student: Epoch: 13, iteration: 86
+
+VAL AUROC: 0.879354, VAL Accus: 0.615597, VAL Senss: 0.684505, VAL Specs: 0.918436
+AUROCs: Melanoma:0.848978 Melanocytic nevus:0.931473 Basal cell carcinoma:0.873933 Actinic keratosis:0.960076 Benign keratosis:0.842378 Dermatofibroma:0.818979 Vascular lesion:0.879662
+Accus: Melanoma:0.605042 Melanocytic nevus:0.819005 Basal cell carcinoma:0.574074 Actinic keratosis:0.606061 Benign keratosis:0.530000 Dermatofibroma:0.375000 Vascular lesion:0.800000
+Senss: Melanoma:0.731092 Melanocytic nevus:0.895928 Basal cell carcinoma:0.648148 Actinic keratosis:0.636364 Benign keratosis:0.580000 Dermatofibroma:0.500000 Vascular lesion:0.800000
+Specs: Melanoma:0.818388 Melanocytic nevus:0.821958 Basal cell carcinoma:0.957717 Actinic keratosis:0.952430 Benign keratosis:0.934444 Dermatofibroma:0.951220 Vascular lesion:0.992893
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [142.0, 1130.0, 82.0, 40.0, 108.0, 11.0, 27.0]
+
+TEST Student: Epoch: 13, iteration: 86
+
+TEST AUROC: 0.901969, TEST Accus: 0.680447, TEST Senss: 0.830254, TEST Specs: 0.845173
+AUROCs: Melanoma:0.872076 Melanocytic nevus:0.935582 Basal cell carcinoma:0.924820 Actinic keratosis:0.927132 Benign keratosis:0.882612 Dermatofibroma:0.773480 Vascular lesion:0.998081
+Accus: Melanoma:0.614719 Melanocytic nevus:0.837658 Basal cell carcinoma:0.745455 Actinic keratosis:0.689655 Benign keratosis:0.504673 Dermatofibroma:0.500000 Vascular lesion:0.870968
+Senss: Melanoma:0.887446 Melanocytic nevus:0.950334 Basal cell carcinoma:0.863636 Actinic keratosis:0.844828 Benign keratosis:0.752336 Dermatofibroma:0.545455 Vascular lesion:0.967742
+Specs: Melanoma:0.682735 Melanocytic nevus:0.707207 Basal cell carcinoma:0.880315 Actinic keratosis:0.910577 Benign keratosis:0.858412 Dermatofibroma:0.899649 Vascular lesion:0.977319
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_14.pth
+
+Epoch: 14, iteration: 0/87, ==> train <===, loss: 1.807578, classification loss: 1.807578,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.2876792454961016e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 546.0, 36.0, 19.0, 58.0, 5.0, 10.0]
+
+VAL Student: Epoch: 14, iteration: 86
+
+VAL AUROC: 0.864924, VAL Accus: 0.593505, VAL Senss: 0.668835, VAL Specs: 0.920680
+AUROCs: Melanoma:0.841767 Melanocytic nevus:0.932655 Basal cell carcinoma:0.900576 Actinic keratosis:0.923725 Benign keratosis:0.853522 Dermatofibroma:0.758702 Vascular lesion:0.843519
+Accus: Melanoma:0.529412 Melanocytic nevus:0.823529 Basal cell carcinoma:0.666667 Actinic keratosis:0.575758 Benign keratosis:0.580000 Dermatofibroma:0.312500 Vascular lesion:0.666667
+Senss: Melanoma:0.638655 Melanocytic nevus:0.892911 Basal cell carcinoma:0.777778 Actinic keratosis:0.666667 Benign keratosis:0.660000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.870602 Melanocytic nevus:0.818991 Basal cell carcinoma:0.948203 Actinic keratosis:0.946225 Benign keratosis:0.892222 Dermatofibroma:0.985772 Vascular lesion:0.982741
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [124.0, 1149.0, 84.0, 42.0, 132.0, 7.0, 28.0]
+
+TEST Student: Epoch: 14, iteration: 86
+
+TEST AUROC: 0.895527, TEST Accus: 0.673506, TEST Senss: 0.810034, TEST Specs: 0.853432
+AUROCs: Melanoma:0.855180 Melanocytic nevus:0.935725 Basal cell carcinoma:0.948871 Actinic keratosis:0.916445 Benign keratosis:0.893665 Dermatofibroma:0.720545 Vascular lesion:0.998260
+Accus: Melanoma:0.536797 Melanocytic nevus:0.851742 Basal cell carcinoma:0.763636 Actinic keratosis:0.724138 Benign keratosis:0.616822 Dermatofibroma:0.318182 Vascular lesion:0.903226
+Senss: Melanoma:0.800866 Melanocytic nevus:0.946627 Basal cell carcinoma:0.863636 Actinic keratosis:0.827586 Benign keratosis:0.822430 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.765695 Melanocytic nevus:0.696697 Basal cell carcinoma:0.883465 Actinic keratosis:0.891671 Benign keratosis:0.813437 Dermatofibroma:0.960863 Vascular lesion:0.962198
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_15.pth
+
+Epoch: 15, iteration: 0/87, ==> train <===, loss: 1.839744, classification loss: 1.839744,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 2.0589113209464913e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [69.0, 561.0, 29.0, 18.0, 45.0, 6.0, 10.0]
+
+VAL Student: Epoch: 15, iteration: 86
+
+VAL AUROC: 0.862949, VAL Accus: 0.571449, VAL Senss: 0.643676, VAL Specs: 0.914301
+AUROCs: Melanoma:0.863829 Melanocytic nevus:0.928255 Basal cell carcinoma:0.907995 Actinic keratosis:0.938109 Benign keratosis:0.809622 Dermatofibroma:0.741870 Vascular lesion:0.850964
+Accus: Melanoma:0.579832 Melanocytic nevus:0.846154 Basal cell carcinoma:0.537037 Actinic keratosis:0.545455 Benign keratosis:0.450000 Dermatofibroma:0.375000 Vascular lesion:0.666667
+Senss: Melanoma:0.680672 Melanocytic nevus:0.912519 Basal cell carcinoma:0.648148 Actinic keratosis:0.606061 Benign keratosis:0.550000 Dermatofibroma:0.375000 Vascular lesion:0.733333
+Specs: Melanoma:0.856981 Melanocytic nevus:0.753709 Basal cell carcinoma:0.964059 Actinic keratosis:0.953464 Benign keratosis:0.927778 Dermatofibroma:0.955285 Vascular lesion:0.988832
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [132.0, 1186.0, 79.0, 43.0, 110.0, 9.0, 26.0]
+
+TEST Student: Epoch: 15, iteration: 86
+
+TEST AUROC: 0.896761, TEST Accus: 0.667426, TEST Senss: 0.817344, TEST Specs: 0.851366
+AUROCs: Melanoma:0.876121 Melanocytic nevus:0.934630 Basal cell carcinoma:0.951883 Actinic keratosis:0.918894 Benign keratosis:0.878263 Dermatofibroma:0.719518 Vascular lesion:0.998016
+Accus: Melanoma:0.571429 Melanocytic nevus:0.879170 Basal cell carcinoma:0.718182 Actinic keratosis:0.741379 Benign keratosis:0.514019 Dermatofibroma:0.409091 Vascular lesion:0.838710
+Senss: Melanoma:0.861472 Melanocytic nevus:0.973314 Basal cell carcinoma:0.836364 Actinic keratosis:0.862069 Benign keratosis:0.733645 Dermatofibroma:0.454545 Vascular lesion:1.000000
+Specs: Melanoma:0.729260 Melanocytic nevus:0.633634 Basal cell carcinoma:0.919160 Actinic keratosis:0.910577 Benign keratosis:0.847307 Dermatofibroma:0.940291 Vascular lesion:0.979335
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_16.pth
+
+Epoch: 16, iteration: 0/87, ==> train <===, loss: 1.820894, classification loss: 1.820894,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 1.8530201888518422e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [71.0, 544.0, 33.0, 20.0, 55.0, 5.0, 10.0]
+
+VAL Student: Epoch: 16, iteration: 86
+
+VAL AUROC: 0.863716, VAL Accus: 0.594784, VAL Senss: 0.672040, VAL Specs: 0.918252
+AUROCs: Melanoma:0.866519 Melanocytic nevus:0.930972 Basal cell carcinoma:0.914122 Actinic keratosis:0.902071 Benign keratosis:0.854689 Dermatofibroma:0.726880 Vascular lesion:0.850761
+Accus: Melanoma:0.596639 Melanocytic nevus:0.820513 Basal cell carcinoma:0.611111 Actinic keratosis:0.606061 Benign keratosis:0.550000 Dermatofibroma:0.312500 Vascular lesion:0.666667
+Senss: Melanoma:0.747899 Melanocytic nevus:0.901961 Basal cell carcinoma:0.722222 Actinic keratosis:0.636364 Benign keratosis:0.650000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.826334 Melanocytic nevus:0.807122 Basal cell carcinoma:0.952431 Actinic keratosis:0.960703 Benign keratosis:0.905556 Dermatofibroma:0.985772 Vascular lesion:0.989848
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [151.0, 1120.0, 85.0, 42.0, 120.0, 7.0, 25.0]
+
+TEST Student: Epoch: 16, iteration: 86
+
+TEST AUROC: 0.905940, TEST Accus: 0.666596, TEST Senss: 0.828025, TEST Specs: 0.848868
+AUROCs: Melanoma:0.880981 Melanocytic nevus:0.935974 Basal cell carcinoma:0.967674 Actinic keratosis:0.917132 Benign keratosis:0.889402 Dermatofibroma:0.757424 Vascular lesion:0.992992
+Accus: Melanoma:0.653680 Melanocytic nevus:0.830245 Basal cell carcinoma:0.772727 Actinic keratosis:0.724138 Benign keratosis:0.560748 Dermatofibroma:0.318182 Vascular lesion:0.806452
+Senss: Melanoma:0.904762 Melanocytic nevus:0.949592 Basal cell carcinoma:0.900000 Actinic keratosis:0.862069 Benign keratosis:0.789720 Dermatofibroma:0.454545 Vascular lesion:0.935484
+Specs: Melanoma:0.651345 Melanocytic nevus:0.692192 Basal cell carcinoma:0.901312 Actinic keratosis:0.915176 Benign keratosis:0.837313 Dermatofibroma:0.960361 Vascular lesion:0.984375
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_17.pth
+
+Epoch: 17, iteration: 0/87, ==> train <===, loss: 1.783229, classification loss: 1.783229,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 1.667718169966658e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [64.0, 560.0, 30.0, 20.0, 63.0, 5.0, 11.0]
+
+VAL Student: Epoch: 17, iteration: 86
+
+VAL AUROC: 0.856962, VAL Accus: 0.602844, VAL Senss: 0.654982, VAL Specs: 0.919395
+AUROCs: Melanoma:0.869371 Melanocytic nevus:0.932973 Basal cell carcinoma:0.897678 Actinic keratosis:0.894331 Benign keratosis:0.867111 Dermatofibroma:0.671621 Vascular lesion:0.865651
+Accus: Melanoma:0.537815 Melanocytic nevus:0.844646 Basal cell carcinoma:0.555556 Actinic keratosis:0.606061 Benign keratosis:0.630000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.689076 Melanocytic nevus:0.911011 Basal cell carcinoma:0.592593 Actinic keratosis:0.636364 Benign keratosis:0.710000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.859251 Melanocytic nevus:0.804154 Basal cell carcinoma:0.965116 Actinic keratosis:0.958635 Benign keratosis:0.881111 Dermatofibroma:0.981707 Vascular lesion:0.985787
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [139.0, 1146.0, 77.0, 43.0, 134.0, 7.0, 26.0]
+
+TEST Student: Epoch: 17, iteration: 86
+
+TEST AUROC: 0.901134, TEST Accus: 0.667956, TEST Senss: 0.830228, TEST Specs: 0.855351
+AUROCs: Melanoma:0.882197 Melanocytic nevus:0.936341 Basal cell carcinoma:0.953686 Actinic keratosis:0.920753 Benign keratosis:0.892970 Dermatofibroma:0.726771 Vascular lesion:0.995220
+Accus: Melanoma:0.601732 Melanocytic nevus:0.849518 Basal cell carcinoma:0.700000 Actinic keratosis:0.741379 Benign keratosis:0.626168 Dermatofibroma:0.318182 Vascular lesion:0.838710
+Senss: Melanoma:0.887446 Melanocytic nevus:0.956264 Basal cell carcinoma:0.845455 Actinic keratosis:0.827586 Benign keratosis:0.827103 Dermatofibroma:0.500000 Vascular lesion:0.967742
+Specs: Melanoma:0.713565 Melanocytic nevus:0.684685 Basal cell carcinoma:0.932808 Actinic keratosis:0.922841 Benign keratosis:0.797890 Dermatofibroma:0.958856 Vascular lesion:0.976815
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_18.pth
+
+Epoch: 18, iteration: 0/87, ==> train <===, loss: 1.794003, classification loss: 1.794003,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 1.5009463529699922e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [70.0, 569.0, 37.0, 18.0, 47.0, 5.0, 11.0]
+
+VAL Student: Epoch: 18, iteration: 86
+
+VAL AUROC: 0.842032, VAL Accus: 0.598990, VAL Senss: 0.657102, VAL Specs: 0.920136
+AUROCs: Melanoma:0.861054 Melanocytic nevus:0.933814 Basal cell carcinoma:0.912928 Actinic keratosis:0.867945 Benign keratosis:0.839478 Dermatofibroma:0.621951 Vascular lesion:0.857056
+Accus: Melanoma:0.588235 Melanocytic nevus:0.858220 Basal cell carcinoma:0.685185 Actinic keratosis:0.545455 Benign keratosis:0.470000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.714286 Melanocytic nevus:0.911011 Basal cell carcinoma:0.722222 Actinic keratosis:0.636364 Benign keratosis:0.570000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.851305 Melanocytic nevus:0.780415 Basal cell carcinoma:0.942918 Actinic keratosis:0.959669 Benign keratosis:0.930000 Dermatofibroma:0.991870 Vascular lesion:0.984772
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [137.0, 1168.0, 86.0, 39.0, 111.0, 8.0, 27.0]
+
+TEST Student: Epoch: 18, iteration: 86
+
+TEST AUROC: 0.898351, TEST Accus: 0.666633, TEST Senss: 0.816271, TEST Specs: 0.854294
+AUROCs: Melanoma:0.871297 Melanocytic nevus:0.936024 Basal cell carcinoma:0.964658 Actinic keratosis:0.905564 Benign keratosis:0.883956 Dermatofibroma:0.729462 Vascular lesion:0.997496
+Accus: Melanoma:0.593074 Melanocytic nevus:0.865827 Basal cell carcinoma:0.781818 Actinic keratosis:0.672414 Benign keratosis:0.518692 Dermatofibroma:0.363636 Vascular lesion:0.870968
+Senss: Melanoma:0.878788 Melanocytic nevus:0.959229 Basal cell carcinoma:0.890909 Actinic keratosis:0.810345 Benign keratosis:0.752336 Dermatofibroma:0.454545 Vascular lesion:0.967742
+Specs: Melanoma:0.709641 Melanocytic nevus:0.660661 Basal cell carcinoma:0.906037 Actinic keratosis:0.912621 Benign keratosis:0.848418 Dermatofibroma:0.969393 Vascular lesion:0.973286
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_19.pth
+
+Epoch: 19, iteration: 0/87, ==> train <===, loss: 1.791279, classification loss: 1.791279,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 1.350851717672993e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 578.0, 33.0, 24.0, 49.0, 5.0, 11.0]
+
+VAL Student: Epoch: 19, iteration: 86
+
+VAL AUROC: 0.864377, VAL Accus: 0.610775, VAL Senss: 0.655904, VAL Specs: 0.921643
+AUROCs: Melanoma:0.853509 Melanocytic nevus:0.935121 Basal cell carcinoma:0.895251 Actinic keratosis:0.933189 Benign keratosis:0.857367 Dermatofibroma:0.712652 Vascular lesion:0.863553
+Accus: Melanoma:0.529412 Melanocytic nevus:0.871795 Basal cell carcinoma:0.611111 Actinic keratosis:0.727273 Benign keratosis:0.490000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.655462 Melanocytic nevus:0.926094 Basal cell carcinoma:0.666667 Actinic keratosis:0.727273 Benign keratosis:0.570000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.888763 Melanocytic nevus:0.780415 Basal cell carcinoma:0.953488 Actinic keratosis:0.943123 Benign keratosis:0.911111 Dermatofibroma:0.982724 Vascular lesion:0.991878
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [124.0, 1175.0, 80.0, 45.0, 121.0, 7.0, 25.0]
+
+TEST Student: Epoch: 19, iteration: 86
+
+TEST AUROC: 0.902372, TEST Accus: 0.657286, TEST Senss: 0.823778, TEST Specs: 0.855186
+AUROCs: Melanoma:0.869290 Melanocytic nevus:0.936148 Basal cell carcinoma:0.959695 Actinic keratosis:0.930268 Benign keratosis:0.888055 Dermatofibroma:0.738494 Vascular lesion:0.994651
+Accus: Melanoma:0.536797 Melanocytic nevus:0.871016 Basal cell carcinoma:0.727273 Actinic keratosis:0.775862 Benign keratosis:0.565421 Dermatofibroma:0.318182 Vascular lesion:0.806452
+Senss: Melanoma:0.831169 Melanocytic nevus:0.959229 Basal cell carcinoma:0.863636 Actinic keratosis:0.896552 Benign keratosis:0.780374 Dermatofibroma:0.500000 Vascular lesion:0.935484
+Specs: Melanoma:0.765695 Melanocytic nevus:0.665165 Basal cell carcinoma:0.913386 Actinic keratosis:0.886050 Benign keratosis:0.822321 Dermatofibroma:0.952333 Vascular lesion:0.981351
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_20.pth
+
+Epoch: 20, iteration: 0/87, ==> train <===, loss: 1.815957, classification loss: 1.815957,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: 0.000000,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.000000,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 0.000000, lr: 1.2157665459056937e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 571.0, 37.0, 23.0, 51.0, 5.0, 11.0]
+
+VAL Student: Epoch: 20, iteration: 86
+
+VAL AUROC: 0.853639, VAL Accus: 0.618377, VAL Senss: 0.669192, VAL Specs: 0.924337
+AUROCs: Melanoma:0.860529 Melanocytic nevus:0.931388 Basal cell carcinoma:0.909991 Actinic keratosis:0.942214 Benign keratosis:0.852644 Dermatofibroma:0.623412 Vascular lesion:0.855296
+Accus: Melanoma:0.529412 Melanocytic nevus:0.861237 Basal cell carcinoma:0.685185 Actinic keratosis:0.696970 Benign keratosis:0.510000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.638655 Melanocytic nevus:0.920060 Basal cell carcinoma:0.722222 Actinic keratosis:0.757576 Benign keratosis:0.600000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.892168 Melanocytic nevus:0.783383 Basal cell carcinoma:0.937632 Actinic keratosis:0.951396 Benign keratosis:0.920000 Dermatofibroma:0.992886 Vascular lesion:0.992893
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [119.0, 1178.0, 93.0, 43.0, 124.0, 6.0, 27.0]
+
+TEST Student: Epoch: 20, iteration: 86
+
+TEST AUROC: 0.904976, TEST Accus: 0.671194, TEST Senss: 0.820711, TEST Specs: 0.856322
+AUROCs: Melanoma:0.878315 Melanocytic nevus:0.933682 Basal cell carcinoma:0.972155 Actinic keratosis:0.931907 Benign keratosis:0.885196 Dermatofibroma:0.736943 Vascular lesion:0.996634
+Accus: Melanoma:0.515152 Melanocytic nevus:0.873239 Basal cell carcinoma:0.845455 Actinic keratosis:0.741379 Benign keratosis:0.579439 Dermatofibroma:0.272727 Vascular lesion:0.870968
+Senss: Melanoma:0.844156 Melanocytic nevus:0.960712 Basal cell carcinoma:0.909091 Actinic keratosis:0.879310 Benign keratosis:0.761682 Dermatofibroma:0.454545 Vascular lesion:0.935484
+Specs: Melanoma:0.774103 Melanocytic nevus:0.660661 Basal cell carcinoma:0.874016 Actinic keratosis:0.908533 Benign keratosis:0.826208 Dermatofibroma:0.971400 Vascular lesion:0.979335
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_21.pth
+
+Epoch: 21, iteration: 0/87, ==> train <===, loss: 1.148924, classification loss: 1.809049,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.692516,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.032391,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.0941898913151244e-05
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [66.0, 471.0, 33.0, 27.0, 42.0, 5.0, 12.0]
+
+VAL Student: Epoch: 21, iteration: 86
+
+VAL AUROC: 0.860896, VAL Accus: 0.603832, VAL Senss: 0.681737, VAL Specs: 0.908233
+AUROCs: Melanoma:0.816070 Melanocytic nevus:0.924764 Basal cell carcinoma:0.928980 Actinic keratosis:0.959700 Benign keratosis:0.801356 Dermatofibroma:0.694487 Vascular lesion:0.900914
+Accus: Melanoma:0.554622 Melanocytic nevus:0.710407 Basal cell carcinoma:0.611111 Actinic keratosis:0.818182 Benign keratosis:0.420000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Senss: Melanoma:0.663866 Melanocytic nevus:0.814480 Basal cell carcinoma:0.722222 Actinic keratosis:0.909091 Benign keratosis:0.550000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.842225 Melanocytic nevus:0.872404 Basal cell carcinoma:0.919662 Actinic keratosis:0.886246 Benign keratosis:0.924444 Dermatofibroma:0.960366 Vascular lesion:0.952284
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [137.0, 966.0, 86.0, 47.0, 110.0, 8.0, 31.0]
+
+TEST Student: Epoch: 21, iteration: 86
+
+TEST AUROC: 0.894892, TEST Accus: 0.682711, TEST Senss: 0.823092, TEST Specs: 0.838295
+AUROCs: Melanoma:0.855022 Melanocytic nevus:0.933776 Basal cell carcinoma:0.961608 Actinic keratosis:0.938206 Benign keratosis:0.868521 Dermatofibroma:0.712266 Vascular lesion:0.994846
+Accus: Melanoma:0.593074 Melanocytic nevus:0.716086 Basal cell carcinoma:0.781818 Actinic keratosis:0.810345 Benign keratosis:0.514019 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Senss: Melanoma:0.809524 Melanocytic nevus:0.905115 Basal cell carcinoma:0.954545 Actinic keratosis:0.931034 Benign keratosis:0.752336 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.756166 Melanocytic nevus:0.803303 Basal cell carcinoma:0.829921 Actinic keratosis:0.827798 Benign keratosis:0.823431 Dermatofibroma:0.927245 Vascular lesion:0.900202
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_22.pth
+
+Epoch: 22, iteration: 0/87, ==> train <===, loss: 1.117155, classification loss: 1.788378,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.700674,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.029451,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 9.84770902183612e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [72.0, 389.0, 36.0, 21.0, 56.0, 5.0, 12.0]
+
+VAL Student: Epoch: 22, iteration: 86
+
+VAL AUROC: 0.839384, VAL Accus: 0.595328, VAL Senss: 0.685054, VAL Specs: 0.891342
+AUROCs: Melanoma:0.831370 Melanocytic nevus:0.901406 Basal cell carcinoma:0.940020 Actinic keratosis:0.881295 Benign keratosis:0.840756 Dermatofibroma:0.596037 Vascular lesion:0.884805
+Accus: Melanoma:0.605042 Melanocytic nevus:0.586727 Basal cell carcinoma:0.666667 Actinic keratosis:0.636364 Benign keratosis:0.560000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Senss: Melanoma:0.722689 Melanocytic nevus:0.752640 Basal cell carcinoma:0.777778 Actinic keratosis:0.727273 Benign keratosis:0.640000 Dermatofibroma:0.375000 Vascular lesion:0.800000
+Specs: Melanoma:0.811578 Melanocytic nevus:0.863501 Basal cell carcinoma:0.910148 Actinic keratosis:0.927611 Benign keratosis:0.891111 Dermatofibroma:0.913618 Vascular lesion:0.921827
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [150.0, 809.0, 87.0, 37.0, 123.0, 8.0, 30.0]
+
+TEST Student: Epoch: 22, iteration: 86
+
+TEST AUROC: 0.886252, TEST Accus: 0.654863, TEST Senss: 0.816752, TEST Specs: 0.818860
+AUROCs: Melanoma:0.858441 Melanocytic nevus:0.922743 Basal cell carcinoma:0.959647 Actinic keratosis:0.896472 Benign keratosis:0.882256 Dermatofibroma:0.697031 Vascular lesion:0.987172
+Accus: Melanoma:0.649351 Melanocytic nevus:0.599703 Basal cell carcinoma:0.790909 Actinic keratosis:0.637931 Benign keratosis:0.574766 Dermatofibroma:0.363636 Vascular lesion:0.967742
+Senss: Melanoma:0.865801 Melanocytic nevus:0.868050 Basal cell carcinoma:0.918182 Actinic keratosis:0.810345 Benign keratosis:0.845794 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.706839 Melanocytic nevus:0.810811 Basal cell carcinoma:0.828871 Actinic keratosis:0.892693 Benign keratosis:0.779012 Dermatofibroma:0.870547 Vascular lesion:0.843246
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_23.pth
+
+Epoch: 23, iteration: 0/87, ==> train <===, loss: 1.085237, classification loss: 1.794942,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.752048,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.042343,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 8.862938119652508e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [77.0, 352.0, 26.0, 28.0, 58.0, 5.0, 11.0]
+
+VAL Student: Epoch: 23, iteration: 86
+
+VAL AUROC: 0.848383, VAL Accus: 0.590540, VAL Senss: 0.659798, VAL Specs: 0.889844
+AUROCs: Melanoma:0.849703 Melanocytic nevus:0.898412 Basal cell carcinoma:0.921913 Actinic keratosis:0.958917 Benign keratosis:0.829611 Dermatofibroma:0.630716 Vascular lesion:0.849408
+Accus: Melanoma:0.647059 Melanocytic nevus:0.530920 Basal cell carcinoma:0.481481 Actinic keratosis:0.848485 Benign keratosis:0.580000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.747899 Melanocytic nevus:0.695324 Basal cell carcinoma:0.574074 Actinic keratosis:0.878788 Benign keratosis:0.610000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.795687 Melanocytic nevus:0.908012 Basal cell carcinoma:0.948203 Actinic keratosis:0.872802 Benign keratosis:0.891111 Dermatofibroma:0.897358 Vascular lesion:0.915736
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [158.0, 721.0, 74.0, 44.0, 126.0, 8.0, 28.0]
+
+TEST Student: Epoch: 23, iteration: 86
+
+TEST AUROC: 0.892858, TEST Accus: 0.643635, TEST Senss: 0.805873, TEST Specs: 0.819000
+AUROCs: Melanoma:0.862498 Melanocytic nevus:0.916044 Basal cell carcinoma:0.950465 Actinic keratosis:0.938664 Benign keratosis:0.881621 Dermatofibroma:0.726497 Vascular lesion:0.974213
+Accus: Melanoma:0.683983 Melanocytic nevus:0.534470 Basal cell carcinoma:0.672727 Actinic keratosis:0.758621 Benign keratosis:0.588785 Dermatofibroma:0.363636 Vascular lesion:0.903226
+Senss: Melanoma:0.878788 Melanocytic nevus:0.805782 Basal cell carcinoma:0.836364 Actinic keratosis:0.879310 Benign keratosis:0.831776 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.698991 Melanocytic nevus:0.863363 Basal cell carcinoma:0.893963 Actinic keratosis:0.839550 Benign keratosis:0.775125 Dermatofibroma:0.841947 Vascular lesion:0.820060
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_24.pth
+
+Epoch: 24, iteration: 0/87, ==> train <===, loss: 1.096629, classification loss: 1.813128,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.747220,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.030721,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.976644307687257e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [72.0, 366.0, 34.0, 25.0, 57.0, 5.0, 11.0]
+
+VAL Student: Epoch: 24, iteration: 86
+
+VAL AUROC: 0.838615, VAL Accus: 0.594302, VAL Senss: 0.666773, VAL Specs: 0.894321
+AUROCs: Melanoma:0.826877 Melanocytic nevus:0.894200 Basal cell carcinoma:0.927492 Actinic keratosis:0.932312 Benign keratosis:0.843656 Dermatofibroma:0.607660 Vascular lesion:0.838105
+Accus: Melanoma:0.605042 Melanocytic nevus:0.552036 Basal cell carcinoma:0.629630 Actinic keratosis:0.757576 Benign keratosis:0.570000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.714286 Melanocytic nevus:0.699849 Basal cell carcinoma:0.759259 Actinic keratosis:0.818182 Benign keratosis:0.630000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.834279 Melanocytic nevus:0.910979 Basal cell carcinoma:0.905920 Actinic keratosis:0.888314 Benign keratosis:0.894444 Dermatofibroma:0.916667 Vascular lesion:0.909645
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [142.0, 730.0, 87.0, 44.0, 118.0, 6.0, 28.0]
+
+TEST Student: Epoch: 24, iteration: 86
+
+TEST AUROC: 0.882383, TEST Accus: 0.633249, TEST Senss: 0.796859, TEST Specs: 0.825167
+AUROCs: Melanoma:0.859594 Melanocytic nevus:0.911272 Basal cell carcinoma:0.958206 Actinic keratosis:0.913881 Benign keratosis:0.880033 Dermatofibroma:0.683255 Vascular lesion:0.970441
+Accus: Melanoma:0.614719 Melanocytic nevus:0.541142 Basal cell carcinoma:0.790909 Actinic keratosis:0.758621 Benign keratosis:0.551402 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.831169 Melanocytic nevus:0.787991 Basal cell carcinoma:0.954545 Actinic keratosis:0.827586 Benign keratosis:0.813084 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.757287 Melanocytic nevus:0.863363 Basal cell carcinoma:0.822572 Actinic keratosis:0.855391 Benign keratosis:0.788451 Dermatofibroma:0.868038 Vascular lesion:0.821069
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_25.pth
+
+Epoch: 25, iteration: 0/87, ==> train <===, loss: 1.058777, classification loss: 1.788458,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.762897,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.033215,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 7.1789798769185315e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 308.0, 38.0, 25.0, 51.0, 4.0, 11.0]
+
+VAL Student: Epoch: 25, iteration: 86
+
+VAL AUROC: 0.829050, VAL Accus: 0.564083, VAL Senss: 0.661860, VAL Specs: 0.888156
+AUROCs: Melanoma:0.797547 Melanocytic nevus:0.877260 Basal cell carcinoma:0.926572 Actinic keratosis:0.933409 Benign keratosis:0.833700 Dermatofibroma:0.588097 Vascular lesion:0.846768
+Accus: Melanoma:0.529412 Melanocytic nevus:0.464555 Basal cell carcinoma:0.703704 Actinic keratosis:0.757576 Benign keratosis:0.510000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.672269 Melanocytic nevus:0.589744 Basal cell carcinoma:0.888889 Actinic keratosis:0.878788 Benign keratosis:0.620000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Specs: Melanoma:0.847900 Melanocytic nevus:0.952522 Basal cell carcinoma:0.860465 Actinic keratosis:0.851086 Benign keratosis:0.890000 Dermatofibroma:0.894309 Vascular lesion:0.920812
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [135.0, 641.0, 94.0, 41.0, 113.0, 6.0, 28.0]
+
+TEST Student: Epoch: 25, iteration: 86
+
+TEST AUROC: 0.860283, TEST Accus: 0.617859, TEST Senss: 0.766709, TEST Specs: 0.818814
+AUROCs: Melanoma:0.836997 Melanocytic nevus:0.914756 Basal cell carcinoma:0.955746 Actinic keratosis:0.897891 Benign keratosis:0.848264 Dermatofibroma:0.599986 Vascular lesion:0.968344
+Accus: Melanoma:0.584416 Melanocytic nevus:0.475167 Basal cell carcinoma:0.854545 Actinic keratosis:0.706897 Benign keratosis:0.528037 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.779221 Melanocytic nevus:0.704967 Basal cell carcinoma:0.981818 Actinic keratosis:0.844828 Benign keratosis:0.757009 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Specs: Melanoma:0.776345 Melanocytic nevus:0.927928 Basal cell carcinoma:0.747507 Actinic keratosis:0.799693 Benign keratosis:0.799556 Dermatofibroma:0.839438 Vascular lesion:0.841230
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_26.pth
+
+Epoch: 26, iteration: 0/87, ==> train <===, loss: 1.085527, classification loss: 1.828564,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.771856,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.028819,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 6.461081889226678e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [66.0, 313.0, 28.0, 29.0, 61.0, 5.0, 11.0]
+
+VAL Student: Epoch: 26, iteration: 86
+
+VAL AUROC: 0.836242, VAL Accus: 0.582837, VAL Senss: 0.667286, VAL Specs: 0.882292
+AUROCs: Melanoma:0.824331 Melanocytic nevus:0.874359 Basal cell carcinoma:0.915629 Actinic keratosis:0.943812 Benign keratosis:0.855022 Dermatofibroma:0.563453 Vascular lesion:0.877090
+Accus: Melanoma:0.554622 Melanocytic nevus:0.472097 Basal cell carcinoma:0.518519 Actinic keratosis:0.878788 Benign keratosis:0.610000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.680672 Melanocytic nevus:0.633484 Basal cell carcinoma:0.722222 Actinic keratosis:0.878788 Benign keratosis:0.710000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.855846 Melanocytic nevus:0.925816 Basal cell carcinoma:0.922833 Actinic keratosis:0.884178 Benign keratosis:0.867778 Dermatofibroma:0.798780 Vascular lesion:0.920812
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [140.0, 643.0, 81.0, 43.0, 126.0, 8.0, 28.0]
+
+TEST Student: Epoch: 26, iteration: 86
+
+TEST AUROC: 0.880133, TEST Accus: 0.630871, TEST Senss: 0.796016, TEST Specs: 0.816987
+AUROCs: Melanoma:0.870149 Melanocytic nevus:0.909643 Basal cell carcinoma:0.956158 Actinic keratosis:0.924180 Benign keratosis:0.878055 Dermatofibroma:0.652716 Vascular lesion:0.970026
+Accus: Melanoma:0.606061 Melanocytic nevus:0.476649 Basal cell carcinoma:0.736364 Actinic keratosis:0.741379 Benign keratosis:0.588785 Dermatofibroma:0.363636 Vascular lesion:0.903226
+Senss: Melanoma:0.805195 Melanocytic nevus:0.754633 Basal cell carcinoma:0.900000 Actinic keratosis:0.862069 Benign keratosis:0.841121 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.790359 Melanocytic nevus:0.878378 Basal cell carcinoma:0.858268 Actinic keratosis:0.853858 Benign keratosis:0.766241 Dermatofibroma:0.727045 Vascular lesion:0.844758
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_27.pth
+
+Epoch: 27, iteration: 0/87, ==> train <===, loss: 1.054381, classification loss: 1.803801,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.771115,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.021695,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.81497370030401e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [61.0, 336.0, 30.0, 29.0, 58.0, 4.0, 11.0]
+
+VAL Student: Epoch: 27, iteration: 86
+
+VAL AUROC: 0.845940, VAL Accus: 0.573867, VAL Senss: 0.646096, VAL Specs: 0.883477
+AUROCs: Melanoma:0.824149 Melanocytic nevus:0.881852 Basal cell carcinoma:0.924751 Actinic keratosis:0.942998 Benign keratosis:0.846811 Dermatofibroma:0.604230 Vascular lesion:0.896785
+Accus: Melanoma:0.512605 Melanocytic nevus:0.506787 Basal cell carcinoma:0.555556 Actinic keratosis:0.878788 Benign keratosis:0.580000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.588235 Melanocytic nevus:0.656109 Basal cell carcinoma:0.703704 Actinic keratosis:0.878788 Benign keratosis:0.650000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.880817 Melanocytic nevus:0.905045 Basal cell carcinoma:0.918605 Actinic keratosis:0.860393 Benign keratosis:0.886667 Dermatofibroma:0.822154 Vascular lesion:0.910660
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [124.0, 680.0, 78.0, 44.0, 121.0, 7.0, 28.0]
+
+TEST Student: Epoch: 27, iteration: 86
+
+TEST AUROC: 0.877529, TEST Accus: 0.613630, TEST Senss: 0.776607, TEST Specs: 0.823140
+AUROCs: Melanoma:0.864571 Melanocytic nevus:0.910173 Basal cell carcinoma:0.954956 Actinic keratosis:0.915405 Benign keratosis:0.866089 Dermatofibroma:0.661360 Vascular lesion:0.970148
+Accus: Melanoma:0.536797 Melanocytic nevus:0.504077 Basal cell carcinoma:0.709091 Actinic keratosis:0.758621 Benign keratosis:0.565421 Dermatofibroma:0.318182 Vascular lesion:0.903226
+Senss: Melanoma:0.761905 Melanocytic nevus:0.777613 Basal cell carcinoma:0.900000 Actinic keratosis:0.862069 Benign keratosis:0.771028 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.819507 Melanocytic nevus:0.864865 Basal cell carcinoma:0.859318 Actinic keratosis:0.834440 Benign keratosis:0.805664 Dermatofibroma:0.764676 Vascular lesion:0.813508
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_28.pth
+
+Epoch: 28, iteration: 0/87, ==> train <===, loss: 1.074733, classification loss: 1.803234,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.768022,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.039520,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 5.23347633027361e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 279.0, 40.0, 22.0, 54.0, 4.0, 11.0]
+
+VAL Student: Epoch: 28, iteration: 86
+
+VAL AUROC: 0.834216, VAL Accus: 0.556825, VAL Senss: 0.637401, VAL Specs: 0.882931
+AUROCs: Melanoma:0.829596 Melanocytic nevus:0.867180 Basal cell carcinoma:0.934715 Actinic keratosis:0.905299 Benign keratosis:0.862467 Dermatofibroma:0.561674 Vascular lesion:0.878579
+Accus: Melanoma:0.546218 Melanocytic nevus:0.420814 Basal cell carcinoma:0.740741 Actinic keratosis:0.666667 Benign keratosis:0.540000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.630252 Melanocytic nevus:0.553544 Basal cell carcinoma:0.907407 Actinic keratosis:0.727273 Benign keratosis:0.660000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Specs: Melanoma:0.859251 Melanocytic nevus:0.955490 Basal cell carcinoma:0.875264 Actinic keratosis:0.886246 Benign keratosis:0.886667 Dermatofibroma:0.835366 Vascular lesion:0.882234
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [137.0, 548.0, 93.0, 34.0, 118.0, 6.0, 28.0]
+
+TEST Student: Epoch: 28, iteration: 86
+
+TEST AUROC: 0.868122, TEST Accus: 0.594045, TEST Senss: 0.761668, TEST Specs: 0.822786
+AUROCs: Melanoma:0.858084 Melanocytic nevus:0.906994 Basal cell carcinoma:0.956168 Actinic keratosis:0.873557 Benign keratosis:0.872143 Dermatofibroma:0.649158 Vascular lesion:0.960751
+Accus: Melanoma:0.593074 Melanocytic nevus:0.406227 Basal cell carcinoma:0.845455 Actinic keratosis:0.586207 Benign keratosis:0.551402 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.757576 Melanocytic nevus:0.678280 Basal cell carcinoma:0.972727 Actinic keratosis:0.793103 Benign keratosis:0.766355 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.800448 Melanocytic nevus:0.932432 Basal cell carcinoma:0.796850 Actinic keratosis:0.861523 Benign keratosis:0.801777 Dermatofibroma:0.790768 Vascular lesion:0.775706
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_29.pth
+
+Epoch: 29, iteration: 0/87, ==> train <===, loss: 1.151929, classification loss: 1.898294,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.782260,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.035895,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.710128697246249e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [58.0, 339.0, 42.0, 22.0, 56.0, 4.0, 11.0]
+
+VAL Student: Epoch: 29, iteration: 86
+
+VAL AUROC: 0.838115, VAL Accus: 0.569498, VAL Senss: 0.677262, VAL Specs: 0.883096
+AUROCs: Melanoma:0.825532 Melanocytic nevus:0.872023 Basal cell carcinoma:0.933580 Actinic keratosis:0.935163 Benign keratosis:0.855206 Dermatofibroma:0.573488 Vascular lesion:0.871810
+Accus: Melanoma:0.487395 Melanocytic nevus:0.511312 Basal cell carcinoma:0.777778 Actinic keratosis:0.666667 Benign keratosis:0.560000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.605042 Melanocytic nevus:0.645551 Basal cell carcinoma:0.925926 Actinic keratosis:0.848485 Benign keratosis:0.670000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.884222 Melanocytic nevus:0.916914 Basal cell carcinoma:0.863636 Actinic keratosis:0.888314 Benign keratosis:0.874444 Dermatofibroma:0.825203 Vascular lesion:0.928934
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [123.0, 674.0, 95.0, 38.0, 127.0, 7.0, 28.0]
+
+TEST Student: Epoch: 29, iteration: 86
+
+TEST AUROC: 0.869710, TEST Accus: 0.623682, TEST Senss: 0.779394, TEST Specs: 0.819334
+AUROCs: Melanoma:0.870288 Melanocytic nevus:0.903927 Basal cell carcinoma:0.954469 Actinic keratosis:0.890763 Benign keratosis:0.868207 Dermatofibroma:0.629111 Vascular lesion:0.971205
+Accus: Melanoma:0.532468 Melanocytic nevus:0.499629 Basal cell carcinoma:0.863636 Actinic keratosis:0.655172 Benign keratosis:0.593458 Dermatofibroma:0.318182 Vascular lesion:0.903226
+Senss: Melanoma:0.757576 Melanocytic nevus:0.750185 Basal cell carcinoma:0.972727 Actinic keratosis:0.844828 Benign keratosis:0.799065 Dermatofibroma:0.363636 Vascular lesion:0.967742
+Specs: Melanoma:0.821749 Melanocytic nevus:0.881381 Basal cell carcinoma:0.773228 Actinic keratosis:0.864078 Benign keratosis:0.767351 Dermatofibroma:0.771199 Vascular lesion:0.856351
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_30.pth
+
+Epoch: 30, iteration: 0/87, ==> train <===, loss: 1.079999, classification loss: 1.819278,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.773489,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.034210,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 4.239115827521624e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 290.0, 31.0, 29.0, 48.0, 5.0, 11.0]
+
+VAL Student: Epoch: 30, iteration: 86
+
+VAL AUROC: 0.836426, VAL Accus: 0.566046, VAL Senss: 0.636130, VAL Specs: 0.880764
+AUROCs: Melanoma:0.831828 Melanocytic nevus:0.859648 Basal cell carcinoma:0.917978 Actinic keratosis:0.952963 Benign keratosis:0.816867 Dermatofibroma:0.585747 Vascular lesion:0.889949
+Accus: Melanoma:0.546218 Melanocytic nevus:0.437406 Basal cell carcinoma:0.574074 Actinic keratosis:0.878788 Benign keratosis:0.480000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.663866 Melanocytic nevus:0.582202 Basal cell carcinoma:0.722222 Actinic keratosis:0.878788 Benign keratosis:0.560000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.849035 Melanocytic nevus:0.937685 Basal cell carcinoma:0.909091 Actinic keratosis:0.850052 Benign keratosis:0.922222 Dermatofibroma:0.803862 Vascular lesion:0.893401
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [140.0, 583.0, 78.0, 46.0, 101.0, 8.0, 28.0]
+
+TEST Student: Epoch: 30, iteration: 86
+
+TEST AUROC: 0.869504, TEST Accus: 0.611322, TEST Senss: 0.764555, TEST Specs: 0.822050
+AUROCs: Melanoma:0.862999 Melanocytic nevus:0.903728 Basal cell carcinoma:0.944266 Actinic keratosis:0.919722 Benign keratosis:0.841537 Dermatofibroma:0.648520 Vascular lesion:0.965758
+Accus: Melanoma:0.606061 Melanocytic nevus:0.432172 Basal cell carcinoma:0.709091 Actinic keratosis:0.793103 Benign keratosis:0.471963 Dermatofibroma:0.363636 Vascular lesion:0.903226
+Senss: Melanoma:0.796537 Melanocytic nevus:0.693106 Basal cell carcinoma:0.918182 Actinic keratosis:0.862069 Benign keratosis:0.672897 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.798767 Melanocytic nevus:0.903904 Basal cell carcinoma:0.835696 Actinic keratosis:0.818600 Benign keratosis:0.847862 Dermatofibroma:0.749624 Vascular lesion:0.799899
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_31.pth
+
+Epoch: 31, iteration: 0/87, ==> train <===, loss: 1.083770, classification loss: 1.809966,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.768311,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.042115,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.815204244769462e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [58.0, 273.0, 35.0, 28.0, 49.0, 5.0, 11.0]
+
+VAL Student: Epoch: 31, iteration: 86
+
+VAL AUROC: 0.844266, VAL Accus: 0.561661, VAL Senss: 0.640691, VAL Specs: 0.877005
+AUROCs: Melanoma:0.823711 Melanocytic nevus:0.859339 Basal cell carcinoma:0.910050 Actinic keratosis:0.943938 Benign keratosis:0.838833 Dermatofibroma:0.627795 Vascular lesion:0.906193
+Accus: Melanoma:0.487395 Melanocytic nevus:0.411765 Basal cell carcinoma:0.648148 Actinic keratosis:0.848485 Benign keratosis:0.490000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.546218 Melanocytic nevus:0.558069 Basal cell carcinoma:0.759259 Actinic keratosis:0.878788 Benign keratosis:0.630000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.900114 Melanocytic nevus:0.937685 Basal cell carcinoma:0.885835 Actinic keratosis:0.858325 Benign keratosis:0.893333 Dermatofibroma:0.783537 Vascular lesion:0.880203
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [114.0, 535.0, 85.0, 41.0, 117.0, 8.0, 29.0]
+
+TEST Student: Epoch: 31, iteration: 86
+
+TEST AUROC: 0.868483, TEST Accus: 0.602224, TEST Senss: 0.764551, TEST Specs: 0.816287
+AUROCs: Melanoma:0.861270 Melanocytic nevus:0.901417 Basal cell carcinoma:0.945020 Actinic keratosis:0.910754 Benign keratosis:0.854171 Dermatofibroma:0.644323 Vascular lesion:0.962425
+Accus: Melanoma:0.493506 Melanocytic nevus:0.396590 Basal cell carcinoma:0.772727 Actinic keratosis:0.706897 Benign keratosis:0.546729 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.718615 Melanocytic nevus:0.682728 Basal cell carcinoma:0.936364 Actinic keratosis:0.862069 Benign keratosis:0.742991 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.843049 Melanocytic nevus:0.906907 Basal cell carcinoma:0.808924 Actinic keratosis:0.836995 Benign keratosis:0.828984 Dermatofibroma:0.725038 Vascular lesion:0.764113
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_32.pth
+
+Epoch: 32, iteration: 0/87, ==> train <===, loss: 1.083565, classification loss: 1.824916,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.774157,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.032806,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.4336838202925156e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 239.0, 38.0, 23.0, 55.0, 5.0, 11.0]
+
+VAL Student: Epoch: 32, iteration: 86
+
+VAL AUROC: 0.836915, VAL Accus: 0.557601, VAL Senss: 0.650311, VAL Specs: 0.878882
+AUROCs: Melanoma:0.826143 Melanocytic nevus:0.848222 Basal cell carcinoma:0.922637 Actinic keratosis:0.928081 Benign keratosis:0.853400 Dermatofibroma:0.589431 Vascular lesion:0.890491
+Accus: Melanoma:0.546218 Melanocytic nevus:0.360483 Basal cell carcinoma:0.703704 Actinic keratosis:0.696970 Benign keratosis:0.550000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.630252 Melanocytic nevus:0.490196 Basal cell carcinoma:0.907407 Actinic keratosis:0.848485 Benign keratosis:0.630000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.858116 Melanocytic nevus:0.973294 Basal cell carcinoma:0.877378 Actinic keratosis:0.872802 Benign keratosis:0.873333 Dermatofibroma:0.794715 Vascular lesion:0.902538
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [132.0, 499.0, 96.0, 37.0, 124.0, 7.0, 28.0]
+
+TEST Student: Epoch: 32, iteration: 86
+
+TEST AUROC: 0.865365, TEST Accus: 0.607548, TEST Senss: 0.754380, TEST Specs: 0.821702
+AUROCs: Melanoma:0.856858 Melanocytic nevus:0.908113 Basal cell carcinoma:0.952856 Actinic keratosis:0.884438 Benign keratosis:0.861383 Dermatofibroma:0.631711 Vascular lesion:0.962198
+Accus: Melanoma:0.571429 Melanocytic nevus:0.369904 Basal cell carcinoma:0.872727 Actinic keratosis:0.637931 Benign keratosis:0.579439 Dermatofibroma:0.318182 Vascular lesion:0.903226
+Senss: Melanoma:0.761905 Melanocytic nevus:0.612305 Basal cell carcinoma:0.954545 Actinic keratosis:0.844828 Benign keratosis:0.775701 Dermatofibroma:0.363636 Vascular lesion:0.967742
+Specs: Melanoma:0.805493 Melanocytic nevus:0.951952 Basal cell carcinoma:0.796850 Actinic keratosis:0.848237 Benign keratosis:0.796780 Dermatofibroma:0.737582 Vascular lesion:0.815020
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_33.pth
+
+Epoch: 33, iteration: 0/87, ==> train <===, loss: 1.118013, classification loss: 1.875731,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.790643,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.032926,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 3.090315438263264e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [56.0, 269.0, 38.0, 24.0, 50.0, 5.0, 11.0]
+
+VAL Student: Epoch: 33, iteration: 86
+
+VAL AUROC: 0.841292, VAL Accus: 0.550447, VAL Senss: 0.651498, VAL Specs: 0.876929
+AUROCs: Melanoma:0.820916 Melanocytic nevus:0.857262 Basal cell carcinoma:0.921698 Actinic keratosis:0.936636 Benign keratosis:0.847300 Dermatofibroma:0.607025 Vascular lesion:0.898206
+Accus: Melanoma:0.470588 Melanocytic nevus:0.405732 Basal cell carcinoma:0.703704 Actinic keratosis:0.727273 Benign keratosis:0.500000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.579832 Melanocytic nevus:0.568627 Basal cell carcinoma:0.907407 Actinic keratosis:0.878788 Benign keratosis:0.580000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.901249 Melanocytic nevus:0.913947 Basal cell carcinoma:0.871036 Actinic keratosis:0.868666 Benign keratosis:0.906667 Dermatofibroma:0.786585 Vascular lesion:0.890355
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [121.0, 550.0, 93.0, 37.0, 108.0, 8.0, 28.0]
+
+TEST Student: Epoch: 33, iteration: 86
+
+TEST AUROC: 0.867196, TEST Accus: 0.598063, TEST Senss: 0.769596, TEST Specs: 0.814796
+AUROCs: Melanoma:0.868300 Melanocytic nevus:0.893526 Basal cell carcinoma:0.951532 Actinic keratosis:0.899274 Benign keratosis:0.858500 Dermatofibroma:0.641678 Vascular lesion:0.957564
+Accus: Melanoma:0.523810 Melanocytic nevus:0.407709 Basal cell carcinoma:0.845455 Actinic keratosis:0.637931 Benign keratosis:0.504673 Dermatofibroma:0.363636 Vascular lesion:0.903226
+Senss: Melanoma:0.722944 Melanocytic nevus:0.702743 Basal cell carcinoma:0.981818 Actinic keratosis:0.827586 Benign keratosis:0.742991 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.840247 Melanocytic nevus:0.888889 Basal cell carcinoma:0.781102 Actinic keratosis:0.842105 Benign keratosis:0.837868 Dermatofibroma:0.722027 Vascular lesion:0.791331
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_34.pth
+
+Epoch: 34, iteration: 0/87, ==> train <===, loss: 1.053947, classification loss: 1.803481,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.784855,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.035321,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.7812838944369375e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [61.0, 272.0, 29.0, 27.0, 61.0, 5.0, 11.0]
+
+VAL Student: Epoch: 34, iteration: 86
+
+VAL AUROC: 0.844781, VAL Accus: 0.561988, VAL Senss: 0.651658, VAL Specs: 0.877011
+AUROCs: Melanoma:0.842416 Melanocytic nevus:0.848857 Basal cell carcinoma:0.913065 Actinic keratosis:0.927141 Benign keratosis:0.857167 Dermatofibroma:0.619982 Vascular lesion:0.904839
+Accus: Melanoma:0.512605 Melanocytic nevus:0.410256 Basal cell carcinoma:0.537037 Actinic keratosis:0.818182 Benign keratosis:0.610000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.630252 Melanocytic nevus:0.570136 Basal cell carcinoma:0.629630 Actinic keratosis:0.909091 Benign keratosis:0.710000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.884222 Melanocytic nevus:0.925816 Basal cell carcinoma:0.939746 Actinic keratosis:0.864529 Benign keratosis:0.860000 Dermatofibroma:0.793699 Vascular lesion:0.871066
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [118.0, 539.0, 75.0, 42.0, 136.0, 8.0, 29.0]
+
+TEST Student: Epoch: 34, iteration: 86
+
+TEST AUROC: 0.876000, TEST Accus: 0.607281, TEST Senss: 0.775715, TEST Specs: 0.814910
+AUROCs: Melanoma:0.874454 Melanocytic nevus:0.889183 Basal cell carcinoma:0.953553 Actinic keratosis:0.906322 Benign keratosis:0.877484 Dermatofibroma:0.668499 Vascular lesion:0.962507
+Accus: Melanoma:0.510823 Melanocytic nevus:0.399555 Basal cell carcinoma:0.681818 Actinic keratosis:0.724138 Benign keratosis:0.635514 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.766234 Melanocytic nevus:0.670867 Basal cell carcinoma:0.872727 Actinic keratosis:0.879310 Benign keratosis:0.831776 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.815583 Melanocytic nevus:0.896396 Basal cell carcinoma:0.886614 Actinic keratosis:0.839039 Benign keratosis:0.769572 Dermatofibroma:0.736578 Vascular lesion:0.760585
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_35.pth
+
+Epoch: 35, iteration: 0/87, ==> train <===, loss: 1.049275, classification loss: 1.806142,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.775563,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.018697,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.503155504993244e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 284.0, 38.0, 24.0, 61.0, 4.0, 11.0]
+
+VAL Student: Epoch: 35, iteration: 86
+
+VAL AUROC: 0.833584, VAL Accus: 0.568868, VAL Senss: 0.648980, VAL Specs: 0.883445
+AUROCs: Melanoma:0.819104 Melanocytic nevus:0.845469 Basal cell carcinoma:0.931583 Actinic keratosis:0.897402 Benign keratosis:0.856078 Dermatofibroma:0.602134 Vascular lesion:0.883316
+Accus: Melanoma:0.529412 Melanocytic nevus:0.428356 Basal cell carcinoma:0.703704 Actinic keratosis:0.727273 Benign keratosis:0.610000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.647059 Melanocytic nevus:0.546003 Basal cell carcinoma:0.888889 Actinic keratosis:0.757576 Benign keratosis:0.720000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Specs: Melanoma:0.860386 Melanocytic nevus:0.955490 Basal cell carcinoma:0.885835 Actinic keratosis:0.864529 Benign keratosis:0.855556 Dermatofibroma:0.885163 Vascular lesion:0.877157
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [130.0, 580.0, 90.0, 39.0, 129.0, 6.0, 28.0]
+
+TEST Student: Epoch: 35, iteration: 86
+
+TEST AUROC: 0.857714, TEST Accus: 0.608867, TEST Senss: 0.768333, TEST Specs: 0.823696
+AUROCs: Melanoma:0.848150 Melanocytic nevus:0.905795 Basal cell carcinoma:0.956283 Actinic keratosis:0.880042 Benign keratosis:0.864032 Dermatofibroma:0.592004 Vascular lesion:0.957694
+Accus: Melanoma:0.562771 Melanocytic nevus:0.429948 Basal cell carcinoma:0.818182 Actinic keratosis:0.672414 Benign keratosis:0.602804 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.770563 Melanocytic nevus:0.650111 Basal cell carcinoma:0.945455 Actinic keratosis:0.844828 Benign keratosis:0.803738 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.797646 Melanocytic nevus:0.935435 Basal cell carcinoma:0.811024 Actinic keratosis:0.824221 Benign keratosis:0.772349 Dermatofibroma:0.844957 Vascular lesion:0.780242
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_36.pth
+
+Epoch: 36, iteration: 0/87, ==> train <===, loss: 1.035227, classification loss: 1.794821,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.784522,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.024927,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.2528399544939195e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [69.0, 299.0, 34.0, 29.0, 51.0, 5.0, 11.0]
+
+VAL Student: Epoch: 36, iteration: 86
+
+VAL AUROC: 0.834627, VAL Accus: 0.585009, VAL Senss: 0.660381, VAL Specs: 0.877743
+AUROCs: Melanoma:0.832286 Melanocytic nevus:0.855172 Basal cell carcinoma:0.922716 Actinic keratosis:0.947228 Benign keratosis:0.837678 Dermatofibroma:0.585112 Vascular lesion:0.862200
+Accus: Melanoma:0.579832 Melanocytic nevus:0.450980 Basal cell carcinoma:0.629630 Actinic keratosis:0.878788 Benign keratosis:0.510000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.697479 Melanocytic nevus:0.594268 Basal cell carcinoma:0.796296 Actinic keratosis:0.878788 Benign keratosis:0.610000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.842225 Melanocytic nevus:0.916914 Basal cell carcinoma:0.899577 Actinic keratosis:0.857291 Benign keratosis:0.905556 Dermatofibroma:0.801829 Vascular lesion:0.920812
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [142.0, 616.0, 85.0, 43.0, 106.0, 7.0, 27.0]
+
+TEST Student: Epoch: 36, iteration: 86
+
+TEST AUROC: 0.874147, TEST Accus: 0.609991, TEST Senss: 0.765115, TEST Specs: 0.823372
+AUROCs: Melanoma:0.871440 Melanocytic nevus:0.903428 Basal cell carcinoma:0.952016 Actinic keratosis:0.913353 Benign keratosis:0.867197 Dermatofibroma:0.649090 Vascular lesion:0.962507
+Accus: Melanoma:0.614719 Melanocytic nevus:0.456635 Basal cell carcinoma:0.772727 Actinic keratosis:0.741379 Benign keratosis:0.495327 Dermatofibroma:0.318182 Vascular lesion:0.870968
+Senss: Melanoma:0.809524 Melanocytic nevus:0.709414 Basal cell carcinoma:0.936364 Actinic keratosis:0.844828 Benign keratosis:0.724299 Dermatofibroma:0.363636 Vascular lesion:0.967742
+Specs: Melanoma:0.775785 Melanocytic nevus:0.894895 Basal cell carcinoma:0.830971 Actinic keratosis:0.830353 Benign keratosis:0.836202 Dermatofibroma:0.748118 Vascular lesion:0.847278
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_37.pth
+
+Epoch: 37, iteration: 0/87, ==> train <===, loss: 1.061970, classification loss: 1.808836,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.784473,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.037608,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 2.0275559590445276e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [65.0, 303.0, 32.0, 29.0, 49.0, 5.0, 11.0]
+
+VAL Student: Epoch: 37, iteration: 86
+
+VAL AUROC: 0.840203, VAL Accus: 0.572921, VAL Senss: 0.647080, VAL Specs: 0.879412
+AUROCs: Melanoma:0.818555 Melanocytic nevus:0.855924 Basal cell carcinoma:0.915394 Actinic keratosis:0.939237 Benign keratosis:0.834478 Dermatofibroma:0.606834 Vascular lesion:0.910998
+Accus: Melanoma:0.546218 Melanocytic nevus:0.457014 Basal cell carcinoma:0.592593 Actinic keratosis:0.878788 Benign keratosis:0.490000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.647059 Melanocytic nevus:0.613876 Basal cell carcinoma:0.703704 Actinic keratosis:0.909091 Benign keratosis:0.610000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.881952 Melanocytic nevus:0.893175 Basal cell carcinoma:0.906977 Actinic keratosis:0.870734 Benign keratosis:0.920000 Dermatofibroma:0.799797 Vascular lesion:0.883249
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [132.0, 600.0, 80.0, 42.0, 108.0, 8.0, 29.0]
+
+TEST Student: Epoch: 37, iteration: 86
+
+TEST AUROC: 0.874456, TEST Accus: 0.610201, TEST Senss: 0.771854, TEST Specs: 0.821741
+AUROCs: Melanoma:0.873192 Melanocytic nevus:0.892722 Basal cell carcinoma:0.948910 Actinic keratosis:0.914339 Benign keratosis:0.871411 Dermatofibroma:0.661041 Vascular lesion:0.959580
+Accus: Melanoma:0.571429 Melanocytic nevus:0.444774 Basal cell carcinoma:0.727273 Actinic keratosis:0.724138 Benign keratosis:0.504673 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.761905 Melanocytic nevus:0.730912 Basal cell carcinoma:0.927273 Actinic keratosis:0.844828 Benign keratosis:0.728972 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.821749 Melanocytic nevus:0.873874 Basal cell carcinoma:0.834646 Actinic keratosis:0.847215 Benign keratosis:0.852860 Dermatofibroma:0.740090 Vascular lesion:0.781754
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_38.pth
+
+Epoch: 38, iteration: 0/87, ==> train <===, loss: 1.085048, classification loss: 1.852951,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.792846,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.024943,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.824800363140075e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [63.0, 238.0, 32.0, 28.0, 57.0, 4.0, 10.0]
+
+VAL Student: Epoch: 38, iteration: 86
+
+VAL AUROC: 0.837249, VAL Accus: 0.545161, VAL Senss: 0.627849, VAL Specs: 0.876495
+AUROCs: Melanoma:0.823444 Melanocytic nevus:0.836222 Basal cell carcinoma:0.918154 Actinic keratosis:0.936010 Benign keratosis:0.833844 Dermatofibroma:0.627858 Vascular lesion:0.885212
+Accus: Melanoma:0.529412 Melanocytic nevus:0.358974 Basal cell carcinoma:0.592593 Actinic keratosis:0.848485 Benign keratosis:0.570000 Dermatofibroma:0.250000 Vascular lesion:0.666667
+Senss: Melanoma:0.596639 Melanocytic nevus:0.476621 Basal cell carcinoma:0.759259 Actinic keratosis:0.909091 Benign keratosis:0.670000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Specs: Melanoma:0.872872 Melanocytic nevus:0.967359 Basal cell carcinoma:0.904863 Actinic keratosis:0.803516 Benign keratosis:0.873333 Dermatofibroma:0.821138 Vascular lesion:0.892386
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [129.0, 495.0, 83.0, 45.0, 124.0, 6.0, 28.0]
+
+TEST Student: Epoch: 38, iteration: 86
+
+TEST AUROC: 0.858447, TEST Accus: 0.601597, TEST Senss: 0.753436, TEST Specs: 0.815464
+AUROCs: Melanoma:0.845025 Melanocytic nevus:0.906446 Basal cell carcinoma:0.945975 Actinic keratosis:0.894014 Benign keratosis:0.838613 Dermatofibroma:0.624162 Vascular lesion:0.954897
+Accus: Melanoma:0.558442 Melanocytic nevus:0.366938 Basal cell carcinoma:0.754545 Actinic keratosis:0.775862 Benign keratosis:0.579439 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.753247 Melanocytic nevus:0.602669 Basal cell carcinoma:0.918182 Actinic keratosis:0.879310 Benign keratosis:0.757009 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.820067 Melanocytic nevus:0.951952 Basal cell carcinoma:0.827297 Actinic keratosis:0.753194 Benign keratosis:0.785675 Dermatofibroma:0.776719 Vascular lesion:0.793347
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_39.pth
+
+Epoch: 39, iteration: 0/87, ==> train <===, loss: 1.040873, classification loss: 1.805103,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.791521,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.027292,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.6423203268260674e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [69.0, 257.0, 30.0, 29.0, 40.0, 5.0, 10.0]
+
+VAL Student: Epoch: 39, iteration: 86
+
+VAL AUROC: 0.843103, VAL Accus: 0.540139, VAL Senss: 0.633557, VAL Specs: 0.873890
+AUROCs: Melanoma:0.839115 Melanocytic nevus:0.853449 Basal cell carcinoma:0.909032 Actinic keratosis:0.945724 Benign keratosis:0.812089 Dermatofibroma:0.640180 Vascular lesion:0.902132
+Accus: Melanoma:0.579832 Melanocytic nevus:0.387632 Basal cell carcinoma:0.555556 Actinic keratosis:0.878788 Benign keratosis:0.400000 Dermatofibroma:0.312500 Vascular lesion:0.666667
+Senss: Melanoma:0.705882 Melanocytic nevus:0.559578 Basal cell carcinoma:0.648148 Actinic keratosis:0.878788 Benign keratosis:0.530000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.847900 Melanocytic nevus:0.919881 Basal cell carcinoma:0.905920 Actinic keratosis:0.855222 Benign keratosis:0.937778 Dermatofibroma:0.773374 Vascular lesion:0.877157
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [139.0, 511.0, 77.0, 44.0, 91.0, 8.0, 29.0]
+
+TEST Student: Epoch: 39, iteration: 86
+
+TEST AUROC: 0.873565, TEST Accus: 0.594786, TEST Senss: 0.763387, TEST Specs: 0.816388
+AUROCs: Melanoma:0.869406 Melanocytic nevus:0.891452 Basal cell carcinoma:0.941947 Actinic keratosis:0.919361 Benign keratosis:0.859115 Dermatofibroma:0.676390 Vascular lesion:0.957287
+Accus: Melanoma:0.601732 Melanocytic nevus:0.378799 Basal cell carcinoma:0.700000 Actinic keratosis:0.758621 Benign keratosis:0.425234 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.800866 Melanocytic nevus:0.704225 Basal cell carcinoma:0.927273 Actinic keratosis:0.862069 Benign keratosis:0.640187 Dermatofibroma:0.409091 Vascular lesion:1.000000
+Specs: Melanoma:0.786435 Melanocytic nevus:0.888889 Basal cell carcinoma:0.833071 Actinic keratosis:0.827287 Benign keratosis:0.887840 Dermatofibroma:0.719017 Vascular lesion:0.772177
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_40.pth
+
+Epoch: 40, iteration: 0/87, ==> train <===, loss: 1.072344, classification loss: 1.821740,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.785471,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.036075,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.4780882941434607e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [69.0, 337.0, 34.0, 23.0, 51.0, 5.0, 11.0]
+
+VAL Student: Epoch: 40, iteration: 86
+
+VAL AUROC: 0.833624, VAL Accus: 0.567223, VAL Senss: 0.664922, VAL Specs: 0.886167
+AUROCs: Melanoma:0.844676 Melanocytic nevus:0.870416 Basal cell carcinoma:0.929254 Actinic keratosis:0.909749 Benign keratosis:0.844978 Dermatofibroma:0.564215 Vascular lesion:0.872081
+Accus: Melanoma:0.579832 Melanocytic nevus:0.508296 Basal cell carcinoma:0.629630 Actinic keratosis:0.696970 Benign keratosis:0.510000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.638655 Melanocytic nevus:0.659125 Basal cell carcinoma:0.796296 Actinic keratosis:0.787879 Benign keratosis:0.660000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.867196 Melanocytic nevus:0.905045 Basal cell carcinoma:0.905920 Actinic keratosis:0.894519 Benign keratosis:0.907778 Dermatofibroma:0.870935 Vascular lesion:0.851777
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [139.0, 662.0, 89.0, 39.0, 114.0, 6.0, 29.0]
+
+TEST Student: Epoch: 40, iteration: 86
+
+TEST AUROC: 0.874248, TEST Accus: 0.616413, TEST Senss: 0.776750, TEST Specs: 0.825243
+AUROCs: Melanoma:0.876378 Melanocytic nevus:0.900017 Basal cell carcinoma:0.956588 Actinic keratosis:0.892913 Benign keratosis:0.880318 Dermatofibroma:0.661337 Vascular lesion:0.952182
+Accus: Melanoma:0.601732 Melanocytic nevus:0.490734 Basal cell carcinoma:0.809091 Actinic keratosis:0.672414 Benign keratosis:0.532710 Dermatofibroma:0.272727 Vascular lesion:0.935484
+Senss: Melanoma:0.796537 Melanocytic nevus:0.764270 Basal cell carcinoma:0.945455 Actinic keratosis:0.810345 Benign keratosis:0.757009 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.795964 Melanocytic nevus:0.866366 Basal cell carcinoma:0.839370 Actinic keratosis:0.879918 Benign keratosis:0.832315 Dermatofibroma:0.829403 Vascular lesion:0.733367
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_41.pth
+
+Epoch: 41, iteration: 0/87, ==> train <===, loss: 1.048623, classification loss: 1.802585,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.781619,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.027657,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.3302794647291146e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [83.0, 237.0, 30.0, 25.0, 56.0, 5.0, 11.0]
+
+VAL Student: Epoch: 41, iteration: 86
+
+VAL AUROC: 0.830127, VAL Accus: 0.567701, VAL Senss: 0.635209, VAL Specs: 0.881691
+AUROCs: Melanoma:0.847089 Melanocytic nevus:0.852509 Basal cell carcinoma:0.922089 Actinic keratosis:0.873304 Benign keratosis:0.860244 Dermatofibroma:0.565231 Vascular lesion:0.890423
+Accus: Melanoma:0.697479 Melanocytic nevus:0.357466 Basal cell carcinoma:0.555556 Actinic keratosis:0.757576 Benign keratosis:0.560000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Senss: Melanoma:0.747899 Melanocytic nevus:0.481146 Basal cell carcinoma:0.703704 Actinic keratosis:0.787879 Benign keratosis:0.680000 Dermatofibroma:0.312500 Vascular lesion:0.733333
+Specs: Melanoma:0.785471 Melanocytic nevus:0.976261 Basal cell carcinoma:0.931290 Actinic keratosis:0.893485 Benign keratosis:0.891111 Dermatofibroma:0.806911 Vascular lesion:0.887310
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [166.0, 481.0, 85.0, 38.0, 120.0, 6.0, 28.0]
+
+TEST Student: Epoch: 41, iteration: 86
+
+TEST AUROC: 0.865517, TEST Accus: 0.605682, TEST Senss: 0.748683, TEST Specs: 0.823079
+AUROCs: Melanoma:0.857783 Melanocytic nevus:0.896920 Basal cell carcinoma:0.955032 Actinic keratosis:0.891089 Benign keratosis:0.870007 Dermatofibroma:0.635588 Vascular lesion:0.952198
+Accus: Melanoma:0.718615 Melanocytic nevus:0.356560 Basal cell carcinoma:0.772727 Actinic keratosis:0.655172 Benign keratosis:0.560748 Dermatofibroma:0.272727 Vascular lesion:0.903226
+Senss: Melanoma:0.870130 Melanocytic nevus:0.602669 Basal cell carcinoma:0.881818 Actinic keratosis:0.793103 Benign keratosis:0.761682 Dermatofibroma:0.363636 Vascular lesion:0.967742
+Specs: Melanoma:0.703475 Melanocytic nevus:0.944444 Basal cell carcinoma:0.878215 Actinic keratosis:0.880429 Benign keratosis:0.815103 Dermatofibroma:0.762669 Vascular lesion:0.777218
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_42.pth
+
+Epoch: 42, iteration: 0/87, ==> train <===, loss: 1.054628, classification loss: 1.819770,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.791021,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.025879,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.1972515182562032e-06
+total: [119.0, 663.0, 54.0, 33.0, 100.0, 16.0, 15.0]
+correct: [59.0, 203.0, 40.0, 23.0, 59.0, 4.0, 11.0]
+
+VAL Student: Epoch: 42, iteration: 86
+
+VAL AUROC: 0.829118, VAL Accus: 0.544718, VAL Senss: 0.648772, VAL Specs: 0.874341
+AUROCs: Melanoma:0.833306 Melanocytic nevus:0.833421 Basal cell carcinoma:0.927198 Actinic keratosis:0.897339 Benign keratosis:0.853100 Dermatofibroma:0.584540 Vascular lesion:0.874924
+Accus: Melanoma:0.495798 Melanocytic nevus:0.306184 Basal cell carcinoma:0.740741 Actinic keratosis:0.696970 Benign keratosis:0.590000 Dermatofibroma:0.250000 Vascular lesion:0.733333
+Senss: Melanoma:0.621849 Melanocytic nevus:0.425339 Basal cell carcinoma:0.944444 Actinic keratosis:0.727273 Benign keratosis:0.710000 Dermatofibroma:0.312500 Vascular lesion:0.800000
+Specs: Melanoma:0.883087 Melanocytic nevus:0.970326 Basal cell carcinoma:0.874207 Actinic keratosis:0.871768 Benign keratosis:0.863333 Dermatofibroma:0.800813 Vascular lesion:0.856853
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+total: [231.0, 1349.0, 110.0, 58.0, 214.0, 22.0, 31.0]
+correct: [128.0, 398.0, 95.0, 35.0, 127.0, 6.0, 27.0]
+
+TEST Student: Epoch: 42, iteration: 86
+
+TEST AUROC: 0.858434, TEST Accus: 0.579055, TEST Senss: 0.741892, TEST Specs: 0.813907
+AUROCs: Melanoma:0.859184 Melanocytic nevus:0.899227 Basal cell carcinoma:0.953414 Actinic keratosis:0.877936 Benign keratosis:0.861561 Dermatofibroma:0.614606 Vascular lesion:0.943109
+Accus: Melanoma:0.554113 Melanocytic nevus:0.295033 Basal cell carcinoma:0.863636 Actinic keratosis:0.603448 Benign keratosis:0.593458 Dermatofibroma:0.272727 Vascular lesion:0.870968
+Senss: Melanoma:0.731602 Melanocytic nevus:0.544848 Basal cell carcinoma:0.954545 Actinic keratosis:0.827586 Benign keratosis:0.771028 Dermatofibroma:0.363636 Vascular lesion:1.000000
+Specs: Melanoma:0.824552 Melanocytic nevus:0.960961 Basal cell carcinoma:0.787927 Actinic keratosis:0.849770 Benign keratosis:0.790117 Dermatofibroma:0.743603 Vascular lesion:0.740423
+save model to ../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_43.pth
+
+Epoch: 43, iteration: 0/87, ==> train <===, loss: 1.054564, classification loss: 1.784512,                     consistency loss: 0.000000, consistency relation loss: 0.000000, bnm loss: -0.761056,bnm loss improve: 0.000000,                         supCon loss: 0.000000,vat loss: 0.031108,wcp loss: 0.000000,entropy loss: 0.000000,consistency weight: 1.000000, lr: 1.0775263664305828e-06

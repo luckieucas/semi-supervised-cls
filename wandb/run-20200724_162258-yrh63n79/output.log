@@ -1,0 +1,300 @@
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w05_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 1
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w05_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 2
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+=> loaded checkpoint '../model/skin_0722_frac005_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac005_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST AUROC: 0.807924, TEST Accus: 0.166891, TEST Senss: 0.993506, TEST Specs: 0.024623, TEST Pre: 0.143307, TEST F1: 0.202434
+
+TEST AUROC: 0.807924, TEST Accus: 0.166891, TEST Senss: 0.993506, TEST Specs: 0.024623, TEST Pre: 0.143307, TEST F1: 0.202434
+AUROCs: Melanoma:0.775809 Melanocytic nevus:0.859381 Basal cell carcinoma:0.824250 Actinic keratosis:0.875328 Benign keratosis:0.818971 Dermatofibroma:0.540688 Vascular lesion:0.961043
+AUROCs: Melanoma:0.775809 Melanocytic nevus:0.859381 Basal cell carcinoma:0.824250 Actinic keratosis:0.875328 Benign keratosis:0.818971 Dermatofibroma:0.540688 Vascular lesion:0.961043
+Accus: Melanoma:0.114640 Melanocytic nevus:0.669479 Basal cell carcinoma:0.070968 Actinic keratosis:0.068983 Benign keratosis:0.106203 Dermatofibroma:0.067494 Vascular lesion:0.070471
+Accus: Melanoma:0.114640 Melanocytic nevus:0.669479 Basal cell carcinoma:0.070968 Actinic keratosis:0.068983 Benign keratosis:0.106203 Dermatofibroma:0.067494 Vascular lesion:0.070471
+Senss: Melanoma:1.000000 Melanocytic nevus:1.000000 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.954545 Vascular lesion:1.000000
+Senss: Melanoma:1.000000 Melanocytic nevus:1.000000 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.954545 Vascular lesion:1.000000
+Specs: Melanoma:0.000000 Melanocytic nevus:0.000000 Basal cell carcinoma:0.017323 Actinic keratosis:0.041390 Benign keratosis:0.000000 Dermatofibroma:0.057702 Vascular lesion:0.055948
+Specs: Melanoma:0.000000 Melanocytic nevus:0.000000 Basal cell carcinoma:0.017323 Actinic keratosis:0.041390 Benign keratosis:0.000000 Dermatofibroma:0.057702 Vascular lesion:0.055948
+=> loaded checkpoint '../model/skin_0722_frac005_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac005_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST AUROC: 0.820615, TEST Accus: 0.304431, TEST Senss: 0.966776, TEST Specs: 0.192479, TEST Pre: 0.156697, TEST F1: 0.216968
+
+TEST AUROC: 0.820615, TEST Accus: 0.304431, TEST Senss: 0.966776, TEST Specs: 0.192479, TEST Pre: 0.156697, TEST F1: 0.216968
+AUROCs: Melanoma:0.767784 Melanocytic nevus:0.891196 Basal cell carcinoma:0.786886 Actinic keratosis:0.857620 Benign keratosis:0.837113 Dermatofibroma:0.611983 Vascular lesion:0.991724
+AUROCs: Melanoma:0.767784 Melanocytic nevus:0.891196 Basal cell carcinoma:0.786886 Actinic keratosis:0.857620 Benign keratosis:0.837113 Dermatofibroma:0.611983 Vascular lesion:0.991724
+Accus: Melanoma:0.159305 Melanocytic nevus:0.738958 Basal cell carcinoma:0.312159 Actinic keratosis:0.181141 Benign keratosis:0.210422 Dermatofibroma:0.289330 Vascular lesion:0.239702
+Accus: Melanoma:0.159305 Melanocytic nevus:0.738958 Basal cell carcinoma:0.312159 Actinic keratosis:0.181141 Benign keratosis:0.210422 Dermatofibroma:0.289330 Vascular lesion:0.239702
+Senss: Melanoma:0.978355 Melanocytic nevus:0.988139 Basal cell carcinoma:0.954545 Actinic keratosis:0.982759 Benign keratosis:1.000000 Dermatofibroma:0.863636 Vascular lesion:1.000000
+Senss: Melanoma:0.978355 Melanocytic nevus:0.988139 Basal cell carcinoma:0.954545 Actinic keratosis:0.982759 Benign keratosis:1.000000 Dermatofibroma:0.863636 Vascular lesion:1.000000
+Specs: Melanoma:0.053251 Melanocytic nevus:0.234234 Basal cell carcinoma:0.275066 Actinic keratosis:0.157384 Benign keratosis:0.116602 Dermatofibroma:0.282990 Vascular lesion:0.227823
+Specs: Melanoma:0.053251 Melanocytic nevus:0.234234 Basal cell carcinoma:0.275066 Actinic keratosis:0.157384 Benign keratosis:0.116602 Dermatofibroma:0.282990 Vascular lesion:0.227823
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST AUROC: 0.849047, TEST Accus: 0.617724, TEST Senss: 0.867373, TEST Specs: 0.545658, TEST Pre: 0.196771, TEST F1: 0.272733
+
+TEST AUROC: 0.849047, TEST Accus: 0.617724, TEST Senss: 0.867373, TEST Specs: 0.545658, TEST Pre: 0.196771, TEST F1: 0.272733
+
+TEST AUROC: 0.849047, TEST Accus: 0.617724, TEST Senss: 0.867373, TEST Specs: 0.545658, TEST Pre: 0.196771, TEST F1: 0.272733
+AUROCs: Melanoma:0.832028 Melanocytic nevus:0.905556 Basal cell carcinoma:0.912326 Actinic keratosis:0.872368 Benign keratosis:0.869099 Dermatofibroma:0.602678 Vascular lesion:0.949272
+AUROCs: Melanoma:0.832028 Melanocytic nevus:0.905556 Basal cell carcinoma:0.912326 Actinic keratosis:0.872368 Benign keratosis:0.869099 Dermatofibroma:0.602678 Vascular lesion:0.949272
+AUROCs: Melanoma:0.832028 Melanocytic nevus:0.905556 Basal cell carcinoma:0.912326 Actinic keratosis:0.872368 Benign keratosis:0.869099 Dermatofibroma:0.602678 Vascular lesion:0.949272
+Accus: Melanoma:0.434739 Melanocytic nevus:0.800993 Basal cell carcinoma:0.696278 Actinic keratosis:0.697270 Benign keratosis:0.429280 Dermatofibroma:0.658561 Vascular lesion:0.606948
+Accus: Melanoma:0.434739 Melanocytic nevus:0.800993 Basal cell carcinoma:0.696278 Actinic keratosis:0.697270 Benign keratosis:0.429280 Dermatofibroma:0.658561 Vascular lesion:0.606948
+Accus: Melanoma:0.434739 Melanocytic nevus:0.800993 Basal cell carcinoma:0.696278 Actinic keratosis:0.697270 Benign keratosis:0.429280 Dermatofibroma:0.658561 Vascular lesion:0.606948
+Senss: Melanoma:0.991342 Melanocytic nevus:0.971090 Basal cell carcinoma:0.918182 Actinic keratosis:0.896552 Benign keratosis:0.995327 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.991342 Melanocytic nevus:0.971090 Basal cell carcinoma:0.918182 Actinic keratosis:0.896552 Benign keratosis:0.995327 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Senss: Melanoma:0.991342 Melanocytic nevus:0.971090 Basal cell carcinoma:0.918182 Actinic keratosis:0.896552 Benign keratosis:0.995327 Dermatofibroma:0.363636 Vascular lesion:0.935484
+Specs: Melanoma:0.362668 Melanocytic nevus:0.456456 Basal cell carcinoma:0.683465 Actinic keratosis:0.691364 Benign keratosis:0.362021 Dermatofibroma:0.661816 Vascular lesion:0.601815
+Specs: Melanoma:0.362668 Melanocytic nevus:0.456456 Basal cell carcinoma:0.683465 Actinic keratosis:0.691364 Benign keratosis:0.362021 Dermatofibroma:0.661816 Vascular lesion:0.601815
+Specs: Melanoma:0.362668 Melanocytic nevus:0.456456 Basal cell carcinoma:0.683465 Actinic keratosis:0.691364 Benign keratosis:0.362021 Dermatofibroma:0.661816 Vascular lesion:0.601815
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST AUROC: 0.889373, TEST Accus: 0.764977, TEST Senss: 0.886216, TEST Specs: 0.721579, TEST Pre: 0.257986, TEST F1: 0.354582
+
+TEST AUROC: 0.889373, TEST Accus: 0.764977, TEST Senss: 0.886216, TEST Specs: 0.721579, TEST Pre: 0.257986, TEST F1: 0.354582
+
+TEST AUROC: 0.889373, TEST Accus: 0.764977, TEST Senss: 0.886216, TEST Specs: 0.721579, TEST Pre: 0.257986, TEST F1: 0.354582
+AUROCs: Melanoma:0.840190 Melanocytic nevus:0.910238 Basal cell carcinoma:0.947535 Actinic keratosis:0.917035 Benign keratosis:0.900395 Dermatofibroma:0.713862 Vascular lesion:0.996358
+AUROCs: Melanoma:0.840190 Melanocytic nevus:0.910238 Basal cell carcinoma:0.947535 Actinic keratosis:0.917035 Benign keratosis:0.900395 Dermatofibroma:0.713862 Vascular lesion:0.996358
+AUROCs: Melanoma:0.840190 Melanocytic nevus:0.910238 Basal cell carcinoma:0.947535 Actinic keratosis:0.917035 Benign keratosis:0.900395 Dermatofibroma:0.713862 Vascular lesion:0.996358
+Accus: Melanoma:0.454591 Melanocytic nevus:0.840199 Basal cell carcinoma:0.871464 Actinic keratosis:0.833251 Benign keratosis:0.587097 Dermatofibroma:0.879404 Vascular lesion:0.888834
+Accus: Melanoma:0.454591 Melanocytic nevus:0.840199 Basal cell carcinoma:0.871464 Actinic keratosis:0.833251 Benign keratosis:0.587097 Dermatofibroma:0.879404 Vascular lesion:0.888834
+Accus: Melanoma:0.454591 Melanocytic nevus:0.840199 Basal cell carcinoma:0.871464 Actinic keratosis:0.833251 Benign keratosis:0.587097 Dermatofibroma:0.879404 Vascular lesion:0.888834
+Senss: Melanoma:0.987013 Melanocytic nevus:0.933284 Basal cell carcinoma:0.881818 Actinic keratosis:0.879310 Benign keratosis:0.976636 Dermatofibroma:0.545455 Vascular lesion:1.000000
+Senss: Melanoma:0.987013 Melanocytic nevus:0.933284 Basal cell carcinoma:0.881818 Actinic keratosis:0.879310 Benign keratosis:0.976636 Dermatofibroma:0.545455 Vascular lesion:1.000000
+Senss: Melanoma:0.987013 Melanocytic nevus:0.933284 Basal cell carcinoma:0.881818 Actinic keratosis:0.879310 Benign keratosis:0.976636 Dermatofibroma:0.545455 Vascular lesion:1.000000
+Specs: Melanoma:0.385650 Melanocytic nevus:0.651652 Basal cell carcinoma:0.870866 Actinic keratosis:0.831886 Benign keratosis:0.540811 Dermatofibroma:0.883091 Vascular lesion:0.887097
+Specs: Melanoma:0.385650 Melanocytic nevus:0.651652 Basal cell carcinoma:0.870866 Actinic keratosis:0.831886 Benign keratosis:0.540811 Dermatofibroma:0.883091 Vascular lesion:0.887097
+Specs: Melanoma:0.385650 Melanocytic nevus:0.651652 Basal cell carcinoma:0.870866 Actinic keratosis:0.831886 Benign keratosis:0.540811 Dermatofibroma:0.883091 Vascular lesion:0.887097
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST Student: Epoch: 1
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+
+TEST AUROC: 0.821356, TEST Accus: 0.320596, TEST Senss: 0.954982, TEST Specs: 0.228288, TEST Pre: 0.161913, TEST F1: 0.216843
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+AUROCs: Melanoma:0.792589 Melanocytic nevus:0.877619 Basal cell carcinoma:0.889234 Actinic keratosis:0.919405 Benign keratosis:0.849440 Dermatofibroma:0.563586 Vascular lesion:0.857619
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Accus: Melanoma:0.125062 Melanocytic nevus:0.774194 Basal cell carcinoma:0.214392 Actinic keratosis:0.135484 Benign keratosis:0.111166 Dermatofibroma:0.361290 Vascular lesion:0.522581
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Senss: Melanoma:1.000000 Melanocytic nevus:0.944403 Basal cell carcinoma:1.000000 Actinic keratosis:1.000000 Benign keratosis:1.000000 Dermatofibroma:0.772727 Vascular lesion:0.967742
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+Specs: Melanoma:0.011771 Melanocytic nevus:0.429429 Basal cell carcinoma:0.169029 Actinic keratosis:0.109862 Benign keratosis:0.005552 Dermatofibroma:0.356749 Vascular lesion:0.515625
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+=> loaded checkpoint '../model/skin_0722_frac01_BNM_w50_vat_batch32_densenet121/checkpoint/epoch_2.pth' (epoch 2)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST Student: Epoch: 2
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+
+TEST AUROC: 0.855136, TEST Accus: 0.504856, TEST Senss: 0.902730, TEST Specs: 0.426578, TEST Pre: 0.179745, TEST F1: 0.245859
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+AUROCs: Melanoma:0.803540 Melanocytic nevus:0.895614 Basal cell carcinoma:0.931339 Actinic keratosis:0.892076 Benign keratosis:0.867841 Dermatofibroma:0.615267 Vascular lesion:0.980278
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Accus: Melanoma:0.362779 Melanocytic nevus:0.784119 Basal cell carcinoma:0.463524 Actinic keratosis:0.376675 Benign keratosis:0.468486 Dermatofibroma:0.561787 Vascular lesion:0.516625
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Senss: Melanoma:0.952381 Melanocytic nevus:0.961453 Basal cell carcinoma:0.981818 Actinic keratosis:0.965517 Benign keratosis:0.957944 Dermatofibroma:0.500000 Vascular lesion:1.000000
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073
+Specs: Melanoma:0.286435 Melanocytic nevus:0.424925 Basal cell carcinoma:0.433596 Actinic keratosis:0.359223 Benign keratosis:0.410328 Dermatofibroma:0.562469 Vascular lesion:0.509073

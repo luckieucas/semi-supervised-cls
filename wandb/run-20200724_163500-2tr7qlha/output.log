@@ -1,0 +1,6 @@
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+=> loaded checkpoint '../model/skin_0722_frac02_BNM_w10_vat_ent_batch32_densenet121/checkpoint/epoch_1.pth' (epoch 1)
+single label  Total # images:2015, labels:2015
+/media/luckie/vol4/semi_supervised_cls/code/validation.py:125: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(inp.view(-1, c, h, w).cuda(), volatile=True)
