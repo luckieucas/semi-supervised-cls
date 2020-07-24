@@ -1,0 +1,37 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "main.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "e87a0e05ab854f995e63f590a43b1c216d9cca25"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-07-24T15:24:21.699466",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [
+        "--labeled_num",
+        "1000",
+        "--task",
+        "hip_4cls",
+        "--vat_loss_weight",
+        "1.0",
+        "--bnm_loss_weight",
+        "1.0",
+        "--entropy_loss_weight",
+        "1.0"
+    ],
+    "state": "killed",
+    "jobType": null,
+    "mode": "run",
+    "name": "hip_4cls_model_test_densenet121_labeledNum1000",
+    "project": "hip_4cls-semi-supervised-newcode",
+    "heartbeatAt": "2020-07-24T15:32:55.653006",
+    "exitcode": 255
+}

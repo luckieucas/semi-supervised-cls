@@ -19,7 +19,7 @@ from DatasetGenerator import DatasetGenerator, TwoStreamBatchSampler
 from losses import VATLoss,bnm_loss
 from utils import AverageMeter
 from metrics import compute_metrics_test
-from losses import cross_entropy_loss
+from losses import cross_entropy_loss,entropy_y_x
 
 
 class Trainer():
@@ -129,9 +129,16 @@ class Trainer():
                 loss_bnm = bnm_loss(varOutput[args.labeled_bs:])
             else:
                 loss_bnm = 0.0
-            lossvalue = cls_loss + vat_loss + loss_bnm
+
+            if epoch >= args.entropy_start_epoch and args.entropy_loss_weight > 0.0:
+                loss_entropy = entropy_y_x(varOutput[args.labeled_bs:])
+            else:
+                loss_entropy = 0.0
+
+            lossvalue = cls_loss + vat_loss + loss_bnm + loss_entropy
             if step % 200 == 0:
-                wandb.log({'train cls loss':cls_loss, 'train vat loss':vat_loss,'train bnm loss':loss_bnm, 
+                wandb.log({'train cls loss':cls_loss, 'train vat loss':vat_loss,'train bnm loss':loss_bnm,
+                'train loss entropy':loss_entropy, 
                 'train total loss':lossvalue})
             
             optimzer.zero_grad()
