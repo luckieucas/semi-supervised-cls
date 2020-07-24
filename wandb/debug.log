@@ -1,24 +1,26 @@
-2020-07-24 16:35:01,464 DEBUG   MainThread:11702 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
-2020-07-24 16:35:01,837 DEBUG   MainThread:11702 [meta.py:_setup_code_git():49] probe for git information
-2020-07-24 16:35:01,875 DEBUG   MainThread:11702 [run_manager.py:__init__():547] Initialized sync for skin-semi-supervised-test/2tr7qlha
-2020-07-24 16:35:01,881 INFO    MainThread:11702 [run_manager.py:wrap_existing_process():1149] wrapping existing process 8891
-2020-07-24 16:35:01,881 WARNING MainThread:11702 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
-2020-07-24 16:35:02,223 INFO    MainThread:11702 [run_manager.py:init_run():928] system metrics and metadata threads started
-2020-07-24 16:35:02,224 INFO    MainThread:11702 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
-2020-07-24 16:35:02,634 INFO    Thread-15 :11702 [run_manager.py:_upsert_run():1056] saving pip packages
-2020-07-24 16:35:02,636 INFO    Thread-15 :11702 [run_manager.py:_upsert_run():1058] initializing streaming files api
-2020-07-24 16:35:02,637 INFO    Thread-15 :11702 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
-2020-07-24 16:35:02,637 INFO    MainThread:11702 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
-2020-07-24 16:35:02,648 INFO    MainThread:11702 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
-2020-07-24 16:35:02,833 INFO    Thread-4  :11702 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/config.yaml
-2020-07-24 16:35:03,223 INFO    Thread-4  :11702 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/wandb-metadata.json
-2020-07-24 16:35:03,224 INFO    Thread-4  :11702 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/requirements.txt
-2020-07-24 16:35:03,225 INFO    Thread-4  :11702 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/output.log
-2020-07-24 16:35:03,831 INFO    Thread-4  :11702 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/output.log
-2020-07-24 16:35:08,835 INFO    Thread-4  :11702 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_163500-2tr7qlha/output.log
-2020-07-24 16:35:11,877 INFO    MainThread:11702 [run_manager.py:_sync_etc():1355] process received interrupt signal, shutting down
-2020-07-24 16:35:11,878 INFO    MainThread:11702 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
-2020-07-24 16:35:11,879 INFO    MainThread:11702 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
-ing down
-2020-07-24 16:35:11,878 INFO    MainThread:11702 [2tr7qlha:run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
-2020-07-24 16:35:11,879 INFO    MainThread:11702 [2tr7qlha:run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-07-24 19:31:18,512 DEBUG   MainThread:24717 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
+2020-07-24 19:31:18,886 DEBUG   MainThread:24717 [meta.py:_setup_code_git():49] probe for git information
+2020-07-24 19:31:18,918 DEBUG   MainThread:24717 [run_manager.py:__init__():547] Initialized sync for skin-semi-supervised-test/3n4j5u15
+2020-07-24 19:31:18,923 INFO    MainThread:24717 [run_manager.py:wrap_existing_process():1149] wrapping existing process 24484
+2020-07-24 19:31:18,923 WARNING MainThread:24717 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-24 19:31:19,457 INFO    MainThread:24717 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-07-24 19:31:19,457 INFO    MainThread:24717 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-07-24 19:31:19,850 INFO    Thread-15 :24717 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-07-24 19:31:19,851 INFO    Thread-15 :24717 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-07-24 19:31:19,852 INFO    Thread-15 :24717 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-07-24 19:31:19,853 INFO    MainThread:24717 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
+2020-07-24 19:31:19,862 INFO    MainThread:24717 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
+2020-07-24 19:31:19,883 INFO    MainThread:24717 [run_manager.py:_sync_etc():1321] received message from user process: {"exitcode": 0}
+2020-07-24 19:31:19,893 INFO    Thread-4  :24717 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/config.yaml
+2020-07-24 19:31:19,904 INFO    MainThread:24717 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
+2020-07-24 19:31:19,916 INFO    MainThread:24717 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-07-24 19:31:20,286 INFO    Thread-4  :24717 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/wandb-metadata.json
+2020-07-24 19:31:20,287 INFO    Thread-4  :24717 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/output.log
+2020-07-24 19:31:20,288 INFO    Thread-4  :24717 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/requirements.txt
+2020-07-24 19:31:20,459 INFO    MainThread:24717 [run_manager.py:shutdown():1086] stopping streaming files and file change observer
+2020-07-24 19:31:20,889 INFO    Thread-4  :24717 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/wandb-metadata.json
+2020-07-24 19:31:20,891 INFO    MainThread:24717 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/output.log
+2020-07-24 19:31:20,891 INFO    MainThread:24717 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/wandb-events.jsonl
+2020-07-24 19:31:22,620 INFO    MainThread:24717 [run_manager.py:_sync_etc():1459] syncing files to cloud storage
+91 INFO    MainThread:24717 [3n4j5u15:run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/wandb/run-20200724_193116-3n4j5u15/wandb-events.jsonl
+2020-07-24 19:31:22,620 INFO    MainThread:24717 [3n4j5u15:run_manager.py:_sync_etc():1459] syncing files to cloud storage

@@ -1,4 +1,5 @@
 import sys
+import os
 import argparse
 import numpy as np
 import wandb
@@ -41,7 +42,7 @@ parser.add_argument('--labeled_rate', type=float, default=0.2, help='number of l
 parser.add_argument('--base_lr', type=float,  default=1e-4, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int,  default=1, help='whether use deterministic training')
 parser.add_argument('--seed', type=int,  default=22000, help='random seed')
-parser.add_argument('--gpu', type=str,  default='0,1', help='GPU to use')
+parser.add_argument('--gpu', type=str,  default='10,11', help='GPU to use')
 parser.add_argument('--baseline', type=int, default=0, help='whether train baseline model')
 
 ### tune
@@ -63,6 +64,7 @@ parser.add_argument('--consistency_began_epoch', type=int,  default=20, help='co
 #add by liupeng
 parser.add_argument('--task', type=str,  default='skin', help='which task')
 args = parser.parse_args()
+os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 class_names = CLASS_NAMES_DICTS[args.task]
 class_num = CLASS_NUM_DICTS[args.task]
 resize = RESIZE_DICTS[args.task]
@@ -79,6 +81,8 @@ for model_path in model_list:
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
     for epoch in range(1,101):
         checkpoint_path = model_path + 'checkpoint/epoch_'+str(epoch)+'.pth'
+        if not os.path.exists(checkpoint_path):
+            continue
         checkpoint = torch.load(checkpoint_path)
         model.load_state_dict(checkpoint['state_dict'])
         logging.info("=> loaded checkpoint '{}' (epoch {})".format(checkpoint_path, checkpoint['epoch']))
