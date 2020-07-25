@@ -1,0 +1,29 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "test.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "6cd1035afc474386942f7efb91a8c2aa97929bb4"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-07-25T04:59:01.239394",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [
+        "--gpu",
+        "0,1"
+    ],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "name": "skin_0722_frac01_BNM_w01_vat_batch32_densenet121",
+    "project": "skin-semi-supervised-test",
+    "heartbeatAt": "2020-07-25T05:43:37.182076",
+    "exitcode": 0
+}

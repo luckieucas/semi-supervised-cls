@@ -37,7 +37,7 @@ def compute_AUCs(gt, pred, competition=True):
     return AUROCs
 
 
-def compute_metrics(gt, pred, competition=True):
+def compute_metrics(gt, pred, args, competition=True):
     """
     Computes accuracy, precision, recall and F1-score from prediction scores.
     Args:
