@@ -98,7 +98,7 @@ def epochVal_metrics(model, dataLoader, args):
             gt = torch.cat((gt, gt_study[study].view(1, -1)), 0)
             pred = torch.cat((pred, pred_study[study].view(1, -1)), 0)
 
-        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred,args, competition=True)
+        AUROCs, Accus, Senss, Specs = compute_metrics(gt, pred, args, competition=True)
     
     model.train(training)
 
@@ -127,7 +127,7 @@ def epochTest_metrics(model, dataLoader, args):
             output_mean = output.view(bs, n_crops, -1).mean(1)
             pred = torch.cat((pred, output_mean.data), 0)
 
-        AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(gt, pred,competition=True)
+        AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(gt, pred,args, competition=True)
     
     model.train(training)
 
