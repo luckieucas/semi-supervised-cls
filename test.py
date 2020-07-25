@@ -62,7 +62,7 @@ parser.add_argument('--consistency', type=float,  default=1, help='consistency')
 parser.add_argument('--consistency_rampup', type=float,  default=30, help='consistency_rampup')
 parser.add_argument('--consistency_began_epoch', type=int,  default=20, help='consistency loss began epoch')
 #add by liupeng
-parser.add_argument('--task', type=str,  default='skin', help='which task')
+parser.add_argument('--task', type=str,  default='hip_4cls', help='which task')
 args = parser.parse_args()
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 class_names = CLASS_NAMES_DICTS[args.task]
@@ -71,8 +71,9 @@ resize = RESIZE_DICTS[args.task]
 args.resize = resize
 args.class_names = class_names
 args.class_num = class_num
+args.csv_file_test = '../dataset/'+ args. task +'/testing.csv'
 model = create_semi_model(args)
-model_list = glob("../model/skin_0722*/")
+model_list = glob("../model/hip_4cls_0722*/")
 for model_path in model_list:
     #model_path = '../model/skin_0722_frac01_BNM_w01_vat_batch32_densenet121/'
     wandb.init(project=args.task+"-semi-supervised-test",name=model_path.split('/')[-2],reinit=True)
