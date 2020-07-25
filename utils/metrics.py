@@ -94,7 +94,7 @@ def compute_metrics(gt, pred, args, competition=True):
     
     return AUROCs, Accus, Senss, Specs
 
-def compute_metrics_test(gt, pred, competition=True):
+def compute_metrics_test(gt, pred, args, competition=True):
     """
     Computes accuracy, precision, recall and F1-score from prediction scores.
     Args:
@@ -121,7 +121,7 @@ def compute_metrics_test(gt, pred, competition=True):
     #indexes = range(n_classes)
     
 #     pdb.set_trace()
-    indexes = range(len(CLASS_NAMES))
+    indexes = range(len(args.class_names))
     
     for i, cls in enumerate(indexes):
         try:
