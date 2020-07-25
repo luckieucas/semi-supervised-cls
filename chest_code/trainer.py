@@ -199,7 +199,7 @@ class Trainer():
         logging.info("Accus: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Accus)]))
         logging.info("Senss: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Senss)]))
         logging.info("Specs: " + " ".join(["{}:{:.6f}".format(args.class_names[i], v) for i,v in enumerate(Specs)]))
-        wandb.log({'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
+        wandb.log({'epoch':epoch,'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
         'TEST Specs':Specs_avg,'TEST Pre':Pre_avg,'TEST F1':F1_avg})
         
      
