@@ -121,17 +121,17 @@ class Trainer():
             #use vat
             vat_loss_fn = VATLoss(filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
-                vat_loss = vat_loss_fn(model, varInput[args.labeled_bs:])
+                vat_loss = args.vat_loss_weight * vat_loss_fn(model, varInput[args.labeled_bs:])
             else:
                 vat_loss = 0.0
 
             if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
-                loss_bnm = bnm_loss(varOutput[args.labeled_bs:])
+                loss_bnm = args.bnm_loss_wegiht * bnm_loss(varOutput[args.labeled_bs:])
             else:
                 loss_bnm = 0.0
 
             if epoch >= args.entropy_start_epoch and args.entropy_loss_weight > 0.0:
-                loss_entropy = entropy_y_x(varOutput[args.labeled_bs:])
+                loss_entropy = args.entropy_loss_weight * entropy_y_x(varOutput[args.labeled_bs:])
             else:
                 loss_entropy = 0.0
 
@@ -166,8 +166,6 @@ class Trainer():
 
     def epochTest(args, wandb, logging, model, epoch, dataloader):
         model.eval()
-        CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
-        'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
         cudnn.benchmark = True
         
         outGT = torch.FloatTensor().cuda()
@@ -214,8 +212,6 @@ class Trainer():
         pathFileTest = args.test_file
         timestampLaunch = ''      
         
-        CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
-                'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
         
         cudnn.benchmark = True
         
