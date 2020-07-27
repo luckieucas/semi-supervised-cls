@@ -107,8 +107,9 @@ class Trainer():
         loss = AverageMeter()
         cls_loss = AverageMeter()
         end = time.time()
+        vat_filter_num = (args.train_bs-arags.labeled_bs) * epoch / args.epochs
 
-
+        wandb.log({'vat_filter_num':vat_filter_num})
         for step, (input, target) in enumerate(dataloader):
             #measure data loading time
             data_time.update(time.time() - end)
@@ -119,7 +120,7 @@ class Trainer():
 
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
-            vat_loss_fn = VATLoss(filter_batch=args.vat_filter_batch,filter_num=args.vat_filter_num)
+            vat_loss_fn = VATLoss(filter_batch=args.vat_filter_batch,filter_num=vat_filter_num)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
                 vat_loss = args.vat_loss_weight * vat_loss_fn(model, varInput[args.labeled_bs:])
             else:
