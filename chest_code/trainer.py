@@ -107,7 +107,7 @@ class Trainer():
         loss = AverageMeter()
         cls_loss = AverageMeter()
         end = time.time()
-        vat_filter_num = int((args.train_bs-args.labeled_bs) * epoch / args.epochs)
+        vat_filter_num = 8 + int((args.train_bs-args.labeled_bs-8) * epoch / args.epochs)
 
         wandb.log({'vat_filter_num':vat_filter_num})
         for step, (input, target) in enumerate(dataloader):
