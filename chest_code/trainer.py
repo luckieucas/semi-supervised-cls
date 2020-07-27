@@ -126,7 +126,7 @@ class Trainer():
                 vat_loss = 0.0
 
             if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
-                loss_bnm = args.bnm_loss_wegiht * bnm_loss(varOutput[args.labeled_bs:])
+                loss_bnm = args.bnm_loss_weight * bnm_loss(varOutput[args.labeled_bs:])
             else:
                 loss_bnm = 0.0
 
