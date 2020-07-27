@@ -29,7 +29,7 @@ parser.add_argument('--epochs', type=int, default=100, help='number of total epo
 parser.add_argument('--start_epoch', type=int, default=0, metavar='N',
                     help='manual epoch number (useful on restarts)')
 parser.add_argument('--checkpoint', type=str, help='whether load checkpoint')
-parser.add_argument('--train_bs', type=int, default=64, help='train batchsize')
+parser.add_argument('--train_bs', type=int, default=646, help='train batchsize')
 parser.add_argument('--test_bs', type=int, default=64, help='test batchsize')
 parser.add_argument('--lr','--learning_rate', type=float, default=1e-4, help='initial learning rate')
 parser.add_argument('--drop', '--dropout', default=0, type=float, help='Dropout ratio')
