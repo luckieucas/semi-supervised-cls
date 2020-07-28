@@ -229,38 +229,6 @@ def bnm_loss_improve(out_logits,filter_num=16):
     return L_bnm
 
 
-def get_UncertaintyLoss(method):
-    assert method in METHODS
-    
-    if method == 'U-Zeros':
-        return Loss_Zeros()
-
-    if method == 'U-Ones':
-        return Loss_Ones()
-    
-    if method == 'U-MultiClass':
-        return Loss_MultiClass()
-
-def dice_loss(score, target):
-    target = target.float()
-    smooth = 1e-5
-    intersect = torch.sum(score * target)
-    y_sum = torch.sum(target * target)
-    z_sum = torch.sum(score * score)
-    loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
-    loss = 1 - loss
-    return loss
-
-def dice_loss1(score, target):
-    target = target.float()
-    smooth = 1e-5
-    intersect = torch.sum(score * target)
-    y_sum = torch.sum(target)
-    z_sum = torch.sum(score)
-    loss = (2 * intersect + smooth) / (z_sum + y_sum + smooth)
-    loss = 1 - loss
-    return loss
-
 
 def entropy_y_x(logit):
     soft_logit = F.softmax(logit, dim=1)

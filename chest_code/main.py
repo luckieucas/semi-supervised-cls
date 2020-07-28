@@ -44,6 +44,7 @@ parser.add_argument('--bnm_loss_weight', type=float, default=0.0,help='weight of
 parser.add_argument('--bnm_start_epoch', type=int, default=0, help='vat loss start epoch')
 parser.add_argument('--entropy_loss_weight', type=float, default=0.0,help='weight of entropy_loss')
 parser.add_argument('--entropy_start_epoch', type=int, default=0, help='entropy loss start epoch')
+parser.add_argument('--mixup', type=bool, default=False, help='whether do mixup')
 #Miscs
 parser.add_argument('--manualSeed', type=int, default=1337, help='manual seed')
 parser.add_argument('--pretrained', type=bool, default=True, help='is use pretrained model')

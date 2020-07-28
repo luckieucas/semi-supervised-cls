@@ -20,6 +20,7 @@ from losses import VATLoss,bnm_loss,bnm_loss_improve
 from utils import AverageMeter
 from metrics import compute_metrics_test
 from losses import cross_entropy_loss,entropy_y_x
+from mixup import mixup_data_sup
 
 
 class Trainer():
@@ -97,7 +98,7 @@ class Trainer():
         for epoch in range(args.start_epoch, args.epochs):
             Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
             Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal,loss_fn)
-            Trainer.epochTest_new(args,wandb, logging, model, epoch, args.root_path)
+            #Trainer.epochTest_new(args,wandb, logging, model, epoch, args.root_path)
             Trainer.epochTest(args, wandb, logging, model, epoch, dataLoaderTest)
 
     def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler,loss_fn):
@@ -117,12 +118,16 @@ class Trainer():
             varInput = torch.autograd.Variable(input)
             varTarget = torch.autograd.Variable(target).long()
             varOutput = model(varInput)
-
+            if args.mixup:
+                mixed_input,lam = mixup_data_sup(varInput[args.labeled_bs:])
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
             vat_loss_fn = VATLoss(filter_batch=args.vat_filter_batch,filter_num=vat_filter_num)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
-                vat_loss = args.vat_loss_weight * vat_loss_fn(model, varInput[args.labeled_bs:])
+                vat_input = varInput[args.labeled_bs:]
+                if args.mixup:
+                    vat_input = mixed_input
+                vat_loss = args.vat_loss_weight * vat_loss_fn(model, vat_input)
             else:
                 vat_loss = 0.0
 
