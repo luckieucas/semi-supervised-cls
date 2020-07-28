@@ -16,7 +16,7 @@ from sklearn.metrics.ranking import roc_auc_score
 
 from models import DenseNet121,DenseNet169,DenseNet201
 from DatasetGenerator import DatasetGenerator, TwoStreamBatchSampler
-from losses import VATLoss,bnm_loss
+from losses import VATLoss,bnm_loss,bnm_loss_improve
 from utils import AverageMeter
 from metrics import compute_metrics_test
 from losses import cross_entropy_loss,entropy_y_x
@@ -127,7 +127,7 @@ class Trainer():
                 vat_loss = 0.0
 
             if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
-                loss_bnm = args.bnm_loss_weight * bnm_loss(varOutput[args.labeled_bs:])
+                loss_bnm = args.bnm_loss_weight * bnm_loss_improve(varOutput[args.labeled_bs:],vat_filter_num)
             else:
                 loss_bnm = 0.0
 
