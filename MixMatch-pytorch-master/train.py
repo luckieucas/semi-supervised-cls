@@ -383,6 +383,7 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
             outGT = torch.cat((outGT, targets), 0)
             outputs = model(inputs)
             outPRED = torch.cat((outPRED, outputs.data), 0)
+            targets = targets.long()
             loss = criterion(outputs, targets)
 
             # measure auc F1
