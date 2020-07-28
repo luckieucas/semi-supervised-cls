@@ -32,7 +32,7 @@ parser.add_argument('--epochs', default=300, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('--batch-size', default=64, type=int, metavar='N',
+parser.add_argument('--batch-size', default=32, type=int, metavar='N',
                     help='train batchsize')
 parser.add_argument('--lr', '--learning-rate', default=0.002, type=float,
                     metavar='LR', help='initial learning rate')
@@ -380,7 +380,7 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
             if use_cuda:
                 inputs, targets = inputs.cuda(), targets.cuda(non_blocking=True)
             # compute output
-            outGT = torch.cat((outGT, target), 0)
+            outGT = torch.cat((outGT, targets), 0)
             outputs = model(inputs)
             outPRED = torch.cat((outPRED, outputs.data), 0)
             loss = criterion(outputs, targets)

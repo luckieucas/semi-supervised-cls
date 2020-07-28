@@ -1,0 +1,6 @@
+==> Preparing cifar10
+==> creating WRN-28-2
+    Total params: 6.96M
+
+Epoch: [1 | 300] LR: 0.002000
+[?25lTraining[KTraining |                                | (1/1024) Data: 1.278s | Batch: 8.817s | Total: 0:00:08 | ETA: 0:00:00 | Loss: 1.9253 | Loss_x: 1.9253 | Loss_u: 0.0087 | W: 0.0000[KTraining |                                | (2/1024) Data: 1.389s | Batch: 5.614s | Total: 0:00:11 | ETA: 2:30:21 | Loss: 1.8635 | Loss_x: 1.8635 | Loss_u: 0.0077 | W: 0.0001[KTraining |                                | (3/1024) Data: 1.305s | Batch: 4.360s | Total: 0:00:13 | ETA: 1:35:38 | Loss: 1.8082 | Loss_x: 1.8082 | Loss_u: 0.0085 | W: 0.0002[KTraining |                                | (4/1024) Data: 1.270s | Batch: 3.801s | Total: 0:00:15 | ETA: 1:14:12 | Loss: 1.7379 | Loss_x: 1.7379 | Loss_u: 0.0075 | W: 0.0004[KTraining |                                | (5/1024) Data: 1.282s | Batch: 3.457s | Total: 0:00:17 | ETA: 1:04:37 | Loss: 1.6934 | Loss_x: 1.6934 | Loss_u: 0.0071 | W: 0.0005[KTraining |                                | (6/1024) Data: 1.275s | Batch: 3.205s | Total: 0:00:19 | ETA: 0:58:43 | Loss: 1.6636 | Loss_x: 1.6635 | Loss_u: 0.0082 | W: 0.0006

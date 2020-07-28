@@ -1,0 +1,56 @@
+==> Preparing cifar10
+==> creating WRN-28-2
+    Total params: 6.96M
+
+Epoch: [1 | 300] LR: 0.002000
+[?25lTrainingTraceback (most recent call last):
+  File "train.py", line 486, in <module>
+    main()
+  File "train.py", line 197, in main
+    train_loss, train_loss_x, train_loss_u = train(labeled_trainloader, unlabeled_trainloader, model, optimizer, ema_optimizer, train_criterion, epoch, use_cuda)
+  File "train.py", line 312, in train
+    logits.append(model(input))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 152, in forward
+    outputs = self.parallel_apply(replicas, inputs, kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 162, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 85, in parallel_apply
+    output.reraise()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/_utils.py", line 369, in reraise
+    raise self.exc_type(msg)
+RuntimeError: Caught RuntimeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 60, in _worker
+    output = module(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/models/models.py", line 27, in forward
+    x = self.densenet121(x)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 155, in forward
+    features = self.features(x)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 74, in forward
+    new_features = layer(*features)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 50, in forward
+    bottleneck_output = bn_function(*prev_features)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 23, in bn_function
+    bottleneck_output = conv(relu(norm(concated_features)))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 343, in forward
+    return self.conv2d_forward(input, self.weight)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 340, in conv2d_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 10.75 GiB total capacity; 9.47 GiB already allocated; 23.62 MiB free; 280.68 MiB cached)
+
