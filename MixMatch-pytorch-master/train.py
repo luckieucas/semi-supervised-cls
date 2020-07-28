@@ -387,16 +387,6 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
             targets = targets.long()
             loss = criterion(outputs, targets)
 
-            # measure auc F1
-            AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(outGT, outPRED, args, competition=True)
-            AUROC_avg = np.array(AUROCs).mean()
-            Accus_avg = np.array(Accus).mean()
-            Senss_avg = np.array(Senss).mean()
-            Specs_avg = np.array(Specs).mean()
-            Pre_avg = np.array(Pre).mean()
-            F1_avg = np.array(F1).mean()
-            wandb.log({'epoch':epoch,'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
-                'TEST Specs':Specs_avg,'TEST Pre':Pre_avg,'TEST F1':F1_avg})
             # measure accuracy and record loss
             #prec1, prec5 = accuracy(outputs, targets, topk=(1, 5))
             losses.update(loss.item(), inputs.size(0))
@@ -423,6 +413,16 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
                         )
             bar.next()
         bar.finish()
+        # measure auc F1
+    AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(outGT, outPRED, args, competition=True)
+    AUROC_avg = np.array(AUROCs).mean()
+    Accus_avg = np.array(Accus).mean()
+    Senss_avg = np.array(Senss).mean()
+    Specs_avg = np.array(Specs).mean()
+    Pre_avg = np.array(Pre).mean()
+    F1_avg = np.array(F1).mean()
+    wandb.log({'epoch':epoch,'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
+        'TEST Specs':Specs_avg,'TEST Pre':Pre_avg,'TEST F1':F1_avg})
     return (losses.avg, Accus_avg)
 
 def save_checkpoint(state, is_best, checkpoint=args.out, filename='checkpoint.pth.tar'):
