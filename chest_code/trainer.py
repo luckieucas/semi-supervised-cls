@@ -172,7 +172,6 @@ class Trainer():
         outGT = torch.FloatTensor().cuda()
         outPRED = torch.FloatTensor().cuda()
 
-        model.eval()
 
         for i, (input,target) in enumerate(dataloader):
             target = target.cuda()

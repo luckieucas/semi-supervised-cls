@@ -1,0 +1,46 @@
+2020-07-28 10:35:23,613 DEBUG   MainThread:25742 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
+2020-07-28 10:35:23,977 DEBUG   MainThread:25742 [meta.py:_setup_code_git():49] probe for git information
+2020-07-28 10:35:24,014 DEBUG   MainThread:25742 [run_manager.py:__init__():547] Initialized sync for skin-mixmatch/35amlelt
+2020-07-28 10:35:24,019 INFO    MainThread:25742 [run_manager.py:wrap_existing_process():1149] wrapping existing process 25635
+2020-07-28 10:35:24,020 WARNING MainThread:25742 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-28 10:35:24,365 INFO    MainThread:25742 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-07-28 10:35:24,366 INFO    MainThread:25742 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-07-28 10:35:24,789 INFO    Thread-15 :25742 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-07-28 10:35:24,790 INFO    Thread-15 :25742 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-07-28 10:35:24,791 INFO    Thread-15 :25742 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-07-28 10:35:24,791 INFO    MainThread:25742 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
+2020-07-28 10:35:24,800 INFO    MainThread:25742 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
+2020-07-28 10:35:24,974 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/config.yaml
+2020-07-28 10:35:25,348 INFO    Thread-4  :25742 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/requirements.txt
+2020-07-28 10:35:25,349 INFO    Thread-4  :25742 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-metadata.json
+2020-07-28 10:35:25,349 INFO    Thread-4  :25742 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:30,976 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-history.jsonl
+2020-07-28 10:35:30,977 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:30,979 INFO    Thread-4  :25742 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-summary.json
+2020-07-28 10:35:39,981 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:40,982 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-metadata.json
+2020-07-28 10:35:41,983 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:44,985 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:46,986 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:48,987 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:51,988 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:53,990 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:53,990 INFO    Thread-4  :25742 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-events.jsonl
+2020-07-28 10:35:55,991 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:56,991 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-metadata.json
+2020-07-28 10:35:57,992 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:35:59,994 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:36:01,857 INFO    MainThread:25742 [run_manager.py:_sync_etc():1355] process received interrupt signal, shutting down
+2020-07-28 10:36:01,858 INFO    MainThread:25742 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
+2020-07-28 10:36:01,859 INFO    MainThread:25742 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-07-28 10:36:01,995 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-events.jsonl
+2020-07-28 10:36:01,995 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/output.log
+2020-07-28 10:36:02,410 INFO    MainThread:25742 [run_manager.py:shutdown():1086] stopping streaming files and file change observer
+2020-07-28 10:36:02,995 INFO    Thread-4  :25742 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-metadata.json
+2020-07-28 10:36:05,493 INFO    MainThread:25742 [run_manager.py:_sync_etc():1427] rendering summary
+2020-07-28 10:36:05,494 INFO    MainThread:25742 [run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-28 10:36:05,495 INFO    MainThread:25742 [run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/luckiepeng/skin-mixmatch/runs/35amlelt
+ed_cls/code/MixMatch-pytorch-master/wandb/run-20200728_103522-35amlelt/wandb-metadata.json
+2020-07-28 10:36:05,493 INFO    MainThread:25742 [35amlelt:run_manager.py:_sync_etc():1427] rendering summary
+2020-07-28 10:36:05,494 INFO    MainThread:25742 [35amlelt:run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-28 10:36:05,495 INFO    MainThread:25742 [35amlelt:run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/luckiepeng/skin-mixmatch/runs/35amlelt
