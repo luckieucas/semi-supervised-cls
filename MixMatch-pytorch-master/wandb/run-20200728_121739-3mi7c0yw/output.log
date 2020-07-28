@@ -1,0 +1,32 @@
+==> Preparing cifar10
+==> creating WRN-28-2
+    Total params: 6.96M
+
+Epoch: [1 | 300] LR: 0.002000
+[?25lTraining[KTraining |######                          | (1/5) Data: 0.716s | Batch: 8.015s | Total: 0:00:08 | ETA: 0:00:00 | Loss: 1.9960 | Loss_x: 1.9960 | Loss_u: 0.0092 | W: 0.0000[KTraining |############                    | (2/5) Data: 0.720s | Batch: 4.759s | Total: 0:00:09 | ETA: 0:00:33 | Loss: 1.9082 | Loss_x: 1.9080 | Loss_u: 0.0076 | W: 0.0250[KTraining |###################             | (3/5) Data: 0.687s | Batch: 3.598s | Total: 0:00:10 | ETA: 0:00:15 | Loss: 1.8686 | Loss_x: 1.8683 | Loss_u: 0.0080 | W: 0.0500[KTraining |#########################       | (4/5) Data: 0.696s | Batch: 3.117s | Total: 0:00:12 | ETA: 0:00:08 | Loss: 1.8243 | Loss_x: 1.8238 | Loss_u: 0.0072 | W: 0.0750[KTraining |################################| (5/5) Data: 0.695s | Batch: 2.762s | Total: 0:00:13 | ETA: 0:00:04 | Loss: 1.7607 | Loss_x: 1.7601 | Loss_u: 0.0070 | W: 0.1000
+[?25h[?25lTrain StatsError in computing accuracy for 0.
+ Error msg:Only one class present in y_true. ROC AUC score is not defined in that case.
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Sensitivity is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Error in computing accuracy for 2.
+ Error msg:Only one class present in y_true. ROC AUC score is not defined in that case.
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Sensitivity is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Error in computing accuracy for 5.
+ Error msg:Only one class present in y_true. ROC AUC score is not defined in that case.
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Sensitivity is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Error in computing accuracy for 6.
+ Error msg:Only one class present in y_true. ROC AUC score is not defined in that case.
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Sensitivity is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Traceback (most recent call last):
+  File "train.py", line 490, in <module>
+    main()
+  File "train.py", line 199, in main
+    _, train_acc = validate(labeled_trainloader, ema_model, criterion, epoch, use_cuda, mode='Train Stats')
+  File "train.py", line 401, in validate
+    prec1, prec5 = accuracy(outputs, targets, topk=(1, 5))
+  File "/media/luckie/vol4/semi_supervised_cls/code/MixMatch-pytorch-master/utils/eval.py", line 12, in accuracy
+    correct = pred.eq(target.view(1, -1).expand_as(pred))
+RuntimeError: The expanded size of the tensor (16) must match the existing size (112) at non-singleton dimension 1.  Target sizes: [5, 16].  Tensor sizes: [1, 112]

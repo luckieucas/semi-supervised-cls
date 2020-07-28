@@ -1,0 +1,31 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "train.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "6deb120739f8f9af5ec3c4946ef01cadce5b110c"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-07-28T04:20:38.532134",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [
+        "--batch-size",
+        "16",
+        "--val-iteration",
+        "5"
+    ],
+    "state": "killed",
+    "jobType": null,
+    "mode": "run",
+    "name": "skinmodel-test",
+    "project": "skin-mixmatch",
+    "heartbeatAt": "2020-07-28T04:22:11.928646",
+    "exitcode": 255
+}

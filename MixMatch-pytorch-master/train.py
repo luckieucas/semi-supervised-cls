@@ -25,6 +25,7 @@ from tensorboardX import SummaryWriter
 import wandb
 from metrics import compute_metrics_test
 from config import CLASS_NAMES_DICTS,CLASS_NUM_DICTS
+from losses import cross_entropy_loss
 
 parser = argparse.ArgumentParser(description='PyTorch MixMatch Training')
 # Optimization options
@@ -161,7 +162,7 @@ def main():
     print('    Total params: %.2fM' % (sum(p.numel() for p in model.parameters())/1000000.0))
 
     train_criterion = SemiLoss()
-    criterion = nn.CrossEntropyLoss()
+    criterion = cross_entropy_loss(args)
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
 
     ema_optimizer= WeightEMA(model, ema_model, alpha=args.ema_decay)
@@ -359,8 +360,8 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
     batch_time = AverageMeter()
     data_time = AverageMeter()
     losses = AverageMeter()
-    top1 = AverageMeter()
-    top5 = AverageMeter()
+    #top1 = AverageMeter()
+    #top5 = AverageMeter()
 
     # switch to evaluate mode
     model.eval()
@@ -397,10 +398,10 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
             wandb.log({'epoch':epoch,'TEST AUROC': AUROC_avg,'TEST Accus':Accus_avg,'TEST Senss':Senss_avg,
                 'TEST Specs':Specs_avg,'TEST Pre':Pre_avg,'TEST F1':F1_avg})
             # measure accuracy and record loss
-            prec1, prec5 = accuracy(outputs, targets, topk=(1, 5))
+            #prec1, prec5 = accuracy(outputs, targets, topk=(1, 5))
             losses.update(loss.item(), inputs.size(0))
-            top1.update(prec1.item(), inputs.size(0))
-            top5.update(prec5.item(), inputs.size(0))
+            #top1.update(prec1.item(), inputs.size(0))
+            #top5.update(prec5.item(), inputs.size(0))
 
             # measure elapsed time
             batch_time.update(time.time() - end)
@@ -415,12 +416,14 @@ def validate(valloader, model, criterion, epoch, use_cuda, mode):
                         total=bar.elapsed_td,
                         eta=bar.eta_td,
                         loss=losses.avg,
-                        top1=top1.avg,
-                        top5=top5.avg,
+                        # top1=top1.avg,
+                        # top5=top5.avg,
+                        top1=0,
+                        top5=0
                         )
             bar.next()
         bar.finish()
-    return (losses.avg, top1.avg)
+    return (losses.avg, Accus_avg)
 
 def save_checkpoint(state, is_best, checkpoint=args.out, filename='checkpoint.pth.tar'):
     filepath = os.path.join(checkpoint, filename)
