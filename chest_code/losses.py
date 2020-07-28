@@ -26,9 +26,13 @@ def _l2_normalize(d):
     return d
 
 
+def sharpen(x, T=0.5):
+    temp = x**(1/T)
+    return temp / temp.sum(axis=1, keepdims=True)
+
 class VATLoss(nn.Module):
 
-    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_num=8):
+    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_num=8, is_sharpen=False):
         """VAT loss
         :param xi: hyperparameter of VAT (default: 10.0)
         :param eps: hyperparameter of VAT (default: 1.0)
@@ -41,10 +45,13 @@ class VATLoss(nn.Module):
         self.dis = dis
         self.filter_batch = filter_batch
         self.filter_num = filter_num
+        self.is_sharpen = is_sharpen
 
     def forward(self, model, x):
         with torch.no_grad():
             pred = F.softmax(model(x), dim=1)
+            if self.is_sharpen:
+                pred = sharpen(pred)
         if self.filter_batch:
             A = pred + 0.000001
             B = -1.0 * A *torch.log(A)
@@ -62,9 +69,13 @@ class VATLoss(nn.Module):
                 pred_hat = model(x + self.xi * d)
                 if self.dis=='mse':
                     pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                    if self.is_sharpen:
+                        pred_hat_softmax = sharpen(pred_hat_softmax)
                     adv_distance = F.mse_loss(pred_hat_softmax,pred)
                 elif self.dis=='mae':
                     pred_hat_softmax = F.softmax(pred_hat, dim=1)
+                    if self.is_sharpen:
+                        pred_hat_softmax = sharpen(pred_hat_softmax)
                     adv_distance = F.l1_loss(pred_hat_softmax,pred)
                 else:
                     logp_hat = F.log_softmax(pred_hat, dim=1)
