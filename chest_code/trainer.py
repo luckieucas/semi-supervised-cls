@@ -123,7 +123,9 @@ class Trainer():
                 mixed_input,lam = mixup_data_sup(varInput[args.labeled_bs:])
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
-            vat_loss_fn = VATLoss(eps=args.vat_eps, filter_batch=args.vat_filter_batch,dis=args.vat_dis_type,filter_num=vat_filter_num,is_sharpen=args.is_sharpen)
+            vat_loss_fn = VATLoss(eps=args.vat_eps, filter_batch=args.vat_filter_batch,
+                filter_prob =args.vat_filter_prob, dis=args.vat_dis_type,filter_num=vat_filter_num,
+                    is_sharpen=args.is_sharpen)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
                 vat_input = varInput[args.labeled_bs:]
                 if args.mixup:

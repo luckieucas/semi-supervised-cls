@@ -32,7 +32,7 @@ def sharpen(x, T=0.5):
 
 class VATLoss(nn.Module):
 
-    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_num=8, is_sharpen=False):
+    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_prob=False,filter_num=8, is_sharpen=False):
         """VAT loss
         :param xi: hyperparameter of VAT (default: 10.0)
         :param eps: hyperparameter of VAT (default: 1.0)
@@ -46,12 +46,19 @@ class VATLoss(nn.Module):
         self.filter_batch = filter_batch
         self.filter_num = filter_num
         self.is_sharpen = is_sharpen
+        self.filter_batch_prob = filter_prob
 
     def forward(self, model, x):
         with torch.no_grad():
             pred = F.softmax(model(x), dim=1)
             if self.is_sharpen:
                 pred = sharpen(pred)
+        if self.filter_batch_prob:
+            A = pred + 1e-6
+            B = torch.max(A, 1)[0]
+            pred = A[B>0.5]
+            if len(pred) == 0:
+                return 0.0
         if self.filter_batch:
             A = pred + 0.000001
             B = -1.0 * A *torch.log(A)

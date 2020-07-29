@@ -1,0 +1,17 @@
+labeled_num: 1000
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main()
+  File "main.py", line 85, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 100, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 133, in epochTrain
+    vat_loss = args.vat_loss_weight * vat_loss_fn(model, vat_input)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/losses.py", line 87, in forward
+    adv_distance = F.kl_div(logp_hat, pred, reduction='batchmean')
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 1942, in kl_div
+    reduced = torch.kl_div(input, target, reduction_enum)
+RuntimeError: The size of tensor a (0) must match the size of tensor b (12) at non-singleton dimension 0

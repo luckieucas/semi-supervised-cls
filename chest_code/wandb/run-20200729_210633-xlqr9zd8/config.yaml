@@ -1,0 +1,135 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.9.3
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+backbone:
+  desc: null
+  value: densenet121
+bnm_loss_weight:
+  desc: null
+  value: 0.0
+bnm_start_epoch:
+  desc: null
+  value: 0
+checkpoint:
+  desc: null
+  value: null
+class_names:
+  desc: null
+  value:
+  - Melanoma
+  - Melanocytic nevus
+  - Basal cell carcinoma
+  - Actinic keratosis
+  - Benign keratosis
+  - Dermatofibroma
+  - Vascular lesion
+class_num:
+  desc: null
+  value: 7
+class_num_dict:
+  desc: null
+  value:
+  - 1113.0
+  - 6705.0
+  - 514.0
+  - 327.0
+  - 1099.0
+  - 115.0
+  - 142.0
+crop_size:
+  desc: null
+  value: 224
+drop:
+  desc: null
+  value: 0
+entropy_loss_weight:
+  desc: null
+  value: 0.0
+entropy_start_epoch:
+  desc: null
+  value: 0
+epochs:
+  desc: null
+  value: 100
+exp:
+  desc: null
+  value: model_test
+gpu_ids:
+  desc: null
+  value: 0,1
+is_sharpen:
+  desc: null
+  value: false
+labeled_bs:
+  desc: null
+  value: 32
+labeled_num:
+  desc: null
+  value: 500
+lr:
+  desc: null
+  value: 0.0001
+manualSeed:
+  desc: null
+  value: 1337
+mixup:
+  desc: null
+  value: false
+pretrained:
+  desc: null
+  value: true
+resize:
+  desc: null
+  value: 256
+root_path:
+  desc: null
+  value: ../../dataset/skin/training_data/
+start_epoch:
+  desc: null
+  value: 0
+task:
+  desc: null
+  value: skin
+test_bs:
+  desc: null
+  value: 64
+test_file:
+  desc: null
+  value: ../../dataset/skin/testing.txt
+train_bs:
+  desc: null
+  value: 64
+train_file:
+  desc: null
+  value: ../../dataset/skin/training.txt
+val_file:
+  desc: null
+  value: ../../dataset/skin/validation.txt
+vat_dis_type:
+  desc: null
+  value: kl
+vat_eps:
+  desc: null
+  value: 1.0
+vat_filter_batch:
+  desc: null
+  value: false
+vat_filter_num:
+  desc: null
+  value: 16
+vat_filter_prob:
+  desc: null
+  value: true
+vat_loss_weight:
+  desc: null
+  value: 1.0
+vat_start_epoch:
+  desc: null
+  value: 0

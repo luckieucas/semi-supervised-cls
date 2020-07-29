@@ -29,16 +29,17 @@ parser.add_argument('--epochs', type=int, default=100, help='number of total epo
 parser.add_argument('--start_epoch', type=int, default=0, metavar='N',
                     help='manual epoch number (useful on restarts)')
 parser.add_argument('--checkpoint', type=str, help='whether load checkpoint')
-parser.add_argument('--train_bs', type=int, default=646, help='train batchsize')
+parser.add_argument('--train_bs', type=int, default=64, help='train batchsize')
 parser.add_argument('--test_bs', type=int, default=64, help='test batchsize')
 parser.add_argument('--lr','--learning_rate', type=float, default=1e-4, help='initial learning rate')
 parser.add_argument('--drop', '--dropout', default=0, type=float, help='Dropout ratio')
 # network architecture
 parser.add_argument('--backbone', type=str, default='densenet121', help='backbone of network')
 # loss
-parser.add_argument('--vat_loss_weight', type=float, default=0.0,help='weight of vat_loss')
+parser.add_argument('--vat_loss_weight', type=float, default=1.0,help='weight of vat_loss')
 parser.add_argument('--vat_start_epoch', type=int, default=0, help='vat loss start epoch')
 parser.add_argument('--vat_filter_batch', type=bool, default=False, help='whether vat loss do filter')
+parser.add_argument('--vat_filter_prob', type=bool, default=False, help='whether vat loss do filter prob')
 parser.add_argument('--vat_filter_num', type=int, default=16, help='vat loss filter num')
 parser.add_argument('--vat_dis_type', type=str,default='kl', help='vat dis type')
 parser.add_argument('--vat_eps', type=float, default=1.0, help='vat epsilon hyperparameter')
