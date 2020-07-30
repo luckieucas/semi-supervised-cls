@@ -56,7 +56,7 @@ class VATLoss(nn.Module):
         if self.filter_batch_prob:
             A = pred + 1e-6
             B = torch.max(A, 1)[0]
-            pred = A[B>0.5]
+            pred = A[B>0.3]
             if len(pred) == 0:
                 return 0.0
         if self.filter_batch:

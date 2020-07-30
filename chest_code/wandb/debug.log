@@ -1,62 +1,36 @@
-2020-07-29 21:40:44,860 DEBUG   MainThread:5259 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
-2020-07-29 21:40:45,235 DEBUG   MainThread:5259 [meta.py:_setup_code_git():49] probe for git information
-2020-07-29 21:40:45,272 DEBUG   MainThread:5259 [run_manager.py:__init__():547] Initialized sync for skin-semi-supervised-newcode/1braxozk
-2020-07-29 21:40:45,277 INFO    MainThread:5259 [run_manager.py:wrap_existing_process():1149] wrapping existing process 5157
-2020-07-29 21:40:45,277 WARNING MainThread:5259 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
-2020-07-29 21:40:45,627 INFO    MainThread:5259 [run_manager.py:init_run():928] system metrics and metadata threads started
-2020-07-29 21:40:45,627 INFO    MainThread:5259 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
-2020-07-29 21:40:46,024 INFO    Thread-15 :5259 [run_manager.py:_upsert_run():1056] saving pip packages
-2020-07-29 21:40:46,025 INFO    Thread-15 :5259 [run_manager.py:_upsert_run():1058] initializing streaming files api
-2020-07-29 21:40:46,026 INFO    Thread-15 :5259 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
-2020-07-29 21:40:46,027 INFO    MainThread:5259 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
-2020-07-29 21:40:46,033 INFO    MainThread:5259 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
-2020-07-29 21:40:46,233 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/config.yaml
-2020-07-29 21:40:46,645 INFO    Thread-4  :5259 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/requirements.txt
-2020-07-29 21:40:46,646 INFO    Thread-4  :5259 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/output.log
-2020-07-29 21:40:46,646 INFO    Thread-4  :5259 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:40:51,232 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/output.log
-2020-07-29 21:40:51,233 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:40:51,235 INFO    Thread-4  :5259 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:40:58,237 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:40:59,238 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:41:02,240 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:41:15,246 INFO    Thread-4  :5259 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:41:18,250 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:41:34,259 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:41:47,267 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:41:50,269 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:42:06,279 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:42:18,288 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:42:19,289 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:42:19,290 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:42:22,291 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:42:38,300 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:42:49,308 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:42:54,311 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:43:10,329 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:43:18,334 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:43:18,335 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:43:20,336 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:43:21,336 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:43:21,338 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:43:26,340 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:43:42,352 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:43:52,358 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:43:58,362 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:44:14,373 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:44:23,377 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:44:30,381 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:44:41,391 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-summary.json
-2020-07-29 21:44:41,396 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-history.jsonl
-2020-07-29 21:44:46,394 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:44:54,399 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-2020-07-29 21:45:02,403 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-metadata.json
-2020-07-29 21:45:05,961 INFO    MainThread:5259 [run_manager.py:_sync_etc():1355] process received interrupt signal, shutting down
-2020-07-29 21:45:05,962 INFO    MainThread:5259 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
-2020-07-29 21:45:05,967 INFO    MainThread:5259 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
-2020-07-29 21:45:06,407 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/output.log
-2020-07-29 21:45:06,408 INFO    Thread-4  :5259 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
-g log streams and sending exitcode to W&B
-2020-07-29 21:45:05,967 INFO    MainThread:5259 [1braxozk:run_manager.py:shutdown():1072] shutting down system stats and metadata service
-2020-07-29 21:45:06,407 INFO    Thread-4  :5259 [1braxozk:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/output.log
-2020-07-29 21:45:06,408 INFO    Thread-4  :5259 [1braxozk:run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_214043-1braxozk/wandb-events.jsonl
+2020-07-29 22:40:33,628 DEBUG   MainThread:26708 [wandb_config.py:_load_defaults():154] no defaults not found in config-defaults.yaml
+2020-07-29 22:40:34,005 DEBUG   MainThread:26708 [meta.py:_setup_code_git():49] probe for git information
+2020-07-29 22:40:34,039 DEBUG   MainThread:26708 [run_manager.py:__init__():547] Initialized sync for skin-semi-supervised-newcode/3mwds64n
+2020-07-29 22:40:34,045 INFO    MainThread:26708 [run_manager.py:wrap_existing_process():1149] wrapping existing process 26608
+2020-07-29 22:40:34,045 WARNING MainThread:26708 [io_wrap.py:register():108] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-07-29 22:40:34,395 INFO    MainThread:26708 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-07-29 22:40:34,396 INFO    MainThread:26708 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-07-29 22:40:34,800 INFO    Thread-15 :26708 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-07-29 22:40:34,801 INFO    Thread-15 :26708 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-07-29 22:40:34,802 INFO    Thread-15 :26708 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-07-29 22:40:34,803 INFO    MainThread:26708 [run_manager.py:wrap_existing_process():1166] informing user process we are ready to proceed
+2020-07-29 22:40:34,812 INFO    MainThread:26708 [run_manager.py:_sync_etc():1298] entering loop for messages from user process
+2020-07-29 22:40:35,001 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/config.yaml
+2020-07-29 22:40:35,390 INFO    Thread-4  :26708 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/requirements.txt
+2020-07-29 22:40:35,391 INFO    Thread-4  :26708 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/output.log
+2020-07-29 22:40:35,392 INFO    Thread-4  :26708 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-metadata.json
+2020-07-29 22:40:40,002 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-history.jsonl
+2020-07-29 22:40:40,005 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/output.log
+2020-07-29 22:40:40,005 INFO    Thread-4  :26708 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-summary.json
+2020-07-29 22:40:50,011 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-summary.json
+2020-07-29 22:40:50,014 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-history.jsonl
+2020-07-29 22:40:51,012 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-metadata.json
+2020-07-29 22:41:04,026 INFO    Thread-4  :26708 [run_manager.py:_on_file_created():681] file/dir created: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-events.jsonl
+2020-07-29 22:41:07,030 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-metadata.json
+2020-07-29 22:41:18,724 INFO    MainThread:26708 [run_manager.py:_sync_etc():1355] process received interrupt signal, shutting down
+2020-07-29 22:41:18,725 INFO    MainThread:26708 [run_manager.py:_sync_etc():1408] closing log streams and sending exitcode to W&B
+2020-07-29 22:41:18,731 INFO    MainThread:26708 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-07-29 22:41:19,038 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-events.jsonl
+2020-07-29 22:41:19,458 INFO    MainThread:26708 [run_manager.py:shutdown():1086] stopping streaming files and file change observer
+2020-07-29 22:41:20,039 INFO    Thread-4  :26708 [run_manager.py:_on_file_modified():692] file/dir modified: /media/luckie/vol4/semi_supervised_cls/code/chest_code/wandb/run-20200729_224032-3mwds64n/wandb-metadata.json
+2020-07-29 22:41:22,419 INFO    MainThread:26708 [run_manager.py:_sync_etc():1427] rendering summary
+2020-07-29 22:41:22,421 INFO    MainThread:26708 [run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-29 22:41:24,680 INFO    MainThread:26708 [run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/luckiepeng/skin-semi-supervised-newcode/runs/3mwds64n
+2,419 INFO    MainThread:26708 [3mwds64n:run_manager.py:_sync_etc():1427] rendering summary
+2020-07-29 22:41:22,421 INFO    MainThread:26708 [3mwds64n:run_manager.py:_sync_etc():1459] syncing files to cloud storage
+2020-07-29 22:41:24,680 INFO    MainThread:26708 [3mwds64n:run_manager.py:_sync_etc():1468] syncing complete: https://app.wandb.ai/luckiepeng/skin-semi-supervised-newcode/runs/3mwds64n
