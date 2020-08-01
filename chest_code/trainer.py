@@ -118,6 +118,8 @@ class Trainer():
             target = target.cuda()
             varInput = torch.autograd.Variable(input)
             varTarget = torch.autograd.Variable(target).long()
+            if args.task == 'chest':
+                varTarget = varTarget.float()
             varOutput = model(varInput)
             if args.mixup:
                 mixed_input,lam = mixup_data_sup(varInput[args.labeled_bs:])
@@ -135,7 +137,7 @@ class Trainer():
                 vat_loss = 0.0
 
             if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
-                loss_bnm = args.bnm_loss_weight * bnm_loss_improve(varOutput[args.labeled_bs:],vat_filter_num)
+                loss_bnm = args.bnm_loss_weight * bnm_loss(varOutput[args.labeled_bs:],filter_prob=args.bnm_filter_prob)
             else:
                 loss_bnm = 0.0
 

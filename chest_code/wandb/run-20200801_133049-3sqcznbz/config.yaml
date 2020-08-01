@@ -1,0 +1,152 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.9.3
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+backbone:
+  desc: null
+  value: densenet121
+bnm_filter_prob:
+  desc: null
+  value: false
+bnm_loss_weight:
+  desc: null
+  value: 1.0
+bnm_start_epoch:
+  desc: null
+  value: 0
+checkpoint:
+  desc: null
+  value: null
+class_names:
+  desc: null
+  value:
+  - Atelectasis
+  - Cardiomegaly
+  - Effusion
+  - Infiltration
+  - Mass
+  - Nodule
+  - Pneumonia
+  - Pneumothorax
+  - Consolidation
+  - Edema
+  - Emphysema
+  - Fibrosis
+  - Pleural_Thickening
+  - Hernia
+class_num:
+  desc: null
+  value: 14
+class_num_dict:
+  desc: null
+  value:
+  - 11559.0
+  - 2776.0
+  - 13317.0
+  - 19894.0
+  - 5782.0
+  - 6331.0
+  - 1431.0
+  - 5302.0
+  - 4667.0
+  - 2303.0
+  - 2516.0
+  - 1686.0
+  - 3385.0
+  - 227.0
+crop_size:
+  desc: null
+  value: 224
+drop:
+  desc: null
+  value: 0
+entropy_loss_weight:
+  desc: null
+  value: 0.0
+entropy_start_epoch:
+  desc: null
+  value: 0
+epochs:
+  desc: null
+  value: 100
+exp:
+  desc: null
+  value: test
+gpu_ids:
+  desc: null
+  value: 0,1
+is_sharpen:
+  desc: null
+  value: false
+labeled_bs:
+  desc: null
+  value: 4
+labeled_num:
+  desc: null
+  value: 1000
+lr:
+  desc: null
+  value: 0.0001
+manualSeed:
+  desc: null
+  value: 1337
+mixup:
+  desc: null
+  value: true
+pretrained:
+  desc: null
+  value: true
+resize:
+  desc: null
+  value: 256
+root_path:
+  desc: null
+  value: ../../dataset/chest/training_data/
+start_epoch:
+  desc: null
+  value: 0
+task:
+  desc: null
+  value: chest
+test_bs:
+  desc: null
+  value: 64
+test_file:
+  desc: null
+  value: ../../dataset/chest/testing.txt
+train_bs:
+  desc: null
+  value: 16
+train_file:
+  desc: null
+  value: ../../dataset/chest/training.txt
+val_file:
+  desc: null
+  value: ../../dataset/chest/validation.txt
+vat_dis_type:
+  desc: null
+  value: kl
+vat_eps:
+  desc: null
+  value: 1.0
+vat_filter_batch:
+  desc: null
+  value: false
+vat_filter_num:
+  desc: null
+  value: 16
+vat_filter_prob:
+  desc: null
+  value: true
+vat_loss_weight:
+  desc: null
+  value: 1.0
+vat_start_epoch:
+  desc: null
+  value: 0

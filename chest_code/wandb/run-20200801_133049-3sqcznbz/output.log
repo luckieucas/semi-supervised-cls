@@ -1,0 +1,13 @@
+labeled_num: 1000
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main()
+  File "main.py", line 86, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 100, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 125, in epochTrain
+    cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
+UnboundLocalError: local variable 'varTarget' referenced before assignment
