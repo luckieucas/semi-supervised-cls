@@ -1,0 +1,6 @@
+labeled_num: 1000
+Exception ignored in: <function _releaseLock at 0x7f4ebecbfcb0>
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/logging/__init__.py", line 221, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt

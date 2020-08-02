@@ -1,0 +1,2 @@
+{"vat_filter_num": 8, "_runtime": 9.152703285217285, "_timestamp": 1596284703.6225283, "_step": 0}
+{"train cls loss": 1.860764503479004, "train vat loss": 0.0, "train bnm loss": -0.15111710131168365, "train loss entropy": 0.0, "train total loss": 1.7096474170684814, "_runtime": 16.77575969696045, "_timestamp": 1596284711.2455847, "_step": 1}

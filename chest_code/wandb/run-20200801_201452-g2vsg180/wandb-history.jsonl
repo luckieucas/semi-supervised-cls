@@ -1,0 +1,7 @@
+{"vat_filter_num": 8, "_runtime": 9.513179302215576, "_timestamp": 1596284099.5535042, "_step": 0}
+{"train cls loss": 2.013277053833008, "train vat loss": 0.0, "train bnm loss": -0.15085655450820923, "train loss entropy": 0.0, "train total loss": 1.8624205589294434, "_runtime": 17.936351776123047, "_timestamp": 1596284107.9766767, "_step": 1}
+{"train cls loss": 1.8064669370651245, "train vat loss": 0.0, "train bnm loss": -0.2018250674009323, "train loss entropy": 0.0, "train total loss": 1.6046419143676758, "_runtime": 98.30955696105957, "_timestamp": 1596284188.349882, "_step": 2}
+{"epoch": 0, "TEST AUROC": 0.8327274919673429, "TEST Accus": 0.728465083303793, "TEST Senss": 0.7808848616674153, "TEST Specs": 0.6364117214329976, "TEST Pre": 0.21308595909108347, "TEST F1": 0.30682871758943303, "_runtime": 166.31204438209534, "_timestamp": 1596284256.3523693, "_step": 3}
+{"vat_filter_num": 8, "_runtime": 166.37570118904114, "_timestamp": 1596284256.416026, "_step": 4}
+{"train cls loss": 1.651304841041565, "train vat loss": 0.0, "train bnm loss": -0.20479165017604828, "train loss entropy": 0.0, "train total loss": 1.4465131759643555, "_runtime": 170.54809045791626, "_timestamp": 1596284260.5884154, "_step": 5}
+{"train cls loss": 1.7695690393447876, "train vat loss": 0.0, "train bnm loss": -0.19776535034179688, "train loss entropy": 0.0, "train total loss": 1.5718036890029907, "_runtime": 256.5622773170471, "_timestamp": 1596284346.6026022, "_step": 6}

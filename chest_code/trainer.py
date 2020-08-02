@@ -137,7 +137,9 @@ class Trainer():
                 vat_loss = 0.0
 
             if epoch >= args.bnm_start_epoch and args.bnm_loss_weight > 0.0:
-                loss_bnm = args.bnm_loss_weight * bnm_loss(varOutput[args.labeled_bs:],filter_prob=args.bnm_filter_prob)
+                loss_bnm = args.bnm_loss_weight * bnm_loss(varOutput[args.labeled_bs:],
+                    filter_prob=args.bnm_filter_prob,filter_batch=args.bnm_filter_batch,
+                    filter_batch_num=vat_filter_num)
             else:
                 loss_bnm = 0.0
 

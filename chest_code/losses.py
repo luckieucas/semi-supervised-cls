@@ -226,7 +226,7 @@ class cross_entropy_loss(object):
         return self.base_loss(output, target.long())
 
 
-def bnm_loss(out_logits,filter_prob=False):
+def bnm_loss(out_logits,filter_prob=False,filter_batch=False,filter_batch_num=-1):
     """
     compute batch nuclear-norm maximization loss
     """
@@ -236,6 +236,12 @@ def bnm_loss(out_logits,filter_prob=False):
         A = A[B>0.4]
     if len(A) == 0:
         return 0.0
+    if filter_batch:
+        A = A + 1e-6
+        B = -1.0 * A *torch.log(A)
+        C = B.sum(dim=1)
+        index = C.argsort(descending=True)[-1*filter_batch_num:]
+        A = A[index]
     L_bnm = -torch.norm(A,'nuc')/A.shape[0]
     return L_bnm
 
