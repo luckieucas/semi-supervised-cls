@@ -1,0 +1,13 @@
+labeled_num: 1000
+Traceback (most recent call last):
+  File "main.py", line 91, in <module>
+    main()
+  File "main.py", line 87, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 100, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 142, in epochTrain
+    filter_batch_num=vat_filter_num)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/losses.py", line 236, in bnm_loss
+    A = A[B>0.3 and B<0.6]
+RuntimeError: bool value of Tensor with more than one value is ambiguous

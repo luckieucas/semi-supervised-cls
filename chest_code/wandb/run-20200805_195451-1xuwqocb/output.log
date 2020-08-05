@@ -1,0 +1,11 @@
+labeled_num: 1000
+Traceback (most recent call last):
+  File "main.py", line 91, in <module>
+    main()
+  File "main.py", line 87, in main
+    Trainer.train(args,wandb,logging)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 100, in train
+    Trainer.epochTrain(args, wandb, model, epoch, dataLoaderTrain, optimizer, scheduler,loss_fn)
+  File "/media/luckie/vol4/semi_supervised_cls/code/chest_code/trainer.py", line 138, in epochTrain
+    index = C.argsort(descending=True)[-1*self.filter_num:]
+NameError: name 'self' is not defined

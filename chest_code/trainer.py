@@ -111,7 +111,7 @@ class Trainer():
         end = time.time()
         vat_filter_num = 8 + int((args.train_bs-args.labeled_bs-8) * epoch / 75)
 
-        wandb.log({'vat_filter_num':vat_filter_num})
+        
         for step, (input, target) in enumerate(dataloader):
             #measure data loading time
             data_time.update(time.time() - end)
@@ -121,8 +121,8 @@ class Trainer():
             if args.task == 'chest':
                 varTarget = varTarget.float()
             varOutput = model(varInput)
-            if args.mixup:
-                mixed_input,lam = mixup_data_sup(varInput[args.labeled_bs:])
+            # if args.mixup:
+            #     mixed_input,lam = mixup_data_sup(varInput[args.labeled_bs:])
             cls_loss = loss_fn(varOutput[:args.labeled_bs], varTarget[:args.labeled_bs])
             #use vat
             vat_loss_fn = VATLoss(eps=args.vat_eps, filter_batch=args.vat_filter_batch,
@@ -130,8 +130,16 @@ class Trainer():
                     is_sharpen=args.is_sharpen)
             if epoch >= args.vat_start_epoch and args.vat_loss_weight > 0.0:
                 vat_input = varInput[args.labeled_bs:]
-                if args.mixup:
-                    vat_input = mixed_input
+                if args.vat_filter_batch:
+                    pred = varOutput[args.labeled_bs:]
+                    A = pred + 0.000001
+                    B = -1.0 * A *torch.log(A)
+                    C = B.sum(dim=1)
+                    index = C.argsort(descending=True)[-1*vat_filter_num:]
+                    vat_input = vat_input[index]
+                    if args.mixup:
+                        vat_input,lam = mixup_data_sup(vat_input)
+                wandb.log({'vat_filter_num':len(vat_input)})
                 vat_loss = args.vat_loss_weight * vat_loss_fn(model, vat_input)
             else:
                 vat_loss = 0.0

@@ -3,6 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 import numpy as np
 import contextlib
+from mixup import mixup_data_sup
 
 
 #CLASS_NUM = [1113, 6705, 514, 327, 1099, 115, 142]
@@ -32,7 +33,8 @@ def sharpen(x, T=0.5):
 
 class VATLoss(nn.Module):
 
-    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_prob=False,filter_num=8, is_sharpen=False):
+    def __init__(self, xi=10.0, eps=1.0, ip=1, dis='kl',filter_batch=False,filter_prob=False,
+                filter_num=8, is_sharpen=False, mixup = False):
         """VAT loss
         :param xi: hyperparameter of VAT (default: 10.0)
         :param eps: hyperparameter of VAT (default: 1.0)
@@ -47,8 +49,11 @@ class VATLoss(nn.Module):
         self.filter_num = filter_num
         self.is_sharpen = is_sharpen
         self.filter_batch_prob = filter_prob
+        self.mixup = mixup
 
     def forward(self, model, x):
+        if self.mixup:
+            x,lam = mixup_data_sup(x)
         with torch.no_grad():
             pred = F.softmax(model(x), dim=1)
             if self.is_sharpen:
@@ -59,13 +64,13 @@ class VATLoss(nn.Module):
             pred = A[B>0.3]
             if len(pred) == 0:
                 return 0.0
-        if self.filter_batch:
-            A = pred + 0.000001
-            B = -1.0 * A *torch.log(A)
-            C = B.sum(dim=1)
-            index = C.argsort(descending=True)[-1*self.filter_num:]
-            pred = pred[index]
-            x = x[index]
+        # if self.filter_batch:
+        #     A = pred + 0.000001
+        #     B = -1.0 * A *torch.log(A)
+        #     C = B.sum(dim=1)
+        #     index = C.argsort(descending=True)[-1*self.filter_num:]
+        #     pred = pred[index]
+        #     x = x[index]
         # prepare random unit tensor
         d = torch.rand(x.shape).sub(0.5).to(x.device)
         d = _l2_normalize(d)
@@ -233,7 +238,9 @@ def bnm_loss(out_logits,filter_prob=False,filter_batch=False,filter_batch_num=-1
     A = F.softmax(out_logits, dim=1)
     if filter_prob:
         B = torch.max(A, 1)[0]
-        A = A[B>0.4]
+        A = A[B<0.6]
+        B = torch.max(A, 1)[0]
+        A = A[B>0.25]
     if len(A) == 0:
         return 0.0
     if filter_batch:
