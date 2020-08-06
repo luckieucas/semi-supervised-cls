@@ -101,6 +101,8 @@ class Trainer():
             Trainer.epochVal(args, wandb, model, epoch, dataLoaderVal,loss_fn)
             #Trainer.epochTest_new(args,wandb, logging, model, epoch, args.root_path)
             Trainer.epochTest(args, wandb, logging, model, epoch, dataLoaderTest)
+            torch.save({'epoch': epoch + 1, 'state_dict': model.state_dict(), 
+            'optimizer' : optimizer.state_dict()}, './model/epoch_' +str(epoch)+'_.pth.tar')
 
     def epochTrain(args, wandb, model, epoch, dataloader, optimzer, scheduler,loss_fn):
         model.train()
