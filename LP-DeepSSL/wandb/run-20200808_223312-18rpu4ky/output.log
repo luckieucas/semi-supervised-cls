@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train_stage2.py", line 190, in <module>
+    main()
+  File "train_stage2.py", line 91, in main
+    best_prec1 = checkpoint['best_prec1']
+KeyError: 'best_prec1'

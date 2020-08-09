@@ -1,0 +1,47 @@
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Resuming from:models/skin_1400_split_10_isL2_1/checkpoint.180.ckpt
+Extracting features...
+Traceback (most recent call last):
+  File "train_stage2.py", line 191, in <module>
+    main()
+  File "train_stage2.py", line 109, in main
+    feats,labels = extract_features(train_loader_noshuff, model, isMT = args.isMT)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 376, in extract_features
+    _ , feats = model(X)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 152, in forward
+    outputs = self.parallel_apply(replicas, inputs, kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 162, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 85, in parallel_apply
+    output.reraise()
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/_utils.py", line 394, in reraise
+    raise self.exc_type(msg)
+RuntimeError: Caught RuntimeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 60, in _worker
+    output = module(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/models.py", line 28, in forward
+    features = self.densenet121.features(x)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/container.py", line 100, in forward
+    input = module(input)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 111, in forward
+    new_features = layer(features)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 84, in forward
+    bottleneck_output = self.bn_function(prev_features)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torchvision/models/densenet.py", line 41, in bn_function
+    bottleneck_output = self.conv1(self.relu1(self.norm1(concated_features)))  # noqa: T484
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward

@@ -12,7 +12,7 @@ from config import CLASS_NAMES_DICTS,CLASS_NUM_DICTS
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp', type=str, default='model_test', help='the name of this run')
-parser.add_argument('--task', type=str, default='chest', help='train which task')
+parser.add_argument('--task', type=str, default='skin', help='train which task')
 # Datasets
 parser.add_argument('--root_path', type=str, default='../../dataset/chest/training_data/',
                     help='dataset root dir')

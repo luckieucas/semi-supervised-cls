@@ -1,0 +1,28 @@
+{
+    "root": "/media/luckie/vol4/paper_with_code/LP-DeepSSL",
+    "program": "train_stage1.py",
+    "startedAt": "2020-08-08T12:56:13.989701",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [
+        "--exclude-unlabeled=True",
+        "--num-labeled=4000",
+        "--gpu-id=0,1",
+        "--isMT=False",
+        "--isL2=True",
+        "--dataset=skin"
+    ],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "name": "stage_1",
+    "project": "skin_label_prob",
+    "heartbeatAt": "2020-08-08T14:30:12.462844",
+    "exitcode": 0
+}

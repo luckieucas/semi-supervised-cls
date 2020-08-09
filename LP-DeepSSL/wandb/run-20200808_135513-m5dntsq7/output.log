@@ -1,0 +1,13 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.157 (6.157)	Data 0.323 (0.323)	Class 1.9091 (1.9091)	Prec@1 25.000 (25.000)	Prec@5 100.000 (100.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.205 (0.277)	Data 0.000 (0.003)	Class 1.6654 (1.5138)	Prec@1 50.000 (65.594)	Prec@5 75.000 (93.069)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.208 (0.246)	Data 0.000 (0.002)	Class 1.4154 (1.5208)	Prec@1 75.000 (64.677)	Prec@5 100.000 (92.786)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.239 (0.236)	Data 0.000 (0.001)	Class 1.4154 (1.4966)	Prec@1 75.000 (67.027)	Prec@5 75.000 (93.688)
+Evaluating the primary model:
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 108, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 468, in epochTest
+    outMean = out.view(bs, n_crops, -1).mean(1)
+AttributeError: 'tuple' object has no attribute 'view'

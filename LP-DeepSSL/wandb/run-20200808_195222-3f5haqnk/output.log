@@ -1,0 +1,13 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.528 (6.528)	Data 0.273 (0.273)	Class 1.8960 (1.8960)	Prec@1 25.000 (25.000)	Prec@5 100.000 (100.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.266 (0.296)	Data 0.000 (0.003)	Class 1.3453 (1.5843)	Prec@1 75.000 (64.851)	Prec@5 100.000 (86.881)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.247 (0.265)	Data 0.000 (0.002)	Class 1.7539 (1.5684)	Prec@1 50.000 (66.294)	Prec@5 75.000 (87.189)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.214 (0.254)	Data 0.000 (0.001)	Class 1.6654 (1.5321)	Prec@1 50.000 (67.774)	Prec@5 75.000 (85.465)
+Evaluating the primary model:
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 108, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 469, in epochTest
+    target = torch.zeros(target.shape[0], 7).scatter_(1, target, 1)
+RuntimeError: Expected object of scalar type Long but got scalar type Float for argument #3 'index' in call to _th_scatter_

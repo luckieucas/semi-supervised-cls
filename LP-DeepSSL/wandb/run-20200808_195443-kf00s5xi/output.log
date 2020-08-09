@@ -1,0 +1,15 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.610 (6.610)	Data 0.314 (0.314)	Class 1.9230 (1.9230)	Prec@1 0.000 (0.000)	Prec@5 75.000 (75.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.253 (0.302)	Data 0.000 (0.003)	Class 1.1662 (1.5748)	Prec@1 100.000 (64.604)	Prec@5 100.000 (88.614)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.247 (0.271)	Data 0.000 (0.002)	Class 1.1655 (1.5130)	Prec@1 100.000 (68.035)	Prec@5 100.000 (86.318)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.249 (0.261)	Data 0.000 (0.001)	Class 1.6654 (1.5022)	Prec@1 50.000 (68.189)	Prec@5 50.000 (85.963)
+Evaluating the primary model:
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 108, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 478, in epochTest
+    AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test(outGT, outPRED, args, competition=True)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/metrics.py", line 124, in compute_metrics_test
+    indexes = range(len(args.class_names))
+AttributeError: 'Namespace' object has no attribute 'class_names'

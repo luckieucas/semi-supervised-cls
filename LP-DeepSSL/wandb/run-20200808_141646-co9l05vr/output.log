@@ -1,0 +1,13 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.642 (6.642)	Data 0.279 (0.279)	Class 1.8726 (1.8726)	Prec@1 50.000 (50.000)	Prec@5 100.000 (100.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.268 (0.305)	Data 0.000 (0.003)	Class 1.6654 (1.4783)	Prec@1 50.000 (69.554)	Prec@5 50.000 (82.426)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.221 (0.271)	Data 0.000 (0.002)	Class 1.6654 (1.4756)	Prec@1 50.000 (69.403)	Prec@5 75.000 (81.965)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.231 (0.259)	Data 0.000 (0.001)	Class 1.6654 (1.4889)	Prec@1 50.000 (67.940)	Prec@5 75.000 (80.399)
+Evaluating the primary model:
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 108, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 462, in epochTest
+    target = torch.zeros(target.shape[0], 7).scatter_(1, target, 1)
+RuntimeError: Invalid index in scatter at /opt/conda/conda-bld/pytorch_1579040055865/work/aten/src/TH/generic/THTensorEvenMoreMath.cpp:151

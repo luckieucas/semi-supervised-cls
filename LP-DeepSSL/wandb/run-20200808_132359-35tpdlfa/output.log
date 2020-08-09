@@ -1,0 +1,13 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.448 (6.448)	Data 0.302 (0.302)	Class 1.9397 (1.9397)	Prec@1 25.000 (25.000)	Prec@5 100.000 (100.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.222 (0.285)	Data 0.000 (0.003)	Class 1.1654 (1.4833)	Prec@1 100.000 (68.564)	Prec@5 100.000 (95.545)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.209 (0.247)	Data 0.000 (0.002)	Class 1.6654 (1.4782)	Prec@1 50.000 (68.905)	Prec@5 100.000 (95.398)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.218 (0.240)	Data 0.000 (0.001)	Class 1.9154 (1.4905)	Prec@1 25.000 (67.608)	Prec@5 100.000 (95.598)
+Evaluating the primary model:
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 108, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 462, in epochTest
+    outGT = torch.cat((outGT, target), 0)
+RuntimeError: Expected object of scalar type Float but got scalar type Long for sequence element 1 in sequence argument at position #1 'tensors'

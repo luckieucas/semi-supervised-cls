@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_stage1.py", line 174, in <module>
+    main()
+  File "train_stage1.py", line 70, in main
+    train_loader, eval_loader, _, _ = create_data_loaders(**dataset_config, args=args)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 111, in create_data_loaders
+    transform=test_transform_sequence)
+NameError: name 'test_transform_sequence' is not defined

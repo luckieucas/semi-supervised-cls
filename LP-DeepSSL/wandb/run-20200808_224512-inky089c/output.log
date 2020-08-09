@@ -1,0 +1,16 @@
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Resuming from:models/skin_4000_split_10_isL2_1/checkpoint.180.ckpt
+Extracting features...
+Updating pseudo-labels...
+kNN Search done in 0 seconds
+Traceback (most recent call last):
+  File "train_stage2.py", line 190, in <module>
+    main()
+  File "train_stage2.py", line 109, in main
+    sel_acc = train_data.update_plabels(feats, k = args.dfs_k, max_iter = 20)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/lp/db_semisuper.py", line 333, in update_plabels
+    y[cur_idx] = 1.0 / cur_idx.shape[0]
+ZeroDivisionError: float division by zero

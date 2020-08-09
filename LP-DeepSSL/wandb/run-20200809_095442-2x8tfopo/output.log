@@ -1,0 +1,1203 @@
+Epoch: [0][0/21]LR 0.0500 (0.0500)	Time 8.506 (8.506)	Data 1.331 (1.331)	Class 2.0357 (2.0357)	Prec@1 4.688 (4.688)	Prec@5 31.250 (31.250)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [1][0/21]LR 0.0500 (0.0500)	Time 1.741 (1.741)	Data 1.328 (1.328)	Class 1.4319 (1.4319)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [2][0/21]LR 0.0500 (0.0500)	Time 1.742 (1.742)	Data 1.465 (1.465)	Class 1.4062 (1.4062)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [3][0/21]LR 0.0500 (0.0500)	Time 1.766 (1.766)	Data 1.476 (1.476)	Class 1.3907 (1.3907)	Prec@1 68.750 (68.750)	Prec@5 95.312 (95.312)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [4][0/21]LR 0.0500 (0.0500)	Time 1.677 (1.677)	Data 1.419 (1.419)	Class 1.4345 (1.4345)	Prec@1 64.062 (64.062)	Prec@5 93.750 (93.750)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [5][0/21]LR 0.0499 (0.0499)	Time 1.674 (1.674)	Data 1.410 (1.410)	Class 1.4186 (1.4186)	Prec@1 67.188 (67.188)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [6][0/21]LR 0.0499 (0.0499)	Time 1.668 (1.668)	Data 1.411 (1.411)	Class 1.4521 (1.4521)	Prec@1 60.938 (60.938)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [7][0/21]LR 0.0499 (0.0499)	Time 1.687 (1.687)	Data 1.413 (1.413)	Class 1.3985 (1.3985)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [8][0/21]LR 0.0498 (0.0498)	Time 1.698 (1.698)	Data 1.447 (1.447)	Class 1.3945 (1.3945)	Prec@1 70.312 (70.312)	Prec@5 95.312 (95.312)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [9][0/21]LR 0.0498 (0.0498)	Time 1.748 (1.748)	Data 1.468 (1.468)	Class 1.3492 (1.3492)	Prec@1 75.000 (75.000)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.10.ckpt ---
+Epoch: [10][0/21]LR 0.0497 (0.0497)	Time 1.786 (1.786)	Data 1.511 (1.511)	Class 1.3618 (1.3618)	Prec@1 68.750 (68.750)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [11][0/21]LR 0.0497 (0.0497)	Time 1.775 (1.775)	Data 1.494 (1.494)	Class 1.3017 (1.3017)	Prec@1 78.125 (78.125)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [12][0/21]LR 0.0496 (0.0496)	Time 1.862 (1.862)	Data 1.555 (1.555)	Class 1.3650 (1.3650)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [13][0/21]LR 0.0495 (0.0495)	Time 1.721 (1.721)	Data 1.439 (1.439)	Class 1.4259 (1.4259)	Prec@1 54.688 (54.688)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [14][0/21]LR 0.0495 (0.0495)	Time 1.813 (1.813)	Data 1.514 (1.514)	Class 1.3352 (1.3352)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [15][0/21]LR 0.0494 (0.0494)	Time 1.748 (1.748)	Data 1.471 (1.471)	Class 1.2786 (1.2786)	Prec@1 81.250 (81.250)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [16][0/21]LR 0.0493 (0.0493)	Time 1.738 (1.738)	Data 1.448 (1.448)	Class 1.3319 (1.3319)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [17][0/21]LR 0.0492 (0.0492)	Time 1.701 (1.701)	Data 1.442 (1.442)	Class 1.3722 (1.3722)	Prec@1 60.938 (60.938)	Prec@5 95.312 (95.312)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [18][0/21]LR 0.0491 (0.0491)	Time 1.742 (1.742)	Data 1.464 (1.464)	Class 1.3777 (1.3777)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [19][0/21]LR 0.0490 (0.0490)	Time 1.804 (1.804)	Data 1.511 (1.511)	Class 1.3574 (1.3574)	Prec@1 60.938 (60.938)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.20.ckpt ---
+Epoch: [20][0/21]LR 0.0489 (0.0489)	Time 1.678 (1.678)	Data 1.393 (1.393)	Class 1.2974 (1.2974)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [21][0/21]LR 0.0488 (0.0488)	Time 1.684 (1.684)	Data 1.413 (1.413)	Class 1.3583 (1.3583)	Prec@1 64.062 (64.062)	Prec@5 93.750 (93.750)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [22][0/21]LR 0.0487 (0.0487)	Time 1.820 (1.820)	Data 1.536 (1.536)	Class 1.3425 (1.3425)	Prec@1 76.562 (76.562)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [23][0/21]LR 0.0485 (0.0485)	Time 1.872 (1.872)	Data 1.585 (1.585)	Class 1.3458 (1.3458)	Prec@1 65.625 (65.625)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [24][0/21]LR 0.0484 (0.0484)	Time 1.714 (1.714)	Data 1.443 (1.443)	Class 1.3118 (1.3118)	Prec@1 71.875 (71.875)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [25][0/21]LR 0.0483 (0.0483)	Time 1.758 (1.758)	Data 1.464 (1.464)	Class 1.3705 (1.3705)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [26][0/21]LR 0.0481 (0.0481)	Time 1.752 (1.752)	Data 1.487 (1.487)	Class 1.3578 (1.3578)	Prec@1 71.875 (71.875)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [27][0/21]LR 0.0480 (0.0480)	Time 1.731 (1.731)	Data 1.436 (1.436)	Class 1.2703 (1.2703)	Prec@1 76.562 (76.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [28][0/21]LR 0.0478 (0.0478)	Time 1.694 (1.694)	Data 1.438 (1.438)	Class 1.3492 (1.3492)	Prec@1 62.500 (62.500)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [29][0/21]LR 0.0477 (0.0477)	Time 1.756 (1.756)	Data 1.489 (1.489)	Class 1.3558 (1.3558)	Prec@1 62.500 (62.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.30.ckpt ---
+Epoch: [30][0/21]LR 0.0475 (0.0475)	Time 1.759 (1.759)	Data 1.478 (1.478)	Class 1.3643 (1.3643)	Prec@1 57.812 (57.812)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [31][0/21]LR 0.0474 (0.0474)	Time 1.742 (1.742)	Data 1.468 (1.468)	Class 1.3432 (1.3432)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [32][0/21]LR 0.0472 (0.0472)	Time 1.657 (1.657)	Data 1.383 (1.383)	Class 1.3574 (1.3574)	Prec@1 62.500 (62.500)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [33][0/21]LR 0.0470 (0.0470)	Time 1.910 (1.910)	Data 1.643 (1.643)	Class 1.4317 (1.4317)	Prec@1 45.312 (45.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [34][0/21]LR 0.0468 (0.0468)	Time 1.793 (1.793)	Data 1.507 (1.507)	Class 1.2807 (1.2807)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [35][0/21]LR 0.0467 (0.0467)	Time 1.796 (1.796)	Data 1.500 (1.500)	Class 1.3700 (1.3700)	Prec@1 67.188 (67.188)	Prec@5 90.625 (90.625)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [36][0/21]LR 0.0465 (0.0465)	Time 1.694 (1.694)	Data 1.433 (1.433)	Class 1.3023 (1.3023)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [37][0/21]LR 0.0463 (0.0463)	Time 1.758 (1.758)	Data 1.462 (1.462)	Class 1.3740 (1.3740)	Prec@1 65.625 (65.625)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [38][0/21]LR 0.0461 (0.0461)	Time 1.736 (1.736)	Data 1.467 (1.467)	Class 1.3153 (1.3153)	Prec@1 70.312 (70.312)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [39][0/21]LR 0.0459 (0.0459)	Time 1.711 (1.711)	Data 1.438 (1.438)	Class 1.3202 (1.3202)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.40.ckpt ---
+--- checkpoint copied to models/skin_1400_split_10_isL2_1/best.ckpt ---
+Epoch: [40][0/21]LR 0.0457 (0.0457)	Time 1.710 (1.710)	Data 1.431 (1.431)	Class 1.2819 (1.2819)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [41][0/21]LR 0.0454 (0.0454)	Time 1.640 (1.640)	Data 1.363 (1.363)	Class 1.3467 (1.3467)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [42][0/21]LR 0.0452 (0.0452)	Time 1.738 (1.738)	Data 1.430 (1.430)	Class 1.2686 (1.2686)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [43][0/21]LR 0.0450 (0.0450)	Time 1.778 (1.778)	Data 1.487 (1.487)	Class 1.3126 (1.3126)	Prec@1 71.875 (71.875)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [44][0/21]LR 0.0448 (0.0448)	Time 1.758 (1.758)	Data 1.460 (1.460)	Class 1.3418 (1.3418)	Prec@1 67.188 (67.188)	Prec@5 95.312 (95.312)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [45][0/21]LR 0.0445 (0.0445)	Time 1.596 (1.596)	Data 1.330 (1.330)	Class 1.3074 (1.3074)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [46][0/21]LR 0.0443 (0.0443)	Time 1.704 (1.704)	Data 1.438 (1.438)	Class 1.2521 (1.2521)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [47][0/21]LR 0.0441 (0.0441)	Time 1.740 (1.740)	Data 1.450 (1.450)	Class 1.3145 (1.3145)	Prec@1 68.750 (68.750)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [48][0/21]LR 0.0438 (0.0438)	Time 1.845 (1.845)	Data 1.569 (1.569)	Class 1.3513 (1.3513)	Prec@1 62.500 (62.500)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [49][0/21]LR 0.0436 (0.0436)	Time 1.736 (1.736)	Data 1.463 (1.463)	Class 1.2597 (1.2597)	Prec@1 75.000 (75.000)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.50.ckpt ---
+--- checkpoint copied to models/skin_1400_split_10_isL2_1/best.ckpt ---
+Epoch: [50][0/21]LR 0.0433 (0.0433)	Time 1.819 (1.819)	Data 1.535 (1.535)	Class 1.2660 (1.2660)	Prec@1 64.062 (64.062)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [51][0/21]LR 0.0431 (0.0431)	Time 1.745 (1.745)	Data 1.480 (1.480)	Class 1.3159 (1.3159)	Prec@1 64.062 (64.062)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [52][0/21]LR 0.0428 (0.0428)	Time 1.728 (1.728)	Data 1.481 (1.481)	Class 1.3061 (1.3061)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [53][0/21]LR 0.0425 (0.0425)	Time 1.795 (1.795)	Data 1.484 (1.484)	Class 1.2550 (1.2550)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [54][0/21]LR 0.0423 (0.0423)	Time 1.739 (1.739)	Data 1.493 (1.493)	Class 1.2430 (1.2430)	Prec@1 71.875 (71.875)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [55][0/21]LR 0.0420 (0.0420)	Time 1.710 (1.710)	Data 1.419 (1.419)	Class 1.2404 (1.2404)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [56][0/21]LR 0.0417 (0.0417)	Time 1.704 (1.704)	Data 1.444 (1.444)	Class 1.3131 (1.3131)	Prec@1 68.750 (68.750)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [57][0/21]LR 0.0414 (0.0414)	Time 1.722 (1.722)	Data 1.439 (1.439)	Class 1.2935 (1.2935)	Prec@1 62.500 (62.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [58][0/21]LR 0.0412 (0.0412)	Time 1.730 (1.730)	Data 1.464 (1.464)	Class 1.3267 (1.3267)	Prec@1 54.688 (54.688)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [59][0/21]LR 0.0409 (0.0409)	Time 1.763 (1.763)	Data 1.467 (1.467)	Class 1.2504 (1.2504)	Prec@1 70.312 (70.312)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.60.ckpt ---
+Epoch: [60][0/21]LR 0.0406 (0.0406)	Time 1.692 (1.692)	Data 1.427 (1.427)	Class 1.2689 (1.2689)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [61][0/21]LR 0.0403 (0.0403)	Time 1.803 (1.803)	Data 1.536 (1.536)	Class 1.2882 (1.2882)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [62][0/21]LR 0.0400 (0.0400)	Time 1.816 (1.816)	Data 1.515 (1.515)	Class 1.3310 (1.3310)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [63][0/21]LR 0.0397 (0.0397)	Time 1.775 (1.775)	Data 1.479 (1.479)	Class 1.2666 (1.2666)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [64][0/21]LR 0.0394 (0.0394)	Time 1.741 (1.741)	Data 1.448 (1.448)	Class 1.3188 (1.3188)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [65][0/21]LR 0.0391 (0.0391)	Time 1.790 (1.790)	Data 1.506 (1.506)	Class 1.2459 (1.2459)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [66][0/21]LR 0.0388 (0.0388)	Time 1.761 (1.761)	Data 1.507 (1.507)	Class 1.2794 (1.2794)	Prec@1 56.250 (56.250)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [67][0/21]LR 0.0385 (0.0385)	Time 1.769 (1.769)	Data 1.470 (1.470)	Class 1.2568 (1.2568)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [68][0/21]LR 0.0381 (0.0381)	Time 1.800 (1.800)	Data 1.500 (1.500)	Class 1.2645 (1.2645)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [69][0/21]LR 0.0378 (0.0378)	Time 1.723 (1.723)	Data 1.429 (1.429)	Class 1.2655 (1.2655)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.70.ckpt ---
+Epoch: [70][0/21]LR 0.0375 (0.0375)	Time 1.724 (1.724)	Data 1.452 (1.452)	Class 1.2764 (1.2764)	Prec@1 71.875 (71.875)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [71][0/21]LR 0.0372 (0.0372)	Time 1.731 (1.731)	Data 1.459 (1.459)	Class 1.3617 (1.3617)	Prec@1 64.062 (64.062)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [72][0/21]LR 0.0368 (0.0368)	Time 1.738 (1.738)	Data 1.458 (1.458)	Class 1.2356 (1.2356)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [73][0/21]LR 0.0365 (0.0365)	Time 1.792 (1.792)	Data 1.507 (1.507)	Class 1.2882 (1.2882)	Prec@1 64.062 (64.062)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [74][0/21]LR 0.0362 (0.0362)	Time 1.479 (1.479)	Data 1.231 (1.231)	Class 1.2639 (1.2639)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [75][0/21]LR 0.0358 (0.0358)	Time 1.805 (1.805)	Data 1.531 (1.531)	Class 1.2883 (1.2883)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [76][0/21]LR 0.0355 (0.0355)	Time 1.724 (1.724)	Data 1.460 (1.460)	Class 1.2379 (1.2379)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [77][0/21]LR 0.0352 (0.0352)	Time 1.415 (1.415)	Data 1.177 (1.177)	Class 1.2339 (1.2339)	Prec@1 75.000 (75.000)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [78][0/21]LR 0.0348 (0.0348)	Time 1.726 (1.726)	Data 1.473 (1.473)	Class 1.3083 (1.3083)	Prec@1 51.562 (51.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [79][0/21]LR 0.0345 (0.0345)	Time 1.782 (1.782)	Data 1.508 (1.508)	Class 1.3191 (1.3191)	Prec@1 62.500 (62.500)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.80.ckpt ---
+Epoch: [80][0/21]LR 0.0341 (0.0341)	Time 1.784 (1.784)	Data 1.500 (1.500)	Class 1.2966 (1.2966)	Prec@1 62.500 (62.500)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [81][0/21]LR 0.0338 (0.0338)	Time 1.806 (1.806)	Data 1.540 (1.540)	Class 1.2543 (1.2543)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [82][0/21]LR 0.0334 (0.0334)	Time 1.805 (1.805)	Data 1.540 (1.540)	Class 1.3109 (1.3109)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [83][0/21]LR 0.0331 (0.0331)	Time 1.718 (1.718)	Data 1.443 (1.443)	Class 1.2636 (1.2636)	Prec@1 59.375 (59.375)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [84][0/21]LR 0.0327 (0.0327)	Time 1.765 (1.765)	Data 1.475 (1.475)	Class 1.2805 (1.2805)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [85][0/21]LR 0.0324 (0.0324)	Time 1.819 (1.819)	Data 1.497 (1.497)	Class 1.2735 (1.2735)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [86][0/21]LR 0.0320 (0.0320)	Time 1.721 (1.721)	Data 1.447 (1.447)	Class 1.2742 (1.2742)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [87][0/21]LR 0.0317 (0.0317)	Time 1.710 (1.710)	Data 1.431 (1.431)	Class 1.3132 (1.3132)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [88][0/21]LR 0.0313 (0.0313)	Time 1.738 (1.738)	Data 1.463 (1.463)	Class 1.3179 (1.3179)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [89][0/21]LR 0.0309 (0.0309)	Time 1.715 (1.715)	Data 1.452 (1.452)	Class 1.3295 (1.3295)	Prec@1 67.188 (67.188)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.90.ckpt ---
+Epoch: [90][0/21]LR 0.0306 (0.0306)	Time 1.733 (1.733)	Data 1.447 (1.447)	Class 1.2807 (1.2807)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [91][0/21]LR 0.0302 (0.0302)	Time 1.752 (1.752)	Data 1.467 (1.467)	Class 1.2235 (1.2235)	Prec@1 76.562 (76.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [92][0/21]LR 0.0298 (0.0298)	Time 1.681 (1.681)	Data 1.426 (1.426)	Class 1.2520 (1.2520)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [93][0/21]LR 0.0295 (0.0295)	Time 1.779 (1.779)	Data 1.506 (1.506)	Class 1.2854 (1.2854)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [94][0/21]LR 0.0291 (0.0291)	Time 1.716 (1.716)	Data 1.436 (1.436)	Class 1.2491 (1.2491)	Prec@1 64.062 (64.062)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [95][0/21]LR 0.0287 (0.0287)	Time 1.764 (1.764)	Data 1.473 (1.473)	Class 1.2666 (1.2666)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [96][0/21]LR 0.0284 (0.0284)	Time 1.699 (1.699)	Data 1.437 (1.437)	Class 1.3147 (1.3147)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [97][0/21]LR 0.0280 (0.0280)	Time 1.686 (1.686)	Data 1.411 (1.411)	Class 1.3074 (1.3074)	Prec@1 59.375 (59.375)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [98][0/21]LR 0.0276 (0.0276)	Time 1.730 (1.730)	Data 1.444 (1.444)	Class 1.2513 (1.2513)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [99][0/21]LR 0.0272 (0.0272)	Time 1.733 (1.733)	Data 1.453 (1.453)	Class 1.2892 (1.2892)	Prec@1 62.500 (62.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.100.ckpt ---
+--- checkpoint copied to models/skin_1400_split_10_isL2_1/best.ckpt ---
+Epoch: [100][0/21]LR 0.0269 (0.0269)	Time 1.715 (1.715)	Data 1.444 (1.444)	Class 1.2694 (1.2694)	Prec@1 62.500 (62.500)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [101][0/21]LR 0.0265 (0.0265)	Time 1.758 (1.758)	Data 1.465 (1.465)	Class 1.2621 (1.2621)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [102][0/21]LR 0.0261 (0.0261)	Time 1.808 (1.808)	Data 1.541 (1.541)	Class 1.3009 (1.3009)	Prec@1 70.312 (70.312)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [103][0/21]LR 0.0257 (0.0257)	Time 1.534 (1.534)	Data 1.290 (1.290)	Class 1.3090 (1.3090)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [104][0/21]LR 0.0254 (0.0254)	Time 1.733 (1.733)	Data 1.484 (1.484)	Class 1.2901 (1.2901)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [105][0/21]LR 0.0250 (0.0250)	Time 1.862 (1.862)	Data 1.579 (1.579)	Class 1.2565 (1.2565)	Prec@1 76.562 (76.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [106][0/21]LR 0.0246 (0.0246)	Time 1.795 (1.795)	Data 1.507 (1.507)	Class 1.2844 (1.2844)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [107][0/21]LR 0.0243 (0.0243)	Time 1.786 (1.786)	Data 1.498 (1.498)	Class 1.3416 (1.3416)	Prec@1 62.500 (62.500)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [108][0/21]LR 0.0239 (0.0239)	Time 1.802 (1.802)	Data 1.513 (1.513)	Class 1.2458 (1.2458)	Prec@1 76.562 (76.562)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [109][0/21]LR 0.0235 (0.0235)	Time 1.861 (1.861)	Data 1.599 (1.599)	Class 1.2607 (1.2607)	Prec@1 70.312 (70.312)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.110.ckpt ---
+Epoch: [110][0/21]LR 0.0231 (0.0231)	Time 1.768 (1.768)	Data 1.487 (1.487)	Class 1.2509 (1.2509)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [111][0/21]LR 0.0228 (0.0228)	Time 1.770 (1.770)	Data 1.483 (1.483)	Class 1.2420 (1.2420)	Prec@1 76.562 (76.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [112][0/21]LR 0.0224 (0.0224)	Time 1.711 (1.711)	Data 1.440 (1.440)	Class 1.2409 (1.2409)	Prec@1 76.562 (76.562)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [113][0/21]LR 0.0220 (0.0220)	Time 1.787 (1.787)	Data 1.508 (1.508)	Class 1.2656 (1.2656)	Prec@1 62.500 (62.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [114][0/21]LR 0.0216 (0.0216)	Time 1.781 (1.781)	Data 1.508 (1.508)	Class 1.2645 (1.2645)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [115][0/21]LR 0.0213 (0.0213)	Time 1.738 (1.738)	Data 1.472 (1.472)	Class 1.3006 (1.3006)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [116][0/21]LR 0.0209 (0.0209)	Time 1.751 (1.751)	Data 1.473 (1.473)	Class 1.2554 (1.2554)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [117][0/21]LR 0.0205 (0.0205)	Time 1.704 (1.704)	Data 1.445 (1.445)	Class 1.2858 (1.2858)	Prec@1 70.312 (70.312)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [118][0/21]LR 0.0202 (0.0202)	Time 1.724 (1.724)	Data 1.455 (1.455)	Class 1.2387 (1.2387)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [119][0/21]LR 0.0198 (0.0198)	Time 1.765 (1.765)	Data 1.473 (1.473)	Class 1.3362 (1.3362)	Prec@1 65.625 (65.625)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.120.ckpt ---
+Epoch: [120][0/21]LR 0.0194 (0.0194)	Time 1.736 (1.736)	Data 1.449 (1.449)	Class 1.2092 (1.2092)	Prec@1 87.500 (87.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [121][0/21]LR 0.0191 (0.0191)	Time 1.457 (1.457)	Data 1.197 (1.197)	Class 1.2348 (1.2348)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [122][0/21]LR 0.0187 (0.0187)	Time 1.528 (1.528)	Data 1.268 (1.268)	Class 1.2895 (1.2895)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [123][0/21]LR 0.0183 (0.0183)	Time 1.767 (1.767)	Data 1.466 (1.466)	Class 1.2500 (1.2500)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [124][0/21]LR 0.0180 (0.0180)	Time 1.715 (1.715)	Data 1.443 (1.443)	Class 1.3083 (1.3083)	Prec@1 79.688 (79.688)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [125][0/21]LR 0.0176 (0.0176)	Time 1.797 (1.797)	Data 1.525 (1.525)	Class 1.2761 (1.2761)	Prec@1 65.625 (65.625)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [126][0/21]LR 0.0173 (0.0173)	Time 1.785 (1.785)	Data 1.504 (1.504)	Class 1.2718 (1.2718)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [127][0/21]LR 0.0169 (0.0169)	Time 1.795 (1.795)	Data 1.521 (1.521)	Class 1.2705 (1.2705)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [128][0/21]LR 0.0166 (0.0166)	Time 1.823 (1.823)	Data 1.518 (1.518)	Class 1.2477 (1.2477)	Prec@1 64.062 (64.062)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [129][0/21]LR 0.0162 (0.0162)	Time 1.706 (1.706)	Data 1.444 (1.444)	Class 1.3049 (1.3049)	Prec@1 70.312 (70.312)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.130.ckpt ---
+Epoch: [130][0/21]LR 0.0159 (0.0159)	Time 1.713 (1.713)	Data 1.425 (1.425)	Class 1.2803 (1.2803)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [131][0/21]LR 0.0155 (0.0155)	Time 1.812 (1.812)	Data 1.529 (1.529)	Class 1.2699 (1.2699)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [132][0/21]LR 0.0152 (0.0152)	Time 1.694 (1.694)	Data 1.437 (1.437)	Class 1.2959 (1.2959)	Prec@1 59.375 (59.375)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [133][0/21]LR 0.0148 (0.0148)	Time 1.774 (1.774)	Data 1.494 (1.494)	Class 1.2716 (1.2716)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [134][0/21]LR 0.0145 (0.0145)	Time 1.755 (1.755)	Data 1.471 (1.471)	Class 1.2712 (1.2712)	Prec@1 81.250 (81.250)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [135][0/21]LR 0.0142 (0.0142)	Time 1.762 (1.762)	Data 1.488 (1.488)	Class 1.2704 (1.2704)	Prec@1 64.062 (64.062)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [136][0/21]LR 0.0138 (0.0138)	Time 1.656 (1.656)	Data 1.357 (1.357)	Class 1.2504 (1.2504)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [137][0/21]LR 0.0135 (0.0135)	Time 1.788 (1.788)	Data 1.502 (1.502)	Class 1.2379 (1.2379)	Prec@1 78.125 (78.125)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [138][0/21]LR 0.0132 (0.0132)	Time 1.781 (1.781)	Data 1.514 (1.514)	Class 1.2367 (1.2367)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [139][0/21]LR 0.0128 (0.0128)	Time 1.748 (1.748)	Data 1.473 (1.473)	Class 1.2400 (1.2400)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.140.ckpt ---
+Epoch: [140][0/21]LR 0.0125 (0.0125)	Time 1.791 (1.791)	Data 1.506 (1.506)	Class 1.2766 (1.2766)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [141][0/21]LR 0.0122 (0.0122)	Time 1.800 (1.800)	Data 1.515 (1.515)	Class 1.2341 (1.2341)	Prec@1 79.688 (79.688)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [142][0/21]LR 0.0119 (0.0119)	Time 1.790 (1.790)	Data 1.510 (1.510)	Class 1.2134 (1.2134)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [143][0/21]LR 0.0115 (0.0115)	Time 1.595 (1.595)	Data 1.343 (1.343)	Class 1.2745 (1.2745)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [144][0/21]LR 0.0112 (0.0112)	Time 1.684 (1.684)	Data 1.404 (1.404)	Class 1.2748 (1.2748)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [145][0/21]LR 0.0109 (0.0109)	Time 1.739 (1.739)	Data 1.468 (1.468)	Class 1.2469 (1.2469)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [146][0/21]LR 0.0106 (0.0106)	Time 1.775 (1.775)	Data 1.500 (1.500)	Class 1.2590 (1.2590)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [147][0/21]LR 0.0103 (0.0103)	Time 1.701 (1.701)	Data 1.434 (1.434)	Class 1.2763 (1.2763)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [148][0/21]LR 0.0100 (0.0100)	Time 1.778 (1.778)	Data 1.486 (1.486)	Class 1.3269 (1.3269)	Prec@1 64.062 (64.062)	Prec@5 96.875 (96.875)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [149][0/21]LR 0.0097 (0.0097)	Time 1.769 (1.769)	Data 1.508 (1.508)	Class 1.2458 (1.2458)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.150.ckpt ---
+Epoch: [150][0/21]LR 0.0094 (0.0094)	Time 1.793 (1.793)	Data 1.504 (1.504)	Class 1.2644 (1.2644)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [151][0/21]LR 0.0091 (0.0091)	Time 1.752 (1.752)	Data 1.469 (1.469)	Class 1.2796 (1.2796)	Prec@1 62.500 (62.500)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [152][0/21]LR 0.0088 (0.0088)	Time 1.769 (1.769)	Data 1.478 (1.478)	Class 1.2828 (1.2828)	Prec@1 68.750 (68.750)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [153][0/21]LR 0.0086 (0.0086)	Time 1.714 (1.714)	Data 1.452 (1.452)	Class 1.2335 (1.2335)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [154][0/21]LR 0.0083 (0.0083)	Time 1.777 (1.777)	Data 1.500 (1.500)	Class 1.2645 (1.2645)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [155][0/21]LR 0.0080 (0.0080)	Time 1.770 (1.770)	Data 1.503 (1.503)	Class 1.2572 (1.2572)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [156][0/21]LR 0.0077 (0.0077)	Time 1.808 (1.808)	Data 1.492 (1.492)	Class 1.2823 (1.2823)	Prec@1 67.188 (67.188)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [157][0/21]LR 0.0075 (0.0075)	Time 1.742 (1.742)	Data 1.447 (1.447)	Class 1.2623 (1.2623)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [158][0/21]LR 0.0072 (0.0072)	Time 1.768 (1.768)	Data 1.472 (1.472)	Class 1.2172 (1.2172)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [159][0/21]LR 0.0069 (0.0069)	Time 1.742 (1.742)	Data 1.456 (1.456)	Class 1.2668 (1.2668)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.160.ckpt ---
+Epoch: [160][0/21]LR 0.0067 (0.0067)	Time 1.840 (1.840)	Data 1.562 (1.562)	Class 1.2485 (1.2485)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [161][0/21]LR 0.0064 (0.0064)	Time 1.767 (1.767)	Data 1.506 (1.506)	Class 1.2445 (1.2445)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [162][0/21]LR 0.0062 (0.0062)	Time 1.726 (1.726)	Data 1.460 (1.460)	Class 1.2247 (1.2247)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [163][0/21]LR 0.0059 (0.0059)	Time 1.752 (1.752)	Data 1.466 (1.466)	Class 1.2498 (1.2498)	Prec@1 73.438 (73.438)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [164][0/21]LR 0.0057 (0.0057)	Time 1.674 (1.674)	Data 1.421 (1.421)	Class 1.2446 (1.2446)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [165][0/21]LR 0.0055 (0.0055)	Time 1.589 (1.589)	Data 1.325 (1.325)	Class 1.2576 (1.2576)	Prec@1 60.938 (60.938)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [166][0/21]LR 0.0052 (0.0052)	Time 1.817 (1.817)	Data 1.541 (1.541)	Class 1.2188 (1.2188)	Prec@1 79.688 (79.688)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [167][0/21]LR 0.0050 (0.0050)	Time 1.471 (1.471)	Data 1.201 (1.201)	Class 1.2716 (1.2716)	Prec@1 65.625 (65.625)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [168][0/21]LR 0.0048 (0.0048)	Time 1.529 (1.529)	Data 1.278 (1.278)	Class 1.2344 (1.2344)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [169][0/21]LR 0.0046 (0.0046)	Time 1.575 (1.575)	Data 1.307 (1.307)	Class 1.2181 (1.2181)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.170.ckpt ---
+Epoch: [170][0/21]LR 0.0043 (0.0043)	Time 1.879 (1.879)	Data 1.609 (1.609)	Class 1.3074 (1.3074)	Prec@1 64.062 (64.062)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [171][0/21]LR 0.0041 (0.0041)	Time 1.704 (1.704)	Data 1.443 (1.443)	Class 1.2609 (1.2609)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [172][0/21]LR 0.0039 (0.0039)	Time 1.527 (1.527)	Data 1.271 (1.271)	Class 1.2457 (1.2457)	Prec@1 75.000 (75.000)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [173][0/21]LR 0.0037 (0.0037)	Time 1.684 (1.684)	Data 1.421 (1.421)	Class 1.2398 (1.2398)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [174][0/21]LR 0.0035 (0.0035)	Time 1.642 (1.642)	Data 1.371 (1.371)	Class 1.2828 (1.2828)	Prec@1 67.188 (67.188)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [175][0/21]LR 0.0033 (0.0033)	Time 1.721 (1.721)	Data 1.435 (1.435)	Class 1.2324 (1.2324)	Prec@1 68.750 (68.750)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [176][0/21]LR 0.0032 (0.0032)	Time 1.656 (1.656)	Data 1.383 (1.383)	Class 1.2378 (1.2378)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [177][0/21]LR 0.0030 (0.0030)	Time 1.728 (1.728)	Data 1.439 (1.439)	Class 1.2695 (1.2695)	Prec@1 70.312 (70.312)	Prec@5 100.000 (100.000)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [178][0/21]LR 0.0028 (0.0028)	Time 1.585 (1.585)	Data 1.327 (1.327)	Class 1.2767 (1.2767)	Prec@1 73.438 (73.438)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Epoch: [179][0/21]LR 0.0026 (0.0026)	Time 1.756 (1.756)	Data 1.491 (1.491)	Class 1.2350 (1.2350)	Prec@1 71.875 (71.875)	Prec@5 98.438 (98.438)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+--- checkpoint saved to models/skin_1400_split_10_isL2_1/checkpoint.180.ckpt ---

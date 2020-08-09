@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train_stage2.py", line 190, in <module>
+    main()
+  File "train_stage2.py", line 98, in main
+    AUROC_avg, Accus_avg, F1_avg = epochTest(args, wandb, model, epoch, eval_loader)
+UnboundLocalError: local variable 'epoch' referenced before assignment

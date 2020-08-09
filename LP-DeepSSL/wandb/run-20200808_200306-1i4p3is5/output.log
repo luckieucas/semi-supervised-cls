@@ -1,0 +1,21 @@
+Epoch: [0][0/350]LR 0.0500 (0.0500)	Time 6.692 (6.692)	Data 0.309 (0.309)	Class 1.9930 (1.9930)	Prec@1 0.000 (0.000)	Prec@5 50.000 (50.000)
+Epoch: [0][100/350]LR 0.0500 (0.0500)	Time 0.248 (0.297)	Data 0.001 (0.003)	Class 1.3453 (1.5878)	Prec@1 75.000 (66.584)	Prec@5 100.000 (95.050)
+Epoch: [0][200/350]LR 0.0500 (0.0500)	Time 0.227 (0.264)	Data 0.000 (0.002)	Class 1.3453 (1.5778)	Prec@1 100.000 (66.418)	Prec@5 100.000 (95.896)
+Epoch: [0][300/350]LR 0.0500 (0.0500)	Time 0.229 (0.253)	Data 0.000 (0.001)	Class 1.3450 (1.5670)	Prec@1 100.000 (67.193)	Prec@5 100.000 (96.678)
+Evaluating the primary model:
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/luckie/anaconda2/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Traceback (most recent call last):
+  File "train_stage1.py", line 177, in <module>
+    main()
+  File "train_stage1.py", line 150, in main
+    F1_avg
+TypeError: not enough arguments for format string

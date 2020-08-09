@@ -1,0 +1,147 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.9.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+arch:
+  desc: null
+  value: resnet18
+batch_size:
+  desc: null
+  value: 64
+checkpoint_epochs:
+  desc: null
+  value: 10
+class_names:
+  desc: null
+  value:
+  - Melanoma
+  - Melanocytic nevus
+  - Basal cell carcinoma
+  - Actinic keratosis
+  - Benign keratosis
+  - Dermatofibroma
+  - Vascular lesion
+class_num:
+  desc: null
+  value:
+  - 1113.0
+  - 6705.0
+  - 514.0
+  - 327.0
+  - 1099.0
+  - 115.0
+  - 142.0
+consistency:
+  desc: null
+  value: 100.0
+consistency_rampup:
+  desc: null
+  value: 5
+consistency_type:
+  desc: null
+  value: mse
+dataset:
+  desc: null
+  value: skin
+dfs_k:
+  desc: null
+  value: 50
+double_output:
+  desc: null
+  value: false
+ema_decay:
+  desc: null
+  value: 0.97
+epochs:
+  desc: null
+  value: 180
+eval_subdir:
+  desc: null
+  value: test
+evaluate:
+  desc: null
+  value: null
+evaluation_epochs:
+  desc: null
+  value: 1
+exclude_unlabeled:
+  desc: null
+  value: false
+fully_supervised:
+  desc: null
+  value: false
+gpu_id:
+  desc: null
+  value: 0,1
+initial_lr:
+  desc: null
+  value: 0.0
+isL2:
+  desc: null
+  value: true
+isMT:
+  desc: null
+  value: false
+label_split:
+  desc: null
+  value: 10
+labeled_batch_size:
+  desc: null
+  value: 16
+labels:
+  desc: null
+  value: /media/luckie/vol4/semi_supervised_cls/dataset/skin/train_labeled.txt
+logit_distance_cost:
+  desc: null
+  value: 0.01
+lr:
+  desc: null
+  value: 0.05
+lr_rampdown_epochs:
+  desc: null
+  value: 210
+lr_rampup:
+  desc: null
+  value: 0
+momentum:
+  desc: null
+  value: 0.9
+nesterov:
+  desc: null
+  value: true
+num_labeled:
+  desc: null
+  value: 1400
+pretrained:
+  desc: null
+  value: false
+print_freq:
+  desc: null
+  value: 100
+resume:
+  desc: null
+  value: ''
+start_epoch:
+  desc: null
+  value: 0
+test_batch_size:
+  desc: null
+  value: 64
+test_mode:
+  desc: null
+  value: ''
+train_subdir:
+  desc: null
+  value: train+val
+weight_decay:
+  desc: null
+  value: 0.0002
+workers:
+  desc: null
+  value: 2

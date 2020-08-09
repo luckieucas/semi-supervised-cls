@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/luckie/.vscode-server/extensions/ms-python.python-2020.7.96456/pythonFiles/lib/python/debugpy/__main__.py", line 45, in <module>
+    cli.main()
+  File "/home/luckie/.vscode-server/extensions/ms-python.python-2020.7.96456/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/luckie/.vscode-server/extensions/ms-python.python-2020.7.96456/pythonFiles/lib/python/debugpy/../debugpy/server/cli.py", line 267, in run_file
+    runpy.run_path(options.target, run_name=compat.force_str("__main__"))
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home/luckie/anaconda2/envs/py37/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/train_stage2.py", line 190, in <module>
+    main()
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/train_stage2.py", line 67, in main
+    train_loader, eval_loader, train_loader_noshuff, train_data = create_data_loaders(**dataset_config, args=args)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 65, in create_data_loaders
+    assert_exactly_one([args.exclude_unlabeled, args.labeled_batch_size, args.fully_supervised])
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/mean_teacher/utils.py", line 42, in assert_exactly_one
+    for el in lst)
+AssertionError: True, 16, False

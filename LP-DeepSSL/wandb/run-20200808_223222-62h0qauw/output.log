@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_stage2.py", line 190, in <module>
+    main()
+  File "train_stage2.py", line 70, in main
+    model = create_model(num_classes,args)
+  File "/media/luckie/vol4/paper_with_code/LP-DeepSSL/helpers.py", line 136, in create_model
+    model = DenseNet121(7,True)
+NameError: name 'DenseNet121' is not defined

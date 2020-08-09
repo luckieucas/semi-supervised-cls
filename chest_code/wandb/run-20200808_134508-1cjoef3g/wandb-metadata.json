@@ -1,0 +1,25 @@
+{
+    "root": "/media/luckie/vol4/semi_supervised_cls/code",
+    "program": "/media/luckie/vol4/semi_supervised_cls/code/chest_code/main.py",
+    "git": {
+        "remote": "git@github.com:luckieucas/semi-supervised-cls.git",
+        "commit": "60f7fb864ac4dcb2730d0c710e5ef9c17c92e30c"
+    },
+    "email": "luckiepeng@163.com",
+    "startedAt": "2020-08-08T05:45:09.720772",
+    "host": "luckie",
+    "username": "luckie",
+    "executable": "/home/luckie/anaconda2/envs/py37/bin/python",
+    "os": "Linux-4.15.0-111-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.4",
+    "gpu": "GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "args": [],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "skin_model_test_densenet121_labeledNum500",
+    "project": "skin-semi-supervised-newcode",
+    "heartbeatAt": "2020-08-08T05:46:15.468127"
+}
