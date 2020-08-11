@@ -1,0 +1,8 @@
+{"vat_filter_num": 32, "_runtime": 21.420844078063965, "_timestamp": 1597150257.941406, "_step": 0}
+{"train cls loss": 2.076103448867798, "train vat loss": 0.07604233920574188, "train bnm loss": 0.0, "train loss entropy": 0.0, "train total loss": 2.1521458625793457, "_runtime": 98.71795296669006, "_timestamp": 1597150335.238515, "_step": 1}
+{"vat_filter_num": 32, "_runtime": 99.28018260002136, "_timestamp": 1597150335.8007445, "_step": 2}
+{"vat_filter_num": 32, "_runtime": 100.56024551391602, "_timestamp": 1597150337.0808074, "_step": 3}
+{"vat_filter_num": 32, "_runtime": 101.95663928985596, "_timestamp": 1597150338.4772012, "_step": 4}
+{"vat_filter_num": 32, "_runtime": 103.24968481063843, "_timestamp": 1597150339.7702467, "_step": 5}
+{"vat_filter_num": 32, "_runtime": 104.52453422546387, "_timestamp": 1597150341.0450962, "_step": 6}
+{"vat_filter_num": 32, "_runtime": 105.82667183876038, "_timestamp": 1597150342.3472338, "_step": 7}

@@ -201,6 +201,7 @@ class Trainer():
             bs, n_crops, c, h, w = input.size()
             with torch.no_grad():
                 out = model(input.view(-1, c, h, w).cuda())
+                out = torch.nn.functional.softmax(out,dim = 1)
             outMean = out.view(bs, n_crops, -1).mean(1)
             outPRED = torch.cat((outPRED, outMean.data), 0)
 

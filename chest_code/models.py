@@ -8,12 +8,13 @@ import torch.backends.cudnn as cudnn
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from sklearn.metrics import roc_auc_score
+import torch.nn.functional as F
 
 import torchvision
 
 class DenseNet121(nn.Module):
 
-    def __init__(self, classCount, isTrained):
+    def __init__(self, classCount=7, isTrained=True):
 	
         super(DenseNet121, self).__init__()
 		
@@ -21,11 +22,32 @@ class DenseNet121(nn.Module):
 
         kernelCount = self.densenet121.classifier.in_features
 		
-        self.densenet121.classifier = nn.Sequential(nn.Linear(kernelCount, classCount), nn.Sigmoid())
+        #self.densenet121.classifier = nn.Sequential(nn.Linear(kernelCount, classCount), nn.Sigmoid())
+        self.densenet121.classifier = nn.Linear(kernelCount, classCount)
 
     def forward(self, x):
         x = self.densenet121(x)
         return x
+
+class DenseNet121_F(nn.Module):
+    
+    def __init__(self, classCount=7, isTrained=True):
+	
+        super(DenseNet121_F, self).__init__()
+		
+        model = DenseNet121()
+        model = torch.nn.DataParallel(model)
+        checkpoint = torch.load('/media/luckie/vol4/semi_supervised_cls/model/vat_best_model.pth.tar')
+        model.load_state_dict(checkpoint['state_dict'])
+        self.densenet121 = model
+
+    def forward(self, x):
+        features = self.densenet121.module.densenet121.features(x)
+        out = F.relu(features, inplace=True)
+        out = F.adaptive_avg_pool2d(out, (1,1))
+        out = torch.flatten(out, 1)
+        logit = self.densenet121.module.densenet121.classifier(out)
+        return logit,out
 
 class DenseNet169(nn.Module):
     
