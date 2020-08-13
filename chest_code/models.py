@@ -22,8 +22,8 @@ class DenseNet121(nn.Module):
 
         kernelCount = self.densenet121.classifier.in_features
 		
-        #self.densenet121.classifier = nn.Sequential(nn.Linear(kernelCount, classCount), nn.Sigmoid())
-        self.densenet121.classifier = nn.Linear(kernelCount, classCount)
+        self.densenet121.classifier = nn.Sequential(nn.Linear(kernelCount, classCount), nn.Sigmoid())
+        #self.densenet121.classifier = nn.Linear(kernelCount, class)
 
     def forward(self, x):
         x = self.densenet121(x)
@@ -39,15 +39,33 @@ class DenseNet121_F(nn.Module):
         model = torch.nn.DataParallel(model)
         checkpoint = torch.load('/media/luckie/vol4/semi_supervised_cls/model/vat_best_model.pth.tar')
         model.load_state_dict(checkpoint['state_dict'])
-        self.densenet121 = model
+        self.densenet121 = model.module.densenet121
 
     def forward(self, x):
-        features = self.densenet121.module.densenet121.features(x)
+        features = self.densenet121.features(x)
         out = F.relu(features, inplace=True)
         out = F.adaptive_avg_pool2d(out, (1,1))
         out = torch.flatten(out, 1)
-        logit = self.densenet121.module.densenet121.classifier(out)
+        logit = self.densenet121.classifier(out)
         return logit,out
+
+class DenseNet121_test(nn.Module):
+    
+    def __init__(self, classCount=7, isTrained=True):
+	
+        super(DenseNet121_test, self).__init__()
+		
+        model = DenseNet121()
+        model = torch.nn.DataParallel(model)
+        checkpoint = torch.load('/media/luckie/vol4/semi_supervised_cls/model/vat_best_model.pth.tar')
+        model.load_state_dict(checkpoint['state_dict'])
+        self.densenet121 = model.module
+
+    def forward(self, x):
+        print("test")
+        logit = self.densenet121(x)
+        return logit
+
 
 class DenseNet169(nn.Module):
     

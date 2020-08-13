@@ -180,7 +180,7 @@ def compute_metrics_test_new(gt, pred, competition=True):
         List of AUROCs of all classes.
     """
 
-    AUROCs, Accus, Senss, Specs, Pre, F1 = [], [], [], [], [], []
+    AUROCs, Accus, Senss, Specs,F1 = [], [], [], [], []
     gt_np = gt
     # if cfg.uncertainty == 'U-Zeros':
     #     gt_np[np.where(gt_np==-1)] = 0
@@ -199,7 +199,7 @@ def compute_metrics_test_new(gt, pred, competition=True):
         try:
             AUROCs.append(roc_auc_score(gt_np[:, i], pred_np[:, i]))
         except ValueError as error:
-            print('Error in computing accuracy for {}.\n Error msg:{}'.format(i, error))
+            print('Error in computing roc for {}.\n Error msg:{}'.format(i, error))
             AUROCs.append(0)
         
         try:
@@ -218,14 +218,8 @@ def compute_metrics_test_new(gt, pred, competition=True):
         try:
             Specs.append(specificity_score(gt_np[:, i], (pred_np[:, i]>=THRESH)))
         except ValueError:
-            print('Error in computing F1-score for {}.'.format(i))
+            print('Error in computing specificity for {}.'.format(i))
             Specs.append(0)
-
-        try:
-            Pre.append(precision_score(gt_np[:, i], (pred_np[:, i]>=THRESH)))
-        except ValueError:
-            print('Error in computing F1-score for {}.'.format(i))
-            Pre.append(0)
     
         try:
             F1.append(f1_score(gt_np[:, i], (pred_np[:, i]>=THRESH)))
@@ -233,5 +227,5 @@ def compute_metrics_test_new(gt, pred, competition=True):
             print('Error in computing F1-score for {}.'.format(i))
             F1.append(0)
     
-    return AUROCs, Accus, Senss, Specs, Pre, F1
+    return AUROCs, Accus, Senss, Specs, F1
 

@@ -6,23 +6,26 @@ import time
 import scipy
 import torch.nn.functional as F
 from faiss import normalize_L2
-from models import DenseNet121,DenseNet121_F
+from models import DenseNet121,DenseNet121_F,DenseNet121_test
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from DatasetGenerator import DatasetGenerator, TwoStreamBatchSampler
 from metrics import compute_metrics_test_new
 
 model = DenseNet121_F()
-# model = DenseNet121()
-# model = torch.nn.DataParallel(model)
+#model_test = DenseNet121_test()
+# model_test = DenseNet121()
+# model_test = torch.nn.DataParallel(model_test)
 # checkpoint = torch.load('/media/luckie/vol4/semi_supervised_cls/model/vat_best_model.pth.tar')
-# model.load_state_dict(checkpoint['state_dict'])
+# model_test.load_state_dict(checkpoint['state_dict'])
+# model_test = model_test.module
 
+model.eval()
 
 # img = torch.rand(1,3,224,224)
-# img = img.cuda()
-# logit = model(img)
-print("666")
+# logit,_ = model(img)
+# logit_test = model_test(img)
+# print("666")
 resize = 256
 crop_size = 224
 
@@ -85,7 +88,8 @@ for i, (input,target) in enumerate(dataLoaderTest):
     input = input.cuda()
     with torch.no_grad():
         out,feats = model(input.view(-1, c, h, w).cuda())
-        #out = model(input.view(-1, c, h, w).cuda())
+        out_sum = torch.sum(out,dim=1).unsqueeze(1)
+        out = out/(out_sum+1e-6)
     featsMean = feats.view(bs, n_crops, -1).mean(1)
     embeddings_all_test.append(featsMean.data.cpu())
     labels_all_test.append(target.data.cpu())
@@ -103,7 +107,7 @@ labels_all = np.concatenate((labels_all_train,labels_all_test),axis=0)
 outPRED = outPRED.cpu().numpy()
 
 # KNN search for the graph
-k = 20
+k = 40
 X = embeddings_all
 d = X.shape[1]
 res = faiss.StandardGpuResources()
@@ -135,12 +139,18 @@ P1 = scipy.sparse.eye(1400).toarray()
 P2 = np.zeros([2015,1400])
 P = np.concatenate((P1,P2), axis=0)
 Y_GT = labels_all_train.T
+#Y_GT = np.random.randint(0,10,(7,1400))
+N = 1400
 B = np.matmul(Y_GT,P.T)/N
-A = np.matmul(P,P.T)/N +10*L
+#B = np.matmul(Y_GT,P.T)
+A = np.matmul(P,P.T)/N +0.01*L
+#A = np.matmul(P,P.T) +0.01*L*N
 Y_pred = B * A.I
 Y_pred_tensor = torch.from_numpy(Y_pred.T)
-Y_soft = F.softmax(Y_pred_tensor*1000.0,dim=1)
-AUROCs, Accus, Senss, Specs, Pre, F1 = compute_metrics_test_new(labels_all_test, Y_soft[1400:], competition=True)
+Y_pred_sum = torch.sum(Y_pred_tensor,dim=1).unsqueeze(1)
+Y_pred_tensor = Y_pred_tensor / Y_pred_sum+1e-9
+#Y_soft = F.softmax(Y_pred_tensor*1000.0,dim= 1)
+AUROCs, Accus, Senss, Specs, F1 = compute_metrics_test_new(labels_all_test, Y_pred_tensor[1400:], competition=True)
 print("test")
 
 # W = W + W.T
